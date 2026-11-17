@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0-4 安装 Anaconda（一步一图） | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="0-4" style="--stage-color: #0ea5e9">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4" class="active"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 0 · 出发准备</div><h1><span class="lid">0-4</span>安装 Anaconda（一步一图）</h1><p class="lesson-summary">按官方安装选项装好 Anaconda，在独立 da-course 环境安装课程清单并注册 Jupyter 内核。</p><ul class="lesson-meta"><li>约 40 分钟</li><li>难度 ★☆☆</li><li>前置：已完成安装前体检；整套教程已完整解压，知道实际根目录；联网安装阶段需可用网络。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可检验目标</p><ul>
+<li>从官方说明进入官方下载，选择适合目标电脑的 Windows x86_64 安装器。</li>
+<li>解释为什么选择 Just Me、为什么不永久添加 PATH。</li>
+<li>创建并激活 <code>da-course</code>，在它里面安装课程依赖，不把课程包放进 <code>base</code>。</li>
+<li>注册 <code>Python (da-course)</code> 内核，从正确目录启动 JupyterLab。</li>
+</ul></div>
+<h2 id="1-先分清四层工具">1. 先分清四层工具</h2>
+<div class="cards"><div class="card"><p class="card-title">Anaconda：工具的入口与管理器</p><p>安装包提供 conda 与基础 Python 等。这里把它看作管理学习环境的入口，而不是每课都使用 Navigator。</p></div>
+<div class="card"><p class="card-title">conda 环境：独立工具箱</p><p><code>base</code> 是基础环境。课程另建 <code>da-course</code>，不把课程依赖安装进 base。环境名和文件夹名不是随便混用的同义词。</p></div>
+<div class="card"><p class="card-title">Python 与 pip：执行与装包</p><p>环境里指定 Python 3.12。<code>python -m pip</code> 使用当前这个 Python 的 pip，按 <code>requirements.txt</code> 固定版本安装课程包。</p></div>
+<div class="card"><p class="card-title">JupyterLab 与内核：界面与执行者</p><p>浏览器里的 JupyterLab 是编辑界面；<code>Python (da-course)</code> 内核才负责执行代码。界面打开并不能证明内核正确。</p></div></div>
+<p>本课沿用一条路线：<strong>Anaconda → Anaconda Prompt → da-course → requirements.txt → Python (da-course) → JupyterLab</strong>。暂时不引入 VS Code、系统 Python、Miniconda 或多个镜像路线，以免在不同窗口来回混用。已有可用 Anaconda 时不重复装，直接从第 4 节检查环境开始。</p>
+<h2 id="2-官方下载与安装前确认">2. 官方下载与安装前确认</h2>
+<p>先打开<a href="https://www.anaconda.com/docs/getting-started/anaconda/install/windows-cli-install">Anaconda 官方 Windows 安装说明</a>，从页面的官方下载入口获取当前 Windows 安装器。该页标题为“Windows shell installer for Anaconda Distribution”，但在 <strong>2026-11-12 本教程核对时</strong>确有图形安装步骤。本课不把某个固定安装器说成“最新”；版本与界面文案可变化。</p>
+<p>选择 <strong>Windows、64 位 x86_64</strong>，前提是<a href="../lessons/0-3-pre-install-check.html">系统体检</a>确认基于 x64 的处理器。ARM 电脑不被这条教程自动视为已支持或已实测；不确定时停止并核对官方系统要求。下载完成后在资源管理器中确认文件来自官方下载、扩展名为 <code>.exe</code>；不要运行不明重新打包的安装器。单位电脑遵循单位软件安装流程。</p>
+<div class="callout note"><p class="callout-title">许可与条款由你按真实用途确认</p><p>安装器中的 Terms of Service，以及 conda 使用服务时的条款提示，需要阅读后依据个人学习、商业或单位使用情况决定是否同意。课程不是法律意见，不代你接受，也不把任何商业使用一概说成免费。不同意或无法判断时停止，向单位支持/相关负责人确认后再继续。</p></div>
+<h2 id="3-图形安装逐步界面示意">3. 图形安装：逐步界面示意</h2>
+<p><strong>下面全部是 HTML 文字界面示意，不是作者采集的 Windows 实机截图，也不是真安装器。</strong> 标记按钮仅帮助你对照。实际安装器出现不同标题或额外页时，读清内容，不凭示意盲点。</p>
+<div class="steps"><ol><li class="step"><p class="step-title">双击官方安装器</p><p>在下载文件夹双击安装器，正常权限运行。不是把安装器放在压缩包内执行，不使用“以管理员身份运行”作为默认路线。若单位策略或安全软件阻止，记录提示并确认来源/支持流程；不关闭杀毒。</p></li>
+<li class="step"><p class="step-title">阅读欢迎与条款页</p><p>阅读欢迎说明和许可，只有在理解并愿意接受时选择下一步。取消安装并不算学习失败。</p></li>
+<li class="step"><p class="step-title">选择当前用户安装</p><p>选择官方推荐的 Just Me；All Users 通常需要管理员权限，不是本课程默认路线。</p></li>
+<li class="step"><p class="step-title">选择目录和高级选项</p><p>记录真实安装目录，确认无已有安装冲突且自己有写权限；按下表选择，不编辑系统 PATH。</p></li>
+<li class="step"><p class="step-title">安装完成后打开 Prompt 验证</p><p>安装进度结束后点 Finish，再从 Windows 搜索打开 Anaconda Prompt，不靠“安装器关闭了”判断成功。</p></li></ol></div>
+<div class="window"><div class="window-title">安装范围页（界面示意）</div><div class="window-body"><ul>
+<li><span class="annot ok">Just Me (Recommended)</span>：为当前用户安装，本教程选择。</li>
+<li>All Users：不是本教程默认；可能需要设备管理员参与。</li>
+<li><span class="ui-btn">Next</span>：确认范围后继续。</li>
+</ul></div></div>
+<div class="window"><div class="window-title">安装目录页（界面示意）</div><div class="window-body"><p>Destination Folder：<code>D:\Anaconda3</code> <strong>仅示例，换成你的实际可写安装目录</strong>。</p>
+<p>官方建议目录不含空格/特殊字符，以降低工具兼容问题。中文用户名无需改名；如果默认安装路径含中文/空格，可选择其他合适的可写目录。没有 D 盘就不填写 D 盘，不把权限错误改为常驻管理员。</p>
+<p><span class="ui-btn">Next</span>：确认路径后继续。教程本身仍放在独立的课程目录，不放在这里。</p></div></div>
+<div class="window"><div class="window-title">Advanced Installation Options（界面示意）</div><div class="window-body"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>本教程选择</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create shortcuts</td>
+<td><span class="annot ok">保持勾选</span></td>
+<td>官方默认勾选；便于从开始菜单打开 Anaconda Prompt</td>
+</tr>
+<tr>
+<td>Add Anaconda3 to my PATH environment variable</td>
+<td><span class="annot">不勾选</span></td>
+<td>官方不建议默认永久加入 PATH；Prompt 激活会为当前窗口处理环境</td>
+</tr>
+<tr>
+<td>Register Anaconda3 as my default Python ...</td>
+<td><span class="annot">本教程可不勾选</span></td>
+<td>避免改变其他软件默认解释器；不是不能运行 Anaconda，始终在 Prompt 工作</td>
+</tr>
+<tr>
+<td>Clear the package cache upon completion（若有）</td>
+<td>本课不要求勾选</td>
+<td>这是缓存管理选项，不是成功安装必须项；不把清理当作修复</td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="ui-btn primary">Install</span>：确认你的真实选项与条款后安装。</p></div></div>
+<p>“Register ... Python 3.12”等文案会带安装器自带版本；<strong>那不是课程环境一定使用的版本</strong>。无论 base 附带什么版本，后面另建 Python 3.12 的 <code>da-course</code>。本教程“不勾选 Register”是课程的隔离选择，不是假称官方要求每个人不勾选。</p>
+<p>安装时可以查看 Show details，等待完成，不在进度过程中强行关闭。报权限、路径冲突或安全软件提示时，先停下保存错误；不删除看不懂的文件，不关闭杀毒，不反复覆盖安装。安装结束后若 Navigator 自动打开，可以关闭 Navigator，本课统一用 Prompt。</p>
+<h2 id="4-打开-anaconda-prompt先确认入口">4. 打开 Anaconda Prompt，先确认入口</h2>
+<p>点 Windows 开始菜单，输入 <strong>Anaconda Prompt</strong>，打开普通权限的应用。看到类似下行：</p>
+<pre class="highlight"><code class="language-output">(base) C:\Users\你的账户名&gt;</code></pre>
+<p>这是提示符示例，不是命令。初次显示 <code>(base)</code> 正常，说明入口的基础环境已激活，但还没有进入课程环境。在这个窗口逐行输入：</p>
+<pre class="highlight"><code class="language-terminal">conda --version
+conda info --envs</code></pre>
+<p>第一条应输出一个 conda 版本；第二条列出环境。版本可以不同，不把本页示例版本当最新版本。环境列表的 <code>*</code> 表示当前激活的环境。没有 <code>da-course</code> 时进入第 5 节；已有 <code>da-course</code> 时先激活、核对 Python 路径与版本，不重复创建。</p>
+<p>如果显示“conda 不是内部或外部命令”，先检查你开的是否真的 Anaconda Prompt；普通 CMD 中找不到 conda 并不说明安装失败。开始菜单也找不到入口时看<a href="../lessons/A-1-troubleshoot.html">A-1</a>，不要先加一串路径到系统 PATH。</p>
+<h2 id="5-创建独立课程环境">5. 创建独立课程环境</h2>
+<p>确认环境列表没有名为 <code>da-course</code> 的环境后，在 Anaconda Prompt 运行：</p>
+<pre class="highlight"><code class="language-terminal">conda create -n da-course python=3.12 pip -y</code></pre>
+<p>逐词解释：<code>create</code> 新建环境；<code>-n da-course</code> 指定名称；<code>python=3.12</code> 指定 Python 主/次版本；<code>pip</code> 一同准备包安装工具；<code>-y</code> 对常规包方案确认使用 yes。<strong><code>-y</code> 不替你阅读或授权服务条款</strong>；若出现条款、证书、代理或单位政策提示，应根据真实情况处理，不能凭教程默认接受。</p>
+<p>输出会包含将下载/安装的包和进度。只有过程正常结束、重新出现提示符后，再运行：</p>
+<pre class="highlight"><code class="language-terminal">conda activate da-course
+conda info --envs
+python --version
+python -c "import sys; print(sys.executable)"
+where python</code></pre>
+<p>正常观察：Prompt 左侧变成 <code>(da-course)</code>；列表中的 <code>*</code> 在 <code>da-course</code>；Python 版本为 <code>3.12.x</code>，补丁号可随创建时间变化；解释器路径指向你安装位置下 <code>envs\da-course\python.exe</code>。<code>where python</code> 可有多行，第一项通常是已激活环境的 Python；最终以实际执行的 <code>sys.executable</code> 为证据。</p>
+<pre class="highlight"><code class="language-output">(da-course) C:\Users\你的账户名&gt;
+Python 3.12.x
+D:\Anaconda3\envs\da-course\python.exe</code></pre>
+<p>上面的 <code>x</code>、用户名、D 盘路径都是输出示意，不能输入成命令。如果仍是 base 或版本不对，停止安装依赖，先按<a href="../lessons/A-1-troubleshoot.html">A-1 环境不一致</a>确认当前窗口与解释器。</p>
+<div class="callout warn"><p class="callout-title">新窗口需要重新激活</p><p><code>conda activate</code> 主要改变当前终端会话，不代表以后每个窗口自动进 da-course。下次打开 Anaconda Prompt 先运行 <code>conda activate da-course</code>，不重复 create，也不重新 pip 安装所有包作为每次启动步骤。</p></div>
+<h2 id="6-在正确根目录安装课程清单">6. 在正确根目录安装课程清单</h2>
+<p>保留已激活的 Prompt。打开资源管理器复制真正课程根目录，回 Prompt 运行下面第一行；<strong>只替换双引号内部路径</strong>：</p>
+<pre class="highlight"><code class="language-terminal">cd /d "D:\da-course\data-analysis-tutorial"
+dir</code></pre>
+<p>确认 <code>dir</code> 里同时有 <code>requirements.txt</code>、<code>data</code>、<code>dacheck</code>、<code>notebooks</code>、<code>tools</code>。找不到时停止，回<a href="../lessons/0-2-computer-basics.html">完整解压与根目录</a>；不要创建空文件凑数。</p>
+<pre class="highlight"><code class="language-terminal">python -m pip --version
+python -m pip install -r requirements.txt</code></pre>
+<p><code>-r</code> 表示从清单读取，文件由课程维护者提供，不要先改成自己猜的版本。输出可能显示下载进度、安装完成、已经满足要求（Requirement already satisfied）。后者可能正常，前提是<strong>当前解释器属于 da-course 且版本清单一致</strong>。看到 <code>ERROR</code>、依赖冲突、证书失败或进程退出就先记录，不仅凭末尾有文字判断成功；下一课用体检核对。</p>
+<p>本课程先 conda 建独立环境与 Python/pip，再在环境中用 pip 安装课程固定清单，遵循官方关于隔离环境、先 conda 后 pip 的建议。不要加 pip 的 <code>--user</code>；它可能把课程包装到环境外。不要用裸 <code>pip</code>，也不要在 base 装课包。错误装进 base 时先回<a href="../lessons/A-1-troubleshoot.html">A-1</a>隔离，不自动批量卸载基础包。</p>
+<h3 id="网络错误的停止条件">网络错误的停止条件</h3>
+<p>出现 <code>ProxyError</code>、<code>SSLError</code>、证书验证失败或超时：先检查系统日期/时间、正常联网、单位代理与官方证书要求。用<a href="../lessons/A-2-common-errors.html">A-2 网络错误</a>整理信息。<strong>不关闭 SSL 校验、不设置随意 trusted-host、不关杀毒、不把下载改为 HTTP</strong>。不随机换不明镜像或一键修复脚本。单位网络要按支持人员提供的合规配置操作；无权限时先求助。</p>
+<h2 id="7-注册课程内核并启动-jupyterlab">7. 注册课程内核并启动 JupyterLab</h2>
+<p>只有安装命令正常完成后，在同一个 <code>(da-course)</code> Prompt、教程根目录运行：</p>
+<pre class="highlight"><code class="language-terminal">python -m ipykernel install --user --name da-course --display-name "Python (da-course)"
+python -m jupyter lab</code></pre>
+<p>这里 ipykernel 的 <code>--user</code> 是在当前用户目录注册<strong>内核描述文件</strong>，不是 pip 的 <code>--user</code> 装包，两者不同。若以前注册过同名内核，应先确认这次确实要把课程内核指到当前 da-course；不把其他项目内核改名覆盖。</p>
+<p>Jupyter 通常自动打开浏览器。服务器日志中可有一个本机地址与 token，这是当前本机运行日志，不是让你贴到公开作业的内容。浏览器未打开时，复制<strong>你自己日志中的本机地址</strong>到浏览器地址栏；不从教材猜端口或 token。浏览器访问本机也不意味着已下载的新包被装对，下一课要验证。</p>
+<p>服务器窗口不再显示普通提示符，这是正常的“正在运行”。不要在该窗口日志中继续安装命令。需要另一个命令时开新的 Anaconda Prompt，重新激活 da-course 并定位根目录。退出时保存 Notebook，在服务窗口按 <code>Ctrl+C</code>，按它实际提示确认关闭；不通过强制结束未知进程释放端口。</p>
+<div class="window"><div class="window-title">JupyterLab 初次入口（界面示意）</div><div class="window-body"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>区域</th>
+<th>应看见什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左侧文件栏</td>
+<td>根目录中的 data、notebooks、solutions 等</td>
+</tr>
+<tr>
+<td>Launcher 或内核选择</td>
+<td>Python (da-course)</td>
+</tr>
+<tr>
+<td>浏览器页</td>
+<td>本机服务器页面，不是 Python 安装器</td>
+</tr>
+</tbody>
+</table></div></div></div>
+<p>如果只显示 Downloads、桌面或另一项目的文件，启动目录不对；保存后正常关闭服务器，从真正根目录重启。没有 <code>Python (da-course)</code> 就回内核注册步骤，不随便选一个名称看起来像 Python 的内核。</p>
+<h2 id="8-理解检查与实际验收">8. 理解检查与实际验收</h2>
+<div class="callout try"><p class="callout-title">练习 1：哪个选项不需要改系统 PATH？</p><p>说出本课三项关键安装选择与原因：范围、PATH、默认 Python 注册。</p></div>
+<details class="fold"><summary>参考答案</summary><p>Just Me 为当前用户安装；不勾选永久 Add to PATH，改用 Prompt 激活；默认 Python 注册本课可不勾选以减少对其他软件的影响。Create shortcuts 保持勾选方便打开 Prompt。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">conda create -n da-course python=3.12 pip -y</button></li><li><button type="button" data-correct="1">conda activate da-course</button></li><li><button type="button" data-correct="0">删除 base 再安装课程</button></li></ul><div class="quiz-explain"><p>环境只创建一次；新窗口重新激活。发现已有 da-course 时先检查，不能反复创建覆盖。</p></div></div>
+<div class="callout try"><p class="callout-title">练习 3：两个 --user 一样吗？</p><p>解释为什么内核注册命令带 <code>--user</code>，pip 安装却不带。</p></div>
+<details class="fold"><summary>参考答案</summary><p>ipykernel --user 注册用户可见的内核描述，Python 与包仍在 da-course。pip --user 把包装入用户级目录，可能绕过环境隔离，课程不用它。</p></details>
+<div class="callout try"><p class="callout-title">练习 4：判定下一步</p><p>Prompt 仍显示 <code>(base)</code>，但你已定位课程根目录。现在能执行 pip 安装吗？提示：目录和环境是两件事。</p></div>
+<details class="fold"><summary>参考答案</summary><p>不能。先 <code>conda activate da-course</code>，核对 <code>sys.executable</code> 与 Python 3.12，确认后再装清单。目录正确不意味着环境正确。</p></details>
+<div class="callout job"><p class="callout-title">可复现比“终于装上”更重要</p><p>你现在应该能向别人交代：环境名字、Python 主次版本、依赖清单在哪里、用什么内核、从哪里启动。后续项目交付可以沿用这些信息，不需要给别人你的整个 Anaconda 文件夹。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="0-4:26:0"><span class="cl-text">下载来自官方说明的官方下载入口，系统/架构匹配，不冒称 ARM 验证。</span></label></li><li><label><input type="checkbox" data-id="0-4:26:1"><span class="cl-text">保留旧软件与用户目录，使用 Just Me 和 Prompt，不永久改系统 PATH。</span></label></li><li><label><input type="checkbox" data-id="0-4:26:2"><span class="cl-text"><code>conda info --envs</code> 的星号在 da-course，Python 版本为 3.12，路径指向该环境。</span></label></li><li><label><input type="checkbox" data-id="0-4:26:3"><span class="cl-text">在真实教程根目录运行 <code>python -m pip install -r requirements.txt</code>，未忽略错误。</span></label></li><li><label><input type="checkbox" data-id="0-4:26:4"><span class="cl-text">完成内核注册，JupyterLab 能从根目录启动并看见 notebooks。</span></label></li></ul></div>
+<p><strong>停止条件</strong>：任何创建/安装失败、错误环境、缺文件或来源不明时先排查，不继续复制下一条命令。下一步<a href="../lessons/0-5-env-check.html">环境体检</a>。</p>
+<h2 id="官方资料与核对说明">官方资料与核对说明</h2>
+<ul>
+<li><a href="https://www.anaconda.com/docs/getting-started/anaconda/install/windows-cli-install">Anaconda 官方 Windows 安装说明</a>：2026-11-12 核对范围、目录、快捷方式与高级选项；本课采用界面示意，不宣称真实截图。</li>
+<li><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda 官方环境管理</a>：核对创建/激活、星号、独立环境与 pip 使用建议。旧的 conda.io/docs 地址在该日返回 404，使用此官方路径。</li>
+<li>官方页面未来可能更新；本课固定 Python 3.12 与随包 <code>requirements.txt</code> 是课程路线，不是“所有包的最新版本”。</li>
+</ul></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="0-3-pre-install-check.html"><small>← 上一课</small>0-3 安装前体检：识别已有 Python、检查路径和磁盘</a><a class="next" href="0-5-env-check.html"><small>下一课 →</small>0-5 环境体检：确认一切正常</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-先分清四层工具">1. 先分清四层工具</a></li><li><a href="#2-官方下载与安装前确认">2. 官方下载与安装前确认</a></li><li><a href="#3-图形安装逐步界面示意">3. 图形安装：逐步界面示意</a></li><li><a href="#4-打开-anaconda-prompt先确认入口">4. 打开 Anaconda Prompt，先确认入口</a></li><li><a href="#5-创建独立课程环境">5. 创建独立课程环境</a></li><li><a href="#6-在正确根目录安装课程清单">6. 在正确根目录安装课程清单</a><ul><li><a href="#网络错误的停止条件">网络错误的停止条件</a></li></ul></li><li><a href="#7-注册课程内核并启动-jupyterlab">7. 注册课程内核并启动 JupyterLab</a></li><li><a href="#8-理解检查与实际验收">8. 理解检查与实际验收</a></li><li><a href="#官方资料与核对说明">官方资料与核对说明</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

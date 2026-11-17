@@ -1,0 +1,110 @@
+{
+  "site_title": "零基础数据分析",
+  "site_subtitle": "写给文科生的求职向入门教程",
+  "stages": [
+    {
+      "id": "0", "name": "出发准备", "color": "#0ea5e9",
+      "desc": "认识数据分析，把电脑环境一次装对",
+      "lessons": [
+        {"id": "0-1", "slug": "what-is-data-analysis", "title": "数据分析是什么？文科生的优势与学习路线", "minutes": 20, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "0-2", "slug": "computer-basics", "title": "电脑基础：文件、路径、扩展名与命令行", "minutes": 40, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "0-3", "slug": "pre-install-check", "title": "安装前体检：识别已有 Python、检查路径和磁盘", "minutes": 30, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "0-4", "slug": "install-anaconda", "title": "安装 Anaconda（一步一图）", "minutes": 40, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "0-5", "slug": "env-check", "title": "环境体检：确认一切正常", "minutes": 30, "level": 1, "notebook": "0-5_env_check.ipynb", "status": "ready"},
+        {"id": "0-6", "slug": "jupyter-basics", "title": "JupyterLab 上手", "minutes": 40, "level": 1, "notebook": "0-6_jupyter_basics.ipynb", "status": "ready"}
+      ]
+    },
+    {
+      "id": "1", "name": "Python 够用就好", "color": "#6366f1",
+      "desc": "只学数据分析用得上的 Python",
+      "lessons": [
+        {"id": "1-1", "slug": "python-variables", "title": "变量与数据类型", "minutes": 50, "level": 1, "notebook": "1-1_python_variables.ipynb", "status": "ready"},
+        {"id": "1-2", "slug": "python-containers", "title": "列表与字典", "minutes": 60, "level": 1, "notebook": "1-2_python_containers.ipynb", "status": "ready"},
+        {"id": "1-3", "slug": "python-control", "title": "条件、循环与函数", "minutes": 70, "level": 2, "notebook": "1-3_python_control.ipynb", "status": "ready"}
+      ]
+    },
+    {
+      "id": "2", "name": "pandas 表格处理", "color": "#10b981",
+      "desc": "用代码完成 Excel 里的一切，并且更快",
+      "lessons": [
+        {"id": "2-1", "slug": "pandas-intro", "title": "认识 DataFrame 与读取数据", "minutes": 60, "level": 1, "notebook": "2-1_pandas_intro.ipynb", "status": "ready"},
+        {"id": "2-2", "slug": "pandas-select", "title": "选取、筛选与排序", "minutes": 70, "level": 2, "notebook": "2-2_pandas_select.ipynb", "status": "ready"},
+        {"id": "2-3", "slug": "pandas-groupby", "title": "新增列与分组统计", "minutes": 80, "level": 2, "notebook": "2-3_pandas_groupby.ipynb", "status": "ready"},
+        {"id": "2-4", "slug": "pandas-merge-pivot", "title": "合并表格与数据透视", "minutes": 80, "level": 2, "notebook": "2-4_pandas_merge_pivot.ipynb", "status": "ready"}
+      ]
+    },
+    {
+      "id": "3", "name": "数据清洗", "color": "#f59e0b",
+      "desc": "真实数据都是脏的，学会把它洗干净",
+      "lessons": [
+        {"id": "3-1", "slug": "clean-missing-duplicates", "title": "缺失值与重复值", "minutes": 60, "level": 2, "notebook": "3-1_clean_missing.ipynb", "status": "ready"},
+        {"id": "3-2", "slug": "clean-types-outliers", "title": "异常值、数据类型、日期与文本", "minutes": 80, "level": 2, "notebook": "3-2_clean_types.ipynb", "status": "ready"}
+      ]
+    },
+    {
+      "id": "4", "name": "数据可视化", "color": "#ec4899",
+      "desc": "选对图、画好图、讲清楚",
+      "lessons": [
+        {"id": "4-1", "slug": "viz-matplotlib", "title": "选对图表 + matplotlib 基础", "minutes": 70, "level": 2, "notebook": "4-1_viz_matplotlib.ipynb", "status": "ready"},
+        {"id": "4-2", "slug": "viz-seaborn", "title": "seaborn 统计图表", "minutes": 60, "level": 2, "notebook": "4-2_viz_seaborn.ipynb", "status": "ready"},
+        {"id": "4-3", "slug": "viz-plotly", "title": "plotly 交互图表与图表美化", "minutes": 60, "level": 2, "notebook": "4-3_viz_plotly.ipynb", "status": "ready"}
+      ]
+    },
+    {
+      "id": "P", "name": "实战项目", "color": "#ef4444",
+      "desc": "做出能写进简历的作品",
+      "lessons": [
+        {"id": "P-1", "slug": "project-ecommerce", "title": "项目一：线上文创店年度销售分析", "minutes": 180, "level": 3, "notebook": "P-1_project_ecommerce.ipynb", "status": "ready"},
+        {"id": "P-2", "slug": "project-funnel-retention", "title": "项目二：App 转化漏斗与用户留存", "minutes": 180, "level": 3, "notebook": null, "status": "soon"},
+        {"id": "P-3", "slug": "project-ab-test", "title": "项目三：A/B 测试分析", "minutes": 150, "level": 3, "notebook": null, "status": "soon"}
+      ]
+    },
+    {
+      "id": "5", "name": "统计基础", "color": "#8b5cf6",
+      "desc": "判断“差异是真的，还是碰巧”",
+      "lessons": [
+        {"id": "5-1", "slug": "stats-descriptive", "title": "描述统计：平均数会骗人", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "5-2", "slug": "stats-distribution", "title": "分布与抽样", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "5-3", "slug": "stats-correlation", "title": "相关性与因果", "minutes": 50, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "5-4", "slug": "stats-hypothesis", "title": "假设检验与 A/B 测试", "minutes": 80, "level": 3, "notebook": null, "status": "soon"}
+      ]
+    },
+    {
+      "id": "6", "name": "SQL 取数", "color": "#14b8a6",
+      "desc": "面试必考，工作必用",
+      "lessons": [
+        {"id": "6-1", "slug": "sql-basics", "title": "SELECT 查询与筛选", "minutes": 60, "level": 1, "notebook": null, "status": "soon"},
+        {"id": "6-2", "slug": "sql-groupby", "title": "分组聚合", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "6-3", "slug": "sql-join", "title": "多表连接与子查询", "minutes": 80, "level": 2, "notebook": null, "status": "soon"}
+      ]
+    },
+    {
+      "id": "7", "name": "分析方法论", "color": "#f97316",
+      "desc": "从“会写代码”到“会分析问题”",
+      "lessons": [
+        {"id": "7-1", "slug": "method-metrics", "title": "指标体系与拆解思路", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "7-2", "slug": "method-funnel-retention", "title": "漏斗、留存与同期群", "minutes": 70, "level": 2, "notebook": null, "status": "soon"},
+        {"id": "7-3", "slug": "method-rfm", "title": "RFM 用户分层", "minutes": 60, "level": 2, "notebook": null, "status": "soon"}
+      ]
+    },
+    {
+      "id": "8", "name": "求职冲刺", "color": "#a855f7",
+      "desc": "简历、作品集与面试",
+      "lessons": [
+        {"id": "8-1", "slug": "job-resume", "title": "数据分析简历与作品集", "minutes": 60, "level": 1, "notebook": null, "status": "soon"},
+        {"id": "8-2", "slug": "job-interview", "title": "面试高频题", "minutes": 90, "level": 2, "notebook": null, "status": "soon"}
+      ]
+    },
+    {
+      "id": "A", "name": "工具箱", "color": "#64748b",
+      "desc": "遇到问题随时查",
+      "lessons": [
+        {"id": "A-1", "slug": "troubleshoot", "title": "环境故障排查向导", "minutes": 10, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "A-2", "slug": "common-errors", "title": "常见报错速查", "minutes": 15, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "A-3", "slug": "datasets", "title": "数据集说明与公开数据集", "minutes": 15, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "A-4", "slug": "cheatsheet", "title": "速查表：pandas 与图表", "minutes": 10, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "A-5", "slug": "glossary", "title": "术语表", "minutes": 10, "level": 1, "notebook": null, "status": "ready"}
+      ]
+    }
+  ]
+}

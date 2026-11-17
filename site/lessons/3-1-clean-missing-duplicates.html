@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3-1 缺失值与重复值 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="3-1" style="--stage-color: #f59e0b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1" class="active"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 3 · 数据清洗</div><h1><span class="lid">3-1</span>缺失值与重复值</h1><p class="lesson-summary">不急着删行，先说明一行代表什么，再处理重复、缺失与修复记录。</p><ul class="lesson-meta"><li>约 60 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/3-1_clean_missing.ipynb</code></li><li>前置：已完成阶段 2，能读取 CSV、筛选和关联表格</li></ul></header><article class="lesson-body"><h2 id="本课要交付什么">本课要交付什么</h2>
+<div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>用 <code>isna()</code> 和 <code>duplicated()</code> 给一份表做体检。</li>
+<li>区分“整行重复”和“同一个订单编号出现多次”。</li>
+<li>依据字段含义处理缺失，保留原表与处理记录。</li>
+<li>解释为什么未评分不应填成 0。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/3-1_clean_missing.ipynb">3-1 练习本</a>，选择 <code>Python (da-course)</code>。在原来的 <code>notebooks</code> 文件夹运行，不要单独把练习本拖到桌面。数据是随包提供的虚构订单，不是实际商家的经营记录。网页帮助你理解决策，Notebook 才真正运行 Python。</p>
+<h2 id="1-清洗不是把表洗成没有空格">1. 清洗不是把表洗成“没有空格”</h2>
+<p>想象整理一份访谈记录：受访者没有回答，不等于回答了“不同意”；同一段记录被复制两次，也不等于发生了两次访谈。数据清洗同样要尊重信息原意。</p>
+<p><code>NaN</code>、<code>pd.NA</code> 等是 pandas 表示缺失的方式。不要写 <code>值 == NaN</code> 判断缺失，用 <code>isna()</code>；它返回每个位置是不是缺失的布尔值。<code>sum()</code> 把 <code>True</code> 当作 1 相加，就得到缺失数量。<code>notna()</code> 则反过来选择已有内容的位置。空字符串、只有空格的文本不一定自动成为缺失，需要另行核对。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">不分原因地消灭缺失</p><p><code>raw.dropna()</code> 会删除任何一列为空的订单。顾客没评分，也会让其实际支付金额从销售统计中消失。</p></div>
+<div class="compare-col good"><p class="compare-title">把问题按字段拆开</p><p>数量缺失会影响销量；评分缺失只说明没观察到评分；品类可能通过商品主表补全。三者不是同一种处理。</p></div></div>
+<h2 id="2-先拍处理前照片">2. 先拍“处理前照片”</h2>
+<p>下面的 Python 放在 Notebook 代码格，而不是 Anaconda Prompt。</p>
+<pre class="highlight"><code class="language-python">import pandas as pd
+raw = pd.read_csv("../data/shop/orders_dirty.csv")
+print("行列数：", raw.shape)
+print("整行额外重复：", raw.duplicated().sum())
+print(raw.isna().sum())</code></pre>
+<p>本版文件有 <strong>2060 行、11 列，包含 60 行额外的整行重复</strong>。这不是要背的标准答案，重新拿到文件时应重新运行体检。缺失和重复可能重叠，所以不要将每列的缺失数相加当成“需要删除的行数”。同一行可能同时没有数量和品类。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>观察层级</th>
+<th>本版结果或检查方式</th>
+<th>能说明什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原表行数</td>
+<td>2060</td>
+<td>导出文件的记录数，尚非去重订单数</td>
+</tr>
+<tr>
+<td>整行额外重复</td>
+<td>60</td>
+<td>每组第一次以外的完全相同行</td>
+</tr>
+<tr>
+<td>去重后行数</td>
+<td>2000</td>
+<td>本模拟数据抽取的订单数</td>
+</tr>
+<tr>
+<td>去重后的数量缺失</td>
+<td><code>unique["数量"].isna().sum()</code>，本版 35</td>
+<td>需要核对的订单，不应猜成 1</td>
+</tr>
+<tr>
+<td>评分缺失</td>
+<td>动态计算</td>
+<td>无观察值，不等于评分为 0</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>“第一次以外”很重要：一条记录出现两次，<code>duplicated()</code> 默认标记后一条，所以结果是 1；<code>duplicated(keep=False)</code> 会标记两条，适合把问题组全部找出来，结果是 2。</p>
+<h2 id="3-判断一行的粒度再决定去重">3. 判断一行的粒度，再决定去重</h2>
+<p>本模拟数据规定：<strong>一行代表一个订单、一个商品，订单编号唯一</strong>。实际系统可能一个订单包含多条商品明细，那时仅按订单编号去重就会吞掉正常商品，必须改用“订单编号 + 明细编号”等键。粒度是数据的身份证规则，不能只凭列名猜。</p>
+<pre class="highlight"><code class="language-python">duplicate_log = raw.loc[raw.duplicated()].copy()
+unique = raw.drop_duplicates().copy()
+print(unique["订单编号"].duplicated().sum())</code></pre>
+<p><code>drop_duplicates()</code> 不指定 <code>subset</code> 时按全部列比较。本课保留第一次并记录被移出的整行。本版去重后的订单编号不再重复。如果仍重复，要检查同一编号是否有状态更新、字段冲突或合法明细；不要直接 <code>drop_duplicates("订单编号")</code> 当作万能修复。</p>
+<div class="widget" data-widget="cleaning-lab"><p class="widget-title">重复与缺失：先观察再处理</p><div class="widget-body"></div></div>
+<p>组件仅演示小表，不会读取你的文件，也不会执行 Python。先试“按整行去重”，再看为什么“不评价”不该影响订单金额。</p>
+<h2 id="4-缺失的三个处理方向">4. 缺失的三个处理方向</h2>
+<div class="cards"><div class="card"><p class="card-title">保留，并说明分母</p><p>平均评分只计算有评分的订单，同时报告已评分数量和覆盖率。pandas 的 <code>mean()</code> 默认跳过缺失，不会自动把它们视为 0。</p></div>
+<div class="card"><p class="card-title">根据可信主表补回</p><p>缺失品类可用原订单表的商品 ID 关联商品主表。补回前确认关联键唯一，避免一笔订单变成两行。</p></div>
+<div class="card"><p class="card-title">标记或隔离待核对</p><p>数量缺失先保留在审计表。做需要数量的分析时标记为待核对，不能悄悄填平均数、填 1 或删除所有空值。</p></div></div>
+<p>本包包含可信的模拟原订单和商品主表，因此可以演示有依据的修复：</p>
+<pre class="highlight"><code class="language-python">orders = pd.read_csv("../data/shop/orders.csv")
+products = pd.read_csv("../data/shop/products.csv")
+master = orders[["order_id", "product_id"]].merge(
+    products[["product_id", "category"]],
+    on="product_id", how="left", validate="many_to_one"
+)
+category_lookup = master.set_index("order_id")["category"]
+recovered = unique["订单编号"].map(category_lookup)
+clean = unique.copy()
+clean["品类"] = clean["品类"].fillna(recovered).fillna("未知")</code></pre>
+<p><code>map()</code> 按订单编号寻找可靠品类，<code>fillna(recovered)</code> <strong>只补缺失的位置</strong>，不会覆盖已有品类。最后的“未知”是公开承认仍无法恢复，而不是随便归到“文具”。没有原订单主表时，可以直接标记未知并向数据负责人求证；不能假装有可靠答案。现实中主表也可能过期，应检查版本、有效日期及关联覆盖率。</p>
+<h2 id="5-留下别人能复核的记录">5. 留下别人能复核的记录</h2>
+<pre class="highlight"><code class="language-python">repair_log = clean.loc[unique["品类"].isna(),
+                       ["订单编号", "品类"]].copy()
+repair_log["原因"] = "原品类缺失；按原订单商品ID关联主表"
+quantity_review = clean.loc[clean["数量"].isna()].copy()
+ratings = clean["评分"]
+print("观察到的评分数量：", ratings.notna().sum())
+print("有评分订单的平均分：", ratings.mean())</code></pre>
+<p>这里暂时仍有越界评分，下一课会识别；这不是最终满意度结论。“没有缺失”也不代表数据正确，6 分出现在五分制字段就是另一个问题。记录至少写明订单编号、旧值、新值、理由与规则版本。保存时另起文件名，不覆盖 <code>orders_dirty.csv</code>；导出方法会在后续项目中用到。</p>
+<h2 id="6-动手练习与提示">6. 动手练习与提示</h2>
+<div class="callout try"><p class="callout-title">练习 1：体检记录</p><p>分别计算原表行数、额外整行重复数、去重后数量缺失数。为什么不能直接把原表的数量缺失数当作需要核对的独立订单数？</p>
+<details class="fold"><summary>提示与答案</summary><p>使用 <code>raw.shape[0]</code>、<code>raw.duplicated().sum()</code>、<code>raw.drop_duplicates()["数量"].isna().sum()</code>。本版为 2060、60、35。原表中的同一缺失订单可能被重复导出。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 2：保留去重后的订单</p><p>创建新表，不修改 <code>raw</code>，并确认整行重复数与订单编号重复数。</p>
+<details class="fold"><summary>参考答案</summary><p><code>dedup_answer = raw.drop_duplicates().copy()</code>。两种重复数量本版都为 0；若键重复但行不完全相同，应先查看差异而不是继续删。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 3：按可信来源补品类</p><p>用已建立的 <code>category_lookup</code> 补缺失品类，无法关联时标记“未知”。说出为什么不用最常见品类填补。</p>
+<details class="fold"><summary>参考答案</summary><p><code>unique["品类"].fillna(unique["订单编号"].map(category_lookup)).fillna("未知")</code>。众数填补会人为增加热门品类订单，扭曲品类结构。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 4：报告评分分母</p><p>在下一课之前，仅观察“原表去重后已有评分”的平均值和数量，同时注明尚未处理越界评分。</p>
+<details class="fold"><summary>参考答案</summary><p><code>unique["评分"].mean()</code> 与 <code>unique["评分"].notna().sum()</code>。不要用 <code>fillna(0).mean()</code>，也不要声称此时的平均分已符合五分制质量要求。</p></details></div>
+<div class="quiz"><p class="quiz-q">一笔已完成订单没有评分，分析实付金额时最合理的是？</p><ul class="quiz-options"><li><button type="button" data-correct="0">删除这笔订单，因为表必须没有空值</button></li><li><button type="button" data-correct="0">把评分填成 0，再参加所有评分统计</button></li><li><button type="button" data-correct="1">保留其金额，把评分缺失单独说明</button></li></ul><div class="quiz-explain"><p>是否能用于分析，要按分析所需字段判断。评分缺失并不抹掉一笔支付记录。</p></div></div>
+<h2 id="7-报错求职用途与验收">7. 报错、求职用途与验收</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>遇到的问题</th>
+<th>先做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KeyError: '数量'</code></td>
+<td><code>print(raw.columns.tolist())</code>，确认读取的是中文字段脏表</td>
+</tr>
+<tr>
+<td><code>MergeError</code></td>
+<td>查主表键是否重复，不要取消 <code>validate</code> 来绕过问题</td>
+</tr>
+<tr>
+<td>去重后行数不对</td>
+<td>检查是否用了 <code>dropna()</code> 或只按订单编号去重</td>
+</tr>
+<tr>
+<td>一次运行得对、重启后出错</td>
+<td>从本练习本第一格按顺序运行，不依赖上一课变量</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职加分</p><p>面试可以说明：“我先确认订单粒度，再分别记录整行重复、关键字段缺失和可关联修复项；评分只对有效观察计算，并交代分母。”这是方法展示，不是虚构“为企业提升营收”。保留审计记录比仅展示清洗后行数更有说服力。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="3-1:20:0"><span class="cl-text">从文件动态算出行数、重复数与缺失数。</span></label></li><li><label><input type="checkbox" data-id="3-1:20:1"><span class="cl-text">原始表仍保留，去重日志能定位被移出的记录。</span></label></li><li><label><input type="checkbox" data-id="3-1:20:2"><span class="cl-text">能解释订单编号去重为何不适用于所有明细表。</span></label></li><li><label><input type="checkbox" data-id="3-1:20:3"><span class="cl-text">品类补回有可信来源，无来源时用未知。</span></label></li><li><label><input type="checkbox" data-id="3-1:20:4"><span class="cl-text">不把缺失评分填 0，知道下一课还要核对越界值。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/3-1_clean_missing.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/3-1_clean_missing.ipynb" download>学生练习本</a> · <a href="../../solutions/3-1_clean_missing.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="2-4-pandas-merge-pivot.html"><small>← 上一课</small>2-4 合并表格与数据透视</a><a class="next" href="3-2-clean-types-outliers.html"><small>下一课 →</small>3-2 异常值、数据类型、日期与文本</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#本课要交付什么">本课要交付什么</a></li><li><a href="#1-清洗不是把表洗成没有空格">1. 清洗不是把表洗成“没有空格”</a></li><li><a href="#2-先拍处理前照片">2. 先拍“处理前照片”</a></li><li><a href="#3-判断一行的粒度再决定去重">3. 判断一行的粒度，再决定去重</a></li><li><a href="#4-缺失的三个处理方向">4. 缺失的三个处理方向</a></li><li><a href="#5-留下别人能复核的记录">5. 留下别人能复核的记录</a></li><li><a href="#6-动手练习与提示">6. 动手练习与提示</a></li><li><a href="#7-报错求职用途与验收">7. 报错、求职用途与验收</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/widgets/cleaning-lab.js"></script>
+</body>
+</html>

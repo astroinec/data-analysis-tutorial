@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0-6 JupyterLab 上手 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="0-6" style="--stage-color: #0ea5e9">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6" class="active"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 0 · 出发准备</div><h1><span class="lid">0-6</span>JupyterLab 上手</h1><p class="lesson-summary">学会打开、编辑、运行、保存与重启练习本，理解代码格、输出和内核的区别。</p><ul class="lesson-meta"><li>约 40 分钟</li><li>难度 ★☆☆</li><li>配套练习本 <code>notebooks/0-6_jupyter_basics.ipynb</code></li><li>前置：已完成环境体检；关键失败为 0；在课程根目录启动 JupyterLab。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>在 JupyterLab 从原 notebooks 位置打开练习本，选择 Python (da-course)。</li>
+<li>分清 Markdown 格、Python 格、输入标记与输出；用 Shift+Enter 运行。</li>
+<li>解释执行顺序、保存与内存变量的区别，能重启内核后从头运行。</li>
+<li>完成三个独立练习，知道空白答案不等于系统出错。</li>
+</ul></div>
+<h2 id="1-打开正确文件先不新建一堆空白本">1. 打开正确文件，先不新建一堆空白本</h2>
+<p>如果 Jupyter 已在运行，直接回浏览器，不重复启动。如果没有，在开始菜单打开 Anaconda Prompt，正常权限运行：</p>
+<pre class="highlight"><code class="language-terminal">conda activate da-course
+cd /d "D:\da-course\data-analysis-tutorial"
+python -m jupyter lab</code></pre>
+<p>第一条路径换成自己的。浏览器没自动打开，就复制<strong>自己服务器日志</strong>的本机地址到浏览器地址栏；地址与 token 不发公开截图。Prompt 此时是服务器日志窗口，不再用来输入下一条普通命令。</p>
+<p>浏览器左侧应显示课程根目录。双击 <code>notebooks</code> 文件夹，再双击 <code>0-6_jupyter_basics.ipynb</code>。练习本可从<a href="../../notebooks/0-6_jupyter_basics.ipynb">对应文件</a>查看；运行时仍在完整教材原目录，不只把一份下载副本搬到桌面。</p>
+<div class="window"><div class="window-title">JupyterLab 编辑器（界面示意，不是实机截图）</div><div class="window-body"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>区域</th>
+<th>内容示意</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左侧文件栏</td>
+<td>data / notebooks / solutions</td>
+<td>打开原始练习本；名字相同不代表路径相同</td>
+</tr>
+<tr>
+<td>上方文件标签</td>
+<td>0-6_jupyter_basics.ipynb</td>
+<td>当前正在编辑的文件</td>
+</tr>
+<tr>
+<td>菜单与工具栏</td>
+<td>File / Run / Kernel / 保存图标</td>
+<td>保存、运行、切换或重启内核</td>
+</tr>
+<tr>
+<td>内核名称</td>
+<td>Python (da-course)</td>
+<td>当前代码执行者</td>
+</tr>
+<tr>
+<td>中央单元格</td>
+<td>说明、代码、输出</td>
+<td>每个格子承担不同角色</td>
+</tr>
+<tr>
+<td>输入标记</td>
+<td><code>[ ]</code>、<code>[*]</code>、<code>[1]</code></td>
+<td>未执行、正在执行、执行序号</td>
+</tr>
+</tbody>
+</table></div></div></div>
+<p>菜单文案可随 JupyterLab 版本和语言变动；目标是找到“Run/运行”和“Kernel/内核”。如果名称不确定，可先鼠标悬停查看提示，不随机删除文件或重启整台电脑。</p>
+<h2 id="2-两种格子说明不是代码代码不是终端命令">2. 两种格子：说明不是代码，代码不是终端命令</h2>
+<p><strong>Markdown 格</strong>放课程说明，可写段落、标题、表格。双击进入文字编辑，按 <code>Shift+Enter</code> 渲染回可读页面。</p>
+<p><strong>Code/Python 格</strong>放 Python。点击后可编辑；按 <code>Shift+Enter</code> 运行并移动到下一个格。<code>Ctrl+Enter</code> 通常运行并留在当前格。最初先只掌握 <code>Shift+Enter</code>，不用背全套快捷键。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">错窗口</p><p>在 Python 格写 <code>conda activate da-course</code> 或 <code>cd /d ...</code> 会得到 Python 语法错误。在 Prompt 写 <code>print("你好")</code> 也不是课程的正确窗口。</p></div>
+<div class="compare-col good"><p class="compare-title">本课写 Python</p><p><pre class="highlight"><code class="language-python">print("你好，数据分析")</code></pre>
+选中代码格，按 Shift+Enter，观察下面输出，而不是把它粘到 Anaconda Prompt。</p></div></div>
+<pre class="highlight"><code class="language-output">你好，数据分析</code></pre>
+<p><code>print</code> 明确打印文字。字符串要有英文引号，中文内容可以在引号里面。下一阶段会细讲语法，当前先确认你能输入、执行、看到结果。</p>
+<h3 id="有的正常代码不产生输出">有的正常代码不产生输出</h3>
+<pre class="highlight"><code class="language-python">sample_total = 12</code></pre>
+<p>这一格只是把值保存在变量里，所以没有输出是正常的。运行序号从 <code>[ ]</code> 变成数字，说明它执行过；想看内容，再运行 <code>print(sample_total)</code>。Notebook 常自动展示代码格<strong>最后一个表达式</strong>的值：</p>
+<pre class="highlight"><code class="language-python">2 + 3</code></pre>
+<p>输出是 <code>5</code>。把两行表达式写在同一格，不保证每行自动显示；要逐个显示就用 <code>print</code> 或 <code>display</code>。代码格下方的输出不能通过修改输出文字改变计算结果，得改代码再运行。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>左侧标记</th>
+<th>意味着什么</th>
+<th>你的下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[ ]</code></td>
+<td>当前格未在此内核执行过</td>
+<td>选中格，Shift+Enter</td>
+</tr>
+<tr>
+<td><code>[*]</code></td>
+<td>正在执行或等输入</td>
+<td>等实际运行完成；若长时间无变化，看代码与内核状态</td>
+</tr>
+<tr>
+<td><code>[3]</code></td>
+<td>它是这次内核中的第 3 次执行</td>
+<td>序号不是固定行号；乱序执行时数字会乱</td>
+</tr>
+<tr>
+<td>红色错误堆栈</td>
+<td>执行遇到错误</td>
+<td>看最后一行类型，再定位相关代码，不自动忽略</td>
+</tr>
+</tbody>
+</table></div>
+<p>如果 <code>[*]</code> 长时间不结束，先确认有没有 <code>input()</code> 等待输入，或你是否运行了较重任务；本课小样例应很快完成。可用 Kernel → Interrupt Kernel 中断<strong>当前本子的内核</strong>。中断不删除文件。不要把 CPU 占用作为理由强制结束所有 Python 进程，因为可能有其他工作。</p>
+<h2 id="3-执行顺序屏幕上的上下顺序与实际运行顺序可以不同">3. 执行顺序：屏幕上的上下顺序与实际运行顺序可以不同</h2>
+<p>下面是解释示例，不依赖你先前格子：</p>
+<pre class="highlight"><code class="language-python">value = 10
+value = 20
+print(value)</code></pre>
+<p>结果为 <code>20</code>，因为后一次赋值覆盖了内存中旧值。你若只改上方代码但没重新运行，内存还是旧结果。看上去文字正确、图表却不变，常是运行顺序问题，不一定包有故障。</p>
+<div class="callout analogy"><p class="callout-title">纸上菜谱与正在做的锅</p><p>Notebook 文件是菜谱；内核内存是锅里当前状态。保存菜谱不会重新下锅，重启内核会倒掉当前状态但保留已保存菜谱。完整从头运行才说明菜谱能复现。</p></div>
+<p>因此写完一份练习，先保存，再按 Kernel 菜单重启内核，然后从第一格到最后一格运行。也可使用“Restart Kernel and Run All Cells/重启内核并运行所有单元格”相应菜单，确认目标是当前练习本。不要把“Run All”作为空白学生练习必须全绿的要求：<code>...</code> 还没填时，检查器显示“还没作答”是设计行为。</p>
+<h2 id="4-第一初始化格要运行不能把环境路径当题目答案">4. 第一初始化格要运行，不能把环境路径当题目答案</h2>
+<p>每份课程练习本从初始化格开始：</p>
+<pre class="highlight"><code class="language-python">import sys
+sys.path.insert(0, "..")
+from dacheck import check, hint, setup_chinese_font
+import pandas as pd</code></pre>
+<p>这里 <code>..</code> 帮 Python 找到上一层的课程工具。它不代表更换系统 PATH，也不把电脑配置永久修改。第一格只在整套教材 <code>notebooks</code> 或 <code>solutions</code> 原位置运行才符合约定。下一阶段还会学习 <code>import</code>，现在先运行且观察是否有错误。</p>
+<p>如果报 <code>No module named dacheck</code>，先检查你是否只搬走了本子，以及左侧当前文件的完整路径；不去网络安装同名包。报 pandas 缺失时看实际内核 <code>sys.executable</code>，回<a href="../lessons/0-5-env-check.html">环境体检</a>；不要在任何随机 Notebook 里重复装包。</p>
+<p>字体示范采用课程工具：</p>
+<pre class="highlight"><code class="language-python">font_name = setup_chinese_font(verbose=True)
+print("当前候选字体：", font_name)</code></pre>
+<p>正常会报告选中的中文字体。<code>None</code> 或缺字警告说明需要去<a href="../lessons/A-2-common-errors.html">A-2 字体问题</a>，不保证一切字体正常。文字练习可以先继续，图表前要解决。后续图表写 <code>plt.show()</code> 显式显示，不能靠屏蔽字体警告过关。</p>
+<h2 id="5-三个独立练习把-替换不改-check-编号">5. 三个独立练习：把 ... 替换，不改 check 编号</h2>
+<p>在 <code>0-6_jupyter_basics.ipynb</code> 中，每题的变量先赋 <code>...</code>。这是一个占位对象，提醒你尚未作答，不是代码错误，也不是要填一个“省略号字符串”。把省略号替换为表达式或值，保留左侧变量名和下面 <code>check(...)</code>，再运行当前格。</p>
+<div class="callout try"><p class="callout-title">练习 1：让结果可见</p><p>给 <code>result</code> 赋值为 <code>2 + 3</code>，运行格子。检查器应显示“通过”。再试用 <code>print(result)</code> 观察数值。</p></div>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">result = 2 + 3
+check("0-6.1", result)</code></pre>
+数值是 <code>5</code>。这题不用前一题变量；即使后两题空白也能独立检查。</p></details>
+<div class="callout try"><p class="callout-title">练习 2：保存一段中文文字</p><p>给 <code>message</code> 赋值为字符串 <code>"我能运行代码"</code>，英文引号保留。提示：引号里面是文字，引号外是 Python 语法。</p></div>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">message = "我能运行代码"
+check("0-6.2", message)</code></pre>
+不要把英文双引号改成输入法的弯引号。中文内容本身不需要转成英文。</p></details>
+<div class="callout try"><p class="callout-title">练习 3：给表格数行</p><p>用 <code>pd.DataFrame({"任务": ["读取", "检查", "保存"]}).shape[0]</code> 给 <code>task_rows</code> 赋值，再检查。暂不要求记住整套 DataFrame 语法，先观察“三项任务对应三行”。</p></div>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">task_rows = pd.DataFrame({"任务": ["读取", "检查", "保存"]}).shape[0]
+check("0-6.3", task_rows)</code></pre>
+结果为 3；检查器从同一小样本动态计算，题目不依赖别的题目变量。Python 表格操作在阶段 2 系统学习。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">保存 Notebook 后，变量自动更新为新代码结果</button></li><li><button type="button" data-correct="1">保存写入文件，运行才会更新内核中的变量</button></li><li><button type="button" data-correct="0">重启内核会删除已经保存的 Notebook 文件</button></li></ul><div class="quiz-explain"><p>文件与内存不同。重启后变量清空，必须从头运行初始化与相关代码。</p></div></div>
+<h2 id="6-保存备份退出各做各的事">6. 保存、备份、退出：各做各的事</h2>
+<p>按 <code>Ctrl+S</code> 或点击保存图标，确认标签中的未保存标记消失。需要保留原始练习模板时，可先用 File → Save Notebook As 以新名保存在<strong>同一个 notebooks 文件夹</strong>，避免破坏相对路径。不要把副本另存到 ZIP 内、安装目录或单独桌面位置。</p>
+<p>保存可能包含输出：生成的表格、图片、错误与路径。分享作品之前查看是否含用户名、敏感记录或浏览器 token。项目原数据保留不覆盖；导出成果另用新文件名。</p>
+<p>退出顺序：</p>
+<ol>
+<li>保存正在编辑的 Notebook。</li>
+<li>在 JupyterLab 关闭对应内核/会话或确认不再需要运行。</li>
+<li>回 Jupyter 服务器所在 Prompt，按 <code>Ctrl+C</code>，按该窗口提示确认停止服务器。</li>
+<li>浏览器标签可关闭。仅关浏览器不保证服务器已停止；不要关掉服务器后把浏览器报连接失败误认为课程坏了。</li>
+</ol>
+<h2 id="常见问题与恢复动作">常见问题与恢复动作</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>常见原因</th>
+<th>最小恢复动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按运行后文字变成标题，没有执行</td>
+<td>Markdown 格</td>
+<td>把类型改成 Code，或新建代码格再输入 Python</td>
+</tr>
+<tr>
+<td>一格无输出但序号变数字</td>
+<td>仅赋值、注释或 import</td>
+<td>用 print/最后表达式显示，不重复安装</td>
+</tr>
+<tr>
+<td>NameError: name ... is not defined</td>
+<td>初始化未运行、错拼或重启后内存清空</td>
+<td>从第一格按顺序运行，查看拼写</td>
+</tr>
+<tr>
+<td>改代码但图没变</td>
+<td>未重新执行、看错旧输出</td>
+<td>运行正确格子；必要时重启并从头运行</td>
+</tr>
+<tr>
+<td>一直显示星号</td>
+<td>执行未结束/在等输入</td>
+<td>看当前代码，Interrupt 当前内核，勿杀所有进程</td>
+</tr>
+<tr>
+<td>“还没作答”</td>
+<td>仍有 ...</td>
+<td>填当前题，不把它当安装失败</td>
+</tr>
+<tr>
+<td>文件栏不是课程目录</td>
+<td>服务器启动位置不对</td>
+<td>保存、正常关闭，从课程根目录重启</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">作品应该能“重启后从头跑”</p><p>面试演示最怕只有内存里的旧变量能救场。完成项目后，保存并重启从头跑一遍，比截图上一张漂亮图更能证明可复现。空白练习本不要求全通过，但自己的完成版应没有被忽略的错误。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="0-6:14:0"><span class="cl-text">我在原 notebooks 目录打开本课文件，内核为 Python (da-course)。</span></label></li><li><label><input type="checkbox" data-id="0-6:14:1"><span class="cl-text">我能分别运行代码格、渲染 Markdown 格，解释输入序号与输出。</span></label></li><li><label><input type="checkbox" data-id="0-6:14:2"><span class="cl-text">三个独立题已通过；我知道 ... 是待填写，不是系统报错。</span></label></li><li><label><input type="checkbox" data-id="0-6:14:3"><span class="cl-text">我能先保存，再重启内核并从第一格按顺序运行。</span></label></li><li><label><input type="checkbox" data-id="0-6:14:4"><span class="cl-text">我知道只有赋值时可以没有输出，保存也不等于执行。</span></label></li><li><label><input type="checkbox" data-id="0-6:14:5"><span class="cl-text">我能正常停止当前服务器，不结束其他项目进程。</span></label></li></ul></div>
+<p>如果初始化、数据路径或内核仍异常，先停在本课并用<a href="../lessons/A-1-troubleshoot.html">A-1</a>排查。完成后进入<a href="../lessons/1-1-python-variables.html">变量与数据类型</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/0-6_jupyter_basics.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/0-6_jupyter_basics.ipynb" download>学生练习本</a> · <a href="../../solutions/0-6_jupyter_basics.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="0-5-env-check.html"><small>← 上一课</small>0-5 环境体检：确认一切正常</a><a class="next" href="1-1-python-variables.html"><small>下一课 →</small>1-1 变量与数据类型</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-打开正确文件先不新建一堆空白本">1. 打开正确文件，先不新建一堆空白本</a></li><li><a href="#2-两种格子说明不是代码代码不是终端命令">2. 两种格子：说明不是代码，代码不是终端命令</a><ul><li><a href="#有的正常代码不产生输出">有的正常代码不产生输出</a></li></ul></li><li><a href="#3-执行顺序屏幕上的上下顺序与实际运行顺序可以不同">3. 执行顺序：屏幕上的上下顺序与实际运行顺序可以不同</a></li><li><a href="#4-第一初始化格要运行不能把环境路径当题目答案">4. 第一初始化格要运行，不能把环境路径当题目答案</a></li><li><a href="#5-三个独立练习把-替换不改-check-编号">5. 三个独立练习：把 ... 替换，不改 check 编号</a></li><li><a href="#6-保存备份退出各做各的事">6. 保存、备份、退出：各做各的事</a></li><li><a href="#常见问题与恢复动作">常见问题与恢复动作</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

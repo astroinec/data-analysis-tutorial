@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-1 项目一：线上文创店年度销售分析 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="P-1" style="--stage-color: #ef4444">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1" class="active"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 P · 实战项目</div><h1><span class="lid">P-1</span>项目一：线上文创店年度销售分析</h1><p class="lesson-summary">用15115笔虚构订单完成一份口径明确、检查可复现、结论有边界的年度分析作品。</p><ul class="lesson-meta"><li>约 180 分钟</li><li>难度 ★★★</li><li>配套练习本 <code>notebooks/P-1_project_ecommerce.ipynb</code></li><li>前置：完成阶段0～4；能读取表格、筛选、分组、合并和画图</li></ul></header><article class="lesson-body"><h2 id="你要交付什么而不只是学什么">你要交付什么，而不只是学什么</h2>
+<div class="callout goal"><p class="callout-title">本项目的可检验目标</p><ul>
+<li>从原始CSV完整重做2025年度分析，重启内核后仍能运行。</li>
+<li>明确订单粒度、时间窗口、状态与金额口径，用检查证明连接没有增行或丢单。</li>
+<li>做出月趋势、平台退款、品类贡献、目标达成四张汇总表，至少三张图。</li>
+<li>用“发现—证据—限制—待验证建议”写3～5项结论，交一份报告。</li>
+<li>完成练习本七题；说得清为什么客单价不等于商品均价，复购率分母不等于注册人数。</li>
+</ul></div>
+<p>这是一个虚构线上文创店，销售书籍、文具、帆布包、明信片、徽章、日历和香薰。店铺、客户、商品及经营结果都是程序模拟的。你不是替真实公司证明增长，而是在展示一种可信的分析工作方式。文科训练中的材料辨析、论证结构和表达能力，在这里不是累赘：指标口径相当于概念定义，数据检查相当于核验材料，结论边界相当于避免过度论证。</p>
+<p>请在本包 <code>notebooks/P-1_project_ecommerce.ipynb</code> 打开练习本，内核选 <code>Python (da-course)</code>。网页负责解释思路，练习本负责运行；答案本在 <code>solutions/</code>。不要只下载一个Notebook便以为拥有完整项目，它还依赖相邻的 <code>data/</code> 和 <code>dacheck/</code>。</p>
+<div class="flow"><ol>
+<li>写问题与口径：要回答谁的什么决策？</li>
+<li>检查数据：每行是什么，缺失与重复意味着什么？</li>
+<li>安全取数：保留原始表，验证多表关系。</li>
+<li>分析与画图：先有汇总表，再有图，不反过来挑好看的数字。</li>
+<li>写结论与限制：区分观察、解释假设与尚未执行的行动。</li>
+<li>复现与交付：报告、汇总表、运行路径和检查记录一起交。</li>
+</ol></div>
+<h2 id="第一步把看一看销售改成具体问题">第一步：把“看一看销售”改成具体问题</h2>
+<p>如果接到一句“分析全年销售”，不要马上开画饼图。先把问题拆成下面的清单，每个问题都有可计算的输出。问题不必复杂，但必须能被现有数据支持。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>业务问题</th>
+<th>指标或表</th>
+<th>图与报告位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全年规模怎样？</td>
+<td>已完成金额、订单数、购买人数、客单价</td>
+<td>开头的指标卡</td>
+</tr>
+<tr>
+<td>哪些月份突出？</td>
+<td>月金额、订单数、客单价；可看环比</td>
+<td>月度折线</td>
+</tr>
+<tr>
+<td>各平台退款是否不同？</td>
+<td>全年订单数、退款订单数、订单退款率</td>
+<td>平台柱状图</td>
+</tr>
+<tr>
+<td>哪些品类贡献最多？</td>
+<td>品类已完成金额及份额</td>
+<td>降序横向条形图</td>
+</tr>
+<tr>
+<td>目标完成了吗？</td>
+<td>月实际与月目标、差额、达成率</td>
+<td>月目标对照表</td>
+</tr>
+<tr>
+<td>有多少购买客户复购？</td>
+<td>窗口内至少两笔已完成订单的客户占比</td>
+<td>报告补充指标</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>现有表没有曝光、访问、广告费用、库存、退款原因或上一年订单。因此“哪个渠道转化率最高”“投入多少广告赚回多少”“比2024增长多少”“促销是否带来新增购买”都不在本次能直接回答的问题内。敢于写“暂时不能回答”不是能力差，而是知道证据边界。你仍然可以列补数需求，但不能把需求写成已经完成的分析。</p>
+<h2 id="第二步写一页指标口径卡">第二步：写一页指标口径卡</h2>
+<p>订单全集 <code>data/shop/orders.csv</code> 当前为 <strong>15115行×11列</strong>，覆盖2025年1月1日至12月31日；不是Excel的3000行演示样本。每行一个订单，而且本数据每个订单只有一种商品；<code>quantity=3</code> 表示这一订单购买该商品三件，不是三笔订单。多人复购时，同一个 <code>customer_id</code> 会出现多次，这是正常交易，不是重复数据。</p>
+<div class="cards"><div class="card"><p class="card-title">一笔订单与一件商品</p><p>订单数用唯一 <code>order_id</code>，件数用 <code>quantity</code> 求和。客单价是金额/订单数；每件平均实付价格才是金额/件数。本数据恰好一单一种商品，但一单仍可多件。</p></div>
+<div class="card"><p class="card-title">已退款与退款金额</p><p>已退款订单视为全额退款。其 <code>pay_amount</code> 仍记录原支付，不会变成0；把全部行直接相加会把已退的钱算进去。没有退款时间，不能做财务月度现金流。</p></div>
+<div class="card"><p class="card-title">购买客户与注册客户</p><p>客户表有3000名注册客户；2025有已完成订单的购买客户是2427人。退款客户不自动算购买客户，注册更不等于购买。</p></div>
+<div class="card"><p class="card-title">估算毛利与净利润</p><p>商品成本是静态每件成本。已完成金额减数量乘成本，得到商品毛利估算；平台费、运费、广告、人工、税费均不在表内，绝非净利润。</p></div></div>
+<p>正式口径如下。报告中可以使用容易读懂的中文，代码里用短变量名，但要在第一次出现时解释。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>本项目定义</th>
+<th>常见误算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间窗口</td>
+<td>下单时间≥2025-01-01且&lt;2026-01-01</td>
+<td>只拿Excel前3000行当全年</td>
+</tr>
+<tr>
+<td>已完成净销售额 <code>revenue</code></td>
+<td><code>status=='已完成'</code> 的 <code>pay_amount</code> 之和</td>
+<td>所有状态直接求和</td>
+</tr>
+<tr>
+<td>全状态原支付GMV</td>
+<td>已完成+已退款的原支付之和</td>
+<td>只写GMV不写状态口径</td>
+</tr>
+<tr>
+<td>已完成订单数</td>
+<td>已完成订单的唯一 <code>order_id</code> 数</td>
+<td>件数求和当订单数</td>
+</tr>
+<tr>
+<td>购买人数</td>
+<td>已完成订单的 <code>customer_id.nunique()</code></td>
+<td>客户表总行数</td>
+</tr>
+<tr>
+<td>客单价 AOV</td>
+<td>已完成金额/已完成订单数</td>
+<td>单价列的平均值</td>
+</tr>
+<tr>
+<td>订单退款率</td>
+<td>已退款订单数/全年全部订单数</td>
+<td>退款额/金额，或仅在已完成表统计</td>
+</tr>
+<tr>
+<td>窗口复购率</td>
+<td>2025至少2笔已完成订单的客户/2025购买客户</td>
+<td>除以3000注册客户或称终身忠诚</td>
+</tr>
+<tr>
+<td>目标达成率</td>
+<td>已完成金额/同期间 <code>target_gmv</code></td>
+<td>不按月份对齐，或先平均月百分比</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout warn"><p class="callout-title">名称必须有边界</p><p>“已完成净销售额”只是本练习按最终订单状态扣除全额退款的业务统计名，不是财务确认收入，也不是到账资金或净利润。若使用“GMV”，必须写明是全状态原支付GMV还是已完成口径。目标表字段虽然叫 <code>target_gmv</code>，本项目约定它与已完成金额比较；目标本身由模拟生成器构造，不是独立真实预算。</p></div>
+<h2 id="第三步读表并保留原样">第三步：读表并保留原样</h2>
+<p>先在Notebook运行下面的初始化。不要在终端粘贴Python，也不要把路径改成网页下载地址。运行目录按课程约定为 <code>notebooks/</code> 或 <code>solutions/</code>，因此数据路径以 <code>../data</code> 开头。路径出错先回到<a href="../lessons/0-2-computer-basics.html">文件与路径</a>，不要随意给系统加管理员权限。</p>
+<pre class="highlight"><code class="language-python">import sys
+sys.path.insert(0, "..")
+from dacheck import check, hint, setup_chinese_font
+import pandas as pd
+from pathlib import Path
+
+DATA = Path("../data/shop")
+orders_raw = pd.read_csv(DATA / "orders.csv", encoding="utf-8-sig")
+products = pd.read_csv(DATA / "products.csv", encoding="utf-8-sig")
+customers = pd.read_csv(DATA / "customers.csv", encoding="utf-8-sig")
+targets = pd.read_csv(DATA / "monthly_targets.csv", encoding="utf-8-sig")
+orders = orders_raw.copy()
+orders["order_time"] = pd.to_datetime(orders["order_time"], errors="raise")
+print(orders.shape, products.shape, customers.shape, targets.shape)</code></pre>
+<pre class="highlight"><code class="language-output">(15115, 11) (33, 6) (3000, 7) (12, 2)</code></pre>
+<p><code>copy()</code> 的作用是留下未经修改的原始材料。不要直接用脏数据教学样本替代完整订单：<code>orders_dirty.csv</code> 是2000笔抽样订单加60行人为重复，并混入文本金额、别名、缺失与异常；它服务<a href="../lessons/3-1-clean-missing-duplicates.html">清洗课</a>，不是全年全集。会清洗和用错样本是两回事，干净的2060行也不可能自动恢复15115行完整订单。</p>
+<h2 id="第四步检查数据不机械地删行">第四步：检查数据，不机械地删行</h2>
+<p>检查从“业务前提”出发：订单主键是否唯一、关键字段有无缺失、日期是否都在2025年、状态是否只有两类、数量是否正整数、折扣是否0～1、金额是否符合公式、商品与客户是否能关联。评分缺失意味着未评价，不是差评；项目不使用评分计算销售，所以不能因为评分空就删订单。当前订单评分缺失6969行，误删会大幅改变销售统计。</p>
+<pre class="highlight"><code class="language-python">import numpy as np
+assert orders["order_id"].is_unique
+assert products["product_id"].is_unique
+assert customers["customer_id"].is_unique
+assert targets["month"].is_unique
+assert orders[["order_id", "order_time", "product_id", "customer_id",
+               "quantity", "pay_amount", "status"]].notna().all().all()
+assert set(orders["status"]) == {"已完成", "已退款"}
+assert orders["quantity"].gt(0).all()
+assert orders["quantity"].mod(1).eq(0).all()
+assert orders["discount"].between(0, 1).all()
+assert orders["order_time"].between("2025-01-01", "2026-01-01", inclusive="left").all()
+expected_pay = (orders["unit_price"] * orders["quantity"] * (1 - orders["discount"])).round(2)
+assert np.isclose(orders["pay_amount"], expected_pay, atol=0.01, rtol=0).all()</code></pre>
+<p>这里断言是对固定数据前提的验证。断言失败时，先看具体数据与读取方法；不要删掉失败的断言假装通过。Notebook还检查必要字段、评分范围、成本、上架时间和注册时间。质量检查不是“把所有缺失值消灭”，而是确认现有信息是否足以回答问题，并记录哪些字段不能支持进一步分析。</p>
+<div class="callout try"><p class="callout-title">练习一：这个删行决定合理吗？</p><p>有人写 <code>orders.dropna()</code> 后说“现在数据很干净”。你应指出什么？</p>
+<details class="fold"><summary>参考答案</summary><p>默认按所有列删空值，会删掉未评价订单。评分不影响交易是否存在，删除它们会改变总体。应单独报告评分缺失，不在本项目据此删除订单。关键字段若缺失则停下来核实，不自动填0。</p></details></div>
+<h2 id="第五步多表关联一定要验证">第五步：多表关联一定要验证</h2>
+<p>订单表中 <code>product_id</code> 指向商品表，<code>customer_id</code> 指向客户表。一个商品或客户可以对应很多订单，所以是“订单多、右表一”。左连接保留订单，<code>many_to_one</code> 限制右表键唯一，匹配标记让你看到找不到的商品。即使行数相同，也要检查订单集合与唯一性：一个订单丢了，另一个重复了，行数仍可能一样。</p>
+<pre class="highlight"><code class="language-python">joined = orders.merge(products, on="product_id", how="left",
+                      validate="many_to_one", indicator="product_match")
+assert joined["product_match"].eq("both").all()
+joined = joined.merge(customers, on="customer_id", how="left",
+                      validate="many_to_one", indicator="customer_match")
+assert joined["customer_match"].eq("both").all()
+assert len(joined) == len(orders)
+assert joined["order_id"].is_unique
+assert set(joined["order_id"]) == set(orders["order_id"])
+joined = joined.drop(columns=["product_match", "customer_match"])
+completed = joined.loc[joined["status"].eq("已完成")].copy()
+completed["month"] = completed["order_time"].dt.strftime("%Y-%m")</code></pre>
+<p>如果商品表某个商品重复两行，普通连接会把对应订单复制；金额求和看起来上升，实际是连接制造了增长。若用内连接，缺少匹配的订单会被悄悄删掉。所以“成功运行”和“统计正确”并不等价。回到<a href="../lessons/2-4-pandas-merge-pivot.html">合并表格</a>查看小样例，再在练习本完成 <strong>P-1.7</strong>，交订单号、商品名称、品类、城市四列。检查函数会核对完整订单是否保留，但代码中的关系验证仍需要你自己写。</p>
+<h2 id="第六步做全年指标再相互对账">第六步：做全年指标，再相互对账</h2>
+<pre class="highlight"><code class="language-python">revenue = completed["pay_amount"].sum()
+refunds = orders.loc[orders["status"].eq("已退款")]
+print(f"已完成净销售额：{revenue:,.2f}元")
+print(f"购买人数：{completed['customer_id'].nunique()}人")
+print(f"客单价：{revenue / len(completed):.2f}元/单")
+print(f"订单退款率：{len(refunds) / len(orders):.2%}")</code></pre>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">当前随包数据结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全年订单</td>
+<td style="text-align: right;">15115笔</td>
+</tr>
+<tr>
+<td>已完成订单</td>
+<td style="text-align: right;">13996笔</td>
+</tr>
+<tr>
+<td>已退款订单</td>
+<td style="text-align: right;">1119笔</td>
+</tr>
+<tr>
+<td>全状态原支付GMV</td>
+<td style="text-align: right;">1928401.00元</td>
+</tr>
+<tr>
+<td>已完成净销售额</td>
+<td style="text-align: right;">1784371.10元</td>
+</tr>
+<tr>
+<td>已退款原支付</td>
+<td style="text-align: right;">144029.90元</td>
+</tr>
+<tr>
+<td>购买人数</td>
+<td style="text-align: right;">2427人</td>
+</tr>
+<tr>
+<td>客单价</td>
+<td style="text-align: right;">127.49元/单</td>
+</tr>
+<tr>
+<td>订单退款率</td>
+<td style="text-align: right;">7.40%</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>第一条对账：13996+1119=15115。第二条：1784371.10+144029.90=1928401.00。第三条：后面所有月份金额与所有品类金额分别求和，都应等于已完成金额。对账不能证明所有业务定义正确，但能发现漏筛选、重复连接和误用样本等常见错误。练习 <strong>P-1.1</strong> 交六键字典，退款率交小数0.074032…而不是字符串“7.40%”；展示格式与计算值分开。</p>
+<h2 id="第七步月度趋势先表后图">第七步：月度趋势，先表后图</h2>
+<pre class="highlight"><code class="language-python">monthly = completed.groupby("month", as_index=False).agg(
+    revenue=("pay_amount", "sum"), orders=("order_id", "nunique"))
+monthly["aov"] = monthly["revenue"] / monthly["orders"]
+monthly["mom"] = monthly["revenue"].pct_change()</code></pre>
+<p><code>month</code> 使用有序的 <code>2025-01</code> 字符串而不是“1月、10月、2月”混排。环比是与上个月相比，第一月没有上个月，结果为缺失；不要填成0再解释“1月零增长”。没有2024数据，所以本项目不能计算同比。练习 <strong>P-1.2</strong> 只交 <code>month, revenue, orders</code> 三列，按月份升序。</p>
+<pre class="highlight"><code class="language-python">import matplotlib.pyplot as plt
+setup_chinese_font()
+fig, ax = plt.subplots(figsize=(10, 4))
+ax.plot(monthly["month"], monthly["revenue"] / 10000, marker="o")
+ax.set(title="2025月度已完成净销售额（模拟数据）", xlabel="下单月份", ylabel="金额（万元）")
+ax.tick_params(axis="x", rotation=45)
+ax.grid(axis="y", alpha=0.25)
+fig.tight_layout()
+plt.show()</code></pre>
+<p>图应告诉读者时间、口径与单位。11月229054元最高，2月95747.40元最低，12月202855.40元次高。但“11月高”只是观察，不自动推出“促销有效”。模拟生成器预设了增长、季节、活动和商品上架规则，图形出现规律正是生成规则的结果；不是你发现了真实世界的因果效应。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">错误做法</p><p>双十一活动让公司销售提升，证明应该加倍投放。</p></div>
+<div class="compare-col good"><p class="compare-title">正确做法</p><p>模拟订单中11月已完成金额为229054元、全年月度最高。生成器设置了季节波动，且缺少流量、费用与对照组，因此不能证明活动增量。真实场景需补活动记录和可比对照后验证投放建议。</p></div></div>
+<h2 id="第八步平台退款要用没有筛掉退款的表">第八步：平台退款，要用没有筛掉退款的表</h2>
+<pre class="highlight"><code class="language-python">platform_stats = orders.assign(is_refund=orders["status"].eq("已退款")).groupby(
+    "platform", as_index=False).agg(all_orders=("order_id", "nunique"), refunds=("is_refund", "sum"))
+platform_stats["refund_rate"] = platform_stats["refunds"] / platform_stats["all_orders"]</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">全年订单</th>
+<th style="text-align: right;">退款订单</th>
+<th style="text-align: right;">订单退款率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微信小程序</td>
+<td style="text-align: right;">4497</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">4.40%</td>
+</tr>
+<tr>
+<td>抖音小店</td>
+<td style="text-align: right;">3732</td>
+<td style="text-align: right;">477</td>
+<td style="text-align: right;">12.78%</td>
+</tr>
+<tr>
+<td>淘宝</td>
+<td style="text-align: right;">6886</td>
+<td style="text-align: right;">444</td>
+<td style="text-align: right;">6.45%</td>
+</tr>
+</tbody>
+</table></div>
+<p>完成 <strong>P-1.3</strong>，按平台名升序交四列。图表使用柱状图，纵轴为百分比且从0开始。本例差异受到模拟器中平台退款概率设定的影响，不能宣传某个真实平台“质量差”。在真实工作中还需比较品类、促销、用户群及退款原因，必要时用更进一步的方法；本课只做描述统计，不声称完成显著性检验。</p>
+<div class="quiz"><p class="quiz-q">只保留已完成订单后再统计退款率，会出现什么问题？</p><ul class="quiz-options"><li><button type="button" data-correct="0">因为表更干净，所以更准确</button></li><li><button type="button" data-correct="1">退款行已经删掉，分子会被人为变成0</button></li><li><button type="button" data-correct="0">pandas会自动帮你找回退款订单</button></li></ul><div class="quiz-explain"><p>收入统计与退款统计需要不同的筛选口径。可以保留全年全集，再分别构造各分析表。</p></div></div>
+<h2 id="第九步品类贡献与成本边界">第九步：品类贡献与成本边界</h2>
+<pre class="highlight"><code class="language-python">category_stats = completed.groupby("category", as_index=False).agg(revenue=("pay_amount", "sum"))
+category_stats["share"] = category_stats["revenue"] / category_stats["revenue"].sum()
+category_stats = category_stats.sort_values("revenue", ascending=False)
+completed["estimated_goods_cost"] = completed["quantity"] * completed["cost"]
+completed["estimated_gross_profit"] = completed["pay_amount"] - completed["estimated_goods_cost"]</code></pre>
+<p>完成 <strong>P-1.4</strong>，交 <code>category, revenue, share</code>，按金额降序。香薰534303.60元、份额29.94%，书籍300468.70元、16.84%，帆布包299920.90元、16.81%。这三类合计约63.59%，可以作为复核贡献结构的起点，而不是仅凭收入就把其他品类淘汰。收入份额受价格、销量和时间共同影响，日历9月起上架，全年金额不能直接解释成需求弱。</p>
+<p>横向条形图适合长中文标签；收入降序后将纵轴反转，最大项放在顶部。份额加起来因四舍五入可能不是恰好100%，但未舍入计算之和应为1。成本估算总计849059.30元，商品毛利估算935311.80元，估算毛利率52.42%。成本不按折扣打折，售价折扣影响收入；成本表只是静态估计。没有运费、退货损耗与平台费等支出，不能说店铺“净赚93.53万元”。</p>
+<h2 id="第十步月目标按键对齐">第十步：月目标按键对齐</h2>
+<pre class="highlight"><code class="language-python">expected_months = [f"2025-{m:02d}" for m in range(1, 13)]
+assert sorted(targets["month"]) == expected_months
+assert monthly["month"].tolist() == expected_months
+performance = monthly[["month", "revenue"]].merge(
+    targets, on="month", how="left", validate="one_to_one", indicator=True)
+assert performance["_merge"].eq("both").all()
+performance = performance.drop(columns="_merge")
+performance["achievement"] = performance["revenue"] / performance["target_gmv"]
+performance["gap"] = performance["revenue"] - performance["target_gmv"]</code></pre>
+<p>不按表格第几行直接相除，因为排序和缺月会让行位置不同。两个表都转成同样的年月字符串，通过 <code>month</code> 连接，验证唯一性、12个月齐全和无未匹配。完成 <strong>P-1.5</strong>，只交月份、实际金额、目标金额与达成率四列。</p>
+<p>全年目标1896000元，全年实际1784371.10元，全年达成率94.11%，差额为-111628.90元。达标月份是5、6、11、12月，共4个月。全年达成率是总实际/总目标，不是12个月达成率的简单平均。模拟目标与实际数据存在生成关系，因此不能拿“达标4个月”评价真实管理者水平；它只是练习口径、对齐和加权汇总的材料。</p>
+<h2 id="第十一步窗口复购率说出观察偏差">第十一步：窗口复购率，说出观察偏差</h2>
+<pre class="highlight"><code class="language-python">purchase_counts = completed.groupby("customer_id")["order_id"].nunique()
+repeat_buyers = purchase_counts.ge(2).sum()
+repeat_rate = repeat_buyers / len(purchase_counts)</code></pre>
+<p>1881/2427=77.50%。完成 <strong>P-1.6</strong>，交0～1小数。这个比率仅表示2025观察窗口内购买客户中至少两笔已完成订单的比例，不是终身复购率，不是所有3000注册客户的转化率，更不是每月留存率。年末才首次下单的人可复购的时间更短，不能仅凭一次年度汇总就说他们“不忠诚”。同期群与留存课程属于下一批，先记下这种比较风险，别编造本课没有做出的分析。</p>
+<h2 id="第十二步写报告保留别人重做的路径">第十二步：写报告，保留别人重做的路径</h2>
+<p>报告模板在 <code>report/analysis-report-template.md</code>，当前实算参考报告在 <code>report/project-reference-report.md</code>。Markdown可以用文本编辑器阅读；网页是学习入口，报告是交付材料，不需要强行转换成Word。若自己美化报告或让GPT/Kimi调整外观，请保留表头、数据来源、模拟声明、图注、口径和限制；好看的排版不能替代核验。</p>
+<p>报告结构建议为：一句话问题→数据与范围→方法与口径→质量检查→结果表与图→3～5项发现→限制→建议和待补数据→复现说明。每项发现至少有一个实算数字和证据位置，建议要写成可检验步骤。例如先按“退款原因×品类×平台”补表，再决定是否优化商品介绍，而不是直接承诺“退款率会下降5%”。未执行的建议用“建议、待验证”，不写成“已实现”。</p>
+<p>导出时别覆盖原始文件。Notebook用 <code>tempfile.TemporaryDirectory()</code> 演示CSV和Excel汇总表的生成及回读；目录关闭后会删除。正式作品请另建输出目录，确认不在 <code>data/</code> 下，使用新的文件名。静态图可保存PNG，交互图若采用Plotly应把脚本内嵌，不能依赖CDN；具体方法见<a href="../lessons/4-3-viz-plotly.html">交互图课</a>。</p>
+<div class="callout try"><p class="callout-title">最后四个独立口头练习</p><ol>
+<li>金额对账正确就一定能证明促销有效吗？</li>
+<li>将 <code>pay_amount.mean()</code> 直接当客单价是否总正确？</li>
+<li>目标表漏掉一个月时该继续报告年度达成率吗？</li>
+<li>把本项目写进简历，什么表达真实且有价值？</li>
+</ol>
+<details class="fold"><summary>参考答案</summary><ol>
+<li>不能。对账验证统计一致性，因果还需研究设计和额外数据。</li>
+<li>先筛已完成且一行一单时等价；全状态直接平均会含退款，真实多商品订单表还可能按行而非按单加权。本项目明确使用金额/唯一订单数。</li>
+<li>应停下来核实缺月和预算口径，不能静默删月或填0再算。</li>
+<li>“独立完成模拟文创店年度分析作品，处理15115笔订单，验证多表关系，制作月趋势及平台退款分析并交付可复现报告。”不冒称服务真实公司或创造真实增长。</li>
+</ol></details></div>
+<h2 id="常见错误与纠正路线">常见错误与纠正路线</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>首先检查</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金额接近1928401而非1784371.10</td>
+<td>是否筛已完成</td>
+<td>对照口径卡，保留两个指标但名称区分</td>
+</tr>
+<tr>
+<td>年度只有3000笔</td>
+<td>是否读取Excel样本</td>
+<td>换为完整 <code>orders.csv</code></td>
+</tr>
+<tr>
+<td>合并后金额增加</td>
+<td>商品/客户键是否重复</td>
+<td>使用关系验证与匹配检查</td>
+</tr>
+<tr>
+<td>平台退款率全为0</td>
+<td>是否在completed表统计</td>
+<td>回到全年orders构造退款标记</td>
+</tr>
+<tr>
+<td>复购率得到62.70%左右</td>
+<td>是否除以3000</td>
+<td>分母改为有已完成购买的2427人</td>
+</tr>
+<tr>
+<td>月目标对应不上</td>
+<td>month类型与月份齐全性</td>
+<td>统一YYYY-MM，按键合并</td>
+</tr>
+<tr>
+<td>中文显示方框</td>
+<td>字体未找到</td>
+<td>调用字体助手并看提示，查<a href="../lessons/A-2-common-errors.html">报错表</a></td>
+</tr>
+<tr>
+<td><code>...</code>参与计算报错</td>
+<td>后续代码依赖空白答案</td>
+<td>按原练习本运行；独立示例不使用答案变量</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职中的价值</p><p>作品的说服力来自“我为什么这样定义、怎样避免误算、哪些事尚不能下结论”，而不只是会调用库。面试时可挑一个错误口径讲清：例如连接重复制造虚假收入，或复购分母误用注册客户。承认模拟来源，展示可复现文件与质量记录，是专业而诚实的表达。</p></div>
+<div class="checklist"><p class="checklist-title">项目验收</p><ul><li><label><input type="checkbox" data-id="P-1:19:0"><span class="cl-text">能解释每行是一单一种商品，区分笔数与件数。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:1"><span class="cl-text">完整订单15115笔，连接后仍15115个唯一订单且全部匹配。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:2"><span class="cl-text">已完成13996笔，购买2427人，已完成净销售额1784371.10元。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:3"><span class="cl-text">月份和品类金额分别能对账到全年金额。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:4"><span class="cl-text">七题都通过，学生版未作答运行全部也不会因答案变量崩溃。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:5"><span class="cl-text">目标按month对齐，全年达成率用总实际/总目标。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:6"><span class="cl-text">图有模拟声明、时间、口径、单位，报告至少三项发现。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:7"><span class="cl-text">报告写清静态成本、无上年/流量/因果证据等限制。</span></label></li><li><label><input type="checkbox" data-id="P-1:19:8"><span class="cl-text">建议尚未执行，简历不虚构真实业绩，原始数据未覆盖。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/P-1_project_ecommerce.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/P-1_project_ecommerce.ipynb" download>学生练习本</a> · <a href="../../solutions/P-1_project_ecommerce.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="4-3-viz-plotly.html"><small>← 上一课</small>4-3 plotly 交互图表与图表美化</a><a class="next" href="A-1-troubleshoot.html"><small>下一课 →</small>A-1 环境故障排查向导</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#你要交付什么而不只是学什么">你要交付什么，而不只是学什么</a></li><li><a href="#第一步把看一看销售改成具体问题">第一步：把“看一看销售”改成具体问题</a></li><li><a href="#第二步写一页指标口径卡">第二步：写一页指标口径卡</a></li><li><a href="#第三步读表并保留原样">第三步：读表并保留原样</a></li><li><a href="#第四步检查数据不机械地删行">第四步：检查数据，不机械地删行</a></li><li><a href="#第五步多表关联一定要验证">第五步：多表关联一定要验证</a></li><li><a href="#第六步做全年指标再相互对账">第六步：做全年指标，再相互对账</a></li><li><a href="#第七步月度趋势先表后图">第七步：月度趋势，先表后图</a></li><li><a href="#第八步平台退款要用没有筛掉退款的表">第八步：平台退款，要用没有筛掉退款的表</a></li><li><a href="#第九步品类贡献与成本边界">第九步：品类贡献与成本边界</a></li><li><a href="#第十步月目标按键对齐">第十步：月目标按键对齐</a></li><li><a href="#第十一步窗口复购率说出观察偏差">第十一步：窗口复购率，说出观察偏差</a></li><li><a href="#第十二步写报告保留别人重做的路径">第十二步：写报告，保留别人重做的路径</a></li><li><a href="#常见错误与纠正路线">常见错误与纠正路线</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

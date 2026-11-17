@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-1 环境故障排查向导 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="A-1" style="--stage-color: #64748b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1" class="active"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 A · 工具箱</div><h1><span class="lid">A-1</span>环境故障排查向导</h1><p class="lesson-summary">从症状分流，按窗口、路径、解释器、依赖、内核的顺序定位，不用重装作为第一反应。</p><ul class="lesson-meta"><li>约 10 分钟</li><li>难度 ★☆☆</li><li>前置：保留完整课程目录；能找到实际错误所在窗口。可在安装未成功时使用。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">用完这张向导，你能做什么</p><ul>
+<li>根据出错位置选择第一条检查，不把所有异常都叫“Python 坏了”。</li>
+<li>收集 Prompt、解释器、pip、内核和目录证据，知道何时停止继续安装。</li>
+<li>区分自己可逆的局部修正与需要单位支持的权限/网络问题。</li>
+<li>准备一份脱敏而可复现的提问。</li>
+</ul></div>
+<h2 id="先记录四件事再选症状">先记录四件事，再选症状</h2>
+<ol>
+<li><strong>在哪个窗口</strong>：普通 CMD、Anaconda Prompt、浏览器、Notebook Python 格？</li>
+<li><strong>刚执行的命令/代码</strong>：不要只说“运行一下”。</li>
+<li><strong>真实路径与环境</strong>：Prompt 当前目录、sys.executable、Notebook 内核名。</li>
+<li><strong>完整错误</strong>：终端从出错行附近到末尾；Notebook 至少保留相关格子与最后一行类型。</li>
+</ol>
+<div class="widget" data-widget="env-doctor"><p class="widget-title">环境故障分流</p><div class="widget-body"></div></div>
+<p>网页只提供症状分流，不读取你电脑，也不自动执行、安装或修复。不要把交互的建议当成检测通过证明。</p>
+<div class="flow"><ul>
+<li>先窗口：课程命令是否在 Anaconda Prompt？</li>
+<li>再路径：ZIP 是否完整提取？根目录是否真的有 requirements.txt？</li>
+<li>再 Python：sys.executable 是否属于 da-course？</li>
+<li>再包：python -m pip 是否绑定当前解释器？</li>
+<li>最后内核与状态：Notebook 是否同一解释器，是否从第一格运行？</li>
+</ul></div>
+<h2 id="1-找不到-conda或点-python-弹出应用商店">1. 找不到 conda，或点 Python 弹出应用商店</h2>
+<h3 id="普通-cmd-找不到-conda">普通 CMD 找不到 conda</h3>
+<p>这是可能正常的：本课程安装时不永久添加 PATH。先关闭普通 CMD，从 Windows 开始菜单搜索 <strong>Anaconda Prompt</strong> 并打开普通权限窗口，然后：</p>
+<pre class="highlight"><code class="language-terminal">conda --version
+conda info --envs</code></pre>
+<p>有版本和环境列表就回<a href="../lessons/0-4-install-anaconda.html">安装课第 5 节</a>，不编辑系统 PATH。Prompt 里仍找不到时，记录窗口标题与实际安装位置。</p>
+<h3 id="开始菜单也没有-prompt">开始菜单也没有 Prompt</h3>
+<p>先在设置的“已安装的应用”与你记录的安装目录确认是否真的完成安装。快捷方式可能没创建，不能仅凭没快捷方式断言软件缺失。若你确认这是完整 Anaconda 安装、实际目录中<strong>确有</strong> <code>Scripts\activate.bat</code>，可在普通命令提示符（CMD）运行：</p>
+<pre class="highlight"><code class="language-cmd">call "D:\Anaconda3\Scripts\activate.bat"
+conda --version</code></pre>
+<p>第一条路径<strong>必须换成真实安装路径</strong>，且先在资源管理器确认文件存在；不是让你在 D 盘自建空脚本。它只激活当前 CMD 会话，不永久改 PATH。若文件缺失、来源不明或激活仍失败，停止复制命令，保留安装错误并按官方安装/单位支持流程处理，不卸载所有旧环境。</p>
+<h3 id="python-打开商店或-where-python-里有-windowsapps"><code>python</code> 打开商店或 where python 里有 WindowsApps</h3>
+<p>WindowsApps 中可能是应用执行别名，不是课程解释器。关闭商店，回 Anaconda Prompt 激活，再看实际执行者：</p>
+<pre class="highlight"><code class="language-terminal">conda activate da-course
+where python
+python -c "import sys; print(sys.executable)"</code></pre>
+<p><code>where</code> 可以多行，<strong>真实执行路径</strong>应在 da-course。设置 → 应用 → 高级应用设置 → 应用执行别名可用于观察；本课不要求先禁用所有别名，更不删除 WindowsApps 文件夹。若 Prompt 激活正确无需修改系统别名。</p>
+<h2 id="2-环境没激活已有同名环境误把课程包装进-base">2. 环境没激活、已有同名环境、误把课程包装进 base</h2>
+<p>在 Anaconda Prompt 运行：</p>
+<pre class="highlight"><code class="language-terminal">conda info --envs</code></pre>
+<p><code>*</code> 是当前环境。只有 base 时，需要按安装课创建 da-course；已经有 da-course 时只激活，不重复 create。创建时显示“prefix already exists”或同名冲突，先列表与核对，不能删除未知环境。</p>
+<pre class="highlight"><code class="language-terminal">conda activate da-course
+python --version
+python -c "import sys; print(sys.executable); print(sys.prefix)"</code></pre>
+<p>应为 Python 3.12，路径指向该环境。Python 补丁号不必和课文示例完全相同。若已有 da-course 是其他项目在用、版本不是 3.12，先备份/确认用途并向维护者求助，不以新课覆盖它。</p>
+<p><strong>误装进 base 的最小纠正</strong>：先停止继续改 base，不批量卸载或清理。保留其他项目，确认/创建课程环境，再激活 da-course，在真实根目录用 <code>python -m pip install -r requirements.txt</code> 安装。以后所有练习都用它。base 若已受依赖冲突影响，再依据真实日志制定修复方案，不把“删掉 base”当教学步骤。</p>
+<h2 id="3-pip-模块缺失或包明明安装却找不到">3. pip 模块缺失，或包明明安装却找不到</h2>
+<p>先核对解释器，不先装包：</p>
+<pre class="highlight"><code class="language-terminal">python -c "import sys; print(sys.executable)"
+python -m pip --version</code></pre>
+<p>如果是 da-course 且出现 <code>No module named pip</code>，在 Anaconda Prompt 运行：</p>
+<pre class="highlight"><code class="language-terminal">conda install -n da-course pip
+conda activate da-course
+python -m pip --version</code></pre>
+<p>这里 conda 常规确认可根据实际方案操作；出现服务条款须阅读按用途确认。没有 da-course 时先创建，不把 <code>-n</code> 换成 base 凑合。<code>conda</code> 本身也不能运行则回第 1 节，不下载不明 pip 引导脚本。</p>
+<p>确认 pip 路径属于课程环境后，在实际根目录安装清单。不要用裸 <code>pip</code>，不加 pip 的 <code>--user</code>，不把“Requirement already satisfied”当内核必定正确。若包元数据存在但 <code>import</code> 报 DLL、二进制或依赖错误，保存具体错误去<a href="../lessons/A-2-common-errors.html">A-2</a>，不强行升级/降级所有包。</p>
+<h3 id="notebook-缺包但-prompt-正常">Notebook 缺包但 Prompt 正常</h3>
+<p>Notebook Python 格运行：</p>
+<pre class="highlight"><code class="language-python">import sys
+print(sys.executable)</code></pre>
+<p>与 Prompt 实际路径比。若不一致，选择内核 <strong>Python (da-course)</strong>，重启并从第一格运行。没有该内核时，从正确 Prompt 注册：</p>
+<pre class="highlight"><code class="language-terminal">python -m ipykernel install --user --name da-course --display-name "Python (da-course)"</code></pre>
+<p>这个 <code>--user</code> 注册用户内核描述，不是 pip 用户级安装。已注册同名时先确认当前路径正确，不覆盖其他用途内核。改内核后不保证旧内存变量仍在，必须从头运行。</p>
+<h2 id="4-路径找不到requirements-缺失jupyter-打开错误位置">4. 路径找不到、requirements 缺失、Jupyter 打开错误位置</h2>
+<p>按 <code>Win+E</code> 进入完整解压的普通目录，点地址栏复制。根目录应同时有 requirements.txt、data、notebooks、dacheck、tools、site。ZIP 内可以预览文件，但不能当正常工作目录；只复制 Notebook 也不足。</p>
+<p>在 Prompt：</p>
+<pre class="highlight"><code class="language-terminal">cd /d "D:\da-course\data-analysis-tutorial"
+dir</code></pre>
+<p>路径换成自己的，双引号保留。缺 D 盘不是故障；文件找不到先看扩展名是否多了 <code>.txt</code>、文件夹是否多套一层。不要修改原数据扩展名来“解决”读取错误。</p>
+<p>Jupyter 左侧显示桌面/Downloads/其他项目，说明服务器从那里启动了。保存当前文件，正常停止服务器，再从正确根目录运行 <code>python -m jupyter lab</code>。Notebook 内默认 cwd 在 notebooks/，此时 <code>../data/books.csv</code> 正常；不要把 Notebook cwd 强求为根目录。</p>
+<h2 id="5-浏览器没打开端口占用连接失败">5. 浏览器没打开、端口占用、连接失败</h2>
+<p>看 Jupyter <strong>服务器窗口日志</strong>。浏览器未自动启动时，复制日志给出的本机地址与当前 token 自己使用；不从教材猜端口/token，不公开分享。只关浏览器可能服务器还在；正常恢复已有服务器比再开一堆更好。</p>
+<p>若日志表示常用端口被占用，Jupyter 可能自动选择下一个可用端口，以<strong>日志实际地址</strong>为准。确认确需另起当前课程服务器时，可以指定另一个端口：</p>
+<pre class="highlight"><code class="language-terminal">python -m jupyter lab --port=8890</code></pre>
+<p>8890 只是端口示例，也可能被占用。不要杀未知进程、不开放防火墙、不绑定到 <code>0.0.0.0</code>、不关闭 token 校验；本课只需本机访问。连接失败时先看服务器是否已停止、当前地址是否旧的、单位浏览器/代理是否拦截本机访问；单位问题先问支持人员。</p>
+<h2 id="6-输出没出现一直星号字体或编码不对">6. 输出没出现、一直星号、字体或编码不对</h2>
+<ul>
+<li>赋值、注释和 import 没输出常是正常的；运行序号变化后用 <code>print(...)</code> 或最后一个表达式查看。</li>
+<li><code>[ ]</code> 仍空：可能只编辑未执行；选中 Code 格后 Shift+Enter。</li>
+<li>文字变成段落而非执行：当前是 Markdown 格，先切为 Code。</li>
+<li><code>[*]</code> 一直不结束：看是否在等 <code>input()</code>，再 Interrupt 当前内核；不要终止所有 Python。</li>
+<li>重启后 NameError：内存清空，按第一格起的顺序运行。</li>
+<li>图中文字是方框或 Glyph 警告：回<a href="../lessons/A-2-common-errors.html">A-2 字体</a>，不屏蔽警告。</li>
+<li>CSV 中文乱码：保留原文件，用已知编码正确读取/导出，见<a href="../lessons/A-2-common-errors.html">A-2 编码</a>，不要随意忽略错误。</li>
+</ul>
+<h2 id="7-网络权限不要为了成功关闭保护">7. 网络/权限：不要为了“成功”关闭保护</h2>
+<p>代理、证书、TLS、连接超时等看<a href="../lessons/A-2-common-errors.html">A-2</a>具体分类。先确认系统时间、官方来源、正常网络与单位 CA/代理规定。<strong>不关闭 SSL 校验，不关杀毒，不长期管理员运行，不发送密码</strong>。无权限写课程目录就用合规可写位置；条款与单位策略不确定时停止，课程不替你接受。</p>
+<h2 id="8-怎样提问才容易得到有效帮助">8. 怎样提问才容易得到有效帮助</h2>
+<div class="window"><div class="window-title">提问模板（文字示意）</div><div class="window-body"><p><strong>目标</strong>：我想在 da-course 中打开 0-5 环境练习本。</p>
+<p><strong>系统</strong>：Windows 11，64 位 x64；不是 ARM。（填真实情况）</p>
+<p><strong>窗口/位置</strong>：Anaconda Prompt，当前目录 <code>[教程根目录，用户名已遮盖]</code>。</p>
+<p><strong>操作</strong>：复制实际运行的命令/相关代码格。</p>
+<p><strong>现象</strong>：期望看到什么、实际看到什么；附错误上下文与末行类型。</p>
+<p><strong>证据</strong>：conda info --envs 星号、sys.executable、python -m pip --version、Notebook 内核/cwd；若有报告附脱敏检查项。</p>
+<p><strong>已尝试</strong>：写具体动作和结果，不写“网上方法都试过”。</p></div></div>
+<p>不要发“无法运行”四个字配整屏看不清的照片；也不用上传全部电脑文件。错误行和路径层级重要，用户名、邮箱、真实业务资料、token、代理密码不需要。</p>
+<div class="callout job"><p class="callout-title">工作里也适用这个顺序</p><p>把问题缩小到“哪个窗口、哪个解释器、哪条命令、哪份数据”，体现可复现与沟通能力，比盲重装更接近分析工作方式。</p></div>
+<h2 id="三个理解检查">三个理解检查</h2>
+<div class="callout try"><p class="callout-title">练习 1：普通 CMD 找不到 conda</p><p>写出第一步，而不是完整重装计划。</p></div>
+<details class="fold"><summary>参考答案</summary><p>从开始菜单打开 Anaconda Prompt，运行 conda --version。因为安装时未永久添加 PATH，普通 CMD 找不到可能正常。</p></details>
+<div class="callout try"><p class="callout-title">练习 2：base 误装之后</p><p>现在知道安装课包时 Prompt 是 base。是否应该批量卸载所有包？</p></div>
+<details class="fold"><summary>参考答案</summary><p>不应该。先停止改 base，保留已有项目，创建/激活正确课程环境再按清单安装。基础环境若真有冲突，留日志另行制定修复方案。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">从别人的截图复制 token</button></li><li><button type="button" data-correct="1">先看自己 Jupyter 日志，使用它实际给出的本机地址</button></li><li><button type="button" data-correct="0">关闭所有 Python 进程并开放防火墙</button></li></ul><div class="quiz-explain"><p>地址与 token 属于当前服务器。不要猜测、公开分享或破坏其他项目进程。</p></div></div>
+<div class="checklist"><p class="checklist-title">排错验收与停止条件</p><ul><li><label><input type="checkbox" data-id="A-1:10:0"><span class="cl-text">我能说出错误发生的窗口与具体命令/格子。</span></label></li><li><label><input type="checkbox" data-id="A-1:10:1"><span class="cl-text">我确认目录完整，解释器属于 da-course，pip 与内核指向正确位置。</span></label></li><li><label><input type="checkbox" data-id="A-1:10:2"><span class="cl-text">我没有删除未知环境、改用户目录、关闭 SSL/杀毒或长期管理员运行。</span></label></li><li><label><input type="checkbox" data-id="A-1:10:3"><span class="cl-text">仍有关键失败、权限/许可未确认或未知二进制错误时，我已停止并准备脱敏提问。</span></label></li></ul></div>
+<p>修正后重跑<a href="../lessons/0-5-env-check.html">环境体检</a>，不要只凭一次命令不报错宣布全部正常。</p></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="P-1-project-ecommerce.html"><small>← 上一课</small>P-1 项目一：线上文创店年度销售分析</a><a class="next" href="A-2-common-errors.html"><small>下一课 →</small>A-2 常见报错速查</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#先记录四件事再选症状">先记录四件事，再选症状</a></li><li><a href="#1-找不到-conda或点-python-弹出应用商店">1. 找不到 conda，或点 Python 弹出应用商店</a><ul><li><a href="#普通-cmd-找不到-conda">普通 CMD 找不到 conda</a></li><li><a href="#开始菜单也没有-prompt">开始菜单也没有 Prompt</a></li><li><a href="#python-打开商店或-where-python-里有-windowsapps">python 打开商店或 where python 里有 WindowsApps</a></li></ul></li><li><a href="#2-环境没激活已有同名环境误把课程包装进-base">2. 环境没激活、已有同名环境、误把课程包装进 base</a></li><li><a href="#3-pip-模块缺失或包明明安装却找不到">3. pip 模块缺失，或包明明安装却找不到</a><ul><li><a href="#notebook-缺包但-prompt-正常">Notebook 缺包但 Prompt 正常</a></li></ul></li><li><a href="#4-路径找不到requirements-缺失jupyter-打开错误位置">4. 路径找不到、requirements 缺失、Jupyter 打开错误位置</a></li><li><a href="#5-浏览器没打开端口占用连接失败">5. 浏览器没打开、端口占用、连接失败</a></li><li><a href="#6-输出没出现一直星号字体或编码不对">6. 输出没出现、一直星号、字体或编码不对</a></li><li><a href="#7-网络权限不要为了成功关闭保护">7. 网络/权限：不要为了“成功”关闭保护</a></li><li><a href="#8-怎样提问才容易得到有效帮助">8. 怎样提问才容易得到有效帮助</a></li><li><a href="#三个理解检查">三个理解检查</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/widgets/env-doctor.js"></script>
+</body>
+</html>

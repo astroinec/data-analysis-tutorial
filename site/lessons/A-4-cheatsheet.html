@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-4 速查表：pandas 与图表 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="A-4" style="--stage-color: #64748b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4" class="active"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 A · 工具箱</div><h1><span class="lid">A-4</span>速查表：pandas 与图表</h1><p class="lesson-summary">用能直接观察输入与输出的小例子，查Python、pandas和三种图表库的够用写法。</p><ul class="lesson-meta"><li>约 10 分钟</li><li>难度 ★☆☆</li><li>前置：至少完成对应课程；速查不能替代第一次学习</li></ul></header><article class="lesson-body"><h2 id="先知道代码在哪运行">先知道代码在哪运行</h2>
+<p>本页 <code>python</code> 块在Notebook里运行。初始化、读取数据和后面的操作需要按顺序执行；查某一行时别忘了前面的变量从哪里来。终端命令与Python分开，环境问题查<a href="../lessons/A-1-troubleshoot.html">排错向导</a>。</p>
+<div class="callout goal"><p class="callout-title">使用目标</p><ul>
+<li>能从一个小输入预测筛选、分组、合并的输出。</li>
+<li>分清Python列表位置、DataFrame行标签、列名和列位置。</li>
+<li>按趋势、类别比较、关系与分布选择图表。</li>
+<li>安全导出到新位置，不改坏原始数据；需要深入时点击原课。</li>
+</ul></div>
+<h2 id="python够用速查">Python够用速查</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>输入代码</th>
+<th>结果/含义</th>
+<th>回到课程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>price = 39; quantity = 2; price * quantity</code></td>
+<td><code>78</code>，变量存值，不是字符串</td>
+<td><a href="../lessons/1-1-python-variables.html">变量</a></td>
+</tr>
+<tr>
+<td><code>'39' + '2'</code></td>
+<td><code>'392'</code>，文本拼接不是加法</td>
+<td><a href="../lessons/1-1-python-variables.html">数据类型</a></td>
+</tr>
+<tr>
+<td><code>int('39') * 2</code></td>
+<td><code>78</code>，能转换的数字文本才可转整数</td>
+<td><a href="../lessons/1-1-python-variables.html">数据类型</a></td>
+</tr>
+<tr>
+<td><code>round(10 / 3, 2)</code></td>
+<td><code>3.33</code>，显示取两位小数；金额最终按业务规则舍入</td>
+<td><a href="../lessons/1-1-python-variables.html">变量</a></td>
+</tr>
+<tr>
+<td><code>f'{0.074:.2%}'</code></td>
+<td><code>'7.40%'</code>，得到展示字符串，不再用于数值运算</td>
+<td><a href="../lessons/1-1-python-variables.html">变量</a></td>
+</tr>
+<tr>
+<td><code>names = ['文具', '书籍']; names[0]</code></td>
+<td><code>'文具'</code>，Python位置从0开始</td>
+<td><a href="../lessons/1-2-python-containers.html">列表</a></td>
+</tr>
+<tr>
+<td><code>len(names)</code></td>
+<td><code>2</code>，元素个数</td>
+<td><a href="../lessons/1-2-python-containers.html">列表</a></td>
+</tr>
+<tr>
+<td><code>kpi = {'orders': 3}; kpi['orders']</code></td>
+<td><code>3</code>，字典按键取值</td>
+<td><a href="../lessons/1-2-python-containers.html">字典</a></td>
+</tr>
+<tr>
+<td><code>39 &gt; 20</code></td>
+<td><code>True</code>，布尔判断</td>
+<td><a href="../lessons/1-3-python-control.html">条件</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>小函数先定义再调用；参数是输入，<code>return</code> 是输出，<code>print</code> 只是显示。</p>
+<pre class="highlight"><code class="language-python">def amount(price, quantity):
+    return price * quantity
+
+print(amount(39, 2))</code></pre>
+<pre class="highlight"><code class="language-output">78</code></pre>
+<p><code>=</code> 是赋值，<code>==</code> 是比较；缩进是代码结构的一部分。循环和函数不是本页新教内容，卡住请回<a href="../lessons/1-3-python-control.html">条件、循环与函数</a>。</p>
+<h2 id="一个统一的小表">一个统一的小表</h2>
+<p>下面所有表格操作都基于这个<strong>独立虚构小样例</strong>，不是项目全集。故意把行索引设为10、20、30，帮你分清行标签和位置。</p>
+<pre class="highlight"><code class="language-python">import sys
+sys.path.insert(0, '..')
+import pandas as pd
+small = pd.DataFrame({
+    'order_id': ['A', 'B', 'C'],
+    'category': ['文具', '书籍', '文具'],
+    'quantity': [2, 1, 3],
+    'pay': [78.0, 58.0, 45.0],
+    'status': ['已完成', '已退款', '已完成'],
+}, index=[10, 20, 30])
+small</code></pre>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: right;">索引（不是数据列）</th>
+<th>order_id</th>
+<th>category</th>
+<th style="text-align: right;">quantity</th>
+<th style="text-align: right;">pay</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10</td>
+<td>A</td>
+<td>文具</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">78.0</td>
+<td>已完成</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>B</td>
+<td>书籍</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">58.0</td>
+<td>已退款</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td>C</td>
+<td>文具</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">45.0</td>
+<td>已完成</td>
+</tr>
+</tbody>
+</table></div></div>
+<h2 id="看结构与读文件">看结构与读文件</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>写法</th>
+<th>本例输出/含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>small.shape</code></td>
+<td><code>(3, 5)</code>，3行5列，不包括左边索引</td>
+</tr>
+<tr>
+<td><code>small.columns.tolist()</code></td>
+<td><code>['order_id', 'category', 'quantity', 'pay', 'status']</code></td>
+</tr>
+<tr>
+<td><code>small.head(2)</code></td>
+<td>前两行，不是随机两行</td>
+</tr>
+<tr>
+<td><code>small.info()</code></td>
+<td>类型、非缺失个数等；它直接打印，返回None</td>
+</tr>
+<tr>
+<td><code>small['pay'].dtype</code></td>
+<td>浮点类型；若CSV混入￥可能成为object文本</td>
+</tr>
+<tr>
+<td><code>small.isna().sum()</code></td>
+<td>各列缺失数，此例均0</td>
+</tr>
+</tbody>
+</table></div>
+<pre class="highlight"><code class="language-python"># 在notebooks/工作目录读取完整订单
+orders = pd.read_csv('../data/shop/orders.csv', encoding='utf-8-sig')
+# GBK样本必须写正确编码
+sample = pd.read_csv('../data/shop/orders_gbk.csv', encoding='gbk')
+# Excel要指定工作表；订单只有前3000行
+excel_sample = pd.read_excel('../data/shop/shop_2025.xlsx', sheet_name='订单')</code></pre>
+<p>不要写 <code>small = small.info()</code>，否则会把表格换成None。具体读文件见<a href="../lessons/2-1-pandas-intro.html">认识DataFrame</a>，数据规模与字段见<a href="../lessons/A-3-datasets.html">数据字典</a>。</p>
+<h2 id="方括号与索引最容易迷惑的地方">方括号与索引：最容易迷惑的地方</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出形状/值</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>small['pay']</code></td>
+<td>Series，索引10/20/30，值78/58/45</td>
+<td>一层方括号拿一列</td>
+</tr>
+<tr>
+<td><code>small<span class="ui-btn">'pay'</span></code></td>
+<td>DataFrame，3×1</td>
+<td>两层方括号保留表格</td>
+</tr>
+<tr>
+<td><code>small.loc[20, 'pay']</code></td>
+<td><code>58.0</code></td>
+<td>loc按行标签20、列名pay</td>
+</tr>
+<tr>
+<td><code>small.iloc[1, 3]</code></td>
+<td><code>58.0</code></td>
+<td>iloc按第2行、第4列的位置</td>
+</tr>
+<tr>
+<td><code>small.loc[10:20]</code></td>
+<td>A、B两行</td>
+<td>标签切片通常包含终点20</td>
+</tr>
+<tr>
+<td><code>small.iloc[0:2]</code></td>
+<td>A、B两行</td>
+<td>位置切片不含终点2</td>
+</tr>
+<tr>
+<td><code>small.reset_index(drop=True)</code></td>
+<td>索引变0/1/2</td>
+<td>drop=True不把旧索引变成数据列</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout warn"><p class="callout-title">不是所有“0”都表示第一行</p><p><code>small.loc[0]</code> 找的是标签0，本例没有，会报KeyError。<code>small.iloc[0]</code> 才是第一行。不要依赖 <code>small['pay'][0]</code> 的含混读法，明确写 <code>.loc</code> 或 <code>.iloc</code>。筛选后索引可能跳号，跳号不代表数据丢失；先看行数与订单ID。</p></div>
+<h2 id="筛选排序新增列">筛选、排序、新增列</h2>
+<pre class="highlight"><code class="language-python">completed_small = small.loc[small['status'].eq('已完成')].copy()
+completed_small[['order_id', 'pay']]</code></pre>
+<pre class="highlight"><code class="language-output">   order_id   pay
+10        A  78.0
+30        C  45.0</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>要做什么</th>
+<th>写法</th>
+<th>本例结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两条件都满足</td>
+<td><code>small.loc[(small['pay'] &gt; 50) &amp; small['status'].eq('已完成')]</code></td>
+<td>仅A</td>
+</tr>
+<tr>
+<td>满足一个即可</td>
+<td><code>small.loc[(small['pay'] &gt; 70) \| small['category'].eq('书籍')]</code></td>
+<td>A、B</td>
+</tr>
+<tr>
+<td>分类在列表里</td>
+<td><code>small.loc[small['category'].isin(['文具'])]</code></td>
+<td>A、C</td>
+</tr>
+<tr>
+<td>按金额降序</td>
+<td><code>small.sort_values('pay', ascending=False)</code></td>
+<td>A、B、C</td>
+</tr>
+<tr>
+<td>每件平均实付</td>
+<td><code>small.assign(pay_per_item=small['pay']/small['quantity'])</code></td>
+<td>新列39、58、15</td>
+</tr>
+<tr>
+<td>修改指定行</td>
+<td><code>small.loc[small['order_id'].eq('A'), 'pay'] = 78.0</code></td>
+<td>明确给指定行赋值</td>
+</tr>
+</tbody>
+</table></div>
+<p>pandas多条件用 <code>&amp;</code>、<code>|</code>、<code>~</code> 并给条件加括号，不用Python标量的and/or。不写 <code>df[条件]['列']=值</code> 的链式赋值；明确 <code>.loc[条件, '列']</code>。见<a href="../lessons/2-2-pandas-select.html">筛选</a>、<a href="../lessons/2-3-pandas-groupby.html">新增列</a>。</p>
+<h2 id="分组先决定统计谁">分组：先决定统计谁</h2>
+<pre class="highlight"><code class="language-python">summary = small.groupby('category', as_index=False).agg(
+    revenue=('pay', 'sum'),
+    orders=('order_id', 'nunique'),
+    quantity=('quantity', 'sum'),
+)
+summary</code></pre>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>category</th>
+<th style="text-align: right;">revenue</th>
+<th style="text-align: right;">orders</th>
+<th style="text-align: right;">quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>书籍</td>
+<td style="text-align: right;">58.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>文具</td>
+<td style="text-align: right;">123.0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>这是全状态原支付分组，不是已完成净销售额；若统计收入，先筛已完成。<code>count</code> 不数缺失，<code>size</code> 数行，<code>nunique</code> 数不同值；表中一单多行时，不要把行数自动当订单数。<code>small['pay'].sum()</code>=181，已完成金额=123，已完成客单价=123/2=61.5，每件平均实付=123/5=24.6。</p>
+<pre class="highlight"><code class="language-python">summary['share'] = summary['revenue'] / summary['revenue'].sum()
+# mean是普通平均，不自动按件数/客户数加权
+print(completed_small['pay'].mean())</code></pre>
+<pre class="highlight"><code class="language-output">61.5</code></pre>
+<p>只在一行一单、且已完成筛选正确时，这个均值才等于已完成客单价。口径比API更重要；详见<a href="../lessons/2-3-pandas-groupby.html">分组统计</a>和<a href="../lessons/P-1-project-ecommerce.html">项目</a>。</p>
+<h2 id="合并与透视">合并与透视</h2>
+<pre class="highlight"><code class="language-python">labels = pd.DataFrame({'category': ['文具', '书籍'], 'label': ['办公', '阅读']})
+joined = small.merge(labels, on='category', how='left',
+                     validate='many_to_one', indicator=True)
+assert len(joined) == len(small)
+assert joined['order_id'].is_unique
+assert joined['_merge'].eq('both').all()
+joined[['order_id', 'label']]</code></pre>
+<pre class="highlight"><code class="language-output">  order_id label
+0        A    办公
+1        B    阅读
+2        C    办公</code></pre>
+<p>右表键若重复，关系验证会报错；找不到匹配行不等于0，不静默填金额。<code>merge</code>可能重新排列索引，核验的是订单ID与行数。<code>pivot_table</code>默认聚合是mean，求收入必须明确sum。</p>
+<pre class="highlight"><code class="language-python">small.pivot_table(index='category', columns='status', values='pay',
+                  aggfunc='sum', fill_value=0)</code></pre>
+<p>结果：文具已完成123、已退款0；书籍已完成0、已退款58。这里缺组合填0符合“小表没有此类订单”规则，不等于所有业务缺失都应填0。详见<a href="../lessons/2-4-pandas-merge-pivot.html">合并与透视</a>。</p>
+<h2 id="缺失重复文本日期">缺失、重复、文本、日期</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>需求</th>
+<th>写法</th>
+<th>输出/边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重复主键检查</td>
+<td><code>small['order_id'].duplicated().sum()</code></td>
+<td>0；客户重复不等于订单重复</td>
+</tr>
+<tr>
+<td>完全重复行去重</td>
+<td><code>small.drop_duplicates()</code></td>
+<td>本例仍3行；先核实是否重复导出</td>
+</tr>
+<tr>
+<td>查看缺失</td>
+<td><code>pd.Series([5, None]).isna().tolist()</code></td>
+<td><code>[False, True]</code></td>
+</tr>
+<tr>
+<td>文本去空格</td>
+<td><code>pd.Series([' 上海 ']).str.strip().iloc[0]</code></td>
+<td><code>'上海'</code></td>
+</tr>
+<tr>
+<td>去货币符号</td>
+<td><code>pd.Series(['￥39元']).str.replace('￥','',regex=False).str.replace('元','',regex=False)</code></td>
+<td>文本<code>'39'</code>，还不是数字</td>
+</tr>
+<tr>
+<td>安全数字转换</td>
+<td><code>pd.to_numeric(pd.Series(['39', '错']), errors='coerce')</code></td>
+<td>39与缺失；需报告转换失败，不填0</td>
+</tr>
+<tr>
+<td>标准日期转换</td>
+<td><code>pd.to_datetime(pd.Series(['2025-01-02']), errors='raise')</code></td>
+<td>datetime日期列</td>
+</tr>
+<tr>
+<td>年月提取</td>
+<td><code>pd.to_datetime(pd.Series(['2025-01-02'])).dt.strftime('%Y-%m')</code></td>
+<td><code>'2025-01'</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>评分缺失不是0分；日期或金额转换失败不是合法0值。混合中文日期和时间格式要先明确规则，不靠盲目试格式。详见<a href="../lessons/3-1-clean-missing-duplicates.html">缺失与重复</a>、<a href="../lessons/3-2-clean-types-outliers.html">类型与异常</a>。</p>
+<h2 id="按问题挑图不按库挑图">按问题挑图，不按库挑图</h2>
+<div class="cards"><div class="card"><p class="card-title">趋势</p><p>横轴有时间顺序，用折线；月份先排序，单位写元/万元。没有上一年数据不写同比。</p></div>
+<div class="card"><p class="card-title">类别比较</p><p>少量类别用柱状，长中文标签用横向条形。柱轴从0起，降序可更清楚。</p></div>
+<div class="card"><p class="card-title">两变量关系</p><p>散点呈现关系与离群点，不能自动证明因果。加颜色要说明分组，避免用颜色掩盖小样本。</p></div>
+<div class="card"><p class="card-title">分布</p><p>直方图看数值分布；箱线图看中位数与四分位。箱线图中的离群标记不是业务异常的自动判定。</p></div></div>
+<h3 id="matplotlib控制标题与坐标">matplotlib：控制标题与坐标</h3>
+<pre class="highlight"><code class="language-python">import matplotlib.pyplot as plt
+from dacheck import setup_chinese_font
+setup_chinese_font()
+fig, ax = plt.subplots(figsize=(6, 3))
+ax.bar(summary['category'], summary['revenue'])
+ax.set(title='小样例全状态原支付（虚构）', xlabel='品类', ylabel='金额（元）')
+fig.tight_layout()
+plt.show()</code></pre>
+<p>输出是两根柱：书籍58、文具123。字体助手提示未找到字体时查<a href="../lessons/4-1-viz-matplotlib.html">图表课</a>与<a href="../lessons/A-2-common-errors.html">报错表</a>，不忽略缺字警告。<code>plt.show()</code> 显示图，<code>fig.savefig()</code> 才保存；不要混淆显示与导出。</p>
+<h3 id="seaborn明确是否在自动聚合">seaborn：明确是否在自动聚合</h3>
+<pre class="highlight"><code class="language-python">import seaborn as sns
+fig, ax = plt.subplots(figsize=(6, 3))
+sns.scatterplot(data=small, x='quantity', y='pay', hue='category', ax=ax)
+ax.set(title='件数与原支付的小样例（虚构）', xlabel='件数', ylabel='金额（元）')
+fig.tight_layout()
+plt.show()</code></pre>
+<p>输出3个点。<code>sns.barplot</code> 默认求均值并可能显示不确定性区间，不是收入求和；已有汇总表直接用matplotlib柱图更直白。复杂统计图见<a href="../lessons/4-2-viz-seaborn.html">seaborn课</a>，不把区间当标准差或因果证据。</p>
+<h3 id="plotly交互与离线导出">Plotly：交互与离线导出</h3>
+<pre class="highlight"><code class="language-python">import plotly.express as px
+fig_interactive = px.bar(summary, x='category', y='revenue',
+                         title='虚构小表全状态原支付',
+                         labels={'category': '品类', 'revenue': '金额（元）'})
+fig_interactive.show(renderer='notebook')</code></pre>
+<p>导出使用 <code>include_plotlyjs=True</code> 把脚本内嵌，离线可用但文件较大；不要选CDN假装离线完整。导出示例见下面，详细交互见<a href="../lessons/4-3-viz-plotly.html">Plotly课</a>。</p>
+<h2 id="安全导出不污染data">安全导出：不污染data/</h2>
+<pre class="highlight"><code class="language-python">from pathlib import Path
+import tempfile
+with tempfile.TemporaryDirectory(prefix='da-cheatsheet-') as tmp:
+    out = Path(tmp)
+    summary.to_csv(out / 'summary.csv', index=False, encoding='utf-8-sig')
+    summary.to_excel(out / 'summary.xlsx', index=False)
+    fig.savefig(out / 'example.png', dpi=150, bbox_inches='tight')
+    fig_interactive.write_html(out / 'example.html', include_plotlyjs=True)
+    print(pd.read_csv(out / 'summary.csv').shape)</code></pre>
+<pre class="highlight"><code class="language-output">(2, 5)</code></pre>
+<p>临时目录退出后删除，正式交付时请换成自己新建且不在 <code>data/</code> 内的目录。<code>index=False</code> 避免把左边行索引额外保存成 <code>Unnamed: 0</code> 列。此代码依赖上方示例的summary和fig变量，不是可以脱离上下文执行的一行魔法。</p>
+<h2 id="sql与下一批内容">SQL与下一批内容</h2>
+<p>SQL、统计检验、留存、同期群、A/B测试在下一批路线，本工具箱不把它们列成已完成技能或提供未经本课程验证的成套练习。当前作品重点是Python、pandas、清洗、图表和完整项目。</p>
+<div class="callout try"><p class="callout-title">三项小练习</p><ol>
+<li>小表第一行pay应写 <code>loc[0]</code> 还是 <code>iloc[0]</code>？</li>
+<li>小表已完成客单价与每件均价各是多少？</li>
+<li>已汇总品类收入交给seaborn柱图时，为什么要注意默认聚合？</li>
+</ol>
+<details class="fold"><summary>参考答案</summary><ol>
+<li><code>small.iloc[0]['pay']</code> 或 <code>small.loc[10, 'pay']</code>；标签0不存在。</li>
+<li>123/2=61.5元/单；123/5=24.6元/件。</li>
+<li><code>barplot</code> 默认估计均值，不自动求收入总和；确认输入粒度与参数，或直接用matplotlib绘汇总。</li>
+</ol></details></div>
+<div class="checklist"><p class="checklist-title">速查验收</p><ul><li><label><input type="checkbox" data-id="A-4:11:0"><span class="cl-text">能分清列、索引、位置和一层/两层方括号。</span></label></li><li><label><input type="checkbox" data-id="A-4:11:1"><span class="cl-text">知道多条件加括号、使用&amp;/|而非and/or。</span></label></li><li><label><input type="checkbox" data-id="A-4:11:2"><span class="cl-text">合并验证关系，按主键检查不增不丢。</span></label></li><li><label><input type="checkbox" data-id="A-4:11:3"><span class="cl-text">先定义筛选口径再求和，缺失不机械填0。</span></label></li><li><label><input type="checkbox" data-id="A-4:11:4"><span class="cl-text">图表标清单位、模拟来源，导出不覆盖原始数据。</span></label></li></ul></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="A-3-datasets.html"><small>← 上一课</small>A-3 数据集说明与公开数据集</a><a class="next" href="A-5-glossary.html"><small>下一课 →</small>A-5 术语表</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#先知道代码在哪运行">先知道代码在哪运行</a></li><li><a href="#python够用速查">Python够用速查</a></li><li><a href="#一个统一的小表">一个统一的小表</a></li><li><a href="#看结构与读文件">看结构与读文件</a></li><li><a href="#方括号与索引最容易迷惑的地方">方括号与索引：最容易迷惑的地方</a></li><li><a href="#筛选排序新增列">筛选、排序、新增列</a></li><li><a href="#分组先决定统计谁">分组：先决定统计谁</a></li><li><a href="#合并与透视">合并与透视</a></li><li><a href="#缺失重复文本日期">缺失、重复、文本、日期</a></li><li><a href="#按问题挑图不按库挑图">按问题挑图，不按库挑图</a><ul><li><a href="#matplotlib控制标题与坐标">matplotlib：控制标题与坐标</a></li><li><a href="#seaborn明确是否在自动聚合">seaborn：明确是否在自动聚合</a></li><li><a href="#plotly交互与离线导出">Plotly：交互与离线导出</a></li></ul></li><li><a href="#安全导出不污染data">安全导出：不污染data/</a></li><li><a href="#sql与下一批内容">SQL与下一批内容</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

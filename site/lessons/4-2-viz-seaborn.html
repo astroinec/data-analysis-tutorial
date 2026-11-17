@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-2 seaborn 统计图表 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="4-2" style="--stage-color: #ec4899">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2" class="active"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 4 · 数据可视化</div><h1><span class="lid">4-2</span>seaborn 统计图表</h1><p class="lesson-summary">用离线历史数据读懂直方图、箱线图与散点图，区分分布、差异和关联。</p><ul class="lesson-meta"><li>约 60 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/4-2_viz_seaborn.ipynb</code></li><li>前置：已完成 4-1，能设置中文字体、标题与坐标轴</li></ul></header><article class="lesson-body"><h2 id="本课目标与数据说明">本课目标与数据说明</h2>
+<div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>从本地文件读取 tips 与 penguins，不调用在线下载接口。</li>
+<li>说明直方图分箱、箱线图中位数和散点图每个点的意义。</li>
+<li>用 seaborn 绘图，继续通过 Axes 修改标签。</li>
+<li>识别缺失与离群，不机械删除，也不把相关当因果。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/4-2_viz_seaborn.ipynb">4-2 练习本</a>。<code>seaborn</code> 常缩写为 <code>sns</code>，它建立在 matplotlib 上，提供适合统计观察的图形接口。你不需要先学完统计学，但必须知道图在呈现什么。这里不是学习显著性检验，也不把历史样本推断成所有人或动物的规律。</p>
+<pre class="highlight"><code class="language-python">import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from dacheck import setup_chinese_font
+sns.set_theme(style="whitegrid")
+setup_chinese_font()
+tips = pd.read_csv("../data/public/tips.csv")
+penguins = pd.read_csv("../data/public/penguins.csv")
+print(tips.shape, penguins.shape)
+print(penguins.isna().sum())</code></pre>
+<p>先设主题再设中文字体，避免主题覆盖字体配置。tips 是历史餐厅消费与小费教学数据，<code>total_bill</code> 是美元账单，<code>tip</code> 是美元小费；它们不是本模拟店的收入，也不是人民币。penguins 是历史企鹅测量教学数据，<code>bill_length_mm</code> 为喙长毫米，<code>body_mass_g</code> 为体重克。</p>
+<div class="callout warn"><p class="callout-title">离线读取，不临时下载</p><p><code>tips.csv</code>、<code>penguins.csv</code> 已随教程提供。不要使用 <code>sns.load_dataset("tips")</code>，那个接口可能需要访问网络或依赖本地缓存。读文件失败时检查路径与文件是否完整，不要为了跑通而换成来历不明的数据。</p></div>
+<h2 id="1-直方图一排数落入哪些区间">1. 直方图：一排数落入哪些区间</h2>
+<p>如果把每笔账单逐条列出来，你很难判断常见金额。直方图把连续数值分成区间，每根柱显示区间内有多少观察，这个区间就叫 <strong>bin（分箱）</strong>。</p>
+<pre class="highlight"><code class="language-python">fig, ax = plt.subplots(figsize=(7, 4))
+sns.histplot(data=tips, x="total_bill", bins=12, ax=ax, color="#2a788e")
+ax.set(title="历史餐厅样本：账单金额分布",
+       xlabel="账单金额（美元）", ylabel="账单数（笔）")
+fig.tight_layout()
+plt.show()</code></pre>
+<p>这里设置 12 个箱，纵轴默认是计数。不是“有 12 笔消费”，而是把所有账单划成 12 个金额区间。改变 <code>bins</code> 会改变细节：太少可能掩盖峰，太多会显得零碎。分箱不是数据造假，但选箱后要检查结论是否过于依赖一个参数。先保持计数，不同时开启密度曲线、归一化等新概念。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>图形</th>
+<th>横轴</th>
+<th>一根柱/一个点代表什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品类柱形图</td>
+<td>文具、书籍等类别</td>
+<td>某类别汇总金额</td>
+</tr>
+<tr>
+<td>账单直方图</td>
+<td>美元数值区间</td>
+<td>该区间的账单数量</td>
+</tr>
+<tr>
+<td>喙长与体重散点图</td>
+<td>喙长毫米</td>
+<td>一只企鹅的一对测量</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>如果纵轴写“概率”而实际画的是账单计数，图虽然能显示却已经误导。坐标文字必须与绘图参数一致。存在缺失时，图形库可能自动不画这些值；因此作图前检查有效观察数，不能因为图出现了就认为所有行都入图。</p>
+<h2 id="2-箱线图中间在哪里分散到哪里">2. 箱线图：中间在哪里，分散到哪里</h2>
+<p>箱线图压缩了一个组的数值分布：箱内横线是中位数；箱子的上下边常对应第 25 与第 75 百分位；箱体宽度覆盖中间 50% 的数值。中位数可以理解为排序后处于中间的位置，通常不像平均数那样容易被极大值拉高。</p>
+<pre class="highlight"><code class="language-python">fig, ax = plt.subplots(figsize=(7, 4))
+sns.boxplot(data=tips, x="day", y="total_bill",
+            order=["Thur", "Fri", "Sat", "Sun"], ax=ax, color="#a9d6cf")
+ax.set(title="历史餐厅样本：不同营业日账单分布",
+       xlabel="星期（Thur周四 / Fri周五 / Sat周六 / Sun周日）",
+       ylabel="账单金额（美元）")
+fig.tight_layout()
+plt.show()</code></pre>
+<p>默认规则下，须通常延伸到 1.5 倍四分位距范围内的最远观察，须外的点显示为离群候选。它们不是必然的最大值和最小值，也不是“程序认证的坏数据”。一个大账单可能来自多人聚餐；是否应排除，需要看原记录和分析目的。</p>
+<p>可以补充每个营业日的样本量与中位数，再描述差异：</p>
+<pre class="highlight"><code class="language-python">day_summary = tips.groupby("day")["total_bill"].agg(["count", "median"])
+print(day_summary)</code></pre>
+<p>观察到某天中位数高，不等于这一天本身导致消费者多花钱。人数、用餐时段、餐厅采样方式等都可能不同。本课不做因果结论，不根据图形重叠程度直接宣布统计显著。</p>
+<h2 id="3-散点图把两个数作为一对看">3. 散点图：把两个数作为一对看</h2>
+<p>一只企鹅同时有喙长和体重，这两个值必须来自同一行。不能分别排序两个列后再拼起来，那样会人为制造关联。为这一张图选出测量完整的行，同时记录没有入图的行。</p>
+<pre class="highlight"><code class="language-python">required = ["bill_length_mm", "body_mass_g", "species"]
+plot_data = penguins.dropna(subset=required).copy()
+excluded = penguins.loc[penguins[required].isna().any(axis=1)].copy()
+print("原记录：", len(penguins), "入图：", len(plot_data), "未入图：", len(excluded))
+fig, ax = plt.subplots(figsize=(7, 4.5))
+sns.scatterplot(data=plot_data, x="bill_length_mm", y="body_mass_g",
+                hue="species", ax=ax, alpha=0.7)
+ax.set(title="历史企鹅样本：喙长与体重",
+       xlabel="喙长（毫米）", ylabel="体重（克）")
+ax.legend(title="物种")
+fig.tight_layout()
+plt.show()</code></pre>
+<p>这里的 <code>dropna(subset=required)</code> 只是建立本图所需完整测量的副本，并非把原始企鹅表中任何缺失都删掉。比如性别缺失不影响这张喙长—体重图，就不应因此排除。不同分析所需的字段可以不同。</p>
+<figure><img alt="从随包企鹅数据绘制的喙长与体重散点图，颜色区分物种" src="../assets/img/viz-penguins-scatter.png" loading="lazy"><figcaption>从随包企鹅数据绘制的喙长与体重散点图，颜色区分物种</figcaption></figure>
+<p><code>hue="species"</code> 按物种着色，便于发现组别。若只看所有点，组间差异可能影响整体关系；组内规律可能不同。<code>alpha=0.7</code> 表示一定透明度，重叠处更容易看出密集，不是把观察值权重改成 70%。</p>
+<h2 id="4-图形证据能说到哪里">4. 图形证据能说到哪里</h2>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">超出证据的结论</p><p>“喙变长会让企鹅变重。”一张散点图并没有随机干预，也没有控制物种、年龄等因素。</p></div>
+<div class="compare-col good"><p class="compare-title">有边界的描述</p><p>“在本历史教学样本的完整测量中，喙长与体重的散点呈现一定关联；物种分组可见差异，不能仅凭图推断因果。”</p></div></div>
+<p>相关不是因果不意味着图没用。图可以帮你提出下一步问题：是否分组后仍存在关系？是否由极少数点驱动？这些都是探索性发现，但不能跳成经营建议或生物机制证明。</p>
+<h2 id="5-四个练习">5. 四个练习</h2>
+<div class="callout try"><p class="callout-title">练习 1：清楚的入图范围</p><p>计算企鹅散点图所需三列均完整的行数。是否还需要因为 <code>sex</code> 缺失而排除？</p>
+<details class="fold"><summary>提示与答案</summary><p><code>penguins.dropna(subset=["bill_length_mm", "body_mass_g", "species"]).shape[0]</code>。这张图不用性别，所以不应只因性别缺失排除；要保留未入图说明。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 2：箱线图旁的数字</p><p>按 Thur、Fri、Sat、Sun 顺序给出账单中位数，保持一列 Series。</p>
+<details class="fold"><summary>参考答案</summary><p><code>tips.groupby("day")["total_bill"].median().reindex(["Thur", "Fri", "Sat", "Sun"])</code>。不要把中位数写成平均数。可另行查看每组样本量，但本题只提交中位数。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 3：不分色的散点图</p><p>使用 <code>plot_data</code> 画喙长与体重散点，横轴“喙长（毫米）”，纵轴“体重（克）”，标题写“企鹅测量关系”。</p>
+<details class="fold"><summary>参考答案</summary><p>新建 <code>fig, scatter_ax = plt.subplots()</code>，用 <code>sns.scatterplot(data=plot_data, x="bill_length_mm", y="body_mass_g", ax=scatter_ax)</code>，再设置标签并 <code>plt.show()</code>。检查对照点坐标与单位，不检测像素颜色。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 4：改写结论</p><p>把“周末使客人更愿意消费”改成不夸大证据的一句话，并在 Notebook 回答相关与因果的关系。</p>
+<details class="fold"><summary>参考答案</summary><p>“这个历史餐厅样本中，不同营业日的账单分布有所不同；样本量、用餐人数等可能不同，相关不等于因果。”Notebook 提交“相关不等于因果”。</p></details></div>
+<div class="quiz"><p class="quiz-q">箱线图须外出现一个点，应该怎样处理？</p><ul class="quiz-options"><li><button type="button" data-correct="0">立即从所有分析里删除</button></li><li><button type="button" data-correct="1">查看原记录和业务含义，必要时标记、做敏感性比较</button></li><li><button type="button" data-correct="0">一律改成平均值</button></li></ul><div class="quiz-explain"><p>离群是探索提示，不是无效数据证明；处理动作需要记录。</p></div></div>
+<h2 id="6-常见问题与验收">6. 常见问题与验收</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>遇到的问题</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>下载 tips 失败</td>
+<td>改用本课的本地 CSV，不调用 <code>load_dataset</code></td>
+</tr>
+<tr>
+<td><code>Could not interpret value ...</code></td>
+<td>查看列名，本课公开数据使用英文，不是中文订单字段</td>
+</tr>
+<tr>
+<td>图中数量比原表少</td>
+<td>检查绘图所需字段缺失，记录有效行数</td>
+</tr>
+<tr>
+<td>中文在设主题后变方框</td>
+<td><code>sns.set_theme()</code> 之后再运行字体设置</td>
+</tr>
+<tr>
+<td>图例出现“species”</td>
+<td><code>ax.legend(title="物种")</code>，不改变数据编码</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职加分</p><p>探索性分析岗位需要能说清图的统计含义。展示分箱选择、样本覆盖率与离群复核，比把所有图套上彩色主题更重要。公开历史数据作品要写来源与样本限制，不把观察性差异包装成已验证的运营方案。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="4-2:16:0"><span class="cl-text">两个公开数据均从随包 CSV 读取，断网也可运行。</span></label></li><li><label><input type="checkbox" data-id="4-2:16:1"><span class="cl-text">能区分柱图类别与直方图区间，纵轴计数单位正确。</span></label></li><li><label><input type="checkbox" data-id="4-2:16:2"><span class="cl-text">能说出箱体、中位数和离群候选的含义。</span></label></li><li><label><input type="checkbox" data-id="4-2:16:3"><span class="cl-text">散点保留成对测量，按本图字段处理缺失且有记录。</span></label></li><li><label><input type="checkbox" data-id="4-2:16:4"><span class="cl-text">结论不把相关当因果，不机械删除离群。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/4-2_viz_seaborn.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/4-2_viz_seaborn.ipynb" download>学生练习本</a> · <a href="../../solutions/4-2_viz_seaborn.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="4-1-viz-matplotlib.html"><small>← 上一课</small>4-1 选对图表 + matplotlib 基础</a><a class="next" href="4-3-viz-plotly.html"><small>下一课 →</small>4-3 plotly 交互图表与图表美化</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#本课目标与数据说明">本课目标与数据说明</a></li><li><a href="#1-直方图一排数落入哪些区间">1. 直方图：一排数落入哪些区间</a></li><li><a href="#2-箱线图中间在哪里分散到哪里">2. 箱线图：中间在哪里，分散到哪里</a></li><li><a href="#3-散点图把两个数作为一对看">3. 散点图：把两个数作为一对看</a></li><li><a href="#4-图形证据能说到哪里">4. 图形证据能说到哪里</a></li><li><a href="#5-四个练习">5. 四个练习</a></li><li><a href="#6-常见问题与验收">6. 常见问题与验收</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

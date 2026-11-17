@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0-3 安装前体检：识别已有 Python、检查路径和磁盘 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="0-3" style="--stage-color: #0ea5e9">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3" class="active"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 0 · 出发准备</div><h1><span class="lid">0-3</span>安装前体检：识别已有 Python、检查路径和磁盘</h1><p class="lesson-summary">盘点系统和已有 Python，不破坏旧工具，为独立课程环境选一个可写的位置。</p><ul class="lesson-meta"><li>约 30 分钟</li><li>难度 ★☆☆</li><li>前置：已读电脑基础；知道如何复制实际路径与显示扩展名。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>确认 Windows、系统架构、磁盘空余与课程目录权限。</li>
+<li>理解多个 Python 可以共存，安装前不强制卸载。</li>
+<li>能解释 <code>where python</code> 和 WindowsApps 别名为什么不能单独证明解释器正常。</li>
+<li>写下一张安装记录卡，并识别需要先停止、求助的情况。</li>
+</ul></div>
+<h2 id="1-清理应当理解为盘点不是删除">1. “清理”应当理解为盘点，不是删除</h2>
+<p>如果目录页仍使用“清理旧 Python”的历史标题，请以这里的做法为准：<strong>先盘点，默认保留已有工具与环境</strong>。以前为工作、学校或其他软件装过 Python，并不妨碍本课程使用 Anaconda 的独立 <code>da-course</code> 环境。盲目卸载可能让其他项目不能运行；删除 PATH、<code>envs</code> 或用户文件夹不是新手安装的前置步骤。</p>
+<div class="callout danger"><p class="callout-title">这些操作本教程不要求</p><p>不重命名 <code>C:\Users\...</code> 的 Windows 用户配置目录，不删除不认识的 Python/conda 环境，不编辑整个系统 PATH，不清除注册表，不关闭杀毒，不为了方便长期以管理员启动终端。工作或学校管理的电脑不能自行绕开管理策略。</p></div>
+<h2 id="2-先确认电脑属于哪条路线">2. 先确认电脑属于哪条路线</h2>
+<p>按 <code>Win+I</code> 打开“设置”，进入“系统 → 系统信息/关于”。记录“Windows 规格”与“系统类型”。本教程面向 <strong>Windows 11、64 位、x64 处理器（x86_64）</strong>。安装器网页可能提供多种系统版本，不要把 macOS、Linux 或 ARM 的包当作同一包。</p>
+<div class="window"><div class="window-title">设置中的系统信息（界面示意，不是实机截图）</div><div class="window-body"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>观察示例</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 规格</td>
+<td>Windows 11</td>
+<td>目标系统路线</td>
+</tr>
+<tr>
+<td>系统类型</td>
+<td>64 位操作系统，基于 x64 的处理器</td>
+<td>使用官方 Windows x86_64 安装器</td>
+</tr>
+<tr>
+<td>其他可能显示</td>
+<td>基于 ARM 的处理器</td>
+<td>不把 x64 教程冒称 ARM 原生验证，先确认官方支持与单位要求</td>
+</tr>
+<tr>
+<td>旧系统或 32 位</td>
+<td>Windows 10 / 32 位系统</td>
+<td>不照搬本课宣称完全兼容；需另行核对系统与安装器条件</td>
+</tr>
+</tbody>
+</table></div></div></div>
+<p>本教程制作与自动检查不代表作者已在你的 Windows 机器上实测。如果你是 macOS/Linux 用户，可以阅读概念，但 Prompt、<code>cd /d</code> 与安装界面不适用；不要照抄 Windows 命令。对于 ARM 或受管理电脑，先保存系统信息并向设备支持人员确认，不继续试一串不同安装器。</p>
+<h3 id="磁盘与权限">磁盘与权限</h3>
+<p>按 <code>Win+E</code>，左侧选“此电脑”，看预备安装盘的“可用空间”。Anaconda、独立环境、包下载缓存都需要空间；建议先预留约 <strong>15～20 GB</strong> 作为学习操作余量，这不是官方固定最低要求，实际占用随安装器与依赖变动。空间明显不足时先按自己的资料备份与系统存储管理流程处理，不删除未知目录。</p>
+<p>在准备放教程的普通文件夹中右键 → 新建 → 文本文档，输入“路径测试”，保存，再打开读一遍。新建自己的测试文件是检查写权限；读完可自行保留，不涉及删除其他文件。如果无法保存，不要把整课改为管理员运行；换到有权限的目录或询问设备管理员。</p>
+<h2 id="3-中文用户名空格与安装位置">3. 中文用户名、空格与安装位置</h2>
+<p>中文用户名不是必然出错，也无需把 Windows 账户目录改名。Python 本身可以处理 Unicode 路径；部分第三方工具可能在特殊路径中有兼容性问题，必须根据具体错误判断。路径中的空格在命令行用双引号包住，不等于必须删除空格。</p>
+<p>Anaconda 官方建议<strong>安装目录避免空格和特殊字符</strong>，用于减少开源工具兼容问题。与其修改现有用户配置，不如选一个自己有权限、简短的安装位置，例如 <code>D:\Anaconda3</code>；如果只有 C 盘，可考虑有权限的 <code>C:\Anaconda3</code>。这些是路径示例，不保证每台机器可写。标准用户无法写入时，应选择实际可写的简短目录，或询问支持人员怎样提供合规可写目录，不自行扩大系统目录权限。</p>
+<p><strong>安装 Anaconda 的位置</strong>与<strong>解压教程的位置</strong>是两个不同文件夹。不要把教材放在 Anaconda 安装目录或环境的 <code>site-packages</code> 里面；教程文件需要你以后能找到、保存和备份。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>示例</th>
+<th>是否必须一样</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anaconda 安装目录</td>
+<td><code>D:\Anaconda3</code></td>
+<td>不同，记录实际位置</td>
+</tr>
+<tr>
+<td>教程根目录</td>
+<td><code>D:\da-course\data-analysis-tutorial</code></td>
+<td>不同，命令换成实际位置</td>
+</tr>
+<tr>
+<td>Windows 用户目录</td>
+<td><code>C:\Users\你的账户名</code></td>
+<td>不改名、不删除</td>
+</tr>
+<tr>
+<td>conda 环境名称</td>
+<td><code>da-course</code></td>
+<td>本课程保持此名字</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-查已有-python看见多个不是坏事">4. 查已有 Python：看见多个不是坏事</h2>
+<p>本节仅盘点，可以用 Windows 搜索打开 <strong>命令提示符</strong>（CMD），正常权限运行；这一节特意用普通 CMD 是为了观察已有系统命令。安装后课程操作统一换成 <strong>Anaconda Prompt</strong>，不要把两种窗口混用。</p>
+<p>在普通 CMD 输入：</p>
+<pre class="highlight"><code class="language-cmd">where python
+where conda</code></pre>
+<p>输出会列出当前这个窗口可搜索到的路径，可能有多个；也可能显示“信息: 用提供的模式无法找到文件”。<code>where</code> 不会删除、安装或修复任何东西。<strong>普通 CMD 找不到 conda，不代表 Anaconda 没装</strong>：本课程不要求把 conda 永久加进系统 PATH。</p>
+<pre class="highlight"><code class="language-output">C:\Users\某用户\AppData\Local\Microsoft\WindowsApps\python.exe
+C:\...\Python312\python.exe</code></pre>
+<p>这是路径<strong>示例</strong>，不是你必须得到的顺序。WindowsApps 中的 <code>python.exe</code> 可能是“应用执行别名”，是一个把 <code>python</code> 命令转到应用/商店的入口，不一定是可运行课程的真实 Python。若输入 <code>python --version</code> 弹出应用商店，先关闭商店，记录当前用的是普通 CMD；之后在 Anaconda Prompt 激活课程环境再验证。</p>
+<p>Windows 11 可在“设置 → 应用 → 高级应用设置 → 应用执行别名”查看 Python 相关入口；界面名称可能变动。<strong>不用为了本课程先关所有别名</strong>。只有确有命令被别名抢占、又需要在普通终端使用时，了解影响后再决定相关 Python 项；不要禁用无关应用，也不要删除 WindowsApps。</p>
+<h3 id="三个问题三个证据">三个问题，三个证据</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>要回答的问题</th>
+<th>后续如何查看</th>
+<th>不足以证明的东西</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>这个窗口能搜索到哪些 python？</td>
+<td><code>where python</code></td>
+<td>不能证明 Notebook 内核用哪一个</td>
+</tr>
+<tr>
+<td>实际执行的是哪个 Python？</td>
+<td><code>python -c "import sys; print(sys.executable)"</code></td>
+<td>窗口名字不等于实际路径</td>
+</tr>
+<tr>
+<td>Notebook 正在用哪个 Python？</td>
+<td>代码格运行 <code>import sys; print(sys.executable)</code></td>
+<td>Prompt 中版本正确不等于内核也正确</td>
+</tr>
+</tbody>
+</table></div>
+<p>以后始终用 <code>python -m pip</code>，意思是“请当前这个 Python 执行自己的 pip 模块”。裸 <code>pip</code> 可能指向另一个安装；<code>pip</code> 与 <code>python</code> 都叫命令，不意味着它们天然绑定。当前不用安装任何课程包，等创建 <code>da-course</code> 后再安装。</p>
+<div class="callout note"><p class="callout-title">已经装过 Anaconda 怎么办</p><p>从开始菜单打开 Anaconda Prompt，输入 <code>conda --version</code> 与 <code>conda info --envs</code> 盘点。看到现有环境先保留；如果 <code>da-course</code> 已存在，先检查版本与归属，不重新创建覆盖。基础安装损坏或命令不运行时去<a href="../lessons/A-1-troubleshoot.html">故障排查</a>，不要直接卸载连带删除环境。</p></div>
+<h2 id="5-网络下载与许可提前知道停止条件">5. 网络、下载与许可：提前知道停止条件</h2>
+<p>环境创建与依赖安装需要联网；网页讲义、已装好的 Python 练习和体检脚本可以离线使用。公司代理、认证网络、证书审查会影响下载。若后续出现代理、证书或服务条款提示，先保存完整信息，按真实用途阅读官方条款与单位要求，不照抄教程替你接受协议。</p>
+<p>不用不明安装器、所谓“一键修复包”或聊天附件中的证书。不要通过关闭 SSL 校验、修改为 HTTP、添加随意 trusted-host 绕过证书错误。不把代理用户名与密码发给别人。</p>
+<div class="callout job"><p class="callout-title">安装记录也是排错证据</p><p>求职作品需要别人能重现你的环境。记录系统类型、安装位置、环境名与版本，不必在简历写一串安装细节，但在项目说明中可以用它解释“怎样复现”。</p></div>
+<h2 id="理解与实操检查">理解与实操检查</h2>
+<div class="callout try"><p class="callout-title">练习 1：做一张记录卡</p><p>写下 Windows 版本、系统类型、可用空间、实际教程目录、是否能保存测试文本、已有 Python/Anaconda 情况。不要在公开作业里写完整用户名。</p></div>
+<details class="fold"><summary>参考记录</summary><p>“Windows 11/x64；安装盘空余约……GB；教程在……；文本保存成功；普通 CMD 的 where python 出现 WindowsApps；已有 Anaconda 情况待核对。”填自己的实际观察，不复制示例当结果。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">先重命名 C:\Users 下面的账户文件夹</button></li><li><button type="button" data-correct="1">保留用户配置，先检查实际读写并选择合适安装位置</button></li><li><button type="button" data-correct="0">中文用户名电脑不能学 Python</button></li></ul><div class="quiz-explain"><p>中文不是必然故障。重命名用户配置目录可能破坏账户与软件引用，不能作为入门操作。</p></div></div>
+<div class="callout try"><p class="callout-title">练习 3：多个 Python 的意义</p><p>普通 CMD 的 where python 出现两个路径，你能断言 Notebook 用了第二个吗？提示：Notebook 有自己的内核。</p></div>
+<details class="fold"><summary>参考答案</summary><p>不能。<code>where</code> 只反映当前终端的搜索结果，Notebook 要运行 <code>sys.executable</code> 查看自己的解释器。不要因两个路径就卸载其中一个。</p></details>
+<div class="callout try"><p class="callout-title">练习 4：何时停止</p><p>磁盘不足、单位电脑无权限、安装下载出现证书错误，分别应该先做什么？</p></div>
+<details class="fold"><summary>参考答案</summary><p>磁盘不足先备份自己的文件并用正规存储管理流程评估；无权限先换有权限的位置或问设备管理员；证书错误保留报错并确认代理/时间/单位 CA 要求。三者都不靠管理员常驻、关杀毒或关闭 SSL 来解决。</p></details>
+<div class="checklist"><p class="checklist-title">进入安装课前</p><ul><li><label><input type="checkbox" data-id="0-3:12:0"><span class="cl-text">我确认系统与架构属于本教程目标路线；不属于时已停止照搬。</span></label></li><li><label><input type="checkbox" data-id="0-3:12:1"><span class="cl-text">我记录了实际安装候选目录和教程根目录，知道它们不是同一个位置。</span></label></li><li><label><input type="checkbox" data-id="0-3:12:2"><span class="cl-text">我没有为了安装删除旧 Python、用户环境或修改整段 PATH。</span></label></li><li><label><input type="checkbox" data-id="0-3:12:3"><span class="cl-text">我知道中文用户名不是必然坏，WindowsApps 路径可能是别名。</span></label></li><li><label><input type="checkbox" data-id="0-3:12:4"><span class="cl-text">我知道空间、权限、证书与许可问题应先确认，不盲目继续。</span></label></li></ul></div>
+<p>下一步<a href="../lessons/0-4-install-anaconda.html">安装 Anaconda</a>。已有正常 Anaconda 的读者可以从该课“打开 Prompt 与创建课程环境”开始，不必重复安装。</p></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="0-2-computer-basics.html"><small>← 上一课</small>0-2 电脑基础：文件、路径、扩展名与命令行</a><a class="next" href="0-4-install-anaconda.html"><small>下一课 →</small>0-4 安装 Anaconda（一步一图）</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-清理应当理解为盘点不是删除">1. “清理”应当理解为盘点，不是删除</a></li><li><a href="#2-先确认电脑属于哪条路线">2. 先确认电脑属于哪条路线</a><ul><li><a href="#磁盘与权限">磁盘与权限</a></li></ul></li><li><a href="#3-中文用户名空格与安装位置">3. 中文用户名、空格与安装位置</a></li><li><a href="#4-查已有-python看见多个不是坏事">4. 查已有 Python：看见多个不是坏事</a><ul><li><a href="#三个问题三个证据">三个问题，三个证据</a></li></ul></li><li><a href="#5-网络下载与许可提前知道停止条件">5. 网络、下载与许可：提前知道停止条件</a></li><li><a href="#理解与实操检查">理解与实操检查</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

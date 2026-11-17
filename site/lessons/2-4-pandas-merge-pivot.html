@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2-4 合并表格与数据透视 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="2-4" style="--stage-color: #10b981">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4" class="active"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 2 · pandas 表格处理</div><h1><span class="lid">2-4</span>合并表格与数据透视</h1><p class="lesson-summary">用编号安全补商品和客户资料，再把明细汇总成品类×平台的透视表。</p><ul class="lesson-meta"><li>约 80 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/2-4_pandas_merge_pivot.ipynb</code></li><li>前置：已完成第 2-3 课，能筛已完成订单、分组并说明金额口径</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课验收目标</p><ul>
+<li>识别订单、商品、客户的匹配键，不按行位置拼表。</li>
+<li>用left merge和many_to_one验证多对一关系，检查行数与未匹配。</li>
+<li>用pivot_table指定sum与fill_value，理解重复组合需要聚合。</li>
+<li>完成4题，透视合计与合并前已完成金额一致。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/2-4_pandas_merge_pivot.ipynb">2-4 练习本</a>，保持原目录，选 <code>Python (da-course)</code>。先运行准备格，读年度orders.csv、products.csv、customers.csv。订单15115行，一行一订单一个商品；商品33行，一行一个商品；客户3000行，一行一个模拟客户。并不是“这三张表行数差不多就可以并排粘贴”。</p>
+<h2 id="1-先认识关系一条主表资料被很多订单使用">1. 先认识关系：一条主表资料被很多订单使用</h2>
+<p>订单有product_id，但没有商品名称、品类；商品表用同一个product_id记录名称、品类。订单有customer_id，客户表用同一个customer_id记录城市、来源渠道。这个共享编号叫匹配键（key）。书名、姓名或第几行都不能替代稳定编号。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>表</th>
+<th>匹配键</th>
+<th>已有资料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>订单 SG25000001</td>
+<td>product_id=P006</td>
+<td>数量2，实付24元</td>
+</tr>
+<tr>
+<td>商品主表中的P006</td>
+<td>product_id=P006</td>
+<td>商品名称诗词胶带，品类文具</td>
+</tr>
+<tr>
+<td>合并后的同一笔订单</td>
+<td>product_id=P006</td>
+<td>数量2，实付24元，诗词胶带，文具</td>
+</tr>
+</tbody>
+</table></div></div>
+<div class="cards"><div class="card"><p class="card-title">many_to_one：多对一</p><p>多笔订单可购买同一个商品，商品主表每个product_id只能出现一次；多笔订单也可属于一个客户，客户主表编号只能出现一次。</p></div>
+<div class="card"><p class="card-title">one_to_one：一对一</p><p>两边键都唯一，才是一对一。本课订单对商品不是这个关系，不要因为只有一个商品字段就误判。</p></div>
+<div class="card"><p class="card-title">many_to_many：多对多</p><p>两边同一个键都出现多次，可能配成很多组合，使订单行数和金额膨胀。没有明确业务需要，不接受这种结果。</p></div></div>
+<p>工作中这个关系也叫“基数”（cardinality）：一个键在两侧允许对应多少条记录。本课只要能够说清“多个订单，对应主表一条资料”，就能理解验证的意义。</p>
+<h2 id="2-merge分格做先准备右表再补字段">2. merge分格做：先准备右表，再补字段</h2>
+<pre class="highlight"><code class="language-python">completed = orders.loc[orders["status"] == "已完成"].copy()
+product_lookup = products[["product_id", "product_name", "category"]]</code></pre>
+<p>输入年度订单与33行商品主表。先保留13996条已完成订单，再从右表只取键、名称、品类。这里不取商品price，因为订单已带成交时unit_price；两列不能只因名字像就当同一业务口径。少取无关列也能避免同名列被自动加后缀。</p>
+<pre class="highlight"><code class="language-python">enriched = completed.merge(
+    product_lookup,
+    on="product_id",
+    how="left",
+    validate="many_to_one",
+)
+print(completed.shape)
+print(enriched.shape)
+enriched[["order_id", "product_name", "category", "pay_amount"]].head(3)</code></pre>
+<p>输入左表completed和右表product_lookup。<code>on</code>指定两边共用的键；<code>how="left"</code>保留每条左表订单，右边找不到资料就留缺失，而不是删掉订单；<code>validate="many_to_one"</code>要求右表每个键唯一。输出规模由 <code>(13996, 11)</code> 变 <code>(13996, 13)</code>：多两列但不多订单。</p>
+<p>实际前三笔：SG25000001诗词胶带/文具/24，SG25000002猫咪图书馆托特包/帆布包/69，SG25000003宋词手账本/文具/90。金额没有因为加资料而改变。行数不变是必要检查，但不是唯一检查，还要看键和未匹配。</p>
+<p><code>left</code>与<code>inner</code>不同：inner只保留两边能找到的键，若商品表漏了一件，其订单会悄悄丢掉。在当前完整主表里可能结果一样，但不能因此说两种方式永远等价。分析前要明确“是否保留所有订单”的业务要求。</p>
+<h2 id="3-validate挡住重复主表造成的金额翻倍">3. validate挡住重复主表造成的金额翻倍</h2>
+<pre class="highlight"><code class="language-python">bad_lookup = pd.concat([product_lookup, product_lookup.head(1)], ignore_index=True)
+try:
+    completed.merge(bad_lookup, on="product_id", how="left", validate="many_to_one")
+except pd.errors.MergeError:
+    print("商品键重复，先检查主表；不要删validate绕过问题。")</code></pre>
+<p>输入商品主表加一条重复资料，右边P001出现两次。<code>pd.concat</code>在这里只是把两份表的行接在一起，<code>ignore_index=True</code>重新编行标签；它不是按商品键匹配。合并验证触发MergeError，捕获后显示中文。没有validate时，同一商品的订单可能复制两遍，金额被重复累计。</p>
+<p>本段只用于展示故障，不要求你把concat当新重点。看懂“主表重复→一条订单匹配两次→合计膨胀”即可。遇到报错先定位重复编号，核对来源，不能随便删一条记录让代码变绿。</p>
+<h2 id="4-未匹配也要看indicator让问题显形">4. 未匹配也要看：indicator让问题显形</h2>
+<p>完整数据的商品键都能匹配。为了练排查，临时从商品清单移除P006，原始CSV不改写。</p>
+<pre class="highlight"><code class="language-python">partial_lookup = product_lookup.loc[product_lookup["product_id"] != "P006"]
+audit = completed.merge(
+    partial_lookup,
+    on="product_id",
+    how="left",
+    validate="many_to_one",
+    indicator=True,
+)
+unmatched = audit.loc[audit["_merge"] == "left_only", ["order_id", "product_id", "pay_amount"]]
+print(unmatched.shape)
+unmatched.head(2)</code></pre>
+<p>输入少了P006的右表和全部已完成订单。indicator新增 <code>_merge</code> 列，<code>both</code>表示两边找到，<code>left_only</code>表示只在左边有。实际未匹配352行3列；第一笔SG25000001/P006/24就在其中。left合并仍保留13996条订单，未匹配的名称、品类缺失，不能说“未匹配金额为0”。</p>
+<p>这里用缺失的匹配信息诊断，不是给订单贴“坏数据”标签。实际业务可能是主表漏导、编号空格、类型不同或商品下架。先查根因，不拿inner把问题藏起来。对完整主表同样可加indicator，当前应为0条left_only。</p>
+<h2 id="5-再按客户键补城市与来源">5. 再按客户键补城市与来源</h2>
+<pre class="highlight"><code class="language-python">customer_lookup = customers[["customer_id", "city", "channel"]]
+with_customers = enriched.merge(
+    customer_lookup,
+    on="customer_id",
+    how="left",
+    validate="many_to_one",
+)
+with_customers[["order_id", "city", "channel"]].head(3)</code></pre>
+<p>输入已补商品的订单与3000行客户主表，按customer_id多对一补两列。仍是13996行，现在15列。实际前三笔城市/渠道是兰州/抖音、杭州/小红书、长沙/小红书。注意客户channel是客户来源，订单platform是下单平台，两列不是一回事：来源于抖音的客户可以在微信小程序下单。</p>
+<div class="callout warn"><p class="callout-title">合并后的成本也不是净利润</p><p>若以后补cost，每件成本需要乘quantity；即便实付减商品成本，也只近似商品毛利，还没扣平台、物流、人工。当前课不做“净利润”计算。不要为了讲merge而给一个未过滤退款的总金额贴上营收标签。</p></div>
+<h2 id="6-数据透视品类作行平台作列金额填格子">6. 数据透视：品类作行，平台作列，金额填格子</h2>
+<pre class="highlight"><code class="language-python">category_platform = enriched.pivot_table(
+    index="category",
+    columns="platform",
+    values="pay_amount",
+    aggfunc="sum",
+    fill_value=0,
+)
+category_platform</code></pre>
+<p>输入13996条已完成且已补品类的订单。index决定结果行，columns决定结果列，values决定统计哪个数字，aggfunc决定同一组合多条订单如何合成一个值。这里用sum，因此不是平均金额；默认aggfunc通常为mean，不能省略后仍称合计。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>category</th>
+<th style="text-align: right;">微信小程序</th>
+<th style="text-align: right;">抖音小店</th>
+<th style="text-align: right;">淘宝</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>书籍</td>
+<td style="text-align: right;">90498.4</td>
+<td style="text-align: right;">66129.0</td>
+<td style="text-align: right;">143841.3</td>
+</tr>
+<tr>
+<td>帆布包</td>
+<td style="text-align: right;">96457.2</td>
+<td style="text-align: right;">74698.5</td>
+<td style="text-align: right;">128765.2</td>
+</tr>
+<tr>
+<td>徽章</td>
+<td style="text-align: right;">39641.3</td>
+<td style="text-align: right;">29604.7</td>
+<td style="text-align: right;">59983.4</td>
+</tr>
+<tr>
+<td>文具</td>
+<td style="text-align: right;">76173.9</td>
+<td style="text-align: right;">60917.3</td>
+<td style="text-align: right;">113933.8</td>
+</tr>
+<tr>
+<td>日历</td>
+<td style="text-align: right;">51624.5</td>
+<td style="text-align: right;">35767.4</td>
+<td style="text-align: right;">74305.7</td>
+</tr>
+<tr>
+<td>明信片</td>
+<td style="text-align: right;">33384.4</td>
+<td style="text-align: right;">23575.5</td>
+<td style="text-align: right;">50766.0</td>
+</tr>
+<tr>
+<td>香薰</td>
+<td style="text-align: right;">163856.4</td>
+<td style="text-align: right;">134398.0</td>
+<td style="text-align: right;">236049.2</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>输出7行3列，category在索引，不是普通数值列；platform是列轴名称，不是多出来的一条记录。<code>fill_value=0</code>只把透视中没有记录的组合填0，便于读表；它不会修好未匹配商品资料，也不应该拿来把缺失评分变0。当前全年每个品类平台组合都有记录，所以这份表没有需要补0的格子。</p>
+<pre class="highlight"><code class="language-python">print(category_platform.sum().sum())
+print(completed["pay_amount"].sum())</code></pre>
+<p>输入透视与合并前明细，第一个sum按列汇总、第二个再合计各列。两者都约为1784371.10，浮点尾数可能略有差异。只看合计一致仍不保证分类绝对正确，但若合计变大，应查键重复；若变小，应查未匹配品类或筛选范围。透视默认可能不展示缺失分组键，所以必须先做未匹配审计。</p>
+<pre class="highlight"><code class="language-python">try:
+    enriched.pivot(index="category", columns="platform", values="pay_amount")
+except ValueError:
+    print("同一品类与平台有多笔订单，用pivot_table明确聚合方式。")</code></pre>
+<p>输入有重复品类平台组合的明细，pivot不能把多笔数值塞进同一格，触发ValueError。pivot_table的sum是<strong>按业务组合汇总多笔订单</strong>，不是删除重复订单。整行重复的清洗留到下一阶段，不能混用概念。</p>
+<div class="quiz"><p class="quiz-q">left merge时找不到商品资料，正确做法是什么？</p><ul class="quiz-options"><li><button type="button" data-correct="0">订单会自动消失，所以无需查</button></li><li><button type="button" data-correct="1">保留订单并检查left_only，补查主表或编号问题</button></li><li><button type="button" data-correct="0">给金额填0，把它当没有销售</button></li></ul><div class="quiz-explain"><p>未匹配说明资料没对上，不说明订单不存在或金额为0。</p></div></div>
+<h2 id="7-四道独立练习">7. 四道独立练习</h2>
+<p>每题从orders、products、customers原始表独立处理；参考答案展开后逐格对照，不依赖上一题result。</p>
+<div class="callout try"><p class="callout-title">2-4.1 商品资料合并</p><p>筛已完成订单，left合并商品的product_id、product_name、category，验证many_to_one，保留全部订单字段。</p></div>
+<details class="fold"><summary>答案与输出</summary><p><pre class="highlight"><code class="language-python">work = orders.loc[orders["status"] == "已完成"].copy()
+result = work.merge(products[["product_id", "product_name", "category"]],
+    on="product_id", how="left", validate="many_to_one")</code></pre>
+输入两表，输出13996行13列，订单数不变。</p></details>
+<div class="callout try"><p class="callout-title">2-4.2 再补客户资料</p><p>独立完成上一题要求的商品合并，再left合并客户的customer_id、city、channel，两次均验证many_to_one。</p></div>
+<details class="fold"><summary>答案与输出</summary><p><pre class="highlight"><code class="language-python">work = orders.loc[orders["status"] == "已完成"].copy()
+work = work.merge(products[["product_id", "product_name", "category"]],
+    on="product_id", how="left", validate="many_to_one")
+result = work.merge(customers[["customer_id", "city", "channel"]],
+    on="customer_id", how="left", validate="many_to_one")</code></pre>
+输入三表，输出13996行15列，城市与来源不等于下单平台。</p></details>
+<div class="callout try"><p class="callout-title">2-4.3 找出缺失商品资料的订单</p><p>临时从商品主表移除P006，按已完成订单left merge并加indicator。只返回left_only的order_id、product_id、pay_amount三列，保持原订单顺序。</p></div>
+<details class="fold"><summary>答案与输出</summary><p><pre class="highlight"><code class="language-python">work = orders.loc[orders["status"] == "已完成"].copy()
+partial = products.loc[products["product_id"] != "P006", ["product_id", "product_name", "category"]]
+audit = work.merge(partial, on="product_id", how="left",
+    validate="many_to_one", indicator=True)
+result = audit.loc[audit["_merge"] == "left_only", ["order_id", "product_id", "pay_amount"]]</code></pre>
+输入缺项主表，保留未匹配订单，输出352行3列。不是把全部订单都删掉。</p></details>
+<div class="callout try"><p class="callout-title">2-4.4 品类平台透视</p><p>从原表筛已完成订单并补品类，按category×platform汇总pay_amount，明确sum、fill_value=0。提交带category索引的透视表，不转成长表。</p></div>
+<details class="fold"><summary>答案与输出</summary><p><pre class="highlight"><code class="language-python">work = orders.loc[orders["status"] == "已完成"].copy()
+work = work.merge(products[["product_id", "category"]],
+    on="product_id", how="left", validate="many_to_one")
+result = work.pivot_table(index="category", columns="platform",
+    values="pay_amount", aggfunc="sum", fill_value=0)</code></pre>
+输入已完成明细，输出7行3列透视，总金额1784371.10。</p></details>
+<h2 id="排错与求职表达">排错与求职表达</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>报错或异常</th>
+<th>先检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MergeError</td>
+<td>右侧主表键是否重复，many_to_one是否符合业务</td>
+</tr>
+<tr>
+<td>KeyError: product_id</td>
+<td>两表是否都有指定键，是否误读了Excel工作表</td>
+</tr>
+<tr>
+<td>名称出现_x、_y</td>
+<td>左右有同名非键列；先明确各字段来源，少取无关列</td>
+</tr>
+<tr>
+<td>合并后行数增加</td>
+<td>键基数是否错，不能删除validate继续汇总</td>
+</tr>
+<tr>
+<td>透视金额减少</td>
+<td>未匹配的品类是否被遗漏，状态范围是否一致</td>
+</tr>
+<tr>
+<td>pivot重复组合报错</td>
+<td>多笔订单需要pivot_table并指定aggfunc</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试要说“安全合并”，不只说会merge</p><p>你可以展示：确认一行粒度→选择共享编号→明确left保留范围→验证主表键唯一→查未匹配→核对行数金额→做透视。说明数据全为模拟，结果用于练习。这个过程体现数据质量意识，比拼出一张大表更有价值。</p></div>
+<div class="checklist"><p class="checklist-title">验收</p><ul><li><label><input type="checkbox" data-id="2-4:18:0"><span class="cl-text">我能解释订单对商品、订单对客户为何是多对一。</span></label></li><li><label><input type="checkbox" data-id="2-4:18:1"><span class="cl-text">我知道left与inner何时会丢不同记录。</span></label></li><li><label><input type="checkbox" data-id="2-4:18:2"><span class="cl-text">我能用validate和indicator发现两类不同问题。</span></label></li><li><label><input type="checkbox" data-id="2-4:18:3"><span class="cl-text">我能解释pivot_table的行、列、值、聚合四个参数。</span></label></li><li><label><input type="checkbox" data-id="2-4:18:4"><span class="cl-text">四题通过，透视合计与已完成明细一致。</span></label></li></ul></div>
+<p>下一阶段：<a href="../lessons/3-1-clean-missing-duplicates.html">缺失值与重复值</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/2-4_pandas_merge_pivot.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/2-4_pandas_merge_pivot.ipynb" download>学生练习本</a> · <a href="../../solutions/2-4_pandas_merge_pivot.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="2-3-pandas-groupby.html"><small>← 上一课</small>2-3 新增列与分组统计</a><a class="next" href="3-1-clean-missing-duplicates.html"><small>下一课 →</small>3-1 缺失值与重复值</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-先认识关系一条主表资料被很多订单使用">1. 先认识关系：一条主表资料被很多订单使用</a></li><li><a href="#2-merge分格做先准备右表再补字段">2. merge分格做：先准备右表，再补字段</a></li><li><a href="#3-validate挡住重复主表造成的金额翻倍">3. validate挡住重复主表造成的金额翻倍</a></li><li><a href="#4-未匹配也要看indicator让问题显形">4. 未匹配也要看：indicator让问题显形</a></li><li><a href="#5-再按客户键补城市与来源">5. 再按客户键补城市与来源</a></li><li><a href="#6-数据透视品类作行平台作列金额填格子">6. 数据透视：品类作行，平台作列，金额填格子</a></li><li><a href="#7-四道独立练习">7. 四道独立练习</a></li><li><a href="#排错与求职表达">排错与求职表达</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2-3 新增列与分组统计 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="2-3" style="--stage-color: #10b981">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3" class="active"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 2 · pandas 表格处理</div><h1><span class="lid">2-3</span>新增列与分组统计</h1><p class="lesson-summary">先保留原始表，再新增计算列，把记录按品类或平台汇总成小表。</p><ul class="lesson-meta"><li>约 80 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/2-3_pandas_groupby.ipynb</code></li><li>前置：已完成第 2-2 课，能多条件筛选与排序</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>用copy保留原表，在明确的新表上增加列，不做链式赋值。</li>
+<li>用整列运算计算两本书价格、订单原价金额。</li>
+<li>用groupby和agg统计每组行数、金额合计、均值。</li>
+<li>区分订单数与件数，区分已完成金额与含退款的字段合计。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/2-3_pandas_groupby.ipynb">2-3 练习本</a>，选 <code>Python (da-course)</code>，先读books和orders两张原始CSV。图书一行一本书；订单一行一订单、一个商品，quantity表示该商品买了几件。所有数据虚构，订单范围是2025年全年15115行，不用Excel前3000行样本代替。</p>
+<h2 id="1-新增列同一公式作用到整列">1. 新增列：同一公式，作用到整列</h2>
+<p>上一阶段需要for逐项累加，是为了理解步骤。pandas常用整列运算：每一行的值自动按行标签对齐，不需要你写200次乘法。</p>
+<pre class="highlight"><code class="language-python">books_calc = books.copy()
+books_calc["two_book_price"] = books_calc["price"] * 2
+books_calc[["title", "price", "two_book_price"]].head(3)</code></pre>
+<p>输入200行10列books，先copy创建独立的工作表，再为每本书单价乘2，存到新列two_book_price。实际前三行：月光与我88.9→177.8，雨夜的孩子36.9→73.8，故园往事80.5→161.0。books_calc变成11列，books仍有10列，磁盘原始CSV也没被改写。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>title</th>
+<th style="text-align: right;">price</th>
+<th style="text-align: right;">two_book_price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月光与我</td>
+<td style="text-align: right;">88.9</td>
+<td style="text-align: right;">177.8</td>
+</tr>
+<tr>
+<td>雨夜的孩子</td>
+<td style="text-align: right;">36.9</td>
+<td style="text-align: right;">73.8</td>
+</tr>
+<tr>
+<td>故园往事</td>
+<td style="text-align: right;">80.5</td>
+<td style="text-align: right;">161.0</td>
+</tr>
+</tbody>
+</table></div></div>
+<p><code>copy()</code>不是保存文件，也不是为了“让电脑更快”，而是明确原始表与工作表边界。<code>working = books</code> 只是给同一个对象多贴一个名字，直接修改时可能一起变。学会先保留原表，日后更容易回头核对处理前后。</p>
+<h2 id="2-先定义订单口径再开始算钱">2. 先定义订单口径，再开始算钱</h2>
+<p><code>pay_amount</code>是下单时计算的实付字段；数据中还有 <code>status=已退款</code>。不能把所有行的pay_amount一加，就叫“全年营收”或“净利润”。本课使用口径：<strong>仅已完成订单的实付金额合计</strong>。它仍未扣平台费、物流、人工等费用，不是净利润。</p>
+<pre class="highlight"><code class="language-python">completed = orders.loc[orders["status"] == "已完成"].copy()
+completed["original_amount"] = completed["unit_price"] * completed["quantity"]
+completed["discount_amount"] = completed["original_amount"] - completed["pay_amount"]
+completed[["order_id", "original_amount", "pay_amount", "discount_amount"]].head(3)</code></pre>
+<p>输入15115行全年订单，先筛状态，得到13996行已完成订单；新增折扣前金额和优惠金额。前三笔都是无折扣：SG25000001原价24、实付24、优惠0；第二笔69、69、0；第三笔90、90、0。新列是逐行计算，不是把全表单价乘全表数量合计。</p>
+<pre class="highlight"><code class="language-python">print(completed["pay_amount"].sum())
+print(orders.loc[orders["status"] == "已退款", "pay_amount"].sum())</code></pre>
+<p>输入两个不同状态范围，分别合计字段。当前数据结果为1784371.1和144029.9。后一个是1119条退款订单的字段金额，<strong>不能再算作已保留销售金额</strong>。完整项目会更详细写口径，本课先把“数据范围决定数字含义”记住。优惠比例discount=0.1意味着减10%，不是减0.1元，也不是只付10%。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title"><code>orders[orders["status"] == "已完成"]["original_amount"] = ...</code></p><p>连着筛选和赋值，修改对象不明确。pandas 3启用Copy-on-Write，不要沿用旧教程里“忽略警告即可”的方法。</p></div>
+<div class="compare-col good"><p class="compare-title">先 <code>completed = orders.loc[...].copy()</code> 再新增列</p><p>工作表名字明确，先筛后改。若确实要修改原工作表的某些格，用一条loc赋值；本课以保留原表为优先。</p></div></div>
+<h2 id="3-groupby先分堆再每堆算一个数">3. groupby：先分堆，再每堆算一个数</h2>
+<div class="callout analogy"><p class="callout-title">给书架按品类分区</p><p>把历史书放一堆、小说放一堆，然后每堆数几本、平均多少钱。groupby只是“如何分堆”，sum、mean、size或agg才决定“每堆算什么”。它不等于先把表排序。</p></div>
+<pre class="highlight"><code class="language-python">category_counts = books.groupby("category")["book_id"].size()
+print(category_counts)</code></pre>
+<p>输入books，按category分组，选book_id列，每组数行。实际得到带品类索引的Series：历史35、哲学20、小说64、心理22、科普22、经济23、诗歌14。加起来200，与原表行数一致。<code>.size()</code>数每组记录数；不是“把编号相加”，编号是文字。</p>
+<pre class="highlight"><code class="language-python">category_mean = books.groupby("category")["price"].mean()
+print(category_mean.round(2))</code></pre>
+<p>输入每组price，求均值，再仅为显示保留2位。历史81.21、哲学60.45、小说62.96、心理57.05、科普59.88、经济61.27、诗歌39.94。这里均价只描述这份模拟目录，不证明一个品类“更值得买”。如果算rating均值，默认跳过缺失评分；未评价不是0分，后面清洗课再展开。</p>
+<h2 id="4-agg一张结果表装多个指标">4. agg：一张结果表装多个指标</h2>
+<pre class="highlight"><code class="language-python">book_summary = books.groupby("category", as_index=False).agg(
+    book_count=("book_id", "size"),
+    mean_price=("price", "mean"),
+)
+book_summary.round(2)</code></pre>
+<p>输入同一200本图书，按品类分堆，两个命名聚合同时计算。<code>book_count=("book_id", "size")</code>读作“新列叫book_count，对book_id按组数行”；<code>mean_price</code>对price求均值。这里括号内的两项是一个元组参数，不是函数定义。</p>
+<p><code>as_index=False</code>让category保留为普通列，结果是7行3列DataFrame，适合后续导出或画图。不写时分组键通常成为索引，结果内容也许正确但形态不同。要明确题目要表格还是Series，不要只看输出长得像表就提交。</p>
+<div class="widget" data-widget="table-lab"><p class="widget-title">小样本分组演示（不执行Python）</p><div class="widget-body"></div><script type="application/json">{"mode":"groupby"}</script></div>
+<p>网页只模拟固定小样本分组，不执行Python、不读取全年订单。你可以先体会分堆后表变短，再回Notebook验证真实随包模拟数据。</p>
+<h2 id="5-工作里的分组按平台统计已完成订单">5. 工作里的分组：按平台统计已完成订单</h2>
+<pre class="highlight"><code class="language-python">platform_summary = completed.groupby("platform", as_index=False).agg(
+    order_count=("order_id", "size"),
+    completed_amount=("pay_amount", "sum"),
+    mean_order=("pay_amount", "mean"),
+)
+platform_summary.round(2)</code></pre>
+<p>输入已筛好的13996条已完成订单，按平台分组，算订单数、已完成实付合计、每单平均实付。输出3行4列：</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>platform</th>
+<th style="text-align: right;">order_count</th>
+<th style="text-align: right;">completed_amount</th>
+<th style="text-align: right;">mean_order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微信小程序</td>
+<td style="text-align: right;">4299</td>
+<td style="text-align: right;">551636.10</td>
+<td style="text-align: right;">128.32</td>
+</tr>
+<tr>
+<td>抖音小店</td>
+<td style="text-align: right;">3255</td>
+<td style="text-align: right;">425090.40</td>
+<td style="text-align: right;">130.60</td>
+</tr>
+<tr>
+<td>淘宝</td>
+<td style="text-align: right;">6442</td>
+<td style="text-align: right;">807644.60</td>
+<td style="text-align: right;">125.37</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>订单数合计13996，金额合计1784371.10，可以与筛选后的总数核对。不要用 <code>quantity.sum()</code>代替订单数：一笔买5件仍是1单。<code>.count()</code>只数某列非空值，<code>.size()</code>数行；若用rating.count数订单，会遗漏未评分订单。每单平均金额也不是“每位客户平均消费”，客户可下多单，分母不同。</p>
+<div class="quiz"><p class="quiz-q">统计已完成订单数量，为什么用order_id的size而不是rating的count？</p><ul class="quiz-options"><li><button type="button" data-correct="0">评分值太大</button></li><li><button type="button" data-correct="1">rating有缺失，count会少算未评分订单；size数记录行</button></li><li><button type="button" data-correct="0">size会自动过滤退款</button></li></ul><div class="quiz-explain"><p>状态需要事先显式筛选，size本身不会替你判断退款口径。</p></div></div>
+<h2 id="6-四道独立练习">6. 四道独立练习</h2>
+<p>各题都从books或orders原始变量重新生成工作表，后题不会依赖前题的未作答变量。</p>
+<div class="callout try"><p class="callout-title">2-3.1 新增两本书价</p><p>复制books，新列two_book_price等于price乘2；保留全部原始列，结果放result。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">result = books.copy()
+result["two_book_price"] = result["price"] * 2</code></pre>
+输入200行10列，新增计算列后200行11列，原始books不变。</p></details>
+<div class="callout try"><p class="callout-title">2-3.2 图书品类汇总</p><p>输出普通列category、book_count、mean_price。按category分组，数量用book_id的size、均价用price的mean。不要先四舍五入原价。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">result = books.groupby("category", as_index=False).agg(
+    book_count=("book_id", "size"),
+    mean_price=("price", "mean"),
+)</code></pre>
+输入图书全表，分堆求两项指标，输出7行3列，数量合计200。</p></details>
+<div class="callout try"><p class="callout-title">2-3.3 订单原价列</p><p>筛已完成订单并copy，只新增original_amount=unit_price乘quantity，保留全部原订单字段。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">result = orders.loc[orders["status"] == "已完成"].copy()
+result["original_amount"] = result["unit_price"] * result["quantity"]</code></pre>
+输入15115单，保留13996单，新增后12列。不要额外加本题没要求的discount_amount。</p></details>
+<div class="callout try"><p class="callout-title">2-3.4 平台汇总</p><p>独立从orders筛已完成，然后按平台产生order_count、completed_amount、mean_order，指标定义与上文一致。提交未round的结果。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">work = orders.loc[orders["status"] == "已完成"].copy()
+result = work.groupby("platform", as_index=False).agg(
+    order_count=("order_id", "size"),
+    completed_amount=("pay_amount", "sum"),
+    mean_order=("pay_amount", "mean"),
+)</code></pre>
+输入年度订单，先定状态范围再分组，输出3行4列，金额合计1784371.10。</p></details>
+<h2 id="常见问题和求职用途">常见问题和求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KeyError: 新列不存在</td>
+<td>先运行创建工作表与新增列格，核对拼写</td>
+</tr>
+<tr>
+<td>输出只有分组对象</td>
+<td>groupby之后还需要size/mean/agg等统计动作</td>
+</tr>
+<tr>
+<td>数量比预期少</td>
+<td>是否count了缺失评分；状态过滤是否一致</td>
+</tr>
+<tr>
+<td>检查说少了category列</td>
+<td>用as_index=False让分组键成为普通列</td>
+</tr>
+<tr>
+<td>金额被叫作净利润</td>
+<td>写清筛选口径，并列出没有扣除的费用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试可以讲的一套步骤</p><p>“保留原始表→明确已完成状态→新增原价列→按平台汇总→核对订单数与金额合计”。这套说法比“我熟练掌握groupby”更有说服力。案例是模拟文创店，不应声称做出了真实销售增长，也不因为淘宝金额最高就推断平台更有效，平台订单基数不同。</p></div>
+<div class="checklist"><p class="checklist-title">验收</p><ul><li><label><input type="checkbox" data-id="2-3:18:0"><span class="cl-text">我能解释copy保护的是哪一份表。</span></label></li><li><label><input type="checkbox" data-id="2-3:18:1"><span class="cl-text">我知道整列运算不需要逐行for。</span></label></li><li><label><input type="checkbox" data-id="2-3:18:2"><span class="cl-text">我能读懂命名聚合中的新列名、来源列、统计动作。</span></label></li><li><label><input type="checkbox" data-id="2-3:18:3"><span class="cl-text">我能区分订单数、件数、评分人数和每单均值。</span></label></li><li><label><input type="checkbox" data-id="2-3:18:4"><span class="cl-text">四题通过，报告金额口径明确排除退款。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/2-4-pandas-merge-pivot.html">给订单补商品资料并做数据透视</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/2-3_pandas_groupby.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/2-3_pandas_groupby.ipynb" download>学生练习本</a> · <a href="../../solutions/2-3_pandas_groupby.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="2-2-pandas-select.html"><small>← 上一课</small>2-2 选取、筛选与排序</a><a class="next" href="2-4-pandas-merge-pivot.html"><small>下一课 →</small>2-4 合并表格与数据透视</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-新增列同一公式作用到整列">1. 新增列：同一公式，作用到整列</a></li><li><a href="#2-先定义订单口径再开始算钱">2. 先定义订单口径，再开始算钱</a></li><li><a href="#3-groupby先分堆再每堆算一个数">3. groupby：先分堆，再每堆算一个数</a></li><li><a href="#4-agg一张结果表装多个指标">4. agg：一张结果表装多个指标</a></li><li><a href="#5-工作里的分组按平台统计已完成订单">5. 工作里的分组：按平台统计已完成订单</a></li><li><a href="#6-四道独立练习">6. 四道独立练习</a></li><li><a href="#常见问题和求职用途">常见问题和求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/widgets/table-lab.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-3 plotly 交互图表与图表美化 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="4-3" style="--stage-color: #ec4899">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3" class="active"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 4 · 数据可视化</div><h1><span class="lid">4-3</span>plotly 交互图表与图表美化</h1><p class="lesson-summary">为同一个月度指标增加悬停交互，并导出不依赖网络的独立 HTML 图表。</p><ul class="lesson-meta"><li>约 60 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/4-3_viz_plotly.ipynb</code></li><li>前置：已完成 4-1、4-2，能按月汇总并解释图表口径</li></ul></header><article class="lesson-body"><h2 id="本课的可检验目标">本课的可检验目标</h2>
+<div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>用 <code>plotly.express</code> 创建一张按月份排序的折线图。</li>
+<li>在悬停中展示日期、金额和已完成订单数。</li>
+<li>导出自带 JavaScript 的 HTML，在本机断网打开。</li>
+<li>区分数据计算、美化展示和文件交付，不让“交互”替代解释。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/4-3_viz_plotly.ipynb">4-3 练习本</a>。本课只显示一张 Plotly 交互图，避免每格重复嵌入较大的离线脚本。数据仍是随包的虚构文创店订单，金额口径为 2025 年已完成订单实付金额总和，不含退款，不代表利润。</p>
+<h2 id="1-交互解决什么问题">1. 交互解决什么问题</h2>
+<p>静态 PNG 像报告照片，打开就能看，适合文档和邮件。交互 HTML 像带放大镜的图：鼠标悬停能读准确数值、拖动能局部查看、双击能恢复视野。交互不意味着自动分析，也不会在浏览器里执行你的 pandas 代码。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>交付形式</th>
+<th>优点</th>
+<th>需要注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PNG / SVG 静态图</td>
+<td>便于文档嵌入，轻量</td>
+<td>细节要提前标注</td>
+</tr>
+<tr>
+<td>独立交互 HTML</td>
+<td>可悬停、缩放，不要求收件人安装 Python</td>
+<td>文件更大，含嵌入的数据，要检查是否适合分享</td>
+</tr>
+<tr>
+<td>Notebook 输出</td>
+<td>方便边算边看</td>
+<td>运行需要课程环境，不等于对方拿到可直接查看的报告</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>Plotly 是图形库，<code>plotly.express</code> 是常见快速入口，通常缩写 <code>px</code>。matplotlib 中常叫 <code>fig</code> 的画布与这里的 Plotly Figure 不是同一种对象，不能混着调用 <code>set_ylabel()</code>。Plotly 常用 <code>update_layout()</code> 和 <code>update_traces()</code>。</p>
+<h2 id="2-汇总表比图更早完成">2. 汇总表比图更早完成</h2>
+<pre class="highlight"><code class="language-python">import pandas as pd
+orders = pd.read_csv("../data/shop/orders.csv")
+completed = orders.loc[orders["status"].eq("已完成")].copy()
+completed["order_time"] = pd.to_datetime(completed["order_time"])
+completed["month"] = completed["order_time"].dt.to_period("M").dt.to_timestamp()
+monthly = (completed.groupby("month", as_index=False)
+           .agg(pay_amount=("pay_amount", "sum"),
+                order_count=("order_id", "count"))
+           .sort_values("month"))
+print(monthly)</code></pre>
+<p><code>agg()</code> 里左侧是结果列名，括号中的两个字符串依次表示源列与统计方法。每行是一个月份，不是一笔订单。订单数按本表一行一个订单的粒度计数，现实明细表则需要重新定义。画图前检查月份有无缺口、金额汇总是否回到已完成订单总额；图不会替你修复漏月和重复订单。</p>
+<p>额外放入 <code>order_count</code> 是帮助读者理解规模，不意味着金额上升一定由订单数导致。客单价、退款状态和商品结构等也可能影响金额。不要为了悬停字段好看加入未计算过的“增长率”。</p>
+<h2 id="3-用-pxline-画第一张交互图">3. 用 px.line 画第一张交互图</h2>
+<pre class="highlight"><code class="language-python">import plotly.express as px
+fig = px.line(
+    monthly, x="month", y="pay_amount", markers=True,
+    hover_data={"order_count": True},
+    labels={"month": "月份", "pay_amount": "实付金额（元）",
+            "order_count": "已完成订单数（笔）"},
+    title="2025年月度已完成订单实付金额（模拟）"
+)
+fig.update_layout(template="plotly_white",
+                  font={"family": "Microsoft YaHei, Arial, sans-serif"},
+                  hovermode="x unified")
+fig.update_xaxes(tickformat="%Y-%m")
+fig.update_yaxes(rangemode="tozero")
+fig.show(renderer="notebook")</code></pre>
+<p><code>x</code>、<code>y</code> 使用表中的列名；<code>labels</code> 更改显示给读者的文字，不修改实际列名。<code>markers=True</code> 给每月加点，悬停更容易定位。<code>hovermode="x unified"</code> 把同一横轴位置的信息放在一个提示框，本课只有一条金额线，先不引入多指标双轴。</p>
+<p>Plotly 默认用浏览器字体显示文字，<code>setup_chinese_font()</code> 主要影响 matplotlib/seaborn，不会自动给 HTML 打包字体。这里写微软雅黑等系统字体候选；在自己的浏览器检查中文。不要因为设置了一个字体名就声称所有收件人机器都有这款字体。</p>
+<div class="callout note"><p class="callout-title">本教程选择离线 Notebook 渲染</p><p><code>renderer="notebook"</code> 会嵌入本地 Plotly 脚本，输出体积会更大。不要换成 <code>notebook_connected</code> 并假设断网仍能运行。若 JupyterLab 中空白，可重新运行此格；仍空白时先用下一节导出的独立 HTML 验证，不必安装静态导出引擎。本课不需要 Kaleido，也不使用另行安装的数据框适配 API。</p></div>
+<h2 id="4-悬停写得清楚不是写得越多越好">4. 悬停写得清楚，不是写得越多越好</h2>
+<p>日期显示到月份足够，不要让月份标签看起来像真实月初的一天。金额保留两位小数，并让读者知道单位；订单数保留整数。需要严格控制提示文字时，使用 <code>hovertemplate</code>。</p>
+<pre class="highlight"><code class="language-python">fig.update_traces(
+    hovertemplate="月份：%{x|%Y-%m}&lt;br&gt;实付金额：%{y:,.2f} 元"
+                  "&lt;br&gt;已完成订单数：%{customdata[0]:,.0f} 笔&lt;extra&gt;&lt;/extra&gt;"
+)</code></pre>
+<p>这里 <code>customdata[0]</code> 是本图 <code>hover_data</code> 中第一个附加字段，即订单数。若以后调整了附加字段顺序，必须一起调整模板。<code>&lt;extra&gt;&lt;/extra&gt;</code> 隐藏附加图例框，不是删除数据。<code>&lt;br&gt;</code> 表示换行，这是提示框里的固定文本格式，不要拼接未经检查的外部用户输入。</p>
+<p>在练习本里，先设置完悬停再调用一次 <code>fig.show()</code>，不要每修改一行就重新输出整份离线脚本。图的美化最后完成，数据口径与排序不因字体和配色变化而改变。</p>
+<h2 id="5-导出一个断网也能打开的文件">5. 导出一个断网也能打开的文件</h2>
+<pre class="highlight"><code class="language-python">from pathlib import Path
+import tempfile
+with tempfile.TemporaryDirectory() as folder:
+    output = Path(folder) / "monthly_sales.html"
+    fig.write_html(output, include_plotlyjs=True, full_html=True)
+    print("临时导出存在：", output.exists())
+    print("文件大小（字节）：", output.stat().st_size)</code></pre>
+<p><code>include_plotlyjs=True</code> 把 Plotly 的脚本带进 HTML；如果写 <code>"cdn"</code>，打开时还要下载网络脚本，不能称为独立离线交付。<code>full_html=True</code> 生成完整页面。文件通常比静态图大，具体大小随版本与数据变化，不需要背一个固定数字。</p>
+<div class="callout warn"><p class="callout-title">临时文件用于练习，不是最终交付</p><p>退出 <code>with</code> 后临时目录自动清理。所以这段代码用于测试，不该打印路径后要求学生去找一个已消失文件。要在个人电脑保留成品，请另建自己有写权限的 <code>outputs</code> 文件夹，再用下面代码。不要覆盖源订单。</p></div>
+<pre class="highlight"><code class="language-python">from pathlib import Path
+folder = Path("../outputs")
+if not folder.exists():
+    folder.mkdir()
+output = folder / "monthly_sales.html"
+fig.write_html(output, include_plotlyjs=True, full_html=True)
+print(output.resolve())</code></pre>
+<p>这一段在个人环境中手动执行：从文件管理器双击 <code>monthly_sales.html</code>，用本地浏览器打开，断开网络后刷新，再试悬停和缩放。Windows 浏览器若提示下载而非展示，先确认扩展名是 <code>.html</code>，不是隐藏后缀导致的 <code>.html.txt</code>。这只是本机文件，不需要发布到网站，也不需要上传第三方平台。</p>
+<div class="callout danger"><p class="callout-title">分享前看数据，而不只是看图</p><p>HTML 里会嵌入绘图用的数据，隐藏某个图例并不等于删除数据。公开作品优先使用本模拟数据或获准公开的汇总数据；不要把个人标识、内部订单和敏感字段顺手打包发出去。本课不自动发送或上传任何文件。</p></div>
+<h2 id="6-四个练习">6. 四个练习</h2>
+<div class="callout try"><p class="callout-title">练习 1：月度金额与订单数</p><p>生成 <code>month</code>、<code>pay_amount</code>、<code>order_count</code> 三列并升序排列。说明 <code>order_count</code> 的粒度依据。</p>
+<details class="fold"><summary>提示与答案</summary><p>使用上文 <code>groupby(...).agg(...)</code>。本订单主表一行一单，所以行数可计订单；若换成多商品明细，不能照搬 <code>count()</code>。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 2：图的结构</p><p>创建一张新的月度折线 Figure，不重复显示；轴标签用“月份”“实付金额（元）”，标题“月度实付金额”。</p>
+<details class="fold"><summary>参考答案</summary><p><code>px.line(monthly, x="month", y="pay_amount", labels={...}, title="月度实付金额")</code>。检查对照线的数据、日期顺序与标签，不要求一模一样的像素。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 3：验证离线导出</p><p>在临时目录导出 HTML，提交完整 HTML 文本供检查，不使用 CDN。</p>
+<details class="fold"><summary>参考答案</summary><p><code>fig.write_html(path, include_plotlyjs=True, full_html=True)</code> 后在 <code>with</code> 内 <code>html_answer = path.read_text(encoding="utf-8")</code>。不要把退出后已经失效的路径当答案；检查不接收外部网址，也不上传文件。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 4：交付决策</p><p>对方没有 Python、可能断网，但需要悬停查看数值，你应该选择什么交付形式？</p>
+<details class="fold"><summary>参考答案</summary><p>“内嵌脚本的HTML”。收件人在浏览器本地查看，无须安装 Python；同时需要说明文件较大、数据已嵌入，分享前审查。</p></details></div>
+<div class="quiz"><p class="quiz-q">哪一个参数符合独立离线 HTML 交付？</p><ul class="quiz-options"><li><button type="button" data-correct="0"><code>include_plotlyjs="cdn"</code></button></li><li><button type="button" data-correct="1"><code>include_plotlyjs=True</code></button></li><li><button type="button" data-correct="0"><code>include_plotlyjs=False</code> 且没有其他脚本来源</button></li></ul><div class="quiz-explain"><p>True 内嵌脚本。CDN 需要网络，False 要依赖页面外部另行提供脚本。</p></div></div>
+<h2 id="7-报错与验收">7. 报错与验收</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ModuleNotFoundError: plotly</code></td>
+<td>检查课程内核和 requirements，不在 base 随机安装</td>
+</tr>
+<tr>
+<td>HTML 断网空白</td>
+<td>确认 True 内嵌脚本，重新导出完整 HTML</td>
+</tr>
+<tr>
+<td>找不到临时文件</td>
+<td>临时目录退出后会消失；个人保存时用 <code>outputs</code></td>
+</tr>
+<tr>
+<td>月份顺序异常</td>
+<td>绘图前按日期升序，不靠悬停格式修正数据顺序</td>
+</tr>
+<tr>
+<td>想导出 PNG 被要求装引擎</td>
+<td>本课仅做 HTML；静态 PNG 继续用 matplotlib</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职加分</p><p>作品集可以同时提供静态总览与离线交互附件，并写清数据来源、指标定义和可公开范围。你的亮点是“交付可复核、无需联网的分析图”，不是虚构某公司用它提升多少收益。互动图同样需要一句有限度的文字结论。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="4-3:15:0"><span class="cl-text">折线数据已汇总，月份按真实日期升序。</span></label></li><li><label><input type="checkbox" data-id="4-3:15:1"><span class="cl-text">悬停日期、金额和订单数的单位与精度正确。</span></label></li><li><label><input type="checkbox" data-id="4-3:15:2"><span class="cl-text">Notebook 一次展示即可，独立 HTML 内嵌脚本。</span></label></li><li><label><input type="checkbox" data-id="4-3:15:3"><span class="cl-text">个人环境已本地打开 HTML 并断网检查交互。</span></label></li><li><label><input type="checkbox" data-id="4-3:15:4"><span class="cl-text">不覆盖原数据、不上传敏感数据，不把趋势包装成因果。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/4-3_viz_plotly.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/4-3_viz_plotly.ipynb" download>学生练习本</a> · <a href="../../solutions/4-3_viz_plotly.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="4-2-viz-seaborn.html"><small>← 上一课</small>4-2 seaborn 统计图表</a><a class="next" href="P-1-project-ecommerce.html"><small>下一课 →</small>P-1 项目一：线上文创店年度销售分析</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#本课的可检验目标">本课的可检验目标</a></li><li><a href="#1-交互解决什么问题">1. 交互解决什么问题</a></li><li><a href="#2-汇总表比图更早完成">2. 汇总表比图更早完成</a></li><li><a href="#3-用-pxline-画第一张交互图">3. 用 px.line 画第一张交互图</a></li><li><a href="#4-悬停写得清楚不是写得越多越好">4. 悬停写得清楚，不是写得越多越好</a></li><li><a href="#5-导出一个断网也能打开的文件">5. 导出一个断网也能打开的文件</a></li><li><a href="#6-四个练习">6. 四个练习</a></li><li><a href="#7-报错与验收">7. 报错与验收</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

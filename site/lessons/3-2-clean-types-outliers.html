@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3-2 异常值、数据类型、日期与文本 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="3-2" style="--stage-color: #f59e0b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2" class="active"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 3 · 数据清洗</div><h1><span class="lid">3-2</span>异常值、数据类型、日期与文本</h1><p class="lesson-summary">把金额、日期和名称统一为可分析的类型，并为疑似异常保留复核证据。</p><ul class="lesson-meta"><li>约 80 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/3-2_clean_types.ipynb</code></li><li>前置：已完成 3-1，理解粒度、缺失值与整行去重</li></ul></header><article class="lesson-body"><h2 id="本课目标与起点">本课目标与起点</h2>
+<div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>区分“看起来像数字”和真正的数值类型。</li>
+<li>清理本模拟文件的金额符号、混合日期和文本别名。</li>
+<li>用布尔条件标记待核对项，留下隔离表和原因。</li>
+<li>解释异常规则的业务边界，不把“很大”直接等同于“错误”。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/3-2_clean_types.ipynb">3-2 练习本</a>，从第一格运行。每本都独立读取数据，本课不会依赖上一课的内存变量。原文件保持不变，本课将操作去重后的副本。</p>
+<pre class="highlight"><code class="language-python">import pandas as pd
+raw = pd.read_csv("../data/shop/orders_dirty.csv")
+work = raw.drop_duplicates().copy()
+print(work.dtypes)</code></pre>
+<p><code>dtypes</code> 显示每列的类型。本版 <code>实付金额</code> 混有 <code>￥39.00</code>、<code>39.00元</code> 与 <code>39.00</code>，读取后是文本。pandas 3 的文本类型可能显示为 <code>str</code>，其他环境可能显示为 <code>object</code>；不必背输出单词，重要的是确认这一列能否安全做数值运算。</p>
+<h2 id="1-金额先解释格式再转数字">1. 金额：先解释格式，再转数字</h2>
+<p>字符串是“字符的队伍”。两个文本相加可能是在拼接，不是在算钱；按文本排序，<code>"100"</code> 也可能排在 <code>"20"</code> 前。清洗过程分为“去掉已知装饰”和“解析为数值”。</p>
+<pre class="highlight"><code class="language-python">money_text = (work["实付金额"].astype("string")
+              .str.strip()
+              .str.replace("￥", "", regex=False)
+              .str.replace("元", "", regex=False))
+money = pd.to_numeric(money_text, errors="coerce")
+money_failed = work.loc[money.isna() &amp; money_text.notna()].copy()
+work["实付金额"] = money
+print("非空金额解析失败：", len(money_failed))</code></pre>
+<p><code>regex=False</code> 表示只替换眼前这个字符，不把它当正则规则。<code>errors="coerce"</code> 表示无法解析时产生缺失，而不是让程序在第一处失败就停止。它不是“错误已经修好”：必须检查新产生的缺失并保留原值。原本空白与解析失败也不是同一种问题。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>原值</th>
+<th>去装饰后</th>
+<th>数值结果</th>
+<th>后续动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>￥39.00</code></td>
+<td><code>39.00</code></td>
+<td>39.0</td>
+<td>可按元统计</td>
+</tr>
+<tr>
+<td><code>39.00元</code></td>
+<td><code>39.00</code></td>
+<td>39.0</td>
+<td>可按元统计</td>
+</tr>
+<tr>
+<td><code>待确认</code>（说明性例子）</td>
+<td><code>待确认</code></td>
+<td>缺失</td>
+<td>留待核对，不能变成零</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>本文件的金额修复仅涵盖已知符号和单位，不能拿到另一份文件就删除所有非数字字符。例如负号、小数点、千位分隔符和不同币种都有实际含义。人民币元和美元不能清掉符号后直接汇总。</p>
+<h2 id="2-日期统一写法不等于恢复时间">2. 日期：统一写法不等于恢复时间</h2>
+<p>本包日期来自 2025 年，混合了 <code>2025-06-18 20:30:12</code>、<code>2025/6/18 20:30</code>、<code>2025年6月18日</code>。先将中文年月日和斜线统一，再明确告诉 pandas 每行可能有不同格式。</p>
+<pre class="highlight"><code class="language-python">date_text = (work["下单时间"].astype("string").str.strip()
+             .str.replace("年", "-", regex=False)
+             .str.replace("月", "-", regex=False)
+             .str.replace("日", "", regex=False)
+             .str.replace("/", "-", regex=False))
+parsed_time = pd.to_datetime(date_text, format="mixed", errors="coerce")
+date_failed = work.loc[parsed_time.isna()].copy()
+work["下单时间"] = parsed_time
+work["日期"] = work["下单时间"].dt.normalize()</code></pre>
+<p><code>NaT</code> 是日期时间中的缺失。<code>dt</code> 可以理解为“日期工具箱”；<code>normalize()</code> 把时分秒归零，适合按日汇总。不要把归零后的时间解释为顾客真的在午夜下单。</p>
+<div class="callout warn"><p class="callout-title">信息损失要写在报告里</p><p>只剩年月日的记录解析后为 00:00:00，但原始小时、分钟和秒已经丢失；只有时分的记录也没有原秒数。统一格式不能凭空还原这些信息。因此本脏表适合日/月分析，不适合直接研究下单小时。也不能按排序位置推算丢失的分钟。</p></div>
+<p>本包没有 <code>03/04/2025</code> 这类日月顺序含糊的来源。遇到跨地区日期，先询问格式约定、时区与业务日边界；<code>format="mixed"</code> 不是替你确定这些语义。</p>
+<h2 id="3-文本先去空白再按已知映射统一">3. 文本：先去空白，再按已知映射统一</h2>
+<pre class="highlight"><code class="language-python">work["城市"] = (work["城市"].astype("string")
+                 .str.strip().str.removesuffix("市"))
+platform_alias = {
+    "taobao": "淘宝", "TB": "淘宝", "微信": "微信小程序",
+    "小程序": "微信小程序", "抖音": "抖音小店", "douyin": "抖音小店"
+}
+work["平台"] = work["平台"].str.strip().replace(platform_alias)
+work["订单状态"] = work["订单状态"].str.strip().replace(
+    {"完成": "已完成", "退款": "已退款"}
+)
+print(work["平台"].value_counts(dropna=False))</code></pre>
+<p><code>strip()</code> 去掉首尾空白，不会改正文。<code>removesuffix("市")</code> 只处理结尾，而不是删除名称中所有“市”字。本模拟文件明确把“上海市”和“上海”当作同一个城市，所以规则成立；现实数据需要规范城市字典，不能把所有地名机械截短。映射表也是本案例约定，“微信”在其他数据里可能是营销来源而非支付平台。</p>
+<div class="callout tip"><p class="callout-title">不认识的值应该冒出来</p><p>用 <code>value_counts(dropna=False)</code> 检查统一后的所有取值。<code>replace()</code> 会保留未匹配值，便于发现新的别名；不要把未知平台默认归到淘宝。对文本先清空白，再映射，也能正确处理本文件的“淘宝 ”。</p></div>
+<h2 id="4-异常统计上的少见不是业务上的无效">4. 异常：统计上的少见，不是业务上的无效</h2>
+<p>999 件可能是录入错，也可能是团购；一个高金额订单可能只是购买昂贵商品。箱线图上的点也不自动是错误。本课采用<strong>明确标注的练习业务假设</strong>：数量应在 1～20 且为整数，评分应在五分制 1～5。超范围先进入复核流程，规则不是对现实订单的实证判断。</p>
+<pre class="highlight"><code class="language-python">quantity = pd.to_numeric(work["数量"], errors="coerce")
+quantity_issue = (quantity.isna() | ~quantity.between(1, 20)
+                  | quantity.mod(1).ne(0))
+rating = pd.to_numeric(work["评分"], errors="coerce")
+rating_issue = rating.notna() &amp; ~rating.between(1, 5)
+review = work.loc[quantity_issue | rating_issue].copy()
+review["数量待核对"] = quantity_issue.loc[review.index]
+review["评分越界"] = rating_issue.loc[review.index]
+print("数量问题：", quantity_issue.sum())
+print("已有评分越界：", rating_issue.sum())</code></pre>
+<p>括号包住每个条件，用 <code>|</code> 表示“或者”；pandas 的列条件不使用 Python 的 <code>or</code>。数量缺失需要复核，而评分缺失仍是“没有观察”，所以 <code>rating_issue</code> 必须先限定 <code>notna()</code>。</p>
+<p>如果某张销量图临时只使用符合假设的订单，图下注明排除了什么、排除了多少行，并保留 <code>review</code>。做评分分析时，可以另建 <code>valid_rating = rating.where(rating.between(1, 5))</code>，保留原评分与越界标记。不要把越界评分改成边界值，更不要因为评分问题删掉整笔金额。</p>
+<h2 id="5-四个练习">5. 四个练习</h2>
+<div class="callout try"><p class="callout-title">练习 1：金额转数值</p><p>从去重后的原始金额列生成数值列，并统计非空输入的解析失败数。</p>
+<details class="fold"><summary>提示与答案</summary><p>按上文先移除 <code>￥</code> 与 <code>元</code>，再 <code>pd.to_numeric(..., errors="coerce")</code>。本包这些格式可解析，但仍必须运行失败检查。不要直接 <code>astype(float)</code> 处理 <code>￥39.00</code>。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 2：统一日期</p><p>解析混合日期并计算共有多少个不同月份。说明为什么不据此报告“最热门下单小时”。</p>
+<details class="fold"><summary>参考答案</summary><p>统一分隔符后用 <code>pd.to_datetime(..., format="mixed", errors="coerce")</code>，再用 <code>.dt.to_period("M").nunique()</code>。中文日期已丢掉小时，解析出的 00:00 不是真实观察。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 3：统一标签</p><p>独立创建仅含“城市、平台、订单状态”的新表，统一空白、后缀和已知别名。</p>
+<details class="fold"><summary>参考答案</summary><p>先选择三列并 <code>.copy()</code>，再分别执行上文规则。完成后查看取值集合，预期本包平台只有淘宝、微信小程序、抖音小店；不要把未匹配值偷偷删除。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 4：隔离数量问题</p><p>从去重后的原始记录中选出数量缺失、不在 1～20 或非整数的行，保留所有原列。另用一句话解释隔离不代表判定无效。</p>
+<details class="fold"><summary>参考答案</summary><p><code>q = pd.to_numeric(unique["数量"], errors="coerce")</code>，随后 <code>unique.loc[q.isna() | ~q.between(1, 20) | q.mod(1).ne(0)].copy()</code>。这是本案例规则下的待复核集合；需要业务依据才能修复或排除。</p></details></div>
+<div class="quiz"><p class="quiz-q"><code>errors="coerce"</code> 成功运行后，最重要的下一步是？</p><ul class="quiz-options"><li><button type="button" data-correct="0">认为所有数据已经正确</button></li><li><button type="button" data-correct="1">检查解析失败的位置并保留原值</button></li><li><button type="button" data-correct="0">把新缺失全部填 0</button></li></ul><div class="quiz-explain"><p>不抛异常只说明程序继续运行，不代表源数据问题消失。</p></div></div>
+<h2 id="6-排错与验收">6. 排错与验收</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError: could not convert ...</code></td>
+<td>先清理已知符号，再使用数值解析并记录失败</td>
+</tr>
+<tr>
+<td><code>.dt</code> 提示只适用于日期</td>
+<td>检查 <code>pd.to_datetime</code> 的结果是否赋回，确认列类型</td>
+</tr>
+<tr>
+<td><code>truth value ... ambiguous</code></td>
+<td>列条件用带括号的 <code>&amp;</code>、<code>|</code>，不用 <code>and</code>、<code>or</code></td>
+</tr>
+<tr>
+<td>修改列出现链式赋值问题</td>
+<td>在副本上直接赋列，用 <code>.loc</code>，不写连续索引赋值</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职加分</p><p>可在作品中放一张“问题—规则—影响行数—处理动作”的质量表。面试时说明规则来自本模拟案例，金额、销量、评分分别使用不同有效字段范围。这体现可复核的分析习惯，不是用删除数据把结果变好看。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="3-2:14:0"><span class="cl-text">金额变成数值，解析失败表仍保留。</span></label></li><li><label><input type="checkbox" data-id="3-2:14:1"><span class="cl-text">混合日期可按月统计，报告明确时间精度限制。</span></label></li><li><label><input type="checkbox" data-id="3-2:14:2"><span class="cl-text">已知文本别名统一，未知值有核对入口。</span></label></li><li><label><input type="checkbox" data-id="3-2:14:3"><span class="cl-text">数量与评分按字段分别标记，缺失评分不判为越界。</span></label></li><li><label><input type="checkbox" data-id="3-2:14:4"><span class="cl-text">能指出 1～20 只是本课假设，不自动套用到其他行业。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/3-2_clean_types.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/3-2_clean_types.ipynb" download>学生练习本</a> · <a href="../../solutions/3-2_clean_types.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="3-1-clean-missing-duplicates.html"><small>← 上一课</small>3-1 缺失值与重复值</a><a class="next" href="4-1-viz-matplotlib.html"><small>下一课 →</small>4-1 选对图表 + matplotlib 基础</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#本课目标与起点">本课目标与起点</a></li><li><a href="#1-金额先解释格式再转数字">1. 金额：先解释格式，再转数字</a></li><li><a href="#2-日期统一写法不等于恢复时间">2. 日期：统一写法不等于恢复时间</a></li><li><a href="#3-文本先去空白再按已知映射统一">3. 文本：先去空白，再按已知映射统一</a></li><li><a href="#4-异常统计上的少见不是业务上的无效">4. 异常：统计上的少见，不是业务上的无效</a></li><li><a href="#5-四个练习">5. 四个练习</a></li><li><a href="#6-排错与验收">6. 排错与验收</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

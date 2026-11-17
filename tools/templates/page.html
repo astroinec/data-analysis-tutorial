@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{page_title}} | {{site_title}}</title>
+<link rel="stylesheet" href="{{root}}assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="{{body_class}}" data-lesson="{{lesson_id}}" style="--stage-color: {{stage_color}}">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="{{root}}index.html"><span class="brand-mark">DA</span><span class="brand-text">{{site_title}}</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+{{sidebar}}
+  </nav>
+  <main class="content">
+{{main}}
+  </main>
+  <aside class="toc" aria-label="本页目录">
+{{toc}}
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="{{root}}assets/js/app.js"></script>
+{{scripts}}
+</body>
+</html>

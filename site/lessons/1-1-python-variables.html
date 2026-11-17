@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1-1 变量与数据类型 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="1-1" style="--stage-color: #6366f1">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1" class="active"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 1 · Python 够用就好</div><h1><span class="lid">1-1</span>变量与数据类型</h1><p class="lesson-summary">用图书价格和一笔折扣订单，分清名字、数字、文字与判断结果。</p><ul class="lesson-meta"><li>约 50 分钟</li><li>难度 ★☆☆</li><li>配套练习本 <code>notebooks/1-1_python_variables.ipynb</code></li><li>前置：已完成第 0-6 课，能在原位置打开 Notebook 并运行代码格</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">学完后你能做到</p><ul>
+<li>给书名、单价、数量起名字，解释赋值符号 <code>=</code>。</li>
+<li>区分 <code>int</code>、<code>float</code>、<code>str</code>、<code>bool</code>，不把价格写成文字。</li>
+<li>算两本书的价格，解释 <code>discount=0.1</code> 为什么是减去 10%。</li>
+<li>在练习本完成 4 道独立练习，并看到中文检查结果。</li>
+</ul></div>
+<h2 id="先把操作位置放对">先把操作位置放对</h2>
+<p>打开 <a href="../../notebooks/1-1_python_variables.ipynb">本课练习本</a>，选择 <code>Python (da-course)</code> 内核。所有标为 Python 的代码都在 Notebook 代码格运行，不是在 Anaconda Prompt 输入。先按从上到下的顺序运行示范，再填练习中的 <code>...</code>。如果你重启内核，电脑会忘记之前的名字；要重新运行前面的格子，而不是反复点击最后一格。</p>
+<p>本课用随包 <code>books.csv</code> 的前三条虚构图书记录和文创店的一笔模拟订单，不代表真实书籍、作者或企业。为了先学语言，本页把核验过的少量值直接写进代码。练习本顶部已帮你载入同一数据，第 2-1 课才详细拆解读文件。你现在不需要背那段准备代码。</p>
+<h2 id="1-变量是贴在值上的名字">1. 变量是贴在值上的名字</h2>
+<div class="callout analogy"><p class="callout-title">给资料贴便签</p><p>你写分析报告时会把某个数记作“本月订单数”。变量也是名字：<code>price</code> 是便签，<code>88.9</code> 是它现在指向的内容。变量不是永远锁死的抽屉，重新赋值后名字可以指向新内容。</p></div>
+<pre class="highlight"><code class="language-python">title = "月光与我"
+price = 88.9
+quantity = 2
+print(title)
+print(price * quantity)</code></pre>
+<p>输入是第一本图书的书名、每本 88.9 元和购买 2 本。前三行分别给值命名，最后两行让结果显示出来。输出为：</p>
+<pre class="highlight"><code class="language-output">月光与我
+177.8</code></pre>
+<p><code>=</code> 的意思是“把右边算好的值交给左边这个名字”，不是数学上的两边恒等。Python 先算右边，再改左边。名字尽量用英文小写，多个词用下划线连接，如 <code>total_price</code>。不能有空格、不能以数字开头；<code>Price</code> 与 <code>price</code> 是两个名字。引号、括号、等号使用英文半角，中文说明放在引号里。</p>
+<pre class="highlight"><code class="language-python">quantity = 2
+quantity = quantity + 1
+print(quantity)</code></pre>
+<p>输入数量 2，第二行先算旧数量加 1，再把 3 交回 <code>quantity</code>，所以输出 3。原来的书价没有跟着变化。Notebook 中只有最后一行表达式会自动显示；想观察多项内容时，用 <code>print(...)</code> 更明确。变量赋值本身通常不显示输出，不代表没有执行。</p>
+<h2 id="2-四种够用的数据类型">2. 四种够用的数据类型</h2>
+<div class="cards"><div class="card"><p class="card-title">整数 int</p><p><code>quantity = 2</code>：没有小数点，适合本数、行数。不要写成 <code>"2"</code>。</p></div>
+<div class="card"><p class="card-title">小数 float</p><p><code>price = 88.9</code>：有小数点，适合金额、比例。<code>0.1</code> 是十分之一。</p></div>
+<div class="card"><p class="card-title">字符串 str</p><p><code>title = "月光与我"</code>：引号包住的文字。看起来像数字的 <code>"88.9"</code> 仍是文字。</p></div>
+<div class="card"><p class="card-title">布尔 bool</p><p><code>is_recent = True</code>：判断结果只有 <code>True</code> 或 <code>False</code>。首字母大写，不加引号。</p></div></div>
+<pre class="highlight"><code class="language-python">print(type(2))
+print(type(88.9))
+print(type("88.9"))
+print(type(True))</code></pre>
+<p>输入四个值，<code>type</code> 查看它们的类别。输出依次是 <code>&lt;class 'int'&gt;</code>、<code>&lt;class 'float'&gt;</code>、<code>&lt;class 'str'&gt;</code>、<code>&lt;class 'bool'&gt;</code>。尖括号是 Python 显示类型的样子，不是需要复制的代码。现在只要能回答“为什么第三个不能直接当价格算”，就掌握了核心。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">看起来像加法，其实拼接文字</p><p><pre class="highlight"><code class="language-python">print("88.9" + "2")</code></pre>
+输入两段文字，<code>+</code> 把文字连接，实际输出 <code>88.92</code>，不是购买两本的金额。</p></div>
+<div class="compare-col good"><p class="compare-title">先用数字表示价格，再乘数量</p><p><pre class="highlight"><code class="language-python">print(88.9 * 2)</code></pre>
+输入单价与本数，<code>*</code> 做乘法，输出 <code>177.8</code>。</p></div></div>
+<p>字符串中的中文可以正常显示。单引号 <code>'月光与我'</code> 和双引号 <code>"月光与我"</code> 都可用，但开头结尾要成对。不要把字符串本身、变量名、屏幕输出混淆：<code>print(title)</code> 找名字的内容，<code>print("title")</code> 只会输出字母 title。</p>
+<h2 id="3-运算和百分比先说清单位">3. 运算和百分比：先说清单位</h2>
+<p>常用运算是 <code>+</code> 加、<code>-</code> 减、<code>*</code> 乘、<code>/</code> 除。括号表示先算括号里的内容。金额和比例要分开：<code>10</code> 表示数值十；<code>0.1</code> 表示十分之一。百分号 <code>%</code> 在 Python 中是取余运算，<strong>不是</strong>写百分比的符号；十个百分点用 <code>10 / 100</code> 或 <code>0.1</code>。</p>
+<p>下面取随包订单 SG25000039：2025-01-02，单价 22 元、5 件、优惠比例 0.1，原字段实付金额 99 元。</p>
+<pre class="highlight"><code class="language-python">unit_price = 22.0
+quantity = 5
+discount = 0.1
+original_amount = unit_price * quantity
+pay_amount = original_amount * (1 - discount)
+print(original_amount)
+print(pay_amount)</code></pre>
+<p>输入是这笔订单的三项数据。先算原价 22×5=110，再保留原价的 90%，输出 110.0 和 99.0。这不是“一折”：<code>discount</code> 存的是<strong>减免比例</strong>，0.1 是减 10%，即付九折价；减 20% 写 0.2，付八折价。不是所有数据文件都这样命名，所以工作中要读字段说明。</p>
+<pre class="highlight"><code class="language-python">print(0.1 * 100)
+print(99 / 110)</code></pre>
+<p>输入优惠比例和实付/原价，分别换算成百分数数值、保留比例，输出 10.0 和 0.9。报告若写“优惠 10%”，单位 <code>%</code> 是报告文字；计算时仍用 0.1。小数计算偶尔出现很长的尾巴是浮点表示现象，不要急着逐行改数据。后面展示金额可以 <code>round(pay_amount, 2)</code>：输入金额，四舍五入保留两位，结果仍是数字。</p>
+<h2 id="4-判断结果也能有名字">4. 判断结果也能有名字</h2>
+<pre class="highlight"><code class="language-python">year = 2021
+is_recent = year &gt;= 2020
+print(is_recent)
+print(year == 2020)</code></pre>
+<p>输入第三本书的出版年份 2021。<code>&gt;=</code> 问“是否至少 2020”，输出 True；<code>==</code> 问“是否恰好 2020”，输出 False。这里“新书”仅是练习约定，并不代表行业统一标准。<code>&gt;</code>、<code>&lt;</code>、<code>&lt;=</code>、<code>!=</code> 分别是大于、小于、小于等于、不等于。一个等号赋值，两个等号比较。</p>
+<div class="quiz"><p class="quiz-q"><code>discount = 0.1</code> 在本数据里表示什么？</p><ul class="quiz-options"><li><button type="button" data-correct="0">顾客只支付原价的 10%</button></li><li><button type="button" data-correct="1">减去原价的 10%，支付 90%</button></li><li><button type="button" data-correct="0">直接减去 0.1 元</button></li></ul><div class="quiz-explain"><p>比例和金额不是同一单位；公式是原价乘以 <code>(1 - discount)</code>。</p></div></div>
+<h2 id="5-四道练习先独立写再检查">5. 四道练习：先独立写，再检查</h2>
+<p>在本课 Notebook 中替换每题的 <code>result = ...</code>。不要把省略号连同整行删掉，也不要改检查编号。每题独立使用已准备好的原始数据，不要求你先完成上一题。</p>
+<div class="callout try"><p class="callout-title">1-1.1 保存书名</p><p>把第一本书的书名“月光与我”赋给 <code>result</code>，保持字符串类型。提示：中文文字要有成对引号。</p></div>
+<details class="fold"><summary>参考答案与观察</summary><p><pre class="highlight"><code class="language-python">result = "月光与我"</code></pre>
+输入书名文字，赋值不产生可见输出；检查通过表示文字与类型符合题意。</p></details>
+<div class="callout try"><p class="callout-title">1-1.2 计算两本书金额</p><p>第一本书单价 88.9 元，买 2 本。把总价赋给 <code>result</code>，不要直接填写带“元”的文字。提示：单价乘数量。</p></div>
+<details class="fold"><summary>参考答案与观察</summary><p><pre class="highlight"><code class="language-python">result = 88.9 * 2</code></pre>
+输入单价和数量，输出观察可用 <code>print(result)</code>，应为 177.8。</p></details>
+<div class="callout try"><p class="callout-title">1-1.3 计算判断结果</p><p>第三本书年份是 2021。把“出版年份至少是 2020”这个判断赋给 <code>result</code>，不要写 <code>"True"</code>。</p></div>
+<details class="fold"><summary>参考答案与观察</summary><p><pre class="highlight"><code class="language-python">result = 2021 &gt;= 2020</code></pre>
+输入年份和边界，比较得到布尔值 True。字符串 True 不能代替判断结果。</p></details>
+<div class="callout try"><p class="callout-title">1-1.4 还原订单优惠</p><p>单价 22 元、5 件、减免比例 0.1。把折后金额赋给 <code>result</code>，不依赖前面题目的 result。</p></div>
+<details class="fold"><summary>参考答案与观察</summary><p><pre class="highlight"><code class="language-python">result = 22.0 * 5 * (1 - 0.1)</code></pre>
+输入三项数据，先算括号再乘，实际金额 99.0 元，与订单字段一致。</p></details>
+<h2 id="常见报错先看最后一行">常见报错：先看最后一行</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>白话原因</th>
+<th>纠正路线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NameError: name 'price' is not defined</code></td>
+<td>这个内核还没收到 price 的赋值</td>
+<td>检查拼写、大小写，先运行赋值格</td>
+</tr>
+<tr>
+<td><code>TypeError</code>，数字和文字不能相加</td>
+<td><code>"88.9"</code> 被当作文字</td>
+<td>本课直接用数字 88.9；数据列转换后面学</td>
+</tr>
+<tr>
+<td><code>SyntaxError</code></td>
+<td>引号未闭合或用了全角符号</td>
+<td>把标点切成英文半角，一对对检查</td>
+</tr>
+<tr>
+<td>有输出但结果是 <code>88.92</code></td>
+<td>两段字符串被拼接</td>
+<td>看 <code>type</code>，不要只看屏幕像不像数字</td>
+</tr>
+</tbody>
+</table></div>
+<p>报错不是“电脑不适合学习”。每次只改一个可能原因，再运行该格。Notebook 的旧输出不会因你修改代码自动更新，要再次执行才能确认新结果。</p>
+<div class="callout job"><p class="callout-title">求职中的用法</p><p>运营和编辑岗位常需要解释“单价×数量×折扣”与“优惠比例”。面试时能说清输入、公式、单位，比只背变量类型更有用。这里可描述你练习了模拟订单金额核对，不写成真实企业降本业绩。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="1-1:20:0"><span class="cl-text">我能解释 <code>=</code> 和 <code>==</code> 的不同。</span></label></li><li><label><input type="checkbox" data-id="1-1:20:1"><span class="cl-text">我能说出 <code>88.9</code> 与 <code>"88.9"</code> 为什么不同。</span></label></li><li><label><input type="checkbox" data-id="1-1:20:2"><span class="cl-text">我能从 0.1 推出减 10%、保留 90%。</span></label></li><li><label><input type="checkbox" data-id="1-1:20:3"><span class="cl-text">4 道独立练习全部显示“通过”。</span></label></li><li><label><input type="checkbox" data-id="1-1:20:4"><span class="cl-text">我重启内核后知道先重新运行准备格。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/1-2-python-containers.html">把多个值放在列表与字典里</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/1-1_python_variables.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/1-1_python_variables.ipynb" download>学生练习本</a> · <a href="../../solutions/1-1_python_variables.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="0-6-jupyter-basics.html"><small>← 上一课</small>0-6 JupyterLab 上手</a><a class="next" href="1-2-python-containers.html"><small>下一课 →</small>1-2 列表与字典</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#先把操作位置放对">先把操作位置放对</a></li><li><a href="#1-变量是贴在值上的名字">1. 变量是贴在值上的名字</a></li><li><a href="#2-四种够用的数据类型">2. 四种够用的数据类型</a></li><li><a href="#3-运算和百分比先说清单位">3. 运算和百分比：先说清单位</a></li><li><a href="#4-判断结果也能有名字">4. 判断结果也能有名字</a></li><li><a href="#5-四道练习先独立写再检查">5. 四道练习：先独立写，再检查</a></li><li><a href="#常见报错先看最后一行">常见报错：先看最后一行</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

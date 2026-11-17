@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1-3 条件、循环与函数 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="1-3" style="--stage-color: #6366f1">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3" class="active"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 1 · Python 够用就好</div><h1><span class="lid">1-3</span>条件、循环与函数</h1><p class="lesson-summary">用判断、循环和函数，把“分类、逐项处理、重复公式”交给程序。</p><ul class="lesson-meta"><li>约 70 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/1-3_python_control.ipynb</code></li><li>前置：已完成第 1-2 课，能取列表元素与字典字段</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">学完可以验收</p><ul>
+<li>写一个 if/else，用缩进表示满足条件后要做的事。</li>
+<li>用 for 遍历列表，分别完成求和与筛选。</li>
+<li>写一个带参数和 return 的小函数，并用不同输入调用。</li>
+<li>完成4题，解释每个结果，不靠背长代码。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/1-3_python_control.ipynb">1-3 练习本</a>，从原位置运行，选 <code>Python (da-course)</code>。先运行准备格。本课列表取自随包前三本模拟图书：价格 88.9、36.9、80.5，年份 2016、1991、2021。下面的“至少2020年出版”是练习规则，不是行业定义，更不是对书质量的评价。</p>
+<h2 id="1-if满足条件才走这条路">1. if：满足条件，才走这条路</h2>
+<div class="flow"><ul>
+<li>输入一本书的年份。</li>
+<li>问：年份是否至少2020？</li>
+<li>若是，写“新书”；若不是，写“较早出版”。</li>
+<li>显示分类结果。</li>
+</ul></div>
+<pre class="highlight"><code class="language-python">year = 2021
+if year &gt;= 2020:
+    label = "新书"
+else:
+    label = "较早出版"
+print(label)</code></pre>
+<p>输入第三本书的年份2021，条件产生 True，执行 <code>if</code> 下面的赋值，不执行 <code>else</code> 的赋值。实际输出“新书”。把输入改成2016重新运行，结果是“较早出版”。每次只走一条分支，print 没有缩进，所以不论哪条分支都执行。</p>
+<p><code>if</code> 后面跟判断和英文冒号；下一行空四格表示属于这条分支。<code>else</code> 意思是“否则”，后面也要冒号，它与 <code>if</code> 左边对齐。Jupyter 通常会在冒号后自动缩进，按退格可回到左边。缩进是代码结构，不是为了好看；不要一行四个空格、一行随意两个空格。</p>
+<pre class="highlight"><code class="language-python">price = 88.9
+if price &lt; 50:
+    price_label = "低于50元"
+elif price &lt;= 80:
+    price_label = "50至80元"
+else:
+    price_label = "高于80元"
+print(price_label)</code></pre>
+<p>输入第一本书价。<code>elif</code> 表示“前一个条件不满足，再问这个条件”。88.9既不小于50，也不小于等于80，实际输出“高于80元”。50会进入第二档，80也进入第二档，边界必须写清。按从上到下顺序遇到第一个真条件后停止选分支，不会把几个标签都写进去。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">条件写成 <code>if year = 2020:</code></p><p>一个等号是赋值，不能在这里代替判断；会有 SyntaxError。把这个错误当说明看，不要放进可执行格。</p></div>
+<div class="compare-col good"><p class="compare-title">条件写成 <code>if year == 2020:</code></p><p>两个等号比较是否恰好2020；若题目问“至少2020”，应写 <code>&gt;=</code>。修语法后仍要核对题意。</p></div></div>
+<h2 id="2-for列表每一项做同一件事">2. for：列表每一项，做同一件事</h2>
+<pre class="highlight"><code class="language-python">titles = ["月光与我", "雨夜的孩子", "故园往事"]
+for title in titles:
+    print(title)</code></pre>
+<p>输入三项列表。<code>for title in titles</code> 可以读成“每次从 titles 取一个值，临时叫它 title”。循环执行三次，依次输出三本书名。<code>title</code> 是循环中单本书的名字，<code>titles</code> 是整个列表，起不同名字能减少混淆。不要先手写 <code>title = titles[0]</code> 再复制三次；列表长度改变时，循环会按当前项数执行。</p>
+<p>现在做求和，拆成“起点”和“每次累加”两部分。</p>
+<pre class="highlight"><code class="language-python">prices = [88.9, 36.9, 80.5]
+total = 0
+for price in prices:
+    total = total + price
+print(total)</code></pre>
+<p>输入三本价格。先设合计为0；第一次变成88.9，第二次变成125.8，第三次变成206.3，最后输出206.3。<code>total = total + price</code> 的右边读旧合计，左边保存新合计。print 在循环外，只输出最后结果。如果把 <code>total = 0</code> 缩进到循环里，每次都会归零，最后只剩最后一本80.5。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: right;">次数</th>
+<th style="text-align: right;">本次price</th>
+<th style="text-align: right;">累加前total</th>
+<th style="text-align: right;">累加后total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">88.9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">88.9</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">36.9</td>
+<td style="text-align: right;">88.9</td>
+<td style="text-align: right;">125.8</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">80.5</td>
+<td style="text-align: right;">125.8</td>
+<td style="text-align: right;">206.3</td>
+</tr>
+</tbody>
+</table></div></div>
+<h2 id="3-循环里判断筛一份短书单">3. 循环里判断：筛一份短书单</h2>
+<p>一本书有多个字段，用上一课学过的字典；三本书放进列表。这里先显式写清楚，暂时不用列表推导式、lambda 或其他缩写。</p>
+<pre class="highlight"><code class="language-python">book_list = [
+    {"title": "月光与我", "price": 88.9},
+    {"title": "雨夜的孩子", "price": 36.9},
+    {"title": "故园往事", "price": 80.5},
+]
+cheap_titles = []
+for book in book_list:
+    if book["price"] &lt;= 50:
+        cheap_titles.append(book["title"])
+print(cheap_titles)</code></pre>
+<p>输入三条图书资料。先创建空结果列表；每次取一本，问价格是否不超过50；满足才追加书名。实际输出 <code>['雨夜的孩子']</code>。这里有两层缩进：if 属于循环，append 属于条件。空列表放在循环前，否则每轮都会抹掉之前的结果。</p>
+<p>两层结构看不懂时，用手指跟踪一条记录：第一本不满足，不追加；第二本满足，追加；第三本不满足，保留现有结果。循环结束后列表可能有0项、1项或多项，都合理。不要把输出一个书名就误解成字符串，外层方括号说明仍是列表。</p>
+<h2 id="4-函数把同一个公式装进可重复调用的小工具">4. 函数：把同一个公式装进可重复调用的小工具</h2>
+<p>你已经会计算 <code>单价 × 数量 × (1 - 减免比例)</code>。换一笔订单，如果每次复制公式，容易有一行忘记扣折扣。函数 <code>function</code> 给这段操作一个名字，输入换了，公式仍统一。</p>
+<pre class="highlight"><code class="language-python">def discounted_total(unit_price, quantity, discount):
+    amount = unit_price * quantity * (1 - discount)
+    return amount</code></pre>
+<p>这里没有输出。<code>def</code> 定义函数；名字后括号里的三个名字叫参数，相当于预留三个输入位置。<code>return</code> 把算好的值交给调用者，而不是直接显示在屏幕。先运行定义格，后面才能使用这个函数。当前只是三行公式，不需要学类、装饰器或复杂工具。</p>
+<pre class="highlight"><code class="language-python">first_amount = discounted_total(12.0, 2, 0.0)
+promo_amount = discounted_total(22.0, 5, 0.1)
+print(first_amount)
+print(promo_amount)</code></pre>
+<p>输入第一笔订单的单价12、数量2、无折扣，以及SG25000039的22、5、0.1。函数分别算出24.0和99.0，再由print显示。顺序与参数一一对应；把数量和折扣对调，即使代码能运行也会算错。0.1仍是减10%，不是一折。</p>
+<div class="callout warn"><p class="callout-title">print 和 return 不替代彼此</p><p>函数里只写 <code>print(amount)</code> 会显示一个数，但调用结果通常是 None，后面不能继续当金额用。<code>return</code> 给出可保存、可运算的结果；要显示，调用者再print。函数定义中的 amount 是函数内部的临时名字，本课不让你在外部直接读取它。</p></div>
+<div class="quiz"><p class="quiz-q">求三本书价格总和时，<code>total = 0</code> 应放哪里？</p><ul class="quiz-options"><li><button type="button" data-correct="0">每次循环内部，防止旧值污染</button></li><li><button type="button" data-correct="1">循环开始前，作为累计起点</button></li><li><button type="button" data-correct="0">最后一行print之后</button></li></ul><div class="quiz-explain"><p>每轮归零就没有“累计”。输出位置也要区分：循环外输出一次，循环内每轮输出。</p></div></div>
+<h2 id="5-四道独立练习">5. 四道独立练习</h2>
+<p>Notebook 为每题准备好原始列表，后题不读前题的 result。不要为了省事把前三道合到一格；一题一格，报错时更容易定位。</p>
+<div class="callout try"><p class="callout-title">1-3.1 条件分类</p><p>第三本书2021年出版，用 if/else 产生“新书”或“较早出版”；至少2020的归新书，结果放 result。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">if 2021 &gt;= 2020:
+    result = "新书"
+else:
+    result = "较早出版"</code></pre>
+输入2021，走第一条分支，result是字符串“新书”。</p></details>
+<div class="callout try"><p class="callout-title">1-3.2 循环求和</p><p>用 for 把 <code>first_prices</code> 的三本书价累加到 result。提示：先设0，再在循环中增加。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">result = 0
+for price in first_prices:
+    result = result + price</code></pre>
+输入88.9、36.9、80.5，三次累加，得到206.3。</p></details>
+<div class="callout try"><p class="callout-title">1-3.3 循环筛选</p><p>遍历准备好的 <code>first_books</code>，把价格不超过50元的书名追加到 result 列表，保持原顺序。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">result = []
+for book in first_books:
+    if book["price"] &lt;= 50:
+        result.append(book["title"])</code></pre>
+输入三本资料，仅第二本满足，得到 <code>['雨夜的孩子']</code>。</p></details>
+<div class="callout try"><p class="callout-title">1-3.4 封装折后金额</p><p>写 <code>discounted_total(unit_price, quantity, discount)</code>，用 return 返回金额。把函数本身赋给 result：<code>result = discounted_total</code>，此处不加调用括号。检查会拿多笔随包订单试算，不能只返回99。</p></div>
+<details class="fold"><summary>答案与观察</summary><p><pre class="highlight"><code class="language-python">def discounted_total(unit_price, quantity, discount):
+    return unit_price * quantity * (1 - discount)
+result = discounted_total</code></pre>
+输入参数在调用时才给。检查会验证无折扣和有折扣订单，确认函数能够复用，不只是记住一个答案。</p></details>
+<h2 id="报错与纠正路径">报错与纠正路径</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>错误</th>
+<th>排查动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IndentationError</td>
+<td>看冒号下一行有没有缩进；同层是否对齐</td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>先运行函数定义与数据准备格，核对名字</td>
+</tr>
+<tr>
+<td>TypeError: 缺少参数</td>
+<td>调用时是否传入单价、数量、折扣三个输入</td>
+</tr>
+<tr>
+<td>返回None</td>
+<td>检查有没有return，是否误用print代替</td>
+</tr>
+<tr>
+<td>合计只有最后一个值</td>
+<td>初始化是否误放进循环；print位置是否正确</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职怎么用</p><p>内容运营可按规则分类书单，电商运营可逐笔核对折扣金额，分析助理可封装一条稳定口径。简历说“用模拟数据实现条件分类与订单金额核对”，不要虚构上线收益。下一阶段大批表格计算会交给pandas，不要求逐行写循环；本课是在建立“输入、步骤、结果”的思考习惯。</p></div>
+<div class="checklist"><p class="checklist-title">验收</p><ul><li><label><input type="checkbox" data-id="1-3:17:0"><span class="cl-text">我能对两个不同年份预测if走哪一支。</span></label></li><li><label><input type="checkbox" data-id="1-3:17:1"><span class="cl-text">我能解释循环中total每次如何变化。</span></label></li><li><label><input type="checkbox" data-id="1-3:17:2"><span class="cl-text">我能用两层缩进筛选后追加。</span></label></li><li><label><input type="checkbox" data-id="1-3:17:3"><span class="cl-text">我知道函数定义不等于调用，return不等于print。</span></label></li><li><label><input type="checkbox" data-id="1-3:17:4"><span class="cl-text">四题通过，重启后从头运行仍可复现。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/2-1-pandas-intro.html">把200行图书读成DataFrame</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/1-3_python_control.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/1-3_python_control.ipynb" download>学生练习本</a> · <a href="../../solutions/1-3_python_control.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="1-2-python-containers.html"><small>← 上一课</small>1-2 列表与字典</a><a class="next" href="2-1-pandas-intro.html"><small>下一课 →</small>2-1 认识 DataFrame 与读取数据</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-if满足条件才走这条路">1. if：满足条件，才走这条路</a></li><li><a href="#2-for列表每一项做同一件事">2. for：列表每一项，做同一件事</a></li><li><a href="#3-循环里判断筛一份短书单">3. 循环里判断：筛一份短书单</a></li><li><a href="#4-函数把同一个公式装进可重复调用的小工具">4. 函数：把同一个公式装进可重复调用的小工具</a></li><li><a href="#5-四道独立练习">5. 四道独立练习</a></li><li><a href="#报错与纠正路径">报错与纠正路径</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

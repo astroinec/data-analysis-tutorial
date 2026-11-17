@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-2 常见报错速查 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="A-2" style="--stage-color: #64748b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2" class="active"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 A · 工具箱</div><h1><span class="lid">A-2</span>常见报错速查</h1><p class="lesson-summary">从错误最后一行识别类别，按最小修正恢复，并保留能复现的错误信息。</p><ul class="lesson-meta"><li>约 15 分钟</li><li>难度 ★☆☆</li><li>前置：会区分 Prompt 命令与 Notebook Python 格；不确定环境时先用 A-1。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>看懂 traceback 的末行错误类型与被指向的代码位置。</li>
+<li>分清语法、变量、路径、包/内核、字体/编码和网络错误。</li>
+<li>避免把错误“隐藏”当修复；只改与证据对应的局部问题。</li>
+<li>修复后重新运行并检查结果，而不只以无红字为目标。</li>
+</ul></div>
+<h2 id="1-先读最后一行再向上找具体位置">1. 先读最后一行，再向上找具体位置</h2>
+<p>Notebook 的 traceback 是“执行经过哪些位置才失败”的记录。初次阅读先看最后一行的错误类型，再找你自己格子的文件/行号与代码箭头，不用把所有库内部代码读懂。不要把报错粘到新格重新执行。</p>
+<div class="window"><div class="window-title">Python 错误阅读（界面示意，不是实机截图）</div><div class="window-body"><p><pre class="highlight"><code class="language-error">Cell In[4], line 1
+----&gt; 1 print(total)
+NameError: name 'total' is not defined</code></pre>
+- <code>Cell In[4]</code>：执行记录中的格子，不等于当前屏幕第 4 格。
+- <code>line 1</code>：该格代码的第 1 行。
+- 箭头：执行到这里遇错。
+- 末行：变量 total 当前不存在；先检查拼写/运行顺序，不安装新包。</p></div></div>
+<p>下面出现的错误块仅供观察，<strong>不是要你复制执行</strong>。需要示范运行的异常都用 try/except 捕获，避免练习本“运行全部”故意崩掉。</p>
+<h2 id="2-高频错误速查">2. 高频错误速查</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>最后一行或终端症状</th>
+<th>常见原因</th>
+<th>第一检查</th>
+<th>最小修正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SyntaxError</code></td>
+<td>引号、括号、冒号，或错窗口语言</td>
+<td>指向的代码与前一行</td>
+<td>改语法/切回正确窗口</td>
+</tr>
+<tr>
+<td><code>IndentationError</code></td>
+<td>Python 缩进层级不对</td>
+<td>if/for/def 后面的行</td>
+<td>同层统一空格，不混 Tab</td>
+</tr>
+<tr>
+<td><code>NameError</code></td>
+<td>变量未定义、错拼、未运行初始化</td>
+<td>当前变量与执行顺序</td>
+<td>先定义、从第一格运行</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError</code></td>
+<td>包不在当前解释器/内核，或教材没完整解压</td>
+<td>sys.executable/文件位置</td>
+<td>正确内核/安装清单/完整解压</td>
+</tr>
+<tr>
+<td><code>FileNotFoundError</code></td>
+<td>cwd 错、文件名错、扩展名隐藏</td>
+<td>Path.cwd() 与真实文件名</td>
+<td>修正路径，不创建空文件凑数</td>
+</tr>
+<tr>
+<td><code>PermissionError</code></td>
+<td>无写权限或 Excel/其他软件锁文件</td>
+<td>目标目录与打开的文件</td>
+<td>另用可写位置/新文件名，或正常关闭占用</td>
+</tr>
+<tr>
+<td><code>KeyError</code></td>
+<td>列名/字典键不存在</td>
+<td>df.columns / 实际键</td>
+<td>按真实名字更正，不猜字段</td>
+</tr>
+<tr>
+<td><code>TypeError</code></td>
+<td>类型不适合操作</td>
+<td>type(value) 与题目类型</td>
+<td>转换有依据的类型，先保留原值</td>
+</tr>
+<tr>
+<td><code>ValueError</code></td>
+<td>值格式无法转换/日期不合法等</td>
+<td>原始值和转换规则</td>
+<td>定位无效值，不盲填 0</td>
+</tr>
+<tr>
+<td><code>UnicodeDecodeError</code></td>
+<td>文件编码与解码方式不符</td>
+<td>文件来源与已知编码</td>
+<td>按明确编码读取，保留原件</td>
+</tr>
+<tr>
+<td><code>ImportError / DLL load failed</code></td>
+<td>二进制依赖、架构或安装损坏等</td>
+<td>环境路径、版本、完整错误</td>
+<td>保存诊断，不盲复制 DLL</td>
+</tr>
+</tbody>
+</table></div>
+<p>不要把“常见原因”当作已确认原因；错误有多种来源，先查第一证据。下一阶段会详细讲类型、列名和转换，本课重点是识别与安全恢复。</p>
+<h2 id="3-syntaxerror输入法与错窗口最常见">3. SyntaxError：输入法与错窗口最常见</h2>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">弯引号是文字排版，不是 Python 引号</p><p><pre class="highlight"><code class="language-text">print(“你好”)</code></pre>
+或者在 Python 格写 <code>conda activate da-course</code>。这都不是缺包问题。</p></div>
+<div class="compare-col good"><p class="compare-title">英文直引号，中文放里面</p><p><pre class="highlight"><code class="language-python">print("你好")</code></pre>
+conda 命令回 Anaconda Prompt；代码格只运行本课标为 Python 的代码。</p></div></div>
+<p>中文逗号 <code>，</code>、中文冒号 <code>：</code>、全角括号也不能替代语法符号。语法错误指向下一行时，上一行可能少了闭合引号或括号。一次只修一处，再运行。不要为了输入方便把正常中文数据全部改成英文。</p>
+<p><code>IndentationError</code> 多出现在 <code>if</code>、<code>for</code>、<code>def</code> 后，下一行通常缩进四个空格；同层必须一致。复制代码时不要把 Markdown 列表的缩进、行号或提示符带进去，具体语法见<a href="../lessons/1-3-python-control.html">控制流程</a>。</p>
+<h2 id="4-nameerror-与输出不出现不一定是软件坏">4. NameError 与输出不出现：不一定是软件坏</h2>
+<p>重启内核后所有内存变量消失；保存文件不会恢复变量。先运行初始化，再运行定义变量的格，最后运行使用它的格。<code>total</code> 和 <code>Total</code> 不同，拼写要一致。</p>
+<pre class="highlight"><code class="language-python">total = 12
+print(total)</code></pre>
+<p>结果应为 <code>12</code>。只执行 <code>total = 12</code> 没输出正常；加 <code>print(total)</code> 或把 <code>total</code> 作为最后一行表达式。若 Markdown 格只渲染了文字，切为 Code 后再执行。<code>[*]</code> 长时间不结束先看是否等待输入，再 Interrupt 当前内核，不直接杀所有 Python。</p>
+<p>检查器的“还没作答”说明 <code>...</code> 尚未替换；“还不对”说明答案与期望不一致；“出错了”可能是答案类型或检查过程错误。这三者都不等于要重装 Anaconda。保留 <code>check("课号.题号", variable)</code> 的编号和变量名，只按题目改答题表达式。</p>
+<h2 id="5-modulenotfounderrorpip-缺失与-dll-错误">5. ModuleNotFoundError、pip 缺失与 DLL 错误</h2>
+<h3 id="包名找不到">包名找不到</h3>
+<p>Notebook 先查看：</p>
+<pre class="highlight"><code class="language-python">import sys
+print(sys.executable)</code></pre>
+<p>如果不是 da-course，换正确内核，重启并从第一格跑。Prompt 里确认 da-course 后用 <code>python -m pip --version</code>，再在根目录 <code>python -m pip install -r requirements.txt</code>。不在 base 安装，不用 pip <code>--user</code>，不靠裸 pip 的搜索顺序。<code>No module named pip</code> 用<a href="../lessons/A-1-troubleshoot.html">A-1 pip 缺失</a>里的 conda 命令补到指定环境。</p>
+<p><code>No module named dacheck</code>：这是随包工具，不是本课让你网上找的库。确认 ZIP 完整提取、Notebook 在原目录、第一格 <code>sys.path.insert(0, "..")</code> 已运行。不要安装网上同名包。</p>
+<h3 id="包有版本信息却导入时报错">包有版本信息，却导入时报错</h3>
+<p><code>DLL load failed</code>、<code>numpy.dtype size changed</code>、无法导入某符号等，可能涉及架构、二进制兼容、版本不一致或安装损坏。先运行离线体检（它会分别检查版本与导入），记录 Python 位数、真实路径、要求/实装版本、完整错误。不要下载散装 DLL 到系统目录，不把版本清单改成任意“最新”，不关闭杀毒以求通过。若是正确环境但依赖仍异常，拿证据求助维护者再做针对性修复；不要删除 base 或所有环境。</p>
+<h2 id="6-filenotfounderror扩展名与-permissionerror">6. FileNotFoundError、扩展名与 PermissionError</h2>
+<p>在 Notebook 使用：</p>
+<pre class="highlight"><code class="language-python">from pathlib import Path
+print(Path.cwd())
+print(Path("../data/books.csv").resolve())
+print(Path("../data/books.csv").is_file())</code></pre>
+<p>这是观察代码，不删除/修改文件。<code>resolve()</code> 展示候选绝对位置，<strong>不证明文件存在</strong>；<code>is_file()</code> 返回 True 才说明对应文件可见。Notebook 正常在 notebooks/，数据在上一层 data；移动本子会改变路径。根目录路径、ZIP 未完整解压、多一层目录、<code>books.csv.txt</code> 都需要从资源管理器核实。</p>
+<p>Prompt 的 <code>cd /d "实际根目录"</code> 可同时切盘，路径含空格要引号。Python 手写 Windows 绝对路径可用 <code>r"D:\da-course\data-analysis-tutorial\data\books.csv"</code>；这里 D 盘是示例，必须换自己的；本课仍优先相对路径。</p>
+<p>PermissionError 写 Excel 时可能是工作簿仍在 Excel 中打开。先保存并正常关闭自己打开的该文件，或用新输出名；目录本身无权限就换合规可写位置。不要改系统目录权限、不常驻管理员、不覆盖原始数据。</p>
+<h2 id="7-中文编码乱码与字体方框是两类问题">7. 中文编码：乱码与字体方框是两类问题</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>属于哪一层</th>
+<th>先处理什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnicodeDecodeError</code></td>
+<td>文本字节如何变成字符</td>
+<td>确认源文件编码</td>
+</tr>
+<tr>
+<td>表格中文看起来像“ä…”</td>
+<td>曾用错误编码读/存</td>
+<td>保留原件，从正确来源重新读，不对乱码猜测修复</td>
+</tr>
+<tr>
+<td>表格中文正常，图上方框</td>
+<td>字体是否含这些字形</td>
+<td>设置实际中文字体</td>
+</tr>
+<tr>
+<td>Prompt 输出中文乱码，Notebook 正常</td>
+<td>终端编码/字体显示</td>
+<td>先区分文件数据是否正常，按单位/系统支持流程调整显示</td>
+</tr>
+</tbody>
+</table></div>
+<p>本套 CSV 按其数据说明读取，通常用 UTF-8，带 BOM 的文件可用 <code>utf-8-sig</code>。如果来源明确是 GBK，才用 <code>encoding="gbk"</code>；不要一轮试所有编码到“不报错”为止，因为读得出不等于文字正确。</p>
+<pre class="highlight"><code class="language-python">import pandas as pd
+books = pd.read_csv("../data/books.csv", encoding="utf-8-sig")
+books.head()</code></pre>
+<p>导出给 Excel 打开的 CSV 常用 <code>encoding="utf-8-sig"</code>，并 <code>index=False</code>；导出新文件名，别覆盖原始数据。<code>errors="ignore"</code> 会丢字符，不是安全修复。仅终端显示异常时，可先以 Notebook 中值与 UTF-8 JSON 报告查看信息；确认是终端编码再按支持流程处理，不改整台机器地区设置作为第一步。</p>
+<h2 id="8-matplotlib-方框与-glyph-missing">8. matplotlib 方框与 Glyph missing</h2>
+<p>后续图表先：</p>
+<pre class="highlight"><code class="language-python">from dacheck import setup_chinese_font
+font_name = setup_chinese_font(verbose=True)</code></pre>
+<p>Windows 常见候选是 Microsoft YaHei/SimHei；其他系统候选不同。返回 <code>None</code> 表示没有找到课程候选，不是“没有中文数据”。先查看实际注册字体：</p>
+<pre class="highlight"><code class="language-python">from matplotlib import font_manager
+available_names = sorted({font.name for font in font_manager.fontManager.ttflist})
+[name for name in available_names if "YaHei" in name or "SimHei" in name or "CJK" in name]</code></pre>
+<p>若存在候选但图未更新，重跑字体设置和绘图格，最后 <code>plt.show()</code>；旧输出不会自动更新。若系统中确无合适字体，使用自己获授权的字体文件，按 Windows 提供的“为当前用户安装”或单位软件管理流程安装合适中文字体，再关闭/重启当前 Jupyter 内核或服务器，重新检测。不下载不明“字体修复包”，不删除整段 matplotlib 缓存/用户目录。</p>
+<p>新装字体实际内部名称可能与文件名不同；课程工具仅自动选候选列表。若使用其他合法字体，应根据 <code>font_manager</code> 显示的<strong>真实内部名称</strong>针对当前图设置，而不是从文件名猜名称。例如已经确认存在 <code>Noto Sans CJK SC</code>，可对当前绘图设置：</p>
+<pre class="highlight"><code class="language-python">import matplotlib.pyplot as plt
+plt.rcParams["font.sans-serif"] = ["Noto Sans CJK SC"]
+plt.rcParams["axes.unicode_minus"] = False</code></pre>
+<p>这一名称只是<strong>已确认存在时</strong>的例子，没有它不能复制后声称修好。Glyph 警告说某个字形缺失，可能是生僻字、符号或选错字体；体检样例通过不保证所有字符。检查真实图标题与文字，换确有相应字形的合法字体；不全局屏蔽 warnings。</p>
+<h2 id="9-网络证书代理与端口">9. 网络、证书、代理与端口</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>安装/启动错误</th>
+<th>检查路线</th>
+<th>停止条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ProxyError</code> / 代理认证失败</td>
+<td>是否在单位网络，代理配置来源是否合规</td>
+<td>需要账号/单位配置时问支持人员，不公开密码</td>
+</tr>
+<tr>
+<td><code>SSLError</code> / certificate verify failed</td>
+<td>系统时间、官方来源、单位 CA/证书审查要求</td>
+<td>不能确认受信任证书时停，不关闭 SSL 校验</td>
+</tr>
+<tr>
+<td><code>ReadTimeout</code> / 连接超时</td>
+<td>网络是否可用、官方服务是否能正常访问</td>
+<td>保留失败日志，再按正规网络支持排查</td>
+</tr>
+<tr>
+<td><code>No matching distribution found</code></td>
+<td>Python 版本/位数、包索引、完整固定清单</td>
+<td>不立即改清单或追最新，先核对 da-course 的 3.12/64 位</td>
+</tr>
+<tr>
+<td>服务条款提示</td>
+<td>阅读当前条款，按真实用途与单位规定判断</td>
+<td>不确定或不同意时停，课程不代接受</td>
+</tr>
+<tr>
+<td>本机 Jupyter 端口占用</td>
+<td>看日志是否自动选择其他端口</td>
+<td>不杀未知进程，按 A-1 使用日志实际地址</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>不要</strong>关闭 SSL 验证、加随意 trusted-host、改成 HTTP、关闭杀毒或长期管理员运行。企业代理若需 CA 文件，应由单位提供并按其安全流程配置，不从聊天附件装根证书。浏览器连接 Jupyter 失败先看服务器是否在运行、日志地址是否当前，不开放远程访问或移除 token。</p>
+<h2 id="10-报错怎样提问">10. 报错怎样提问</h2>
+<p>用<a href="../lessons/A-1-troubleshoot.html">A-1 提问模板</a>，附目标、窗口、命令、相关格子、末行类型、环境与目录证据、已做动作与结果。JSON 报告包含本机路径，分享前遮盖用户名/项目机密；不发送 token、代理密码和真实业务数据。你不需要一次解释全部错误，只需要让别人能复现最小失败。</p>
+<div class="callout job"><p class="callout-title">复核能力比“没报错”更重要</p><p>表格成功读出来后还要看中文是否正常、行数/列名是否合理；图生成后还要看字体与标签；错误消失后要回到原问题验证结果。工作里的分析质量不是以警告隐藏得多干净来衡量。</p></div>
+<h2 id="理解检查">理解检查</h2>
+<div class="callout try"><p class="callout-title">练习 1：看末行</p><p>报 <code>NameError: name 'total' is not defined</code>，列出两个应先检查的点。</p></div>
+<details class="fold"><summary>参考答案</summary><p>变量是否拼写一致；定义 total 的格是否在当前内核运行过（重启后是否从头运行）。通常不需要安装新包。</p></details>
+<div class="callout try"><p class="callout-title">练习 2：读取与显示区分</p><p>CSV 表格里的中文正常，图上标题方框。应改 CSV 编码还是检查字体？</p></div>
+<details class="fold"><summary>参考答案</summary><p>检查字体。字符已正确读入，问题在字形显示；先 setup_chinese_font 并观察返回值/警告，不重新保存原 CSV。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">加 trusted-host 让验证绕过去</button></li><li><button type="button" data-correct="1">保留报错，检查系统时间与单位代理/证书要求，不关闭 SSL 校验</button></li><li><button type="button" data-correct="0">安装任意聊天附件中的根证书</button></li></ul><div class="quiz-explain"><p>成功下载不能建立在绕开验证上。证书与代理需要可信配置，单位设备先咨询支持人员。</p></div></div>
+<div class="callout try"><p class="callout-title">练习 4：resolve 的局限</p><p><code>Path("../data/books.csv").resolve()</code> 打印出一个地址，就能确认文件存在吗？</p></div>
+<details class="fold"><summary>参考答案</summary><p>不能。resolve 只计算位置；还要 is_file() 和实际读取。若不存在，检查完整解压、cwd、真实文件名与扩展名，不创建空文件伪造通过。</p></details>
+<div class="checklist"><p class="checklist-title">修复验收</p><ul><li><label><input type="checkbox" data-id="A-2:13:0"><span class="cl-text">我能指出错误类型、相关格子和发生窗口，不把输出当命令。</span></label></li><li><label><input type="checkbox" data-id="A-2:13:1"><span class="cl-text">我只做与证据对应的局部修改，没丢弃原数据/隐去警告。</span></label></li><li><label><input type="checkbox" data-id="A-2:13:2"><span class="cl-text">修正后重新执行，从头运行需要的初始化，并复核数值、文字与图表。</span></label></li><li><label><input type="checkbox" data-id="A-2:13:3"><span class="cl-text">遇未知依赖/许可/权限/证书问题我知道停止并准备脱敏求助。</span></label></li></ul></div>
+<p>环境相关修正后重跑<a href="../lessons/0-5-env-check.html">0-5 体检</a>。具体计算问题再回相应课，不把这张表当所有错误的自动处方。</p></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="A-1-troubleshoot.html"><small>← 上一课</small>A-1 环境故障排查向导</a><a class="next" href="A-3-datasets.html"><small>下一课 →</small>A-3 数据集说明与公开数据集</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-先读最后一行再向上找具体位置">1. 先读最后一行，再向上找具体位置</a></li><li><a href="#2-高频错误速查">2. 高频错误速查</a></li><li><a href="#3-syntaxerror输入法与错窗口最常见">3. SyntaxError：输入法与错窗口最常见</a></li><li><a href="#4-nameerror-与输出不出现不一定是软件坏">4. NameError 与输出不出现：不一定是软件坏</a></li><li><a href="#5-modulenotfounderrorpip-缺失与-dll-错误">5. ModuleNotFoundError、pip 缺失与 DLL 错误</a><ul><li><a href="#包名找不到">包名找不到</a></li><li><a href="#包有版本信息却导入时报错">包有版本信息，却导入时报错</a></li></ul></li><li><a href="#6-filenotfounderror扩展名与-permissionerror">6. FileNotFoundError、扩展名与 PermissionError</a></li><li><a href="#7-中文编码乱码与字体方框是两类问题">7. 中文编码：乱码与字体方框是两类问题</a></li><li><a href="#8-matplotlib-方框与-glyph-missing">8. matplotlib 方框与 Glyph missing</a></li><li><a href="#9-网络证书代理与端口">9. 网络、证书、代理与端口</a></li><li><a href="#10-报错怎样提问">10. 报错怎样提问</a></li><li><a href="#理解检查">理解检查</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

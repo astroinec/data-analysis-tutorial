@@ -1,0 +1,11 @@
+# 学习者依赖；使用 Python 3.12，在激活的 da-course 环境里安装。
+# 作者验证于 2026-11-12；固定版本方便对照结果，不代表最新版本。
+numpy==2.5.4
+pandas==3.1.1
+matplotlib==3.11.2
+seaborn==0.13.2
+plotly==7.1.0
+openpyxl==3.1.5
+scipy==1.18.1
+jupyterlab==4.6.6
+ipykernel==7.4.0

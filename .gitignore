@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# 学习者自己的练习进度，不随仓库分发
+dacheck/progress.json
+
+# 作者测试构建流程用的演示本
+tools/nbsrc/zz_demo.md
+dacheck/checks/zz_demo.py
+notebooks/zz_demo.ipynb
+solutions/zz_demo.ipynb

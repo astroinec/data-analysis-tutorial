@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0-2 电脑基础：文件、路径、扩展名与命令行 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="0-2" style="--stage-color: #0ea5e9">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2" class="active"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 0 · 出发准备</div><h1><span class="lid">0-2</span>电脑基础：文件、路径、扩展名与命令行</h1><p class="lesson-summary">能找到真实文件、识别完整路径、解压整套课程，并区分命令、提示符和输出。</p><ul class="lesson-meta"><li>约 40 分钟</li><li>难度 ★☆☆</li><li>前置：一台 Windows 11 电脑；尚不需要安装 Python。</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>在文件资源管理器显示扩展名，并读出一个文件的完整路径。</li>
+<li>完整解压课程 ZIP，确认根目录和 notebooks/data 的相对位置。</li>
+<li>理解地址栏不是搜索框、目录不是文件、Prompt 不是浏览器。</li>
+<li>在稍后使用 Anaconda Prompt 时，会用 <code>cd /d</code> 与带引号的路径定位。</li>
+</ul></div>
+<h2 id="1-文件文件夹磁盘先把东西放得找得到">1. 文件、文件夹、磁盘：先把东西放得找得到</h2>
+<p>文件是一个具体对象，例如表格 <code>books.csv</code> 或练习本 <code>0-5_env_check.ipynb</code>；文件夹（目录）是容纳它们的位置。<code>D:</code> 是一个磁盘盘符，不是人人都有 D 盘。课程示例路径是 <code>D:\da-course\data-analysis-tutorial</code>，<strong>必须换成你实际解压的位置</strong>。没有 D 盘可以选你有写权限的 <code>C:\da-course\data-analysis-tutorial</code>；若这条路径无权限，选自己的有权限目录，不要长期用管理员运行来绕过。</p>
+<div class="window"><div class="window-title">文件资源管理器（界面示意，不是实机截图）</div><div class="window-body"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>区域</th>
+<th>示例内容</th>
+<th>你要做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顶部地址栏</td>
+<td><code>D:\da-course\data-analysis-tutorial</code></td>
+<td>点空白处或按 <code>Alt+D</code> 显示路径，复制实际地址</td>
+</tr>
+<tr>
+<td>右上搜索框</td>
+<td>搜索 data-analysis-tutorial</td>
+<td>用来找名字，不是切换路径；不要把命令粘进这里</td>
+</tr>
+<tr>
+<td>主区域</td>
+<td><code>content</code>、<code>data</code>、<code>notebooks</code>、<code>requirements.txt</code></td>
+<td>找到课程根目录的这些同级对象</td>
+</tr>
+<tr>
+<td>菜单</td>
+<td><span class="ui-btn">查看</span> → <span class="ui-btn">显示</span> → <span class="annot ok">文件扩展名</span></td>
+<td>勾选后，文件名末尾显示 <code>.csv</code>、<code>.ipynb</code> 等</td>
+</tr>
+</tbody>
+</table></div></div></div>
+<p>按 <code>Win+E</code> 打开文件资源管理器。进入你保存下载文件的文件夹。在 Windows 11 的“查看 → 显示”中打开“文件扩展名”；菜单名称可能因系统更新稍变，目标是让完整文件名可见。</p>
+<h3 id="扩展名告诉软件怎样读取不保证内容正确">扩展名告诉软件怎样读取，不保证内容正确</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>类型</th>
+<th>本教程如何使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>books.csv</code></td>
+<td>逗号分隔文本表格</td>
+<td>用 pandas 读取；双击可能交给 Excel，但双击不是运行课程</td>
+</tr>
+<tr>
+<td><code>sample.xlsx</code></td>
+<td>Excel 工作簿</td>
+<td>由 pandas + openpyxl 读写</td>
+</tr>
+<tr>
+<td><code>0-5_env_check.ipynb</code></td>
+<td>Jupyter 练习本</td>
+<td>从 JupyterLab 文件栏双击打开</td>
+</tr>
+<tr>
+<td><code>check_env.py</code></td>
+<td>Python 脚本</td>
+<td>在 Prompt 中用 Python 运行</td>
+</tr>
+<tr>
+<td><code>requirements.txt</code></td>
+<td>课程包与版本清单</td>
+<td>让 pip 按此清单安装，不需要改成 <code>.py</code></td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>网页</td>
+<td>用浏览器阅读课程</td>
+</tr>
+<tr>
+<td><code>course.zip</code></td>
+<td>压缩包</td>
+<td>必须先完整解压；里面的文件尚不等于正常工作目录</td>
+</tr>
+</tbody>
+</table></div>
+<p>把 <code>表格.txt</code> 重命名为 <code>表格.xlsx</code> 并不会把文本变成 Excel 工作簿。隐藏扩展名时容易出现 <code>check_env.py.txt</code>，所以先打开扩展名显示。不知道文件格式时保留原文件，不批量重命名。</p>
+<h2 id="2-完整解压不要只拿走一个练习本">2. 完整解压：不要只拿走一个练习本</h2>
+<div class="steps"><ol><li class="step"><p class="step-title">找到 ZIP</p><p>在下载位置查看扩展名，确认压缩包是整套课程。不是安装器 <code>.exe</code>，也不是只含一个 Notebook 的附件。</p></li>
+<li class="step"><p class="step-title">选择全部提取</p><p>右键 ZIP，选择 <span class="ui-btn">全部提取</span>。在目标位置填入你有写权限的课程存放父目录，例如 <code>D:\da-course</code>；完成后打开提取出来的普通文件夹。</p></li>
+<li class="step"><p class="step-title">识别真正的根目录</p><p>若下载包外面多套了一层同名文件夹，继续进入，直到同时看到 <code>requirements.txt</code>、<code>data</code>、<code>dacheck</code>、<code>notebooks</code>、<code>tools</code> 和 <code>site</code>。这一级才是教程根目录。</p></li>
+<li class="step"><p class="step-title">验证不是在 ZIP 内</p><p>看地址栏与文件类型：不应仍显示 ZIP 内部路径或“压缩文件夹工具”。进入 <code>data</code> 能看到 <code>books.csv</code>，回上一级后仍能看到 <code>notebooks</code>。</p></li></ol></div>
+<div class="callout danger"><p class="callout-title">先停止的情况</p><p>如果只找到 <code>.ipynb</code>，或 <code>data</code>/<code>tools</code>/<code>dacheck</code> 缺失，不继续安装课程依赖；回到 ZIP 完整提取。不要通过另建一个空 data 文件夹假装补齐，也不要下载网上同名 <code>dacheck</code>。</p></div>
+<p>从根目录看，数据路径是 <code>data\books.csv</code>；从 <code>notebooks</code> 看，要先回上一层，所以 Python 里常写 <code>../data/books.csv</code>。<code>..</code> 表示上一级目录，<code>.</code> 表示当前目录，不是要替换的占位符。斜杠写法会随语言有差异：Windows 命令路径常用 <code>\</code>，Python 的相对数据路径可用 <code>/</code>。</p>
+<div class="flow"><ul>
+<li><code>data-analysis-tutorial/</code>：教程根目录</li>
+<li><code>requirements.txt</code>：安装清单</li>
+<li><code>data/books.csv</code>：读取数据</li>
+<li><code>dacheck/</code>：练习检查工具</li>
+<li><code>tools/check_env.py</code>：环境体检脚本</li>
+<li><code>notebooks/</code>：练习本原位置</li>
+<li><code>solutions/</code>：答案本原位置</li>
+<li><code>site/index.html</code>：从浏览器阅读</li>
+</ul></div>
+<h2 id="3-什么是命令行给程序发一条明确指令">3. 什么是命令行：给程序发一条明确指令</h2>
+<p>命令行是接受文字指令的窗口；不是聊天输入框。之后统一使用 Windows 开始菜单中的 <strong>Anaconda Prompt</strong>，不是随手打开普通 CMD、PowerShell 或浏览器开发者工具。本课未安装 Anaconda，可先看懂示例，等<a href="../lessons/0-4-install-anaconda.html">安装课</a>再操作。</p>
+<div class="window"><div class="window-title">Anaconda Prompt（界面示意，不是实机截图）</div><div class="window-body"><p><pre class="highlight"><code class="language-text">(da-course) D:\da-course\data-analysis-tutorial&gt;</code></pre>
+这是“提示符”：<code>(da-course)</code> 是当前环境，后面是当前目录，<code>&gt;</code> 后才是输入命令的位置。你不会键入这整行；复制课程的 <code>terminal</code> 代码块中命令即可。</p></div></div>
+<p>命令按一次回车才提交。提交后文字滚动是<strong>输出</strong>，包括正常结果、进度和错误；输出不是要求你重新输入。重新出现提示符通常表示上一条命令结束，可以输入下一条；Jupyter 服务器是例外，它一直运行并占用窗口，不能在它的日志中继续输入安装命令。</p>
+<h3 id="切换到课程目录">切换到课程目录</h3>
+<p>以下在 Anaconda Prompt 中运行。第一行换成你的实际课程根目录，双引号要保留：</p>
+<pre class="highlight"><code class="language-terminal">cd /d "D:\da-course\data-analysis-tutorial"
+dir</code></pre>
+<p><code>cd</code> 是切换目录；<code>/d</code> 允许同时切换磁盘。如果你在 C 盘只用 <code>cd D:\...</code>，可能未真正把当前盘切到 D 盘。<code>dir</code> 列出当前目录内容，不会安装或删除东西。路径含空格时双引号防止被拆成多段；中文路径不等于必然有问题。</p>
+<pre class="highlight"><code class="language-output">... data
+... dacheck
+... notebooks
+... requirements.txt
+... tools</code></pre>
+<p>这是省略了日期等字段的<strong>输出示例</strong>。你电脑上的日期、大小、目录顺序可以不同；应出现所需对象。如果出现“系统找不到指定的路径”，回文件资源管理器地址栏复制真实路径，别继续运行安装命令。</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">不要键入</p><p><pre class="highlight"><code class="language-text">(da-course) D:\da-course\data-analysis-tutorial&gt; python --version
+Python 3.12.x</code></pre>
+把提示符和输出全部当命令会报错。<code>x</code> 也不是让你输入的版本字符。</p></div>
+<div class="compare-col good"><p class="compare-title">只提交命令</p><p><pre class="highlight"><code class="language-terminal">python --version</code></pre>
+然后观察程序返回的版本；输出位置不可当作输入框。</p></div></div>
+<h3 id="python-里的路径与-prompt-命令不是一种语言">Python 里的路径与 Prompt 命令不是一种语言</h3>
+<p>在 Notebook 代码格中写 <code>cd /d ...</code> 不是本课程的操作路线；在 Prompt 中直接写 <code>import pandas</code> 也不对。课程的代码块标了 <code>terminal</code> 或 <code>python</code>，先看窗口再粘贴。以后在 Python 中手写 Windows 绝对路径，可用原始字符串 <code>r"D:\da-course\data-analysis-tutorial"</code>；本教程优先相对路径，不要求记住这个语法。</p>
+<h2 id="4-文件保存与隐私">4. 文件保存与隐私</h2>
+<p>浏览器“另存为”网页不能替代下载整套教程。Notebook 的保存是把代码、文字与可能的输出写入 <code>.ipynb</code>；关闭浏览器之前要保存，但保存不等于代码执行过。重要原始表格留一份不修改的副本，后续导出使用新文件名。</p>
+<p>截图可能包含用户名、浏览器 token、邮箱、工作文件名。求助时保留错误与操作信息，遮盖这些个人内容；不要把整台电脑目录上传。</p>
+<div class="callout job"><p class="callout-title">文件管理也是交付能力</p><p>分析交付给别人时，对方需要知道数据在哪里、哪个文件是结果、从哪里运行。保留明确目录结构与文件扩展名，比“我电脑能打开”更接近可复现的作品。</p></div>
+<h2 id="练习与参考">练习与参考</h2>
+<div class="callout try"><p class="callout-title">练习 1：写完整路径</p><p>假设根目录为 <code>D:\da-course\data-analysis-tutorial</code>，写出 books.csv 的绝对路径和从 notebooks 出发的相对路径。</p></div>
+<details class="fold"><summary>参考答案</summary><p>绝对路径是 <code>D:\da-course\data-analysis-tutorial\data\books.csv</code>。Notebook 中相对路径是 <code>../data/books.csv</code>。自己的根目录不同，绝对路径要改变，相对目录关系不变。</p></details>
+<div class="quiz"><p class="quiz-q"></p><ul class="quiz-options"><li><button type="button" data-correct="0">双击 ZIP 看到了一个 Notebook</button></li><li><button type="button" data-correct="1">提取后的普通文件夹中同时看到 requirements.txt、data、notebooks、tools、dacheck</button></li><li><button type="button" data-correct="0">在桌面新建一个叫 data 的空文件夹</button></li></ul><div class="quiz-explain"><p>相对路径需要整套文件保持结构，单独移动 Notebook 会导致数据和检查工具不可达。</p></div></div>
+<div class="callout try"><p class="callout-title">练习 3：识别输入与输出</p><p>看到 <code>(da-course) C:\Users\某用户&gt;</code> 后，需要运行 <code>python --version</code>。你输入哪些文字？返回 <code>Python 3.12.13</code> 后，是否再输入这一行？</p></div>
+<details class="fold"><summary>参考答案</summary><p>只输入 <code>python --version</code> 并按回车；版本是输出，不需要再输入。用户目录是示例，不是让你把 Windows 用户目录改名。</p></details>
+<div class="callout try"><p class="callout-title">练习 4：你的实际目录</p><p>打开文件资源管理器显示扩展名，在完整解压的根目录复制地址，记下地址和 requirements.txt 的真实完整名字。尚未拿到完整教程包时，只写“等待整包”，不要自造空结构。</p></div>
+<details class="fold"><summary>验收参考</summary><p>地址不在 ZIP 内部；根目录有真实课程对象；文件是 <code>requirements.txt</code> 而不是 <code>requirements.txt.txt</code>。没有 D 盘不算错误，路径用自己有权限的目录。</p></details>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="0-2:21:0"><span class="cl-text">我打开了文件扩展名显示，能分清 <code>.ipynb</code>、<code>.py</code> 与 <code>.txt</code>。</span></label></li><li><label><input type="checkbox" data-id="0-2:21:1"><span class="cl-text">我能找到普通文件夹形式的课程根目录，且整套文件完整。</span></label></li><li><label><input type="checkbox" data-id="0-2:21:2"><span class="cl-text">我知道示例 D 盘路径必须替换，提示符和输出不能复制为命令。</span></label></li><li><label><input type="checkbox" data-id="0-2:21:3"><span class="cl-text">我能解释 <code>cd /d</code>、双引号、<code>..</code> 的作用。</span></label></li></ul></div>
+<p>常见错误是仍在 ZIP 内、进入多一层文件夹、把搜索框当地址栏、复制了提示符。修正目录后再进入<a href="../lessons/0-3-pre-install-check.html">安装前体检</a>。</p></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="0-1-what-is-data-analysis.html"><small>← 上一课</small>0-1 数据分析是什么？文科生的优势与学习路线</a><a class="next" href="0-3-pre-install-check.html"><small>下一课 →</small>0-3 安装前体检：识别已有 Python、检查路径和磁盘</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-文件文件夹磁盘先把东西放得找得到">1. 文件、文件夹、磁盘：先把东西放得找得到</a><ul><li><a href="#扩展名告诉软件怎样读取不保证内容正确">扩展名告诉软件怎样读取，不保证内容正确</a></li></ul></li><li><a href="#2-完整解压不要只拿走一个练习本">2. 完整解压：不要只拿走一个练习本</a></li><li><a href="#3-什么是命令行给程序发一条明确指令">3. 什么是命令行：给程序发一条明确指令</a><ul><li><a href="#切换到课程目录">切换到课程目录</a></li><li><a href="#python-里的路径与-prompt-命令不是一种语言">Python 里的路径与 Prompt 命令不是一种语言</a></li></ul></li><li><a href="#4-文件保存与隐私">4. 文件保存与隐私</a></li><li><a href="#练习与参考">练习与参考</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

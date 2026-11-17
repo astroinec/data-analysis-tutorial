@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-1 选对图表 + matplotlib 基础 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="4-1" style="--stage-color: #ec4899">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1" class="active"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 4 · 数据可视化</div><h1><span class="lid">4-1</span>选对图表 + matplotlib 基础</h1><p class="lesson-summary">先根据问题选图，再用 Figure 和 Axes 画有标题、单位与正确排序的图。</p><ul class="lesson-meta"><li>约 70 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/4-1_viz_matplotlib.ipynb</code></li><li>前置：已完成阶段 2、3，能分组汇总并说明数据范围</li></ul></header><article class="lesson-body"><h2 id="本课要掌握的结果">本课要掌握的结果</h2>
+<div class="callout goal"><p class="callout-title">本课目标</p><ul>
+<li>把“比较类别、观察趋势、查看分布、探索关系”对应到图形。</li>
+<li>认识 Figure 画布与 Axes 绘图区，自己修改标题和坐标轴。</li>
+<li>用已完成订单画品类柱形图、按时间排序的月度折线图。</li>
+<li>检查单位、范围、排序与来源，不靠华丽配色掩盖问题。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/4-1_viz_matplotlib.ipynb">4-1 练习本</a>。本课使用 <code>orders.csv</code> 和 <code>products.csv</code>，它们是随包的规范模拟主表，不是未经处理的 <code>orders_dirty.csv</code>。练习先选“已完成”订单，金额定义为其 <code>pay_amount</code> 总和；这里不讨论成本、利润，也不把退款订单计入此口径。</p>
+<h2 id="1-先问一句人话再选图">1. 先问一句人话，再选图</h2>
+<p>“我想画一张图”还不是问题。把它改成“哪个品类的已完成订单实付金额最多？”就知道需要汇总并比较类别，而不是逐笔展示上万条订单。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>你想回答的问题</th>
+<th>首选图形</th>
+<th>读者在看什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>哪个品类金额多？</td>
+<td>柱形/条形图</td>
+<td>不同类别的长度</td>
+</tr>
+<tr>
+<td>每月金额怎样变化？</td>
+<td>折线图</td>
+<td>沿时间排列的走向</td>
+</tr>
+<tr>
+<td>单笔金额集中在哪？</td>
+<td>直方图</td>
+<td>数值区间的频数</td>
+</tr>
+<tr>
+<td>两个连续变量有关联吗？</td>
+<td>散点图</td>
+<td>成对观察的分布</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>柱形图的每根柱对应一个类别，直方图的每根柱对应一个数值区间；两者长得像，回答的问题却不同。饼图适合少数类别且确实构成同一个整体的粗略占比，类别很多或差距很小时通常不如排序条形图易读。不是每张图都要加三维效果；透视会让面积和长度更难比较。</p>
+<div class="widget" data-widget="chart-picker"><p class="widget-title">让问题决定图形</p><div class="widget-body"></div></div>
+<p>组件只做选图练习，不执行代码。选错不说明“没美感”，通常只是尚未区分比较、趋势、分布和关系。</p>
+<h2 id="2-画布与绘图区像纸张与坐标框">2. 画布与绘图区：像纸张与坐标框</h2>
+<p><code>matplotlib</code> 是绘图库，<code>pyplot</code> 是常用入口，通常缩写为 <code>plt</code>。执行 <code>fig, ax = plt.subplots()</code> 得到两个对象：<code>fig</code> 是整张画布，可以保存文件；<code>ax</code> 是画布里的一块绘图区，可以添加柱、线和坐标轴文字。这里的 Axes 指“一个绘图区”，不是只有两根坐标轴。</p>
+<pre class="highlight"><code class="language-python">import matplotlib.pyplot as plt
+from dacheck import setup_chinese_font
+setup_chinese_font()
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.bar(["文具", "书籍", "帆布包"], [120, 90, 60])
+ax.set_title("三个品类示意：已完成订单金额")
+ax.set_xlabel("品类")
+ax.set_ylabel("实付金额（元，示意值）")
+ax.set_ylim(bottom=0)
+fig.tight_layout()
+plt.show()</code></pre>
+<p>这一格是三条人工示意值，用来认识写法；后面的正式图来自文件。<code>figsize</code> 单位是英寸，不是像素。<code>set_title()</code> 设标题，<code>set_xlabel()</code>、<code>set_ylabel()</code> 写轴名。<code>tight_layout()</code> 尽量避免文字被挤出边缘。<code>plt.show()</code> 明确展示，不能只计算表格就声称已经画图。</p>
+<div class="callout note"><p class="callout-title">每次重启内核，都先设置字体</p><p><code>setup_chinese_font()</code> 会寻找已有中文字体。Windows 通常可用微软雅黑，但不要忽略“Glyph ... missing”警告。出现方框时先确认运行了字体设置格，再看 <a href="../lessons/A-2-common-errors.html">常见报错</a>。本地保存图片也要实际打开看，字体配置成功返回不等于每个字符都已核对。</p></div>
+<h2 id="3-真实从本模拟数据计算品类金额">3. 真实从本模拟数据计算品类金额</h2>
+<pre class="highlight"><code class="language-python">import pandas as pd
+orders = pd.read_csv("../data/shop/orders.csv")
+products = pd.read_csv("../data/shop/products.csv")
+completed = orders.loc[orders["status"].eq("已完成")].copy()
+joined = completed.merge(products[["product_id", "category"]],
+                         on="product_id", how="left", validate="many_to_one")
+category_sales = (joined.groupby("category")["pay_amount"]
+                   .sum().sort_values(ascending=False))
+fig, ax = plt.subplots(figsize=(8, 4.5))
+ax.bar(category_sales.index, category_sales.values, color="#2a788e")
+ax.set(title="2025年各品类已完成订单实付金额（模拟）",
+       xlabel="品类", ylabel="实付金额（元）")
+ax.set_ylim(bottom=0)
+fig.tight_layout()
+plt.show()</code></pre>
+<p>先关联品类，再分组求和，然后降序排列。七个类别各有一根柱，不是一笔订单画一根柱。<code>validate="many_to_one"</code> 检查每个商品 ID 在主表里最多对应一行，防止重复关联让金额变大。画图前也要检查是否有未匹配品类，不能仅因为代码运行成功就认为口径正确。</p>
+<figure><img alt="按真实模拟订单汇总的品类金额柱形图，纵轴从零开始" src="../assets/img/viz-category-sales.png" loading="lazy"><figcaption>按真实模拟订单汇总的品类金额柱形图，纵轴从零开始</figcaption></figure>
+<div class="callout warn"><p class="callout-title">柱形/条形图从零开始</p><p>柱长表达量的大小。如果把纵轴截到很高的位置，轻微差异会被画成很大差异。不要为“看起来更明显”而缩短柱图基线。可以标注数值或补充差额，但不改变长度的含义。折线图如需非零范围，也必须清楚标注，避免读者误会。</p></div>
+<h2 id="4-时间趋势必须按日期排序">4. 时间趋势必须按日期排序</h2>
+<pre class="highlight"><code class="language-python">completed["order_time"] = pd.to_datetime(completed["order_time"])
+completed["month"] = completed["order_time"].dt.to_period("M").dt.to_timestamp()
+monthly = (completed.groupby("month", as_index=False)["pay_amount"]
+           .sum().sort_values("month"))
+fig, ax = plt.subplots(figsize=(9, 4))
+ax.plot(monthly["month"], monthly["pay_amount"], marker="o", color="#5b5fc7")
+ax.set(title="2025年月度已完成订单实付金额（模拟）",
+       xlabel="月份", ylabel="实付金额（元）")
+ax.set_ylim(bottom=0)
+fig.autofmt_xdate()
+fig.tight_layout()
+plt.show()</code></pre>
+<p><code>to_period("M")</code> 取得所属月份，<code>to_timestamp()</code> 转成该月第一天，便于日期轴绘图。这个第一天只是月份标签，不表示金额都发生在月初。按月份排序，不按金额大小排序；否则线段连接的是“大小排名”而非时间趋势。</p>
+<p>折线连接相邻观察，容易使读者认为过程连续。某个月没有数据时，先分清“真的没有订单”和“没有采集到数据”，不能直接填零或跨缺口连接后说增长稳定。波峰出现的月份也不证明促销有效，归因需要活动记录、对照和其他证据。</p>
+<h2 id="5-图画出来之后读一句完整的话">5. 图画出来之后，读一句完整的话</h2>
+<p>不要只说“文具第一”。更完整的描述要写对象、时间、指标与限制，例如：“在本模拟数据的 2025 年已完成订单口径下，品类金额排名如图；金额不代表利润，主表关联和状态筛选已完成。”具体最大品类应从 <code>category_sales.index[0]</code> 读出，不靠记忆写死。</p>
+<p>颜色少而一致通常更好。给同一指标在不同图里使用相同颜色；只突出需要关注的一项，不让每根柱都像警报。深浅也不该暗示不存在的高低风险。网格线可以辅助读数，但要淡，不盖住主要图形。</p>
+<h2 id="6-四个练习">6. 四个练习</h2>
+<div class="callout try"><p class="callout-title">练习 1：品类汇总</p><p>从本课的 <code>joined</code> 表计算品类实付金额并从高到低排序。检查汇总金额是否等于已完成订单总金额。</p>
+<details class="fold"><summary>提示与答案</summary><p><code>joined.groupby("category")["pay_amount"].sum().sort_values(ascending=False)</code>。再比较 <code>.sum()</code> 与 <code>completed["pay_amount"].sum()</code>；出现差额先查关联和缺失分组。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 2：月度表</p><p>创建 <code>month</code> 和 <code>pay_amount</code> 两列的月度结果，月份保持日期类型且升序。</p>
+<details class="fold"><summary>参考答案</summary><p>按上文先解析日期、转换月份，再 <code>groupby("month", as_index=False)["pay_amount"].sum().sort_values("month")</code>。不要按文本“1月、10月、2月”排序。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 3：交付可读的柱形图</p><p>创建 Axes，柱子使用已排序的 <code>category_sales</code>，标题写“品类实付金额”，横轴“品类”，纵轴“实付金额（元）”，基线从 0 开始。</p>
+<details class="fold"><summary>参考答案</summary><p><code>fig, answer_ax = plt.subplots()</code> 后 <code>answer_ax.bar(...)</code>、<code>answer_ax.set(...)</code>、<code>answer_ax.set_ylim(bottom=0)</code>，最后 <code>plt.show()</code>。检查会核对数据和轴标签，不比较像素或强迫使用某个颜色。</p></details></div>
+<div class="callout try"><p class="callout-title">练习 4：一句话选图</p><p>老板问“各月金额是否持续增长”，你选什么图？给出排序依据。</p>
+<details class="fold"><summary>参考答案</summary><p>选择“折线图”，按真实月份升序，而不是按金额高低。图只描述趋势，不能单凭上升判断某措施有效。</p></details></div>
+<div class="quiz"><p class="quiz-q">下列哪种做法会破坏月度趋势含义？</p><ul class="quiz-options"><li><button type="button" data-correct="0">先解析为日期，再按日期排序</button></li><li><button type="button" data-correct="1">先按金额从高到低排序，再依次连线</button></li><li><button type="button" data-correct="0">在纵轴标明金额单位</button></li></ul><div class="quiz-explain"><p>折线的相邻位置必须有时间意义，按金额排序连线只是在画排名。</p></div></div>
+<h2 id="7-常见问题与验收">7. 常见问题与验收</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>处理方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ModuleNotFoundError: matplotlib</code></td>
+<td>确认内核是课程环境，回环境体检，不在 base 乱装</td>
+</tr>
+<tr>
+<td>图中文字方框</td>
+<td>先运行 <code>setup_chinese_font()</code>，再检查可用字体和缺字警告</td>
+</tr>
+<tr>
+<td><code>KeyError: category</code></td>
+<td>品类来自商品主表，先关联，不在订单主表硬找</td>
+</tr>
+<tr>
+<td>柱子数量特别多</td>
+<td>先汇总再画，不要把逐笔记录当类别统计</td>
+</tr>
+<tr>
+<td>保存图缺了标题</td>
+<td>在 <code>plt.show()</code> 前用 <code>fig.savefig(...)</code>，实际打开验证</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">求职加分</p><p>求职作品最需要的是一张“问题与口径清楚”的图。你可以展示先筛选、关联、汇总、验证，再绘图的流程；不要把模拟金额写成真实公司业绩。面试时说明为什么柱图从零开始、为什么折线按日期排序，比说“会画漂亮图”更具体。</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="4-1:15:0"><span class="cl-text">能口头区分 Figure 与 Axes。</span></label></li><li><label><input type="checkbox" data-id="4-1:15:1"><span class="cl-text">品类图使用汇总值与正确排序，柱形基线为零。</span></label></li><li><label><input type="checkbox" data-id="4-1:15:2"><span class="cl-text">月度折线按日期排序，不把缺数据当零。</span></label></li><li><label><input type="checkbox" data-id="4-1:15:3"><span class="cl-text">标题、轴名、单位、范围和模拟来源清楚。</span></label></li><li><label><input type="checkbox" data-id="4-1:15:4"><span class="cl-text">图已实际显示，中文无方框，图中的结论不冒充因果。</span></label></li></ul></div><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/4-1_viz_matplotlib.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/4-1_viz_matplotlib.ipynb" download>学生练习本</a> · <a href="../../solutions/4-1_viz_matplotlib.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="3-2-clean-types-outliers.html"><small>← 上一课</small>3-2 异常值、数据类型、日期与文本</a><a class="next" href="4-2-viz-seaborn.html"><small>下一课 →</small>4-2 seaborn 统计图表</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#本课要掌握的结果">本课要掌握的结果</a></li><li><a href="#1-先问一句人话再选图">1. 先问一句人话，再选图</a></li><li><a href="#2-画布与绘图区像纸张与坐标框">2. 画布与绘图区：像纸张与坐标框</a></li><li><a href="#3-真实从本模拟数据计算品类金额">3. 真实从本模拟数据计算品类金额</a></li><li><a href="#4-时间趋势必须按日期排序">4. 时间趋势必须按日期排序</a></li><li><a href="#5-图画出来之后读一句完整的话">5. 图画出来之后，读一句完整的话</a></li><li><a href="#6-四个练习">6. 四个练习</a></li><li><a href="#7-常见问题与验收">7. 常见问题与验收</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/widgets/chart-picker.js"></script>
+</body>
+</html>

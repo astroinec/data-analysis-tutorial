@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-5 术语表 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="A-5" style="--stage-color: #64748b">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><span class="soon"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></span></li><li><span class="soon"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><span class="soon"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></span></li><li><span class="soon"><span class="nid">5-2</span><span>分布与抽样</span></span></li><li><span class="soon"><span class="nid">5-3</span><span>相关性与因果</span></span></li><li><span class="soon"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><span class="soon"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></span></li><li><span class="soon"><span class="nid">6-2</span><span>分组聚合</span></span></li><li><span class="soon"><span class="nid">6-3</span><span>多表连接与子查询</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><span class="soon"><span class="nid">7-1</span><span>指标体系与拆解思路</span></span></li><li><span class="soon"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></span></li><li><span class="soon"><span class="nid">7-3</span><span>RFM 用户分层</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><span class="soon"><span class="nid">8-1</span><span>数据分析简历与作品集</span></span></li><li><span class="soon"><span class="nid">8-2</span><span>面试高频题</span></span></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5" class="active"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 A · 工具箱</div><h1><span class="lid">A-5</span>术语表</h1><p class="lesson-summary">按使用场景查英文术语、中文名称和白话解释，点击回到已完成的对应课。</p><ul class="lesson-meta"><li>约 10 分钟</li><li>难度 ★☆☆</li><li>前置：无；遇到词再查，不要求一次背完</li></ul></header><article class="lesson-body"><h2 id="怎么查不必背">怎么查，不必背</h2>
+<div class="callout goal"><p class="callout-title">术语工具箱的用法</p><ul>
+<li>用主题或浏览器Ctrl+F搜索英文词、中文词。</li>
+<li>先看白话解释，再点击课程查看实际输入和输出。</li>
+<li>分清“听过术语”和“已经会做”；下一批方法不冒充本批完成。</li>
+</ul></div>
+<p>同一个词在不同场景里可能不同。<code>index</code> 在列表是位置概念，在pandas是行标签；“收入”在本项目是已完成业务金额，不是会计确认；“平台”不是“获客来源”。查词时连同上下文一起看，别只背一行翻译。</p>
+<h2 id="一电脑与环境">一、电脑与环境</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File / Folder</td>
+<td>文件/文件夹</td>
+<td>文件装内容，文件夹组织文件；目录是文件夹的另一说法</td>
+<td><a href="../lessons/0-2-computer-basics.html">电脑基础</a></td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>扩展名</td>
+<td>文件名最后的类型后缀，如.csv、.ipynb；改名字不等于转换格式</td>
+<td><a href="../lessons/0-2-computer-basics.html">扩展名</a></td>
+</tr>
+<tr>
+<td>Path</td>
+<td>路径</td>
+<td>告诉电脑文件在哪里的地址，不是互联网网址</td>
+<td><a href="../lessons/0-2-computer-basics.html">路径</a></td>
+</tr>
+<tr>
+<td>Absolute path</td>
+<td>绝对路径</td>
+<td>从盘符或根目录出发的完整位置</td>
+<td><a href="../lessons/0-2-computer-basics.html">路径</a></td>
+</tr>
+<tr>
+<td>Relative path</td>
+<td>相对路径</td>
+<td>从当前目录出发，<code>..</code>表示上一级</td>
+<td><a href="../lessons/0-2-computer-basics.html">路径</a></td>
+</tr>
+<tr>
+<td>Working directory</td>
+<td>当前工作目录</td>
+<td>程序查找相对路径时的出发点，不一定是你想的文件夹</td>
+<td><a href="../lessons/0-6-jupyter-basics.html">Jupyter</a></td>
+</tr>
+<tr>
+<td>Terminal / Prompt</td>
+<td>终端/命令提示窗口</td>
+<td>输入系统命令的地方；本课用Anaconda Prompt，不是Notebook代码格</td>
+<td><a href="../lessons/0-2-computer-basics.html">电脑基础</a></td>
+</tr>
+<tr>
+<td>Command</td>
+<td>命令</td>
+<td>让终端执行的操作，如激活环境；提示符不是命令的一部分</td>
+<td><a href="../lessons/0-4-install-anaconda.html">安装</a></td>
+</tr>
+<tr>
+<td>Interpreter</td>
+<td>解释器</td>
+<td>真正执行Python代码的程序；电脑可能有多个</td>
+<td><a href="../lessons/0-5-env-check.html">环境体检</a></td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>环境</td>
+<td>给项目单独准备的Python及包组合，避免互相影响</td>
+<td><a href="../lessons/0-4-install-anaconda.html">Anaconda</a></td>
+</tr>
+<tr>
+<td>base</td>
+<td>默认基础环境</td>
+<td>Anaconda自带的管理环境，本课不往这里装课程包</td>
+<td><a href="../lessons/0-4-install-anaconda.html">Anaconda</a></td>
+</tr>
+<tr>
+<td>conda</td>
+<td>环境管理工具</td>
+<td>创建、激活独立环境；本课统一da-course</td>
+<td><a href="../lessons/0-4-install-anaconda.html">安装</a></td>
+</tr>
+<tr>
+<td>pip</td>
+<td>Python包安装工具</td>
+<td>通过当前Python安装包，本课用 <code>python -m pip</code></td>
+<td><a href="../lessons/0-4-install-anaconda.html">安装</a></td>
+</tr>
+<tr>
+<td>Package / Library</td>
+<td>包/库</td>
+<td>别人写好的工具集合，如pandas；不是压缩包同义词</td>
+<td><a href="../lessons/0-5-env-check.html">环境体检</a></td>
+</tr>
+<tr>
+<td>Dependency</td>
+<td>依赖</td>
+<td>项目运行必须具备的其他包及版本</td>
+<td><a href="../lessons/0-5-env-check.html">环境体检</a></td>
+</tr>
+<tr>
+<td>Kernel</td>
+<td>内核</td>
+<td>Notebook背后实际跑代码的Python进程，选错可能缺包</td>
+<td><a href="../lessons/0-6-jupyter-basics.html">Jupyter</a></td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>单元格</td>
+<td>Notebook中的一个代码或说明块，执行顺序影响变量</td>
+<td><a href="../lessons/0-6-jupyter-basics.html">Jupyter</a></td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>轻量标记文本</td>
+<td>用标题、列表、表格编写说明，不当Python执行</td>
+<td><a href="../lessons/0-6-jupyter-basics.html">Jupyter</a></td>
+</tr>
+<tr>
+<td>Traceback</td>
+<td>错误追踪</td>
+<td>报错时显示的执行路径；先看最后的错误名与原因</td>
+<td><a href="../lessons/A-2-common-errors.html">报错表</a></td>
+</tr>
+<tr>
+<td>Encoding / UTF-8 / GBK</td>
+<td>编码</td>
+<td>文字如何存成字节；读错会乱码或解码报错</td>
+<td><a href="../lessons/2-1-pandas-intro.html">读取数据</a></td>
+</tr>
+<tr>
+<td>BOM</td>
+<td>字节顺序标记</td>
+<td>UTF-8-sig带的文件头，常帮助Excel识别中文；不是数据列</td>
+<td><a href="../lessons/A-3-datasets.html">数据集</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="二python基础">二、Python基础</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>变量</td>
+<td>给一个值起名字，值可变；<code>price=39</code>是赋值</td>
+<td><a href="../lessons/1-1-python-variables.html">变量</a></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>数据类型</td>
+<td>值属于整数、浮点数、文本等哪一类</td>
+<td><a href="../lessons/1-1-python-variables.html">变量</a></td>
+</tr>
+<tr>
+<td>int / float</td>
+<td>整数/浮点数</td>
+<td>int无小数，float表示小数但可能有二进制精度误差</td>
+<td><a href="../lessons/1-1-python-variables.html">类型</a></td>
+</tr>
+<tr>
+<td>str / String</td>
+<td>字符串</td>
+<td>文本，<code>'39'</code>不是数字39</td>
+<td><a href="../lessons/1-1-python-variables.html">类型</a></td>
+</tr>
+<tr>
+<td>bool / Boolean</td>
+<td>布尔值</td>
+<td>True或False，表示判断结果</td>
+<td><a href="../lessons/1-1-python-variables.html">类型</a></td>
+</tr>
+<tr>
+<td>None</td>
+<td>空对象</td>
+<td>Python中表示没有值；与数字0、空字符串不同</td>
+<td><a href="../lessons/1-1-python-variables.html">类型</a></td>
+</tr>
+<tr>
+<td>List</td>
+<td>列表</td>
+<td>一串有顺序的值，位置从0开始</td>
+<td><a href="../lessons/1-2-python-containers.html">列表</a></td>
+</tr>
+<tr>
+<td>Dictionary / dict</td>
+<td>字典</td>
+<td>按键查值，像“指标名→指标值”的小账本</td>
+<td><a href="../lessons/1-2-python-containers.html">字典</a></td>
+</tr>
+<tr>
+<td>Key / Value</td>
+<td>键/值</td>
+<td>字典中的名称与对应内容；列名也常起查找作用</td>
+<td><a href="../lessons/1-2-python-containers.html">字典</a></td>
+</tr>
+<tr>
+<td>Condition</td>
+<td>条件</td>
+<td>能判断真假的表达式，不是文字解释</td>
+<td><a href="../lessons/1-3-python-control.html">条件</a></td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>循环</td>
+<td>对一批元素重复执行代码；pandas表格常可直接整列处理</td>
+<td><a href="../lessons/1-3-python-control.html">循环</a></td>
+</tr>
+<tr>
+<td>Function</td>
+<td>函数</td>
+<td>带输入、完成操作、可返回输出的一段代码</td>
+<td><a href="../lessons/1-3-python-control.html">函数</a></td>
+</tr>
+<tr>
+<td>Argument / Parameter</td>
+<td>实参/参数</td>
+<td>定义时的输入名字与调用时传入的具体值</td>
+<td><a href="../lessons/1-3-python-control.html">函数</a></td>
+</tr>
+<tr>
+<td>Return</td>
+<td>返回</td>
+<td>将计算值交给调用者，与只显示的print不同</td>
+<td><a href="../lessons/1-3-python-control.html">函数</a></td>
+</tr>
+<tr>
+<td>Import</td>
+<td>导入</td>
+<td>把包或模块工具引入当前Python会话</td>
+<td><a href="../lessons/0-5-env-check.html">环境与包</a></td>
+</tr>
+<tr>
+<td>Indentation</td>
+<td>缩进</td>
+<td>空格决定代码层级；Python不是装饰性排版</td>
+<td><a href="../lessons/1-3-python-control.html">控制结构</a></td>
+</tr>
+<tr>
+<td>Ellipsis / ...</td>
+<td>省略号占位值</td>
+<td>练习的未作答标记，不是随便可算的数字</td>
+<td><a href="../lessons/0-6-jupyter-basics.html">Jupyter</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="三表格与pandas">三、表格与pandas</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DataFrame</td>
+<td>二维表格</td>
+<td>有行有列的pandas对象，像可编程的工作表</td>
+<td><a href="../lessons/2-1-pandas-intro.html">认识表格</a></td>
+</tr>
+<tr>
+<td>Series</td>
+<td>一维序列</td>
+<td>带标签的一列值，不等于一列DataFrame</td>
+<td><a href="../lessons/2-1-pandas-intro.html">认识表格</a></td>
+</tr>
+<tr>
+<td>Row / Column</td>
+<td>行/列</td>
+<td>行常表示记录，列常表示字段；左边索引不默认算数据列</td>
+<td><a href="../lessons/2-1-pandas-intro.html">认识表格</a></td>
+</tr>
+<tr>
+<td>Field</td>
+<td>字段</td>
+<td>一类信息的名称，如订单号、实付金额</td>
+<td><a href="../lessons/A-3-datasets.html">数据字典</a></td>
+</tr>
+<tr>
+<td>Index</td>
+<td>索引/行标签</td>
+<td>pandas最左边的行标签，不一定连续，也不必从0开始</td>
+<td><a href="../lessons/2-2-pandas-select.html">筛选</a></td>
+</tr>
+<tr>
+<td>Position</td>
+<td>位置</td>
+<td>第几个，从0开始，区别于行标签</td>
+<td><a href="../lessons/2-2-pandas-select.html">筛选</a></td>
+</tr>
+<tr>
+<td>loc / iloc</td>
+<td>按标签/按位置选择</td>
+<td>loc找标签，iloc找位置；不是两种可任意混用的拼写</td>
+<td><a href="../lessons/2-2-pandas-select.html">筛选</a></td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>形状</td>
+<td><code>(行数,列数)</code>，不包含索引和CSV表头</td>
+<td><a href="../lessons/2-1-pandas-intro.html">表格</a></td>
+</tr>
+<tr>
+<td>Filter / Mask</td>
+<td>筛选/布尔掩码</td>
+<td>每行一项True/False，只保留满足条件的行</td>
+<td><a href="../lessons/2-2-pandas-select.html">筛选</a></td>
+</tr>
+<tr>
+<td>Sort</td>
+<td>排序</td>
+<td>按某列升降序排列，不自动改变业务含义</td>
+<td><a href="../lessons/2-2-pandas-select.html">排序</a></td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>副本</td>
+<td>留下原材料再操作；不等于另导出文件</td>
+<td><a href="../lessons/2-2-pandas-select.html">筛选</a></td>
+</tr>
+<tr>
+<td>Groupby</td>
+<td>分组</td>
+<td>把同类记录放一起再计算，如按平台统计</td>
+<td><a href="../lessons/2-3-pandas-groupby.html">分组</a></td>
+</tr>
+<tr>
+<td>Aggregate / agg</td>
+<td>聚合</td>
+<td>多条记录汇成一个数或一行，如求和、计数、均值</td>
+<td><a href="../lessons/2-3-pandas-groupby.html">分组</a></td>
+</tr>
+<tr>
+<td>sum / mean</td>
+<td>总和/平均值</td>
+<td>求总量或普通算术平均；mean不自动按数量加权</td>
+<td><a href="../lessons/2-3-pandas-groupby.html">分组</a></td>
+</tr>
+<tr>
+<td>count / size / nunique</td>
+<td>非空计数/行数/不同值数</td>
+<td>三种计数分母不同，数订单常用唯一订单号</td>
+<td><a href="../lessons/2-3-pandas-groupby.html">分组</a></td>
+</tr>
+<tr>
+<td>Merge / Join</td>
+<td>合并/连接</td>
+<td>按共同键给订单补商品或客户信息，不是把文件上下堆起来</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">合并</a></td>
+</tr>
+<tr>
+<td>Primary key</td>
+<td>主键</td>
+<td>唯一标识每条实体，如order_id，不拿客户复购当主键重复</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">合并</a></td>
+</tr>
+<tr>
+<td>Foreign key</td>
+<td>外键</td>
+<td>指向另表的编号，如订单里的product_id</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">合并</a></td>
+</tr>
+<tr>
+<td>many-to-one</td>
+<td>多对一</td>
+<td>多笔订单指向一个商品；右表同键必须只有一行</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目检查</a></td>
+</tr>
+<tr>
+<td>Left join</td>
+<td>左连接</td>
+<td>保留左表所有行，右表无匹配时补缺失；可能仍因右键重复增行</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">合并</a></td>
+</tr>
+<tr>
+<td>Inner join</td>
+<td>内连接</td>
+<td>只保留匹配上的记录，可能丢订单</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">合并</a></td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>验证</td>
+<td>主动检查键关系、行数、集合和匹配，不是“没报错就对”</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Pivot table</td>
+<td>数据透视表</td>
+<td>把分类摆到行列并聚合；默认mean不等于销售总和</td>
+<td><a href="../lessons/2-4-pandas-merge-pivot.html">透视</a></td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>逗号分隔文本</td>
+<td>表格的一种文本保存方式，有编码、分隔符与表头</td>
+<td><a href="../lessons/2-1-pandas-intro.html">读取</a></td>
+</tr>
+<tr>
+<td>Excel workbook / Sheet</td>
+<td>工作簿/工作表</td>
+<td>一个.xlsx可有多张表；读取时指定sheet_name</td>
+<td><a href="../lessons/2-1-pandas-intro.html">读取</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="四清洗与质量">四、清洗与质量</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing value / NaN / NA</td>
+<td>缺失值</td>
+<td>没有记录，不是零；未评价不等于差评</td>
+<td><a href="../lessons/3-1-clean-missing-duplicates.html">缺失</a></td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>重复</td>
+<td>整行重复或主键重复要分别核查；同客户多单可合法</td>
+<td><a href="../lessons/3-1-clean-missing-duplicates.html">重复</a></td>
+</tr>
+<tr>
+<td>Data cleaning</td>
+<td>数据清洗</td>
+<td>按规则处理可确认的格式与质量问题，不是把“不好看”的值删掉</td>
+<td><a href="../lessons/3-1-clean-missing-duplicates.html">清洗</a></td>
+</tr>
+<tr>
+<td>Outlier</td>
+<td>离群值</td>
+<td>在统计分布上较远的值，不自动等于错误</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">异常</a></td>
+</tr>
+<tr>
+<td>Anomaly</td>
+<td>异常</td>
+<td>违反业务或质量规则的记录，如数量为负</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">异常</a></td>
+</tr>
+<tr>
+<td>Type conversion</td>
+<td>类型转换</td>
+<td>把文本变数字或日期；失败需保留并核查</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">类型</a></td>
+</tr>
+<tr>
+<td>Coerce</td>
+<td>失败转缺失</td>
+<td><code>errors='coerce'</code>使无法解析的项变缺失，不代表已经清洗正确</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">类型</a></td>
+</tr>
+<tr>
+<td>Parse</td>
+<td>解析</td>
+<td>按格式理解文本，比如将日期字符串读成日期</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">日期</a></td>
+</tr>
+<tr>
+<td>Standardization</td>
+<td>口径/写法统一</td>
+<td>统一平台别名与空格等；不能随意把不同类别混为一类</td>
+<td><a href="../lessons/3-2-clean-types-outliers.html">文本</a></td>
+</tr>
+<tr>
+<td>Imputation</td>
+<td>缺失填补</td>
+<td>根据可说明的依据补值；本批不把均值填补当万能默认</td>
+<td><a href="../lessons/3-1-clean-missing-duplicates.html">缺失</a></td>
+</tr>
+<tr>
+<td>Reconciliation</td>
+<td>对账</td>
+<td>比较明细与分组总和、状态和等，找漏算与重复计算</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Reproducibility</td>
+<td>可复现</td>
+<td>同份输入、明确环境与步骤，别人能重做结果</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="五图表与阅读">五、图表与阅读</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualization</td>
+<td>可视化</td>
+<td>用图呈现数据结构与问题，不只追求好看</td>
+<td><a href="../lessons/4-1-viz-matplotlib.html">选图</a></td>
+</tr>
+<tr>
+<td>Figure / Axes</td>
+<td>整张画布/坐标图区域</td>
+<td>fig是画布，ax是具体绘图区域，不是数据表</td>
+<td><a href="../lessons/4-1-viz-matplotlib.html">matplotlib</a></td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>坐标轴</td>
+<td>表示横纵方向的量或类别，需标单位</td>
+<td><a href="../lessons/4-1-viz-matplotlib.html">matplotlib</a></td>
+</tr>
+<tr>
+<td>Bar chart</td>
+<td>柱状/条形图</td>
+<td>比较类别大小，柱轴从0起更诚实</td>
+<td><a href="../lessons/4-1-viz-matplotlib.html">选图</a></td>
+</tr>
+<tr>
+<td>Line chart</td>
+<td>折线图</td>
+<td>展示有序时间趋势，先按时间排序</td>
+<td><a href="../lessons/4-1-viz-matplotlib.html">选图</a></td>
+</tr>
+<tr>
+<td>Scatter plot</td>
+<td>散点图</td>
+<td>每点一条观察，看两变量关联，不自动证明因果</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Histogram</td>
+<td>直方图</td>
+<td>按数值区间看分布，与按类别的柱图不同</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Boxplot</td>
+<td>箱线图</td>
+<td>展示中位数、四分位及统计离群标记，不能自动判断业务错值</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Distribution</td>
+<td>分布</td>
+<td>值集中在哪、是否偏斜、离散有多大</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Median / Quantile</td>
+<td>中位数/分位数</td>
+<td>排序后的中间或某比例位置，常比均值更能抵抗极端值</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Hue / Legend</td>
+<td>颜色分组/图例</td>
+<td>用颜色区分类别，并说明每种颜色是什么</td>
+<td><a href="../lessons/4-2-viz-seaborn.html">seaborn</a></td>
+</tr>
+<tr>
+<td>Hover</td>
+<td>悬停提示</td>
+<td>鼠标移到图上显示数值；不替代清楚的标题</td>
+<td><a href="../lessons/4-3-viz-plotly.html">Plotly</a></td>
+</tr>
+<tr>
+<td>Renderer</td>
+<td>渲染方式</td>
+<td>决定Plotly如何显示，不改变数据本身</td>
+<td><a href="../lessons/4-3-viz-plotly.html">Plotly</a></td>
+</tr>
+<tr>
+<td>CDN</td>
+<td>内容分发网络</td>
+<td>从外网加载脚本，断网可能失效；离线图要内嵌资源</td>
+<td><a href="../lessons/4-3-viz-plotly.html">Plotly</a></td>
+</tr>
+<tr>
+<td>Correlation / Causation</td>
+<td>相关/因果</td>
+<td>一起变化不等于一方造成另一方，需额外设计和证据</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目边界</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="六业务分析与来源">六、业务分析与来源</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话解释</th>
+<th>去哪里学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Granularity</td>
+<td>粒度</td>
+<td>一行是什么；本项目一单一种商品，真实订单也可能一单多行</td>
+<td><a href="../lessons/A-3-datasets.html">数据字典</a></td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>指标</td>
+<td>具有明确计算公式、筛选、期间和单位的业务数字</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Metric definition</td>
+<td>指标口径</td>
+<td>规定统计谁、何时、按什么状态、怎么算</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>GMV</td>
+<td>商品交易总额</td>
+<td>常见定义各异，必须明确是否含退款及所用status过滤</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Completed net sales</td>
+<td>已完成净销售额</td>
+<td>本项目只加已完成支付，业务口径，不是财务确认收入</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>AOV</td>
+<td>客单价</td>
+<td>已完成金额/已完成唯一订单数，不是每件商品均价</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Refund rate</td>
+<td>订单退款率</td>
+<td>退款订单数/同范围全部订单数，不是退款金额比</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Buyer</td>
+<td>购买客户</td>
+<td>本窗口有已完成购买的人；注册未购不算</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Repeat purchase rate</td>
+<td>窗口复购率</td>
+<td>本窗口至少2笔已完成订单客户/本窗口购买客户，非终身忠诚</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Channel / Platform</td>
+<td>获客来源/交易平台</td>
+<td>从哪认识店与在哪下单是不同维度</td>
+<td><a href="../lessons/A-3-datasets.html">数据字典</a></td>
+</tr>
+<tr>
+<td>Contribution share</td>
+<td>贡献份额</td>
+<td>品类金额/总金额，分子分母要同状态与期间</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Gross profit estimate</td>
+<td>商品毛利估算</td>
+<td>已完成金额减静态成本×件数，未计全部费用</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Net profit</td>
+<td>净利润</td>
+<td>扣除相关成本费用后的财务概念；本数据不足以计算</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目限制</a></td>
+</tr>
+<tr>
+<td>Achievement rate</td>
+<td>目标达成率</td>
+<td>同期间实际/目标，全年不是月比率简单平均</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>MoM / YoY</td>
+<td>环比/同比</td>
+<td>比上一期/上年同期；本包无2024订单不能同比</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Percentage point</td>
+<td>百分点</td>
+<td>10%到12%增加2个百分点，而不是增加2%</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Observation window</td>
+<td>观察窗口</td>
+<td>允许看数据的期间，新客晚来可观察时间更短</td>
+<td><a href="../lessons/P-1-project-ecommerce.html">项目</a></td>
+</tr>
+<tr>
+<td>Synthetic data</td>
+<td>模拟数据</td>
+<td>按规则生成的虚构记录，规律不是真实因果发现</td>
+<td><a href="../lessons/A-3-datasets.html">来源</a></td>
+</tr>
+<tr>
+<td>Public data</td>
+<td>公开数据</td>
+<td>可以公开访问，不自动等于可任意商用转载</td>
+<td><a href="../lessons/A-3-datasets.html">来源许可</a></td>
+</tr>
+<tr>
+<td>License / CC0</td>
+<td>许可证/公共领域贡献声明</td>
+<td>具体授权范围要查证；企鹅数据CC0不自动覆盖网站图片</td>
+<td><a href="../lessons/A-3-datasets.html">来源许可</a></td>
+</tr>
+<tr>
+<td>Data dictionary</td>
+<td>数据字典</td>
+<td>逐列说明含义、单位、缺失、取值及关联</td>
+<td><a href="../lessons/A-3-datasets.html">字段说明</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="七下一批会遇到的词不冒充已经完成">七、下一批会遇到的词，不冒充已经完成</h2>
+<p>以下只有定位说明，不是本批成套方法、作业或面试训练。当前先完成阶段0～4与P-1。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>白话定位</th>
+<th>本批边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL</td>
+<td>结构化查询语言</td>
+<td>从数据库按规则取数</td>
+<td>下一批SQL课程；当前使用CSV与pandas</td>
+</tr>
+<tr>
+<td>Funnel / Conversion</td>
+<td>漏斗/转化</td>
+<td>看各步骤人数与进入下一步的比例</td>
+<td>下一批；本项目缺流量和步骤事件</td>
+</tr>
+<tr>
+<td>Retention / Cohort</td>
+<td>留存/同期群</td>
+<td>在相同观察时长比较人群后续行为</td>
+<td>下一批；本项目仅年度窗口复购</td>
+</tr>
+<tr>
+<td>A/B test</td>
+<td>A/B测试</td>
+<td>通过分组实验评估差异</td>
+<td>下一批；未做随机分组不能冒称实验结论</td>
+</tr>
+<tr>
+<td>Hypothesis test</td>
+<td>假设检验</td>
+<td>用统计方法检验差异是否与随机波动相容</td>
+<td>下一批；本课平台差异只是描述</td>
+</tr>
+<tr>
+<td>ROI</td>
+<td>投资回报指标</td>
+<td>要明确收益、成本与时间口径</td>
+<td>本项目缺投放和全成本，不可计算</td>
+</tr>
+<tr>
+<td>RFM</td>
+<td>最近购买、频次、金额分层</td>
+<td>用三类行为信息描述客户</td>
+<td>下一批；本课未完成分层方法</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout try"><p class="callout-title">用术语检查自己的表达</p><ol>
+<li>“购买人数就是客户表3000行”哪里错？</li>
+<li>“我画了散点，证明小费由账单金额导致”哪里错？</li>
+<li>“企鹅CC0，所以任何网页图片都能随便用”哪里错？</li>
+</ol>
+<details class="fold"><summary>参考答案</summary><ol>
+<li>把注册人和有已完成购买的人混为一谈；本项目购买2427人。</li>
+<li>相关不等于因果，散点显示观察关联，没有实验或充分因果设计。</li>
+<li>数据许可有范围，不能自动覆盖网页插画、代码或第三方素材；应单独核实。</li>
+</ol></details></div>
+<div class="checklist"><p class="checklist-title">术语验收</p><ul><li><label><input type="checkbox" data-id="A-5:3:0"><span class="cl-text">能解释工作目录、内核、包与环境不是一回事。</span></label></li><li><label><input type="checkbox" data-id="A-5:3:1"><span class="cl-text">能用自己的话解释粒度、主键、多对一与对账。</span></label></li><li><label><input type="checkbox" data-id="A-5:3:2"><span class="cl-text">能区分金额/订单数/件数/人数的不同分母。</span></label></li><li><label><input type="checkbox" data-id="A-5:3:3"><span class="cl-text">不把描述统计写成因果，不把毛利估算写成净利润。</span></label></li><li><label><input type="checkbox" data-id="A-5:3:4"><span class="cl-text">知道哪些课程已经完成、哪些只在下一批路线。</span></label></li></ul></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="A-4-cheatsheet.html"><small>← 上一课</small>A-4 速查表：pandas 与图表</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#怎么查不必背">怎么查，不必背</a></li><li><a href="#一电脑与环境">一、电脑与环境</a></li><li><a href="#二python基础">二、Python基础</a></li><li><a href="#三表格与pandas">三、表格与pandas</a></li><li><a href="#四清洗与质量">四、清洗与质量</a></li><li><a href="#五图表与阅读">五、图表与阅读</a></li><li><a href="#六业务分析与来源">六、业务分析与来源</a></li><li><a href="#七下一批会遇到的词不冒充已经完成">七、下一批会遇到的词，不冒充已经完成</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>
