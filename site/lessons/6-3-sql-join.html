@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6-3 多表连接与子查询 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="6-3" style="--stage-color: #14b8a6">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3" class="active"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 6 · SQL 取数</div><h1><span class="lid">6-3</span>多表连接与子查询</h1><p class="lesson-summary">掌握 LEFT JOIN 与 INNER JOIN、避免 ON/WHERE 混用陷阱，并用 CTE（WITH）与窗口函数 ROW_NUMBER() 解决分组 Top N 问题。</p><ul class="lesson-meta"><li>约 80 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/6-3_sql_join.ipynb</code></li><li>前置：已完成第 6-2 课，会写 GROUP BY 与 HAVING</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>用 <code>LEFT JOIN</code> 把 <code>orders</code> 与 <code>products</code>、<code>monthly_targets</code> 等多张表正确关联。</li>
+<li>说清 <code>LEFT JOIN</code> 中把右表过滤条件写在 <code>ON</code> 与写在 <code>WHERE</code> 的本质区别。</li>
+<li>用 CTE（<code>WITH ... AS (...)</code>）把多步分析拆成可读、易调试的模块。</li>
+<li>用窗口函数 <code>ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...)</code> 解决面试必考的“每组 Top N”问题。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/6-3_sql_join.ipynb">6-3 练习本</a>，选择 <code>Python (da-course)</code> 内核。</p>
+<h2 id="1-left-join-vs-inner-join优先保留主表不丢单">1. LEFT JOIN vs INNER JOIN：优先保留主表不丢单</h2>
+<p>给订单补商品品类时，用 <code>orders o LEFT JOIN products p ON o.product_id = p.product_id</code>，并始终给表起短别名（<code>o</code>、<code>p</code>、<code>c</code>），避免同名列冲突。</p>
+<h2 id="2-面试最爱考的陷阱left-join-时条件放-on-还是-where">2. 面试最爱考的陷阱：LEFT JOIN 时条件放 ON 还是 WHERE？</h2>
+<p>假设产品经理问：“注册了 3000 个客户，有多少人<strong>从来没有已完成订单</strong>？”</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">把 <code>o.status = '已完成'</code> 写在 <code>WHERE</code> 里</p><p><pre class="highlight"><code class="language-sql">SELECT COUNT(*)
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+WHERE o.status = '已完成' AND o.order_id IS NULL;</code></pre>
+结果永远是 <strong>0</strong>！因为没下过单的客户连接后 <code>o.status</code> 是 <code>NULL</code>，<code>NULL = '已完成'</code> 不成立，直接被 <code>WHERE</code> 过滤掉了，等价于把 <code>LEFT JOIN</code> 强行变成了 <code>INNER JOIN</code>。</p></div>
+<div class="compare-col good"><p class="compare-title">把右表筛选写在 <code>ON</code> 里，再在 <code>WHERE</code> 找 <code>IS NULL</code></p><p><pre class="highlight"><code class="language-sql">SELECT COUNT(*) AS n
+FROM customers c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id AND o.status = '已完成'
+WHERE o.order_id IS NULL;</code></pre>
+先只连接“已完成订单”，连接不上的客户右表全为 <code>NULL</code>，再用 <code>WHERE o.order_id IS NULL</code> 精准找出 <strong>573</strong> 位未成交客户（核对：3000 − 2427 = 573！）。</p></div></div>
+<h2 id="3-ctewith告别层层嵌套的洋葱子查询">3. CTE（WITH）：告别层层嵌套的“洋葱子查询”</h2>
+<p>当需要先算月销售额、再和月目标表对齐求达成率时，用 <code>WITH</code> 定义一个清晰的临时结果集（CTE）：</p>
+<pre class="highlight"><code class="language-sql">WITH monthly AS (
+    SELECT substr(order_time, 1, 7) AS month, SUM(pay_amount) AS revenue
+    FROM orders
+    WHERE status = '已完成'
+    GROUP BY month
+)
+SELECT
+    m.month,
+    m.revenue,
+    t.target_gmv,
+    m.revenue * 1.0 / t.target_gmv AS achievement
+FROM monthly m
+LEFT JOIN monthly_targets t ON m.month = t.month
+ORDER BY m.month ASC;</code></pre>
+<h2 id="4-窗口函数入门每组取-top-1销冠商品">4. 窗口函数入门：每组取 Top 1（销冠商品）</h2>
+<p><code>GROUP BY</code> 会把多行折叠成一行；<strong>窗口函数</strong>（<code>OVER (...)</code>）则保留每一行，同时按 <code>PARTITION BY</code>（分组）和 <code>ORDER BY</code>（排序）给每行打上排名号或累计值。</p>
+<pre class="highlight"><code class="language-sql">WITH prod_rev AS (
+    SELECT p.category, p.product_name, SUM(o.pay_amount) AS revenue
+    FROM orders o
+    LEFT JOIN products p ON o.product_id = p.product_id
+    WHERE o.status = '已完成'
+    GROUP BY p.category, p.product_name
+),
+ranked AS (
+    SELECT category, product_name, revenue,
+           ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue DESC) AS rn
+    FROM prod_rev
+)
+SELECT category, product_name, revenue
+FROM ranked
+WHERE rn = 1
+ORDER BY category ASC;</code></pre>
+<div class="quiz"><p class="quiz-q">窗口函数与 GROUP BY 的区别
+为什么求“每个品类销售额最高的商品名称”时，通常用 CTE + <code>ROW_NUMBER()</code> 而不是直接 <code>SELECT category, product_name, MAX(revenue) ... GROUP BY category</code>？</p><ul class="quiz-options"><li><button type="button" data-correct="0"><code>MAX()</code> 不能用在小数上</button></li><li><button type="button" data-correct="1">直接 <code>GROUP BY category</code> 无法可靠保证 <code>product_name</code> 与最大销售额一一对应，用窗口函数排序取 <code>rn = 1</code> 既标准又可扩展到 Top 3</button></li><li><button type="button" data-correct="0">SQL 不支持同时使用 <code>GROUP BY</code> 和 <code>MAX</code></button></li></ul><div class="quiz-explain"><p>窗口函数取每组 Top N 是标准 SQL 写法，在 SQLite、MySQL 8+、PostgreSQL、Hive、Spark SQL 中完全通用。</p></div></div>
+<h2 id="5-四道独立练习">5. 四道独立练习</h2>
+<div class="callout try"><p class="callout-title">6-3.1 多表连接统计各品类已完成销售额</p><p><code>orders LEFT JOIN products</code>，仅保留已完成订单，输出 <code>category, orders, revenue</code>（不提前 ROUND），按 <code>revenue</code> 降序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-sql">SELECT p.category, COUNT(DISTINCT o.order_id) AS orders, SUM(o.pay_amount) AS revenue
+FROM orders o LEFT JOIN products p ON o.product_id = p.product_id
+WHERE o.status = '已完成' GROUP BY p.category ORDER BY revenue DESC</code></pre></details></div>
+<div class="callout try"><p class="callout-title">6-3.2 找出没有已完成订单的注册客户数</p><p>用 <code>customers LEFT JOIN orders</code>（<code>o.status = '已完成'</code> 放在 <code>ON</code> 中），返回无已完成订单的客户数（整数）。</p>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">ans_6_3_2 = int(q("""
+SELECT COUNT(*) AS n FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id AND o.status = '已完成'
+WHERE o.order_id IS NULL
+""").iat[0, 0])</code></pre>
+实算：573 人。</p></details></div>
+<div class="callout try"><p class="callout-title">6-3.3 用 CTE 对齐月度销售与月度目标</p><p>输出 <code>month, revenue, target_gmv, achievement</code>，按 <code>month</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-sql">WITH monthly AS (
+    SELECT substr(order_time, 1, 7) AS month, SUM(pay_amount) AS revenue
+    FROM orders WHERE status = '已完成' GROUP BY month
+)
+SELECT m.month, m.revenue, t.target_gmv, m.revenue * 1.0 / t.target_gmv AS achievement
+FROM monthly m LEFT JOIN monthly_targets t ON m.month = t.month ORDER BY m.month ASC</code></pre></details></div>
+<div class="callout try"><p class="callout-title">6-3.4 用窗口函数找出每个品类的销冠商品</p><p>用 <code>ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue DESC)</code> 选出每个品类第 1 名，输出 <code>category, product_name, revenue</code>，按 <code>category</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-sql">WITH prod_rev AS (
+    SELECT p.category, p.product_name, SUM(o.pay_amount) AS revenue
+    FROM orders o LEFT JOIN products p ON o.product_id = p.product_id
+    WHERE o.status = '已完成' GROUP BY p.category, p.product_name
+),
+ranked AS (
+    SELECT category, product_name, revenue,
+           ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue DESC) AS rn
+    FROM prod_rev
+)
+SELECT category, product_name, revenue FROM ranked WHERE rn = 1 ORDER BY category ASC</code></pre></details></div>
+<h2 id="常见问题与求职用途">常见问题与求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ambiguous column name: product_id</code></td>
+<td>多表有同名列时必须加表别名前缀，如 <code>o.product_id</code></td>
+</tr>
+<tr>
+<td><code>WHERE rn = 1</code> 直接写在含窗口函数的同一层报错</td>
+<td>窗口函数在 <code>WHERE</code> 之后执行，必须先包一层 CTE 或子查询再在外部 <code>WHERE rn = 1</code></td>
+</tr>
+<tr>
+<td>多表连接后总金额莫名变大</td>
+<td>检查右表连接键是否唯一；多对多连接会造成行膨胀</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试加分表达</p><p>“写复杂取数需求时，我习惯用 CTE 分层拆解：第一层做口径过滤与连接，第二层做聚合，第三层用窗口函数做排名或累计占比，既方便同事 review，也方便逐层对账行数。”</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="6-3:14:0"><span class="cl-text">我能解释 <code>LEFT JOIN</code> 中右表条件放在 <code>ON</code> 和 <code>WHERE</code> 的区别。</span></label></li><li><label><input type="checkbox" data-id="6-3:14:1"><span class="cl-text">我会用 <code>WITH</code>（CTE）组织多步骤 SQL。</span></label></li><li><label><input type="checkbox" data-id="6-3:14:2"><span class="cl-text">我会用 <code>ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...)</code> 求每组 Top N。</span></label></li><li><label><input type="checkbox" data-id="6-3:14:3"><span class="cl-text">练习本 6-3.1 ～ 6-3.4 四题全部通过检查。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/7-1-method-metrics.html">进入阶段 7：指标体系与拆解思路</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/6-3_sql_join.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/6-3_sql_join.ipynb" download>学生练习本</a> · <a href="../../solutions/6-3_sql_join.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="6-2-sql-groupby.html"><small>← 上一课</small>6-2 分组聚合</a><a class="next" href="7-1-method-metrics.html"><small>下一课 →</small>7-1 指标体系与拆解思路</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-left-join-vs-inner-join优先保留主表不丢单">1. LEFT JOIN vs INNER JOIN：优先保留主表不丢单</a></li><li><a href="#2-面试最爱考的陷阱left-join-时条件放-on-还是-where">2. 面试最爱考的陷阱：LEFT JOIN 时条件放 ON 还是 WHERE？</a></li><li><a href="#3-ctewith告别层层嵌套的洋葱子查询">3. CTE（WITH）：告别层层嵌套的“洋葱子查询”</a></li><li><a href="#4-窗口函数入门每组取-top-1销冠商品">4. 窗口函数入门：每组取 Top 1（销冠商品）</a></li><li><a href="#5-四道独立练习">5. 四道独立练习</a></li><li><a href="#常见问题与求职用途">常见问题与求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

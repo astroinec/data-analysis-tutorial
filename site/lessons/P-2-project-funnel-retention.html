@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-2 项目二：App 转化漏斗与用户留存 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="P-2" style="--stage-color: #ef4444">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2" class="active"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 P · 实战项目</div><h1><span class="lid">P-2</span>项目二：App 转化漏斗与用户留存</h1><p class="lesson-summary">用虚构“墨读 App”6000 名新用户的事件与活跃日志，独立完成漏斗瓶颈定位、分渠道/分设备诊断、留存与同期群热力图项目。</p><ul class="lesson-meta"><li>约 180 分钟</li><li>难度 ★★★</li><li>配套练习本 <code>notebooks/P-2_project_funnel_retention.ipynb</code></li><li>前置：已完成阶段 0～4 与第 7-2 课，能多表连接、日期计算与画热力图</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本项目的可检验目标</p><ul>
+<li>从 <code>data/app/</code> 三张原始 CSV 完整复现新用户转化与留存分析，重启内核后一键跑通。</li>
+<li>完成数据体检（主键唯一、用户集合覆盖、30 天完整留存观察窗口验证）。</li>
+<li>构建全量五步去重漏斗、分渠道漏斗、分设备支付转化、分渠道留存与按周同期群表。</li>
+<li>用“发现—证据—限制—待验证建议”产出至少 3 条结构化业务结论，不把模拟规律写成真实增长业绩。</li>
+<li>通过练习本 P-2.1 ～ P-2.6 六道自动检查。</li>
+</ul></div>
+<p>本项目基于虚构的阅读学习类产品“墨读 App”（<code>data/app/app_users.csv</code>、<code>app_events.csv</code>、<code>app_active.csv</code>，共 6,000 名 2025-07-01 至 2025-09-28 注册用户，活跃观察截至 2025-10-31）。所有数据均为固定随机种子生成的教学模拟数据，不代表任何真实 App 表现。</p>
+<p>请在本包 <code>notebooks/P-2_project_funnel_retention.ipynb</code> 打开练习本，内核选 <code>Python (da-course)</code>；参考答案在 <code>solutions/</code>。</p>
+<div class="flow"><ol>
+<li>明确业务问题与去重口径</li>
+<li>数据体检与 30 天观察窗口校验</li>
+<li>全量五步转化漏斗（找最大流失卡点）</li>
+<li>分渠道 &amp; 分设备下钻（把瓶颈落到具体对象）</li>
+<li>D1/D7/D14/D30 留存与周同期群热力图</li>
+<li>撰写带证据边界与待验证假设的分析报告</li>
+</ol></div>
+<h2 id="第一步数据体检与口径定义">第一步：数据体检与口径定义</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>数据表</th>
+<th style="text-align: right;">行×列</th>
+<th>粒度（每行代表什么）</th>
+<th>关键检查项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app_users.csv</code></td>
+<td style="text-align: right;">6000×5</td>
+<td>一名注册用户</td>
+<td><code>user_id</code> 唯一；注册区间 <code>2025-07-01 ~ 2025-09-28</code></td>
+</tr>
+<tr>
+<td><code>app_events.csv</code></td>
+<td style="text-align: right;">15243×3</td>
+<td>一次漏斗步骤事件</td>
+<td>所有 <code>user_id</code> 均在用户表内；按 <code>user_id</code> 去重统计漏斗</td>
+</tr>
+<tr>
+<td><code>app_active.csv</code></td>
+<td style="text-align: right;">34166×2</td>
+<td>一名用户在某天活跃</td>
+<td>活跃截止 <code>2025-10-31</code>，距离最晚注册日 ≥ 33 天，满足完整 30 天留存窗口</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="第二步全量五步转化漏斗p-21">第二步：全量五步转化漏斗（P-2.1）</h2>
+<p>按唯一 <code>user_id</code> 统计五个有序步骤：<code>app_open → view_course → start_trial → click_pay → pay_success</code>。</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th style="text-align: right;">唯一用户数</th>
+<th style="text-align: right;">环节转化率</th>
+<th style="text-align: right;">整体转化率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app_open</code></td>
+<td style="text-align: right;">6000</td>
+<td style="text-align: right;">100.00%</td>
+<td style="text-align: right;">100.00%</td>
+</tr>
+<tr>
+<td><code>view_course</code></td>
+<td style="text-align: right;">4927</td>
+<td style="text-align: right;">82.12%</td>
+<td style="text-align: right;">82.12%</td>
+</tr>
+<tr>
+<td><code>start_trial</code></td>
+<td style="text-align: right;">2640</td>
+<td style="text-align: right;">53.58%</td>
+<td style="text-align: right;">44.00%</td>
+</tr>
+<tr>
+<td><code>click_pay</code></td>
+<td style="text-align: right;">1081</td>
+<td style="text-align: right;"><strong>40.95%</strong></td>
+<td style="text-align: right;">18.02%</td>
+</tr>
+<tr>
+<td><code>pay_success</code></td>
+<td style="text-align: right;">595</td>
+<td style="text-align: right;">55.04%</td>
+<td style="text-align: right;"><strong>9.92%</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<p>全量整体付费转化率为 <strong>9.92%</strong>，其中 <code>start_trial → click_pay</code>（40.95%）是转化率最低的环节。</p>
+<h2 id="第三步分渠道与分设备下钻定位p-22-p-23">第三步：分渠道与分设备下钻定位（P-2.2 &amp; P-2.3）</h2>
+<p>把漏斗按获客渠道 <code>channel</code> 和客户端 <code>device</code> 拆开，立刻浮现两大核心问题：</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>渠道</th>
+<th style="text-align: right;">打开人数</th>
+<th style="text-align: right;"><code>start_trial → click_pay</code></th>
+<th style="text-align: right;">整体付费率</th>
+<th style="text-align: right;">D7 留存率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>朋友推荐</td>
+<td style="text-align: right;">970</td>
+<td style="text-align: right;">47.96%</td>
+<td style="text-align: right;"><strong>17.42%</strong></td>
+<td style="text-align: right;"><strong>22.47%</strong></td>
+</tr>
+<tr>
+<td>自然搜索</td>
+<td style="text-align: right;">1527</td>
+<td style="text-align: right;">45.71%</td>
+<td style="text-align: right;">13.16%</td>
+<td style="text-align: right;">19.52%</td>
+</tr>
+<tr>
+<td>小红书</td>
+<td style="text-align: right;">1797</td>
+<td style="text-align: right;">39.61%</td>
+<td style="text-align: right;">9.52%</td>
+<td style="text-align: right;">19.25%</td>
+</tr>
+<tr>
+<td>信息流广告</td>
+<td style="text-align: right;">1706</td>
+<td style="text-align: right;"><strong>26.35%</strong></td>
+<td style="text-align: right;"><strong>3.17%</strong></td>
+<td style="text-align: right;"><strong>12.13%</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<ul>
+<li><strong>发现一（渠道质量分化）</strong>：信息流广告带来了 28.4% 的注册量（1706 人），但 <code>start_trial → click_pay</code> 转化仅 <strong>26.35%</strong>，整体付费率仅 <strong>3.17%</strong>（不足朋友推荐 17.42% 的五分之一），且 D7 留存仅 <strong>12.13%</strong>。</li>
+<li><strong>发现二（端内支付体验差异）</strong>：在最后一步 <code>click_pay → pay_success</code>，<strong>iOS 为 59.92%</strong>（308/514），而 <strong>Android 仅为 50.62%</strong>（287/567），低了 <strong>9.30 个百分点</strong>！这提示 Android 端支付流程（如弹窗加载、微信/支付宝跳转或机型兼容）存在重点排查价值。</li>
+</ul>
+<h2 id="第四步留存曲线与周同期群热力图p-24-p-25">第四步：留存曲线与周同期群热力图（P-2.4 &amp; P-2.5）</h2>
+<p>全量留存实测：<strong>D1 = 40.88%，D7 = 17.82%，D14 = 13.68%，D30 = 9.97%</strong>。
+将注册日期对齐到当周周一 <code>cohort_week</code>（注意 pandas 3 推荐使用 <code>.dt.day_of_week</code>，替代旧版 <code>.dt.weekday</code>），绘制 13 个注册周的 D1/D3/D7/D14/D30 同期群热力图，确认各周留存走势相对平稳，未见某一特定周断崖式下跌。</p>
+<div class="quiz"><p class="quiz-q">分设备排查思维
+在项目二中，Android 与 iOS 在前面步骤转化接近，但到了 <code>click_pay → pay_success</code> 这一步 Android 比 iOS 低了 9.3 个百分点。下面哪种归因表述最专业？</p><ul class="quiz-options"><li><button type="button" data-correct="0">这证明 Android 用户消费能力一定比 iOS 用户差</button></li><li><button type="button" data-correct="1">观察到 Android 在支付临门一脚流失显著偏高，可能是支付弹窗/跳转兼容问题，也可能是人群消费意愿差异，建议先补查支付失败错误日志与分机型成功率再定论</button></li><li><button type="button" data-correct="0">直接把 Android 渠道预算全部砍掉</button></li></ul><div class="quiz-explain"><p>观察到现象后先列竞争假设（技术故障 vs 人群结构），再指定需要补充核查的日志字段，绝不武断下单一因果结论。</p></div></div>
+<h2 id="第五步练习本六题清单与报告边界">第五步：练习本六题清单与报告边界</h2>
+<p>在 <code>notebooks/P-2_project_funnel_retention.ipynb</code> 中完成全部六道独立检查：
+- <strong>P-2.1</strong>：全量五步漏斗表（<code>step, users, step_rate, overall_rate</code>）
+- <strong>P-2.2</strong>：分渠道核心漏斗转化对比（按 <code>overall_pay_rate</code> 降序）
+- <strong>P-2.3</strong>：分设备支付成功率对比（按 <code>device</code> 升序）
+- <strong>P-2.4</strong>：分渠道 D1/D7/D30 留存率对比（按 <code>d7</code> 降序）
+- <strong>P-2.5</strong>：按周同期群 7 日留存趋势（<code>cohort_week, users, d7_rate</code>）
+- <strong>P-2.6</strong>：项目二核心指标卡 6 键字典</p>
+<div class="callout try"><p class="callout-title">练习：写一段项目二的“数据局限与补数需求”</p><p>现有三张模拟表缺少哪些关键字段，导致哪些问题暂时无法直接回答？</p>
+<details class="fold"><summary>参考答案</summary><ol>
+<li>缺少各渠道的<strong>获客成本（CAC）与客单价/课程单价</strong>，因此无法直接计算各渠道 ROI（信息流广告虽然转化低，但若单次获客成本极低，仍需结合 ROI 评估）。</li>
+<li>缺少<strong>支付失败错误码、网络环境与客户端版本号</strong>，无法直接确认 Android 支付率偏低是技术 Bug 还是用户支付意愿差异。</li>
+<li>缺少<strong>用户试听时长与完课率</strong>，无法判断信息流用户是在试听前 1 分钟就退出，还是听完觉得不值。</li>
+</ol></details></div>
+<div class="callout job"><p class="callout-title">写进作品集的要点</p><p>在作品集中可结合 <code>report/analysis-report-template.md</code> 交付一份完整报告：包含全量漏斗图、分渠道对比表、周同期群热力图，以及“渠道素材与人群匹配度复核 + Android 支付链路日志排查”两项待验证建议，并醒目标注“虚构教学数据集”。</p></div>
+<div class="checklist"><p class="checklist-title">项目二验收</p><ul><li><label><input type="checkbox" data-id="P-2:8:0"><span class="cl-text">重启内核运行 <code>P-2_project_funnel_retention.ipynb</code> 全部通过，6 道检查全绿。</span></label></li><li><label><input type="checkbox" data-id="P-2:8:1"><span class="cl-text">我能说清为什么必须按 <code>user_id</code> 去重算漏斗，并核验 30 天观察窗口。</span></label></li><li><label><input type="checkbox" data-id="P-2:8:2"><span class="cl-text">我能用数字说出信息流广告渠道与 Android 支付环节的两大核心发现，并交代数据局限。</span></label></li></ul></div>
+<p>下一步：挑战最后一个实战项目 <a href="../lessons/P-3-project-ab-test.html">项目三：A/B 测试分析</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/P-2_project_funnel_retention.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/P-2_project_funnel_retention.ipynb" download>学生练习本</a> · <a href="../../solutions/P-2_project_funnel_retention.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="P-1-project-ecommerce.html"><small>← 上一课</small>P-1 项目一：线上文创店年度销售分析</a><a class="next" href="P-3-project-ab-test.html"><small>下一课 →</small>P-3 项目三：A/B 测试分析</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#第一步数据体检与口径定义">第一步：数据体检与口径定义</a></li><li><a href="#第二步全量五步转化漏斗p-21">第二步：全量五步转化漏斗（P-2.1）</a></li><li><a href="#第三步分渠道与分设备下钻定位p-22-p-23">第三步：分渠道与分设备下钻定位（P-2.2 &amp;amp; P-2.3）</a></li><li><a href="#第四步留存曲线与周同期群热力图p-24-p-25">第四步：留存曲线与周同期群热力图（P-2.4 &amp;amp; P-2.5）</a></li><li><a href="#第五步练习本六题清单与报告边界">第五步：练习本六题清单与报告边界</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

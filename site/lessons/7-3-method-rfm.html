@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7-3 RFM 用户分层 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="7-3" style="--stage-color: #f97316">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3" class="active"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 7 · 分析方法论</div><h1><span class="lid">7-3</span>RFM 用户分层</h1><p class="lesson-summary">掌握经典的 RFM（最近消费、频次、金额）客户分层模型，用中位数阈值把 2427 位购买客户划分为八类并制定差异化策略。</p><ul class="lesson-meta"><li>约 60 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/7-3_method_rfm.ipynb</code></li><li>前置：已完成第 7-1 与 7-2 课，熟悉 groupby 聚合与日期差计算</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>准确定义 R（Recency）、F（Frequency）、M（Monetary）三个维度的计算口径与基准日。</li>
+<li>牢记 <strong>R 越小越好</strong>（最近刚买过），避免把 R 的高低方向打反。</li>
+<li>用中位数作为客观阈值，把文创店 2427 位购买客户映射到八类经典分层。</li>
+<li>计算“重要价值客户”的人数占比与金额占比，并说出 RFM 模型的适用边界。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/7-3_method_rfm.ipynb">7-3 练习本</a>，选择 <code>Python (da-course)</code> 内核。本课使用 2025 年已完成订单（<code>data/shop/orders.csv</code>），基准日设为 <code>2026-01-01</code>。</p>
+<h2 id="1-什么是-rfm-模型">1. 什么是 RFM 模型？</h2>
+<p>给所有客户发同一张满减券往往既浪费预算、又打扰老客。<strong>RFM 模型</strong>只用订单表里最常见的三个行为指标，就能把客户清清楚楚分成不同价值层级：</p>
+<div class="cards"><div class="card"><p class="card-title">R · Recency（最近一次消费距今）</p><p><code>基准日 - 最后一次已完成下单时间</code>（天数）。<strong>R 越小越好</strong>：昨天刚买过的客户比半年前买过的客户活跃得多。</p></div>
+<div class="card"><p class="card-title">F · Frequency（消费频次）</p><p>观察窗口内的唯一已完成订单数。<strong>F 越大越好</strong>：代表客户粘性与复购习惯。</p></div>
+<div class="card"><p class="card-title">M · Monetary（消费金额）</p><p>观察窗口内的已完成实付金额总和。<strong>M 越大越好</strong>：代表客户对店铺的营收贡献。</p></div></div>
+<p>在文创店 2427 位购买客户中，三项指标的中位数实测为：<strong>R = 50 天、F = 3 单、M = 376.20 元</strong>。为什么用<strong>中位数</strong>而不是均值做切分阈值？因为我们在 <a href="../lessons/5-1-stats-descriptive.html">5-1 描述统计</a> 学过，消费金额与频次明显右偏，均值会被极少数土豪客户拉高，导致大量活跃客户被误判为“低价值”。</p>
+<h2 id="2-八类客户分层与对应运营动作">2. 八类客户分层与对应运营动作</h2>
+<p>规定：<code>R_high = (R &lt;= 50)</code>、<code>F_high = (F &gt;= 3)</code>、<code>M_high = (M &gt;= 376.2)</code>，组合出 8 类客户：</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>R（近不近）</th>
+<th>F（频不频）</th>
+<th>M（高不高）</th>
+<th>分层名称</th>
+<th>建议运营动作（待验证假设）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高（近）</td>
+<td>高</td>
+<td>高</td>
+<td><strong>重要价值客户</strong></td>
+<td>VIP 专属服务、新品优先体验、切忌过度打折伤品牌</td>
+</tr>
+<tr>
+<td>低（远）</td>
+<td>高</td>
+<td>高</td>
+<td><strong>重要保持客户</strong></td>
+<td>曾经高频高额但近期沉默，定向提醒/回访防流失</td>
+</tr>
+<tr>
+<td>高（近）</td>
+<td>低</td>
+<td>高</td>
+<td><strong>重要发展客户</strong></td>
+<td>刚买过且客单高但频次低，推送关联商品促复购</td>
+</tr>
+<tr>
+<td>低（远）</td>
+<td>低</td>
+<td>高</td>
+<td><strong>重要挽留客户</strong></td>
+<td>大额一次性客户即将流失，用有针对性的召回券测试</td>
+</tr>
+<tr>
+<td>高/低</td>
+<td>高/低</td>
+<td>低</td>
+<td>一般价值/保持/发展/挽留</td>
+<td>低成本自动化触达为主，控制营销投入产出比</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>实测结果呈现出鲜明的<strong>二八效应</strong>：<strong>重要价值客户仅 756 人（占购买客户的 31.15%），却贡献了 1,247,488.80 元（占总已完成净销售额的 69.91%）</strong>！</p>
+<h2 id="3-rfm-模型的适用边界">3. RFM 模型的适用边界</h2>
+<p>RFM 很好用，但绝不是万能钥匙：
+- <strong>不适合低频耐用品</strong>（如买房、买车、大型家电）：几年才买一次，F 几乎全是 1。
+- <strong>不适合冷启动新客</strong>：刚注册未下单的 573 位客户没有 R/F/M，需要用注册渠道与浏览行为做新客激活。
+- <strong>不包含利润与退货率</strong>：高 M 但高退款率的客户并不等于高利润客户。</p>
+<div class="quiz"><p class="quiz-q">RFM 方向判断
+基准日为 2026-01-01。客户 A 的 <code>R = 5 天</code>，客户 B 的 <code>R = 180 天</code>，整体中位数 <code>R_med = 50 天</code>。谁属于“R 高（近期活跃）”？</p><ul class="quiz-options"><li><button type="button" data-correct="0">客户 B，因为 180 &gt; 50</button></li><li><button type="button" data-correct="1">客户 A，因为 R 是距今天数，天数越小说明消费越近、越活跃</button></li><li><button type="button" data-correct="0">两人都不算</button></li></ul><div class="quiz-explain"><p>R 是反向指标（越小越好），代码里务必写成 <code>R &lt;= R_med</code>，千万别顺手写成 <code>R &gt;= R_med</code>。</p></div></div>
+<h2 id="4-四道独立练习">4. 四道独立练习</h2>
+<div class="callout try"><p class="callout-title">7-3.1 计算每位购买客户的 R、F、M 原始值</p><p>以 <code>2026-01-01</code> 为基准日，对已完成订单按 <code>customer_id</code> 输出 <code>customer_id, R, F, M</code>，按 <code>customer_id</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">done_ex = orders.loc[orders["status"].eq("已完成")]
+rfm_ex = done_ex.groupby("customer_id", as_index=False).agg(
+    last_time=("order_time", "max"), F=("order_id", "nunique"), M=("pay_amount", "sum"))
+rfm_ex["R"] = (pd.Timestamp("2026-01-01") - rfm_ex["last_time"]).dt.days
+ans_7_3_1 = rfm_ex[["customer_id", "R", "F", "M"]].sort_values("customer_id").reset_index(drop=True)</code></pre></details></div>
+<div class="callout try"><p class="callout-title">7-3.2 计算 R、F、M 的中位数阈值</p><p>返回 <code>R_med, F_med, M_med</code> 三键字典。</p>
+<details class="fold"><summary>参考答案</summary><p>实算：<code>R_med = 50.0, F_med = 3.0, M_med = 376.2</code>。</p></details></div>
+<div class="callout try"><p class="callout-title">7-3.3 RFM 八类客户分层汇总</p><p>按 <code>R &lt;= R_med, F &gt;= F_med, M &gt;= M_med</code> 映射八类名称，统计 <code>segment, customers, total_m</code>，按 <code>total_m</code> 降序。</p>
+<details class="fold"><summary>参考答案</summary><p>详见 <code>solutions/7-3_method_rfm.ipynb</code>。</p></details></div>
+<div class="callout try"><p class="callout-title">7-3.4 重要价值客户的人数占比与金额贡献占比</p><p>计算 <code>customer_share</code> 与 <code>revenue_share</code>（0～1 小数）。</p>
+<details class="fold"><summary>参考答案</summary><p>实算：<code>customer_share ≈ 31.15%</code>, <code>revenue_share ≈ 69.91%</code>。</p></details></div>
+<h2 id="常见问题与求职用途">常见问题与求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把 <code>R &gt;= R_med</code> 当成高价值</td>
+<td>R 是距今天数，越小越近，必须 <code>R &lt;= R_med</code></td>
+</tr>
+<tr>
+<td>用 <code>customers.csv</code> 全部 3000 人算 RFM</td>
+<td>573 位未成交客户没有消费记录，应明确只对 2427 位购买客户分层，其余单列“注册未购池”</td>
+</tr>
+<tr>
+<td>忘记过滤退款订单</td>
+<td>退款订单不应计入 F 和 M</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试加分表达</p><p>“用 RFM 做用户分层时，我采用中位数而非均值做切分阈值以抵抗长尾偏态，并指出 31% 的重要价值客户贡献了近 70% 的已完成净销售额；同时明确说明 RFM 不涵盖未成交注册用户与退货成本。”</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="7-3:16:0"><span class="cl-text">我能用代码从订单明细计算每位客户的 R、F、M 并设置明确基准日。</span></label></li><li><label><input type="checkbox" data-id="7-3:16:1"><span class="cl-text">我牢记 R 越小越活跃，没有把阈值方向写反。</span></label></li><li><label><input type="checkbox" data-id="7-3:16:2"><span class="cl-text">我能针对不同 RFM 分层提出差异化且待验证的运营建议。</span></label></li><li><label><input type="checkbox" data-id="7-3:16:3"><span class="cl-text">练习本 7-3.1 ～ 7-3.4 四题全部通过检查。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/8-1-job-resume.html">进入阶段 8：数据分析简历与作品集</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/7-3_method_rfm.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/7-3_method_rfm.ipynb" download>学生练习本</a> · <a href="../../solutions/7-3_method_rfm.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="7-2-method-funnel-retention.html"><small>← 上一课</small>7-2 漏斗、留存与同期群</a><a class="next" href="8-1-job-resume.html"><small>下一课 →</small>8-1 数据分析简历与作品集</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-什么是-rfm-模型">1. 什么是 RFM 模型？</a></li><li><a href="#2-八类客户分层与对应运营动作">2. 八类客户分层与对应运营动作</a></li><li><a href="#3-rfm-模型的适用边界">3. RFM 模型的适用边界</a></li><li><a href="#4-四道独立练习">4. 四道独立练习</a></li><li><a href="#常见问题与求职用途">常见问题与求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

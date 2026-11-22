@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5-4 假设检验与 A/B 测试 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="5-4" style="--stage-color: #8b5cf6">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4" class="active"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 5 · 统计基础</div><h1><span class="lid">5-4</span>假设检验与 A/B 测试</h1><p class="lesson-summary">用白话理解零假设、p 值、显著性水平与两类错误，并用 scipy 完成转化率卡方检验与耗时 Welch t 检验。</p><ul class="lesson-meta"><li>约 80 分钟</li><li>难度 ★★★</li><li>配套练习本 <code>notebooks/5-4_stats_hypothesis.ipynb</code></li><li>前置：已完成第 5-2 与 5-3 课，理解样本波动与置信区间</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>用白话解释零假设 $H_0$、备择假设 $H_1$、p 值与显著性水平 $\alpha = 0.05$。</li>
+<li>区分比例类指标（用卡方检验/比例 z 检验）与连续均值指标（用 Welch t 检验）。</li>
+<li>在虚构 A/B 测试数据 <code>ab_experiment.csv</code> 上检验主指标转化率与护栏指标加载耗时。</li>
+<li>区分“统计显著”与“业务显著”，并识别新老客之间的异质性效果。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/5-4_stats_hypothesis.ipynb">5-4 练习本</a>，选择 <code>Python (da-course)</code> 内核。本课使用虚构的“商品详情页新版评价卡片” A/B 测试数据 <code>data/abtest/ab_experiment.csv</code>（12000 名用户，14 天）。</p>
+<h2 id="1-假设检验的底层逻辑像法庭上的无罪推定">1. 假设检验的底层逻辑：像法庭上的“无罪推定”</h2>
+<div class="callout analogy"><p class="callout-title">法庭上的无罪推定</p><p>法官先假定嫌疑人“无罪”（<strong>零假设 $H_0$：新旧版本没有真实差异</strong>）。接着收集证据（实验数据）。如果“在无罪前提下，出现这么极端证据的概率”极低（<strong>p 值 &lt; 0.05</strong>），法官才推翻无罪假定，支持<strong>备择假设 $H_1$（两组确实存在差异）</strong>。如果证据不够强（p ≥ 0.05），只能说“证据不足以推翻无罪”，而不能宣称“证明绝对无罪”。</p></div>
+<p>因此，<strong>p 值</strong>的准确白话含义是：<strong>假如新旧版本本来完全没区别，单靠随机运气出现“当前这么大甚至更大差异”的概率。</strong></p>
+<div class="callout warn"><p class="callout-title">最容易说错的一句话</p><p>千万不要把 <code>p = 0.014</code> 解释成“实验组有 98.6% 的概率比对照组好”或“零假设为真的概率是 1.4%”！p 值是在假设 $H_0$ 为真的前提下算出来的条件概率。</p></div>
+<h2 id="2-两类错误假阳性与假阴性">2. 两类错误：假阳性与假阴性</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>真实情况 \ 检验结论</th>
+<th>拒绝 $H_0$（认为有效）</th>
+<th>不拒绝 $H_0$（认为没证据）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实无效（$H_0$ 为真）</td>
+<td><strong>一类错误（假阳性，概率 $\alpha$）</strong>：把没用的功能上线了</td>
+<td>正确决策</td>
+</tr>
+<tr>
+<td>真实有效（$H_1$ 为真）</td>
+<td>正确决策（统计功效 Power = $1-\beta$）</td>
+<td><strong>二类错误（假阴性，概率 $\beta$）</strong>：错过了好功能</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-实战检验比例用卡方均值用-welch-t">3. 实战检验：比例用卡方，均值用 Welch t</h2>
+<p>在 <code>ab_experiment.csv</code> 中，对照组（<code>control</code>）5976 人转化率 <strong>8.75%</strong>，实验组（<code>treatment</code>）6024 人转化率 <strong>10.06%</strong>，高出 1.31 个百分点。</p>
+<pre class="highlight"><code class="language-python">ct = pd.crosstab(ab["group"], ab["converted"])
+chi2, p_val, _, _ = stats.chi2_contingency(ct, correction=False)
+print(f"chi2 = {chi2:.4f}, p_value = {p_val:.5f}")</code></pre>
+<pre class="highlight"><code class="language-output">chi2 = 6.0226, p_value = 0.01412</code></pre>
+<ul>
+<li><strong>主指标（转化率，0/1 比例）</strong>：<code>p = 0.0141 &lt; 0.05</code>，统计显著！说明总体转化率提升不太可能是随机波动。</li>
+<li><strong>护栏指标（<code>page_load_ms</code>，连续均值）</strong>：用不要求两组方差相等的 Welch t 检验 <code>stats.ttest_ind(t_ms, c_ms, equal_var=False)</code>，实测实验组平均慢了 <strong>+43.52 ms</strong>（455.76ms → 499.28ms），<code>t = 26.17</code>，<code>p = 7.68e-147</code>，极度显著！</li>
+<li><strong>统计显著 ≠ 必须全量上线</strong>：还要权衡业务收益与性能代价，更要拆开人群看——把新老客拆开后发现，新客转化率大涨 <strong>+2.49 个百分点</strong>（<code>p = 0.00027</code>），而老客几乎无变化（−0.19 个百分点，<code>p = 0.82</code>）！</li>
+</ul>
+<div class="quiz"><p class="quiz-q">关于 p 值与统计显著的判断
+某 A/B 测试样本量极大（每组 500 万人），测得点击率提升 0.02 个百分点，<code>p = 0.001</code>。你该如何给产品经理建议？</p><ul class="quiz-options"><li><button type="button" data-correct="0">因为 p &lt; 0.01 非常显著，说明收益巨大，应立即全量上线</button></li><li><button type="button" data-correct="1">这是“统计显著但业务未必显著”：差异大概率不是随机波动，但 0.02pp 的提升需结合研发成本和护栏指标综合权衡</button></li><li><button type="button" data-correct="0">p = 0.001 说明 99.9% 的用户都更喜欢新版</button></li></ul><div class="quiz-explain"><p>超大样本下极微小的差异也能达到极小的 p 值，决策必须同时看效应量（提升幅度）与业务成本。</p></div></div>
+<h2 id="4-四道独立练习">4. 四道独立练习</h2>
+<div class="callout try"><p class="callout-title">5-4.1 A/B 分组转化率汇总</p><p>按 <code>group</code> 分组（<code>as_index=False</code>）统计 <code>users</code>、<code>conversions</code>、<code>conv_rate</code>，按 <code>group</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">ab_summary_ans = (
+    ab.groupby("group", as_index=False)
+    .agg(users=("user_id", "size"), conversions=("converted", "sum"), conv_rate=("converted", "mean"))
+    .sort_values("group").reset_index(drop=True)
+)</code></pre></details></div>
+<div class="callout try"><p class="callout-title">5-4.2 总体转化率卡方检验</p><p>用 <code>pd.crosstab(ab["group"], ab["converted"])</code> 和 <code>stats.chi2_contingency(ct, correction=False)</code> 计算 <code>chi2</code> 和 <code>p_value</code>。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">ct_ex = pd.crosstab(ab["group"], ab["converted"])
+chi2_val, p_val_ex, _, _ = stats.chi2_contingency(ct_ex, correction=False)
+chi2_ans = {"chi2": float(chi2_val), "p_value": float(p_val_ex)}</code></pre></details></div>
+<div class="callout try"><p class="callout-title">5-4.3 护栏指标页面加载耗时 Welch t 检验</p><p>用 <code>stats.ttest_ind(..., equal_var=False)</code> 检验两组 <code>page_load_ms</code>，返回 <code>t_stat</code> 与 <code>p_value</code>。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">c_ms_ex = ab.loc[ab["group"].eq("control"), "page_load_ms"]
+t_ms_ex = ab.loc[ab["group"].eq("treatment"), "page_load_ms"]
+t_val, p_t = stats.ttest_ind(t_ms_ex, c_ms_ex, equal_var=False)
+ttest_ans = {"t_stat": float(t_val), "p_value": float(p_t)}</code></pre></details></div>
+<div class="callout try"><p class="callout-title">5-4.4 新客群体转化率提升与卡方 p 值</p><p>筛选 <code>is_new_user == 1</code>，计算 <code>lift = treatment - control</code> 以及卡方检验（<code>correction=False</code>）<code>p_value</code>。</p>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">sub_new = ab.loc[ab["is_new_user"].eq(1)]
+rates_new = sub_new.groupby("group")["converted"].mean()
+_, p_new, _, _ = stats.chi2_contingency(pd.crosstab(sub_new["group"], sub_new["converted"]), correction=False)
+new_user_ans = {"lift": float(rates_new["treatment"] - rates_new["control"]), "p_value": float(p_new)}</code></pre>
+实算：lift = +2.49pp，p = 0.000275。</p></details></div>
+<h2 id="常见问题与求职用途">常见问题与求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每天偷看 p 值，一低于 0.05 就提前停实验</td>
+<td>偷看会大幅推高假阳性率，应提前约定实验周期（如 14 天覆盖完整周周期）</td>
+</tr>
+<tr>
+<td>对转化率直接用 <code>ttest_ind</code> 还是 <code>chi2_contingency</code>？</td>
+<td>比例类指标优先用卡方检验或双样本比例 z 检验；连续均值用 <code>ttest_ind(..., equal_var=False)</code></td>
+</tr>
+<tr>
+<td>只看主指标不看护栏指标</td>
+<td>性能变慢、退款率飙升等负向副作用必须纳入护栏监控</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试加分表达</p><p>“做 A/B 测试复盘时，我会按‘SRM 分流校验 → 主指标显著性与置信区间 → 护栏指标 → 分人群异质性 → 业务决策’五步展开，并清楚区分统计显著与业务显著。”</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="5-4:13:0"><span class="cl-text">我能用白话准确解释 p 值，不把它说成“新版更好的概率”。</span></label></li><li><label><input type="checkbox" data-id="5-4:13:1"><span class="cl-text">我会用 <code>scipy.stats.chi2_contingency</code> 与 <code>ttest_ind(..., equal_var=False)</code> 做检验。</span></label></li><li><label><input type="checkbox" data-id="5-4:13:2"><span class="cl-text">我能解释为什么护栏指标和分人群拆解同样重要。</span></label></li><li><label><input type="checkbox" data-id="5-4:13:3"><span class="cl-text">练习本 5-4.1 ～ 5-4.4 四题全部通过检查。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/6-1-sql-basics.html">进入阶段 6：SQL SELECT 查询与筛选</a>，也可以在学完后直接挑战<a href="../lessons/P-3-project-ab-test.html">项目三：A/B 测试分析</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/5-4_stats_hypothesis.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/5-4_stats_hypothesis.ipynb" download>学生练习本</a> · <a href="../../solutions/5-4_stats_hypothesis.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="5-3-stats-correlation.html"><small>← 上一课</small>5-3 相关性与因果</a><a class="next" href="6-1-sql-basics.html"><small>下一课 →</small>6-1 SELECT 查询与筛选</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-假设检验的底层逻辑像法庭上的无罪推定">1. 假设检验的底层逻辑：像法庭上的“无罪推定”</a></li><li><a href="#2-两类错误假阳性与假阴性">2. 两类错误：假阳性与假阴性</a></li><li><a href="#3-实战检验比例用卡方均值用-welch-t">3. 实战检验：比例用卡方，均值用 Welch t</a></li><li><a href="#4-四道独立练习">4. 四道独立练习</a></li><li><a href="#常见问题与求职用途">常见问题与求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

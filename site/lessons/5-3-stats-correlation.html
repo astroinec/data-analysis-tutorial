@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5-3 相关性与因果 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="5-3" style="--stage-color: #8b5cf6">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3" class="active"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 5 · 统计基础</div><h1><span class="lid">5-3</span>相关性与因果</h1><p class="lesson-summary">掌握 Pearson 与 Spearman 相关系数，看懂相关矩阵，并用企鹅数据亲手复现辛普森悖论，牢记“相关不等于因果”。</p><ul class="lesson-meta"><li>约 50 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/5-3_stats_correlation.ipynb</code></li><li>前置：已完成第 5-2 课，能画散点图与按组聚合</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>用 pandas 计算两列数值的 Pearson（线性）与 Spearman（单调）相关系数。</li>
+<li>生成并解读多变量相关系数矩阵，知道取值范围 <code>[-1, 1]</code> 的含义。</li>
+<li>用 <code>penguins.csv</code> 复现辛普森悖论：整体负相关，分物种后全部正相关。</li>
+<li>识别混杂变量、反向因果与巧合相关，不在报告里把相关性写成因果结论。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/5-3_stats_correlation.ipynb">5-3 练习本</a>，选择 <code>Python (da-course)</code> 内核。</p>
+<h2 id="1-相关系数-r衡量是否一起变化">1. 相关系数 r：衡量“是否一起变化”</h2>
+<p>相关系数 $r$ 落在 $[-1, 1]$ 之间：
+- 越接近 <code>+1</code>：正相关越强（一个大，另一个也倾向于大）；
+- 越接近 <code>-1</code>：负相关越强（一个大，另一个倾向于小）；
+- 接近 <code>0</code>：几乎没有线性/单调关联。</p>
+<pre class="highlight"><code class="language-python">tips = pd.read_csv("../data/public/tips.csv")
+print("Pearson :", round(tips["total_bill"].corr(tips["tip"], method="pearson"), 4))
+print("Spearman:", round(tips["total_bill"].corr(tips["tip"], method="spearman"), 4))</code></pre>
+<pre class="highlight"><code class="language-output">Pearson : 0.6757
+Spearman: 0.679</code></pre>
+<div class="cards"><div class="card"><p class="card-title">Pearson 相关系数</p><p>衡量<strong>直线关系</strong>，直接用原始数值计算。对极端离群值敏感；适合分布较对称、关系近似直线的连续变量。</p></div>
+<div class="card"><p class="card-title">Spearman 秩相关系数</p><p>先把数值变成“排名（秩）”，再算相关。衡量<strong>单调关系</strong>（只要一直同步上升即可，不必是直线），抗离群值能力更强。</p></div></div>
+<h2 id="2-辛普森悖论不分组看整体结论可能完全反过来">2. 辛普森悖论：不分组看整体，结论可能完全反过来！</h2>
+<p>在 <code>penguins.csv</code> 中，如果我们把三种企鹅混在一起算喙长 <code>bill_length_mm</code> 和喙深 <code>bill_depth_mm</code> 的相关系数，会得到 <strong>−0.2351</strong>（看起来“嘴越长、嘴越浅”）。但只要按物种 <code>species</code> 分开算，三个物种全部变成<strong>显著正相关</strong>！</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>分组范围</th>
+<th style="text-align: right;">Pearson 相关系数</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全部企鹅混在一起</td>
+<td style="text-align: right;">-0.2351</td>
+<td>负相关</td>
+</tr>
+<tr>
+<td>Adelie（阿德利企鹅）</td>
+<td style="text-align: right;">+0.3915</td>
+<td>正相关</td>
+</tr>
+<tr>
+<td>Chinstrap（帽带企鹅）</td>
+<td style="text-align: right;">+0.6535</td>
+<td>正相关</td>
+</tr>
+<tr>
+<td>Gentoo（巴布亚企鹅）</td>
+<td style="text-align: right;">+0.6434</td>
+<td>正相关</td>
+</tr>
+</tbody>
+</table></div></div>
+<p>为什么会这样？因为 <code>species</code>（物种）是一个<strong>混杂变量</strong>：Gentoo 企鹅天生嘴长但嘴较浅，Adelie 企鹅天生嘴短但嘴较深。混在一起画散点图时，物种间的差异把物种内部“嘴越长越深”的真实正相关彻底反转了。</p>
+<p>在商业分析里，辛普森悖论每天都在发生：比如“整体转化率下降”，拆开新客和老客一看，其实新客和老客的转化率都涨了，只是转化率较低的新客流量占比突然变大！</p>
+<h2 id="3-为什么相关不等于因果">3. 为什么相关不等于因果？</h2>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">“消费频次和客单价正相关，所以强制用户多买就能提高客单价”</p><p>这混淆了关联与因果，既可能是高收入客户（混杂变量）同时买得多且买得贵，也可能是反向因果。</p></div>
+<div class="compare-col good"><p class="compare-title">“观察到 A 与 B 呈正相关，可能受客户层级等混杂因素影响，需进一步分层或通过随机实验验证”</p><p>先交代相关性、再提出可检验的业务假设，最后用控制变量或 A/B 测试检验因果。</p></div></div>
+<p>常见的三种伪因果陷阱：
+1. <strong>混杂变量（Confounder）</strong>：夏天冰淇淋销量和溺水人数高度正相关，背后的共同原因是气温升高。
+2. <strong>反向因果（Reverse Causality）</strong>：医院越多的城市生病记录越多，不是医院让人变病，而是人口多/需求大才建更多医院。
+3. <strong>巧合相关</strong>：把足够多毫无关系的时间序列两两配对，总能碰巧撞出高相关。</p>
+<div class="quiz"><p class="quiz-q">识别辛普森悖论
+某 App 本月 iOS 和 Android 两个端的留存率都比上月上升了 1 个百分点，但全站总留存率反而下降了 0.5 个百分点。最可能的原因是？</p><ul class="quiz-options"><li><button type="button" data-correct="0">代码一定算错了，部分上升整体不可能下降</button></li><li><button type="button" data-correct="1">本月留存率本身较低的那个端新增流量占比大幅上升，拉低了加权整体（辛普森悖论）</button></li><li><button type="button" data-correct="0">这说明 iOS 和 Android 之间存在负相关</button></li></ul><div class="quiz-explain"><p>当各子群体的权重（流量占比）发生明显变化时，加权平均完全可能与所有子群体的变化方向相反。</p></div></div>
+<h2 id="4-四道独立练习">4. 四道独立练习</h2>
+<div class="callout try"><p class="callout-title">5-3.1 账单与小费的两种相关系数</p><p>计算 <code>tips</code> 中 <code>total_bill</code> 与 <code>tip</code> 的 <code>pearson</code> 和 <code>spearman</code> 相关系数，存入 2 键字典。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">tips_corr = {
+    "pearson": tips["total_bill"].corr(tips["tip"], method="pearson"),
+    "spearman": tips["total_bill"].corr(tips["tip"], method="spearman"),
+}</code></pre></details></div>
+<div class="callout try"><p class="callout-title">5-3.2 生成三列相关系数矩阵</p><p>计算 <code>tips<span class="ui-btn">"total_bill", "tip", "size"</span>.corr()</code>（3×3 DataFrame）。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">corr_matrix = tips[["total_bill", "tip", "size"]].corr()</code></pre></details></div>
+<div class="callout try"><p class="callout-title">5-3.3 企鹅喙长与喙深的整体相关系数</p><p>先 <code>dropna(subset=["bill_length_mm", "bill_depth_mm"])</code>，再计算两列 Pearson 相关系数。</p>
+<details class="fold"><summary>参考答案</summary><p><pre class="highlight"><code class="language-python">p_sub = penguins.dropna(subset=["bill_length_mm", "bill_depth_mm"])
+overall_r = p_sub["bill_length_mm"].corr(p_sub["bill_depth_mm"])</code></pre>
+实算：-0.2351。</p></details></div>
+<div class="callout try"><p class="callout-title">5-3.4 分物种计算相关系数</p><p>按 <code>species</code> 分组计算 <code>bill_length_mm</code> 与 <code>bill_depth_mm</code> 的 Pearson 相关系数，输出 <code>species, corr</code> 两列，按 <code>species</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">p_sub2 = penguins.dropna(subset=["bill_length_mm", "bill_depth_mm"])
+group_r = pd.DataFrame([
+    {"species": sp, "corr": g["bill_length_mm"].corr(g["bill_depth_mm"])}
+    for sp, g in p_sub2.groupby("species")
+]).sort_values("species").reset_index(drop=True)</code></pre></details></div>
+<h2 id="常见问题与求职用途">常见问题与求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对含文本列整表调用 <code>df.corr()</code> 报错</td>
+<td>先用 <code>df<span class="ui-btn">"列1", "列2"</span></code> 选出数值列，或传 <code>numeric_only=True</code></td>
+</tr>
+<tr>
+<td>看到 <code>r = 0</code> 就断定两变量无关</td>
+<td>Pearson 只测线性关系，U 型等非线性关系也可能算出接近 0，务必画散点图</td>
+</tr>
+<tr>
+<td>在报告里写“相关系数 0.68 证明 A 导致 B”</td>
+<td>改为“观察到中等正相关，因果关系需通过对照实验验证”</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试加分表达</p><p>“面试被问到‘整体指标跌了但各渠道都在涨’时，直接点出辛普森悖论——先查各渠道流量结构（权重）是否变化，再看单渠道质量，这是数据分析师非常核心的拆解敏感度。”</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="5-3:18:0"><span class="cl-text">我能区分 Pearson 与 Spearman 相关系数的适用场景。</span></label></li><li><label><input type="checkbox" data-id="5-3:18:1"><span class="cl-text">我能画散点图并用企鹅数据解释辛普森悖论。</span></label></li><li><label><input type="checkbox" data-id="5-3:18:2"><span class="cl-text">我能说出混杂变量、反向因果、巧合相关三种伪因果陷阱。</span></label></li><li><label><input type="checkbox" data-id="5-3:18:3"><span class="cl-text">练习本 5-3.1 ～ 5-3.4 四题全部通过检查。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/5-4-stats-hypothesis.html">假设检验与 A/B 测试</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/5-3_stats_correlation.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/5-3_stats_correlation.ipynb" download>学生练习本</a> · <a href="../../solutions/5-3_stats_correlation.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="5-2-stats-distribution.html"><small>← 上一课</small>5-2 分布与抽样</a><a class="next" href="5-4-stats-hypothesis.html"><small>下一课 →</small>5-4 假设检验与 A/B 测试</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-相关系数-r衡量是否一起变化">1. 相关系数 r：衡量“是否一起变化”</a></li><li><a href="#2-辛普森悖论不分组看整体结论可能完全反过来">2. 辛普森悖论：不分组看整体，结论可能完全反过来！</a></li><li><a href="#3-为什么相关不等于因果">3. 为什么相关不等于因果？</a></li><li><a href="#4-四道独立练习">4. 四道独立练习</a></li><li><a href="#常见问题与求职用途">常见问题与求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

@@ -55,44 +55,44 @@
       "desc": "做出能写进简历的作品",
       "lessons": [
         {"id": "P-1", "slug": "project-ecommerce", "title": "项目一：线上文创店年度销售分析", "minutes": 180, "level": 3, "notebook": "P-1_project_ecommerce.ipynb", "status": "ready"},
-        {"id": "P-2", "slug": "project-funnel-retention", "title": "项目二：App 转化漏斗与用户留存", "minutes": 180, "level": 3, "notebook": null, "status": "soon"},
-        {"id": "P-3", "slug": "project-ab-test", "title": "项目三：A/B 测试分析", "minutes": 150, "level": 3, "notebook": null, "status": "soon"}
+        {"id": "P-2", "slug": "project-funnel-retention", "title": "项目二：App 转化漏斗与用户留存", "minutes": 180, "level": 3, "notebook": "P-2_project_funnel_retention.ipynb", "status": "ready"},
+        {"id": "P-3", "slug": "project-ab-test", "title": "项目三：A/B 测试分析", "minutes": 150, "level": 3, "notebook": "P-3_project_ab_test.ipynb", "status": "ready"}
       ]
     },
     {
       "id": "5", "name": "统计基础", "color": "#8b5cf6",
       "desc": "判断“差异是真的，还是碰巧”",
       "lessons": [
-        {"id": "5-1", "slug": "stats-descriptive", "title": "描述统计：平均数会骗人", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "5-2", "slug": "stats-distribution", "title": "分布与抽样", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "5-3", "slug": "stats-correlation", "title": "相关性与因果", "minutes": 50, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "5-4", "slug": "stats-hypothesis", "title": "假设检验与 A/B 测试", "minutes": 80, "level": 3, "notebook": null, "status": "soon"}
+        {"id": "5-1", "slug": "stats-descriptive", "title": "描述统计：平均数会骗人", "minutes": 60, "level": 2, "notebook": "5-1_stats_descriptive.ipynb", "status": "ready"},
+        {"id": "5-2", "slug": "stats-distribution", "title": "分布与抽样", "minutes": 60, "level": 2, "notebook": "5-2_stats_distribution.ipynb", "status": "ready"},
+        {"id": "5-3", "slug": "stats-correlation", "title": "相关性与因果", "minutes": 50, "level": 2, "notebook": "5-3_stats_correlation.ipynb", "status": "ready"},
+        {"id": "5-4", "slug": "stats-hypothesis", "title": "假设检验与 A/B 测试", "minutes": 80, "level": 3, "notebook": "5-4_stats_hypothesis.ipynb", "status": "ready"}
       ]
     },
     {
       "id": "6", "name": "SQL 取数", "color": "#14b8a6",
       "desc": "面试必考，工作必用",
       "lessons": [
-        {"id": "6-1", "slug": "sql-basics", "title": "SELECT 查询与筛选", "minutes": 60, "level": 1, "notebook": null, "status": "soon"},
-        {"id": "6-2", "slug": "sql-groupby", "title": "分组聚合", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "6-3", "slug": "sql-join", "title": "多表连接与子查询", "minutes": 80, "level": 2, "notebook": null, "status": "soon"}
+        {"id": "6-1", "slug": "sql-basics", "title": "SELECT 查询与筛选", "minutes": 60, "level": 1, "notebook": "6-1_sql_basics.ipynb", "status": "ready"},
+        {"id": "6-2", "slug": "sql-groupby", "title": "分组聚合", "minutes": 60, "level": 2, "notebook": "6-2_sql_groupby.ipynb", "status": "ready"},
+        {"id": "6-3", "slug": "sql-join", "title": "多表连接与子查询", "minutes": 80, "level": 2, "notebook": "6-3_sql_join.ipynb", "status": "ready"}
       ]
     },
     {
       "id": "7", "name": "分析方法论", "color": "#f97316",
       "desc": "从“会写代码”到“会分析问题”",
       "lessons": [
-        {"id": "7-1", "slug": "method-metrics", "title": "指标体系与拆解思路", "minutes": 60, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "7-2", "slug": "method-funnel-retention", "title": "漏斗、留存与同期群", "minutes": 70, "level": 2, "notebook": null, "status": "soon"},
-        {"id": "7-3", "slug": "method-rfm", "title": "RFM 用户分层", "minutes": 60, "level": 2, "notebook": null, "status": "soon"}
+        {"id": "7-1", "slug": "method-metrics", "title": "指标体系与拆解思路", "minutes": 60, "level": 2, "notebook": "7-1_method_metrics.ipynb", "status": "ready"},
+        {"id": "7-2", "slug": "method-funnel-retention", "title": "漏斗、留存与同期群", "minutes": 70, "level": 2, "notebook": "7-2_method_funnel_retention.ipynb", "status": "ready"},
+        {"id": "7-3", "slug": "method-rfm", "title": "RFM 用户分层", "minutes": 60, "level": 2, "notebook": "7-3_method_rfm.ipynb", "status": "ready"}
       ]
     },
     {
       "id": "8", "name": "求职冲刺", "color": "#a855f7",
       "desc": "简历、作品集与面试",
       "lessons": [
-        {"id": "8-1", "slug": "job-resume", "title": "数据分析简历与作品集", "minutes": 60, "level": 1, "notebook": null, "status": "soon"},
-        {"id": "8-2", "slug": "job-interview", "title": "面试高频题", "minutes": 90, "level": 2, "notebook": null, "status": "soon"}
+        {"id": "8-1", "slug": "job-resume", "title": "数据分析简历与作品集", "minutes": 60, "level": 1, "notebook": null, "status": "ready"},
+        {"id": "8-2", "slug": "job-interview", "title": "面试高频题", "minutes": 90, "level": 2, "notebook": "8-2_job_interview.ipynb", "status": "ready"}
       ]
     },
     {

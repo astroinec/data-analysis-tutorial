@@ -2,8 +2,8 @@
 hero: 给文科生的量化起点：不先啃公式，先学会用数据回答一个问题。
 ---
 
-:::note 第一批交付 · Windows 零基础路线
-已经包含 **{{READY_COUNT}} 篇可阅读讲义、{{NOTEBOOK_COUNT}} 套配套练习本及其参考答案**，覆盖电脑准备、Python、pandas、清洗、图表和一个完整项目。SQL、统计推断、留存与 A/B 测试列在后续路线中，**不在本批成品里**。
+:::note 全套课程已上线 · Windows 零基础路线
+已经包含 **{{READY_COUNT}} 篇可阅读讲义、{{NOTEBOOK_COUNT}} 套配套练习本及其参考答案**，覆盖电脑准备、Python、pandas、数据清洗、可视化、统计推断、SQL（SQLite）、分析方法论、三大实战项目与求职冲刺。
 
 读 HTML 不用装 Python；执行练习才需要按阶段 0 安装环境。HTML 里的互动是小样本教学示意，**不是浏览器中的 Python 执行器**。
 :::
@@ -76,7 +76,7 @@ hero: 给文科生的量化起点：不先啃公式，先学会用数据回答�
 
 <a id="roadmap"></a>
 
-实线卡片是本批课程；灰色卡片是后续内容。按顺序学到 P-1 后，先交出基础项目，再进统计与 SQL。工具箱不必按顺序背，遇到问题再查。
+全部阶段课程与三大实战项目均已开放。建议按顺序学完阶段 0～4 与 P-1，再推进统计（阶段 5）、SQL（阶段 6）、方法论（阶段 7）、项目 P-2/P-3 与求职冲刺（阶段 8）。工具箱不必按顺序背，遇到问题再查。
 
 <label class="course-search-label" for="course-search">找一节课</label>
 <input class="course-search" id="course-search" type="search" placeholder="输入：环境、筛选、图表、2-1…" autocomplete="off">
@@ -98,9 +98,9 @@ hero: 给文科生的量化起点：不先啃公式，先学会用数据回答�
 [操作速查表](lesson:A-4) · [术语表](lesson:A-5)
 :::
 :::card 准备做求职作品
-[项目一：文创店年度销售分析](lesson:P-1)
+[项目一：文创店年度销售分析](lesson:P-1) · [项目二：App 漏斗与留存](lesson:P-2) · [项目三：A/B 测试分析](lesson:P-3)
 
-报告模板在 `report/analysis-report-template.md`，参考报告在 `report/project-reference-report.md`。先独立完成，再对照，不把示例当作自己的真实工作经历。
+报告模板在 `report/analysis-report-template.md`，参考报告在 `report/project-reference-report.md`，简历与面试见[阶段 8](lesson:8-1)。先独立完成，再对照，不把模拟示例当作真实工作经历。
 :::
 :::
 

@@ -36,9 +36,14 @@ prereq: 能识别文件夹、扩展名和相对路径
 | public/titanic.csv | 891×15 | 一位历史乘客；缺失与分组 | UTF-8 |
 | public/penguins.csv | 344×7 | 一只企鹅的记录；散点与分布 | UTF-8 |
 | public/gapminder.csv | 1704×8 | 一个地区在一个历史年份的观测；时间与气泡图 | UTF-8带BOM |
+| shop/shop.db | 4 张表 | 文创店 CSV 导出的 SQLite 数据库；阶段 6 SQL 课 | SQLite3 |
+| app/app_users.csv | 6000×5 | 虚构“墨读 App”注册用户；7-2 与 P-2 | UTF-8带BOM |
+| app/app_events.csv | 15243×3 | 虚构“墨读 App”五步漏斗事件；7-2 与 P-2 | UTF-8带BOM |
+| app/app_active.csv | 34166×2 | 虚构“墨读 App”每日活跃日志；留存与同期群 | UTF-8带BOM |
+| abtest/ab_experiment.csv | 12000×9 | 虚构商品详情页新版评价卡片 A/B 测试；5-4 与 P-3 | UTF-8带BOM |
 :::
 
-`data/generate_data.py` 与 `data/download_public_data.py` 是数据制作/恢复脚本，不是数据表。前者生成模拟CSV和Excel，后者恢复公开数据；它们不会自动为来源授予新许可。不要为学习而运行重新生成脚本覆盖原始资料；如需实验生成，先复制完整课程到自己另建目录。
+`data/generate_data.py`、`data/generate_phase2_data.py` 与 `data/download_public_data.py` 是数据制作/恢复脚本，不是数据表。前两者分别用固定种子 2025 与 2026 生成两批模拟数据，后者恢复公开数据；它们不会自动为来源授予新许可。不要为学习而运行重新生成脚本覆盖原始资料；如需实验生成，先复制完整课程到自己另建目录。
 
 :::warn 三个不能互换的“订单文件”
 项目必须用15115行 `orders.csv`。Excel订单只是前3000行；GBK只是300行；脏表只有抽样2000笔加重复，清洗后也不是年度全集。部分文件用相同表头不代表有相同覆盖范围。

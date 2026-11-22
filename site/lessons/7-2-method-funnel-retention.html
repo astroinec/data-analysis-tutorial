@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7-2 漏斗、留存与同期群 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="7-2" style="--stage-color: #f97316">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2" class="active"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 7 · 分析方法论</div><h1><span class="lid">7-2</span>漏斗、留存与同期群</h1><p class="lesson-summary">用虚构“墨读 App”数据掌握转化漏斗、次日/7日/30日留存率与同期群分析，避开观察窗口截断陷阱。</p><ul class="lesson-meta"><li>约 70 分钟</li><li>难度 ★★☆</li><li>配套练习本 <code>notebooks/7-2_method_funnel_retention.ipynb</code></li><li>前置：已完成第 7-1 课，熟练日期差计算与多表合并</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本课可验证目标</p><ul>
+<li>按唯一用户数构建多步转化漏斗，区分“环节转化率（相对上一步）”与“整体转化率（相对第一步）”。</li>
+<li>用 <code>active_date - register_date</code> 计算 D1、D7、D14、D30 留存率，并避开观察窗口不足的分母陷阱。</li>
+<li>分渠道对比 7 日留存率，识别“拉新量大但留存低”的低效渠道。</li>
+<li>按注册月份构造同期群（Cohort）留存表，学会横向看衰减、纵向看趋势。</li>
+</ul></div>
+<p>打开 <a href="../../notebooks/7-2_method_funnel_retention.ipynb">7-2 练习本</a>，选择 <code>Python (da-course)</code> 内核。本课使用虚构的“墨读 App”三张表（<code>data/app/</code>：6000 名 2025-07-01 至 2025-09-28 注册用户，活跃观察截至 2025-10-31）。</p>
+<h2 id="1-转化漏斗找到流失最严重的卡点">1. 转化漏斗：找到流失最严重的“卡点”</h2>
+<p>漏斗分析跟踪用户从打开 App 到最终付费的每一步。<strong>务必按唯一 <code>user_id</code> 去重</strong>，否则一个用户反复浏览课程 10 次会把 <code>view_course</code> 抬得比 <code>app_open</code> 还高！</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th style="text-align: right;">唯一用户数</th>
+<th style="text-align: right;">环节转化率（相对上步）</th>
+<th style="text-align: right;">整体转化率（相对首步）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <code>app_open</code>（打开）</td>
+<td style="text-align: right;">6000</td>
+<td style="text-align: right;">100.00%</td>
+<td style="text-align: right;">100.00%</td>
+</tr>
+<tr>
+<td>2. <code>view_course</code>（看课）</td>
+<td style="text-align: right;">4927</td>
+<td style="text-align: right;">82.12%</td>
+<td style="text-align: right;">82.12%</td>
+</tr>
+<tr>
+<td>3. <code>start_trial</code>（试听）</td>
+<td style="text-align: right;">2640</td>
+<td style="text-align: right;">53.58%</td>
+<td style="text-align: right;">44.00%</td>
+</tr>
+<tr>
+<td>4. <code>click_pay</code>（点付费）</td>
+<td style="text-align: right;">1081</td>
+<td style="text-align: right;"><strong>40.95%</strong></td>
+<td style="text-align: right;">18.02%</td>
+</tr>
+<tr>
+<td>5. <code>pay_success</code>（付成功）</td>
+<td style="text-align: right;">595</td>
+<td style="text-align: right;">55.04%</td>
+<td style="text-align: right;">9.92%</td>
+</tr>
+</tbody>
+</table></div></div>
+<p><code>start_trial → click_pay</code> 只有 40.95% 的环节转化率，是五步中流失最大的瓶颈。</p>
+<h2 id="2-留存率与观察窗口截断陷阱">2. 留存率与“观察窗口截断”陷阱</h2>
+<ul>
+<li><strong>次日留存（D1）</strong>：注册第 0 天的人里，在注册后第 1 天再次活跃的比例。</li>
+<li><strong>7 日留存（D7）</strong>：注册后恰好第 7 天再次活跃的比例（同理 D14、D30）。</li>
+<li>本数据集实测全量留存：<strong>D1 = 40.88%，D7 = 17.82%，D14 = 13.68%，D30 = 9.97%</strong>。</li>
+</ul>
+<div class="callout warn"><p class="callout-title">真实业务里最容易踩的坑：窗口不足却把人算进分母</p><p>如果今天是 10 月 31 日，你想算 10 月全部新用户的 30 日留存，10 月 25 日才注册的用户根本还没活到第 30 天！把他们放进分母，会人为把 30 日留存拉低。正确做法：<strong>只把注册日期早于 <code>截止日 - 30天</code> 的用户放进 D30 分母</strong>。本教程数据注册截止 9 月 28 日、活跃截止 10 月 31 日，所有 6000 人均满足 30 天完整窗口。</p></div>
+<h2 id="3-同期群cohort分析横向看衰减纵向看迭代">3. 同期群（Cohort）分析：横向看衰减，纵向看迭代</h2>
+<p>把同一时期（同一周或同一月）注册的用户编成一组，称为一个<strong>同期群</strong>。
+- <strong>横向看</strong>：同一批用户随天数（D1 → D7 → D30）的自然衰减速度，看曲线何时趋于平缓（留存稳定线）。
+- <strong>纵向看</strong>：比较 7 月、8 月、9 月注册的几批用户的 D7 留存，判断产品改版或渠道结构变化是否让新用户留存变好了。</p>
+<p>按渠道拆开 D7 留存率，差距一目了然：<strong>朋友推荐 22.47% &gt; 自然搜索 19.52% &gt; 小红书 19.25% &gt;&gt; 信息流广告 12.13%</strong>。信息流广告拉新量不小，但后续留存远低于其他渠道。</p>
+<div class="quiz"><p class="quiz-q">漏斗去重原则
+统计某 App 从“打开首页”到“点击购买”的转化漏斗时，如果直接用事件行数（<code>COUNT(*)</code>）而不是唯一用户数（<code>nunique(user_id)</code>），可能出现什么荒谬结果？</p><ul class="quiz-options"><li><button type="button" data-correct="0">转化率永远等于 0</button></li><li><button type="button" data-correct="1">若少数用户反复点击按钮多次，下一步事件数可能大于上一步，算出超过 100% 的转化率</button></li><li><button type="button" data-correct="0">pandas 会直接报错拒绝计算</button></li></ul><div class="quiz-explain"><p>人头漏斗必须按用户 ID 去重，确保每个用户在每个步骤最多计数一次。</p></div></div>
+<h2 id="4-四道独立练习">4. 四道独立练习</h2>
+<div class="callout try"><p class="callout-title">7-2.1 App 五步转化漏斗表</p><p>按 <code>["app_open", "view_course", "start_trial", "click_pay", "pay_success"]</code> 顺序计算 <code>step, users, step_rate, overall_rate</code>。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">steps_ex = ["app_open", "view_course", "start_trial", "click_pay", "pay_success"]
+cnt_ex = [events.loc[events["event_name"].eq(st), "user_id"].nunique() for st in steps_ex]
+ans_7_2_1 = pd.DataFrame([
+    {"step": st, "users": u, "step_rate": 1.0 if i == 0 else u / cnt_ex[i - 1], "overall_rate": u / cnt_ex[0]}
+    for i, (st, u) in enumerate(zip(steps_ex, cnt_ex))
+])</code></pre></details></div>
+<div class="callout try"><p class="callout-title">7-2.2 全量用户 D1/D7/D14/D30 留存率</p><p>计算 <code>day_diff = (active_date - register_date).dt.days</code>，返回 <code>d1, d7, d14, d30</code> 四键字典。</p>
+<details class="fold"><summary>参考答案</summary><p>实算：d1=0.4088, d7=0.1782, d14=0.1368, d30=0.0997。</p></details></div>
+<div class="callout try"><p class="callout-title">7-2.3 各渠道 7 日留存率对比</p><p>按 <code>channel</code> 统计 <code>users, d7_retained, d7_rate</code>，按 <code>d7_rate</code> 降序排列。</p>
+<details class="fold"><summary>参考答案</summary><pre class="highlight"><code class="language-python">base_ch = users.groupby("channel", as_index=False).agg(users=("user_id", "nunique"))
+d7_ch = au_ch.loc[au_ch["day_diff"].eq(7)].groupby("channel", as_index=False).agg(d7_retained=("user_id", "nunique"))
+ans_7_2_3 = base_ch.merge(d7_ch, on="channel", how="left")
+ans_7_2_3["d7_retained"] = ans_7_2_3["d7_retained"].fillna(0).astype(int)
+ans_7_2_3["d7_rate"] = ans_7_2_3["d7_retained"] / ans_7_2_3["users"]
+ans_7_2_3 = ans_7_2_3.sort_values("d7_rate", ascending=False).reset_index(drop=True)</code></pre></details></div>
+<div class="callout try"><p class="callout-title">7-2.4 按注册月份制作同期群留存表</p><p>按 <code>register_month</code>（<code>2025-07</code>～<code>2025-09</code>）输出 <code>register_month, users, d1, d7, d30</code>，按 <code>register_month</code> 升序。</p>
+<details class="fold"><summary>参考答案</summary><p>详见 <code>solutions/7-2_method_funnel_retention.ipynb</code> 最后一题。</p></details></div>
+<h2 id="常见问题与求职用途">常见问题与求职用途</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>纠正路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active_date - register_date</code> 报错 TypeError</td>
+<td>先用 <code>parse_dates</code> 或 <code>pd.to_datetime</code> 把文本转成日期类型，再取 <code>.dt.days</code></td>
+</tr>
+<tr>
+<td>用 <code>count()</code> 而不是 <code>nunique()</code> 算某天留存</td>
+<td>若同一用户一天产生多条活跃日志，<code>count()</code> 会重复计数导致留存虚高</td>
+</tr>
+<tr>
+<td>忽略渠道/设备差异只看全量漏斗</td>
+<td>全量漏斗找“哪一步掉了”，分维度漏斗找“是谁掉了”</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout job"><p class="callout-title">面试加分表达</p><p>“做留存和同期群分析时，我会第一时间检查注册日期与数据截止日之间是否满足完整观察窗口，避免右截断偏差；同时结合渠道与设备交叉下钻，把‘留存下降’定位到具体获客渠道或客户端体验问题。”</p></div>
+<div class="checklist"><p class="checklist-title">本课验收</p><ul><li><label><input type="checkbox" data-id="7-2:13:0"><span class="cl-text">我能区分环节转化率与整体转化率，并按唯一用户去重。</span></label></li><li><label><input type="checkbox" data-id="7-2:13:1"><span class="cl-text">我会用日期差计算 D1/D7/D14/D30 留存率，并知道如何避免观察窗口截断。</span></label></li><li><label><input type="checkbox" data-id="7-2:13:2"><span class="cl-text">练习本 7-2.1 ～ 7-2.4 四题全部通过检查。</span></label></li></ul></div>
+<p>下一课：<a href="../lessons/7-3-method-rfm.html">RFM 用户分层</a>，也可以在学完后直接挑战<a href="../lessons/P-2-project-funnel-retention.html">项目二：App 转化漏斗与用户留存</a>。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/7-2_method_funnel_retention.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/7-2_method_funnel_retention.ipynb" download>学生练习本</a> · <a href="../../solutions/7-2_method_funnel_retention.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="7-1-method-metrics.html"><small>← 上一课</small>7-1 指标体系与拆解思路</a><a class="next" href="7-3-method-rfm.html"><small>下一课 →</small>7-3 RFM 用户分层</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#1-转化漏斗找到流失最严重的卡点">1. 转化漏斗：找到流失最严重的“卡点”</a></li><li><a href="#2-留存率与观察窗口截断陷阱">2. 留存率与“观察窗口截断”陷阱</a></li><li><a href="#3-同期群cohort分析横向看衰减纵向看迭代">3. 同期群（Cohort）分析：横向看衰减，纵向看迭代</a></li><li><a href="#4-四道独立练习">4. 四道独立练习</a></li><li><a href="#常见问题与求职用途">常见问题与求职用途</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>

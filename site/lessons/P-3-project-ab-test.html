@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-3 项目三：A/B 测试分析 | 零基础数据分析</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("da-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="page-lesson" data-lesson="P-3" style="--stage-color: #ef4444">
+<div class="read-progress" aria-hidden="true"></div>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="打开目录">&#9776;</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">DA</span><span class="brand-text">零基础数据分析</span></a>
+  <div class="topbar-spacer"></div>
+  <div class="overall-progress" title="整体学习进度"><span class="op-bar"><i></i></span><span class="op-text">0%</span></div>
+  <button class="icon-btn theme-btn" type="button" aria-label="切换深色/浅色">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="课程目录">
+<div class="nav-stage" style="--c:#0ea5e9"><div class="nav-stage-title"><span class="dot"></span>阶段 0 · 出发准备</div><ol><li><a href="../lessons/0-1-what-is-data-analysis.html" data-lid="0-1"><span class="nid">0-1</span><span>数据分析是什么？文科生的优势与学习路线</span></a></li><li><a href="../lessons/0-2-computer-basics.html" data-lid="0-2"><span class="nid">0-2</span><span>电脑基础：文件、路径、扩展名与命令行</span></a></li><li><a href="../lessons/0-3-pre-install-check.html" data-lid="0-3"><span class="nid">0-3</span><span>安装前体检：识别已有 Python、检查路径和磁盘</span></a></li><li><a href="../lessons/0-4-install-anaconda.html" data-lid="0-4"><span class="nid">0-4</span><span>安装 Anaconda（一步一图）</span></a></li><li><a href="../lessons/0-5-env-check.html" data-lid="0-5"><span class="nid">0-5</span><span>环境体检：确认一切正常</span></a></li><li><a href="../lessons/0-6-jupyter-basics.html" data-lid="0-6"><span class="nid">0-6</span><span>JupyterLab 上手</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#6366f1"><div class="nav-stage-title"><span class="dot"></span>阶段 1 · Python 够用就好</div><ol><li><a href="../lessons/1-1-python-variables.html" data-lid="1-1"><span class="nid">1-1</span><span>变量与数据类型</span></a></li><li><a href="../lessons/1-2-python-containers.html" data-lid="1-2"><span class="nid">1-2</span><span>列表与字典</span></a></li><li><a href="../lessons/1-3-python-control.html" data-lid="1-3"><span class="nid">1-3</span><span>条件、循环与函数</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#10b981"><div class="nav-stage-title"><span class="dot"></span>阶段 2 · pandas 表格处理</div><ol><li><a href="../lessons/2-1-pandas-intro.html" data-lid="2-1"><span class="nid">2-1</span><span>认识 DataFrame 与读取数据</span></a></li><li><a href="../lessons/2-2-pandas-select.html" data-lid="2-2"><span class="nid">2-2</span><span>选取、筛选与排序</span></a></li><li><a href="../lessons/2-3-pandas-groupby.html" data-lid="2-3"><span class="nid">2-3</span><span>新增列与分组统计</span></a></li><li><a href="../lessons/2-4-pandas-merge-pivot.html" data-lid="2-4"><span class="nid">2-4</span><span>合并表格与数据透视</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f59e0b"><div class="nav-stage-title"><span class="dot"></span>阶段 3 · 数据清洗</div><ol><li><a href="../lessons/3-1-clean-missing-duplicates.html" data-lid="3-1"><span class="nid">3-1</span><span>缺失值与重复值</span></a></li><li><a href="../lessons/3-2-clean-types-outliers.html" data-lid="3-2"><span class="nid">3-2</span><span>异常值、数据类型、日期与文本</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ec4899"><div class="nav-stage-title"><span class="dot"></span>阶段 4 · 数据可视化</div><ol><li><a href="../lessons/4-1-viz-matplotlib.html" data-lid="4-1"><span class="nid">4-1</span><span>选对图表 + matplotlib 基础</span></a></li><li><a href="../lessons/4-2-viz-seaborn.html" data-lid="4-2"><span class="nid">4-2</span><span>seaborn 统计图表</span></a></li><li><a href="../lessons/4-3-viz-plotly.html" data-lid="4-3"><span class="nid">4-3</span><span>plotly 交互图表与图表美化</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#ef4444"><div class="nav-stage-title"><span class="dot"></span>阶段 P · 实战项目</div><ol><li><a href="../lessons/P-1-project-ecommerce.html" data-lid="P-1"><span class="nid">P-1</span><span>项目一：线上文创店年度销售分析</span></a></li><li><a href="../lessons/P-2-project-funnel-retention.html" data-lid="P-2"><span class="nid">P-2</span><span>项目二：App 转化漏斗与用户留存</span></a></li><li><a href="../lessons/P-3-project-ab-test.html" data-lid="P-3" class="active"><span class="nid">P-3</span><span>项目三：A/B 测试分析</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#8b5cf6"><div class="nav-stage-title"><span class="dot"></span>阶段 5 · 统计基础</div><ol><li><a href="../lessons/5-1-stats-descriptive.html" data-lid="5-1"><span class="nid">5-1</span><span>描述统计：平均数会骗人</span></a></li><li><a href="../lessons/5-2-stats-distribution.html" data-lid="5-2"><span class="nid">5-2</span><span>分布与抽样</span></a></li><li><a href="../lessons/5-3-stats-correlation.html" data-lid="5-3"><span class="nid">5-3</span><span>相关性与因果</span></a></li><li><a href="../lessons/5-4-stats-hypothesis.html" data-lid="5-4"><span class="nid">5-4</span><span>假设检验与 A/B 测试</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#14b8a6"><div class="nav-stage-title"><span class="dot"></span>阶段 6 · SQL 取数</div><ol><li><a href="../lessons/6-1-sql-basics.html" data-lid="6-1"><span class="nid">6-1</span><span>SELECT 查询与筛选</span></a></li><li><a href="../lessons/6-2-sql-groupby.html" data-lid="6-2"><span class="nid">6-2</span><span>分组聚合</span></a></li><li><a href="../lessons/6-3-sql-join.html" data-lid="6-3"><span class="nid">6-3</span><span>多表连接与子查询</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#f97316"><div class="nav-stage-title"><span class="dot"></span>阶段 7 · 分析方法论</div><ol><li><a href="../lessons/7-1-method-metrics.html" data-lid="7-1"><span class="nid">7-1</span><span>指标体系与拆解思路</span></a></li><li><a href="../lessons/7-2-method-funnel-retention.html" data-lid="7-2"><span class="nid">7-2</span><span>漏斗、留存与同期群</span></a></li><li><a href="../lessons/7-3-method-rfm.html" data-lid="7-3"><span class="nid">7-3</span><span>RFM 用户分层</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#a855f7"><div class="nav-stage-title"><span class="dot"></span>阶段 8 · 求职冲刺</div><ol><li><a href="../lessons/8-1-job-resume.html" data-lid="8-1"><span class="nid">8-1</span><span>数据分析简历与作品集</span></a></li><li><a href="../lessons/8-2-job-interview.html" data-lid="8-2"><span class="nid">8-2</span><span>面试高频题</span></a></li></ol></div>
+<div class="nav-stage" style="--c:#64748b"><div class="nav-stage-title"><span class="dot"></span>阶段 A · 工具箱</div><ol><li><a href="../lessons/A-1-troubleshoot.html" data-lid="A-1"><span class="nid">A-1</span><span>环境故障排查向导</span></a></li><li><a href="../lessons/A-2-common-errors.html" data-lid="A-2"><span class="nid">A-2</span><span>常见报错速查</span></a></li><li><a href="../lessons/A-3-datasets.html" data-lid="A-3"><span class="nid">A-3</span><span>数据集说明与公开数据集</span></a></li><li><a href="../lessons/A-4-cheatsheet.html" data-lid="A-4"><span class="nid">A-4</span><span>速查表：pandas 与图表</span></a></li><li><a href="../lessons/A-5-glossary.html" data-lid="A-5"><span class="nid">A-5</span><span>术语表</span></a></li></ol></div>
+  </nav>
+  <main class="content">
+<header class="lesson-hero"><div class="crumb">阶段 P · 实战项目</div><h1><span class="lid">P-3</span>项目三：A/B 测试分析</h1><p class="lesson-summary">用虚构的 12,000 人商品详情页新版评价卡片实验，走完 SRM 校验、主指标检验、护栏指标评估、新老客异质性拆解与上线决策。</p><ul class="lesson-meta"><li>约 150 分钟</li><li>难度 ★★★</li><li>配套练习本 <code>notebooks/P-3_project_ab_test.ipynb</code></li><li>前置：已完成阶段 5（尤其是第 5-4 课），会用 scipy 做卡方与 Welch t 检验</li></ul></header><article class="lesson-body"><div class="callout goal"><p class="callout-title">本项目的可检验目标</p><ul>
+<li>独立完成 A/B 测试五步标准流程：质量体检 → SRM 分流校验 → 总体主/辅助/护栏指标检验 → 人群异质性拆解 → 业务决策。</li>
+<li>用卡方拟合优度检验确认分流未发生 SRM（样本比例失衡）。</li>
+<li>分别用卡方检验与 Welch t 检验评估转化率、页面加载耗时与已转化客单价。</li>
+<li>发现“增益集中在首次访问新客、老客无显著变化，且加载耗时增加约 43.5ms”的核心权衡，给出可执行建议。</li>
+<li>通过练习本 P-3.1 ～ P-3.6 六道自动检查。</li>
+</ul></div>
+<p>本项目基于虚构的“商品详情页新版评价卡片”14 天 A/B 测试数据（<code>data/abtest/ab_experiment.csv</code>，12,000 名用户，50/50 随机分流）。数据由程序模拟生成，仅用于学习严谨的实验分析流程，不代表真实业务上线收益。</p>
+<p>请在本包 <code>notebooks/P-3_project_ab_test.ipynb</code> 打开练习本，内核选 <code>Python (da-course)</code>；参考答案在 <code>solutions/</code>。</p>
+<div class="flow"><ol>
+<li>明确实验假设与指标体系（主指标 / 辅助指标 / 护栏指标）</li>
+<li>数据体检与 SRM 校验（分流不准，后面全作废）</li>
+<li>总体主指标与辅助指标显著性检验</li>
+<li>护栏指标（页面加载耗时）副作用评估</li>
+<li>分新老客、分设备异质性拆解 → 形成灰度/上线决策</li>
+</ol></div>
+<h2 id="第一步指标体系设计与数据体检">第一步：指标体系设计与数据体检</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指标层级</th>
+<th>指标名称</th>
+<th>定义</th>
+<th>期望方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>主指标（OEC）</strong></td>
+<td>下单转化率 <code>conv_rate</code></td>
+<td><code>converted</code> 均值</td>
+<td>显著上升</td>
+</tr>
+<tr>
+<td><strong>辅助指标</strong></td>
+<td>详情互动点击率 / 人均 GMV（ARPU） / 已转化客单价</td>
+<td><code>clicked</code> 均值 / <code>order_amount</code> 均值 / 已转化者 <code>order_amount</code> 均值</td>
+<td>上升或持平</td>
+</tr>
+<tr>
+<td><strong>护栏指标</strong></td>
+<td>页面加载耗时 <code>page_load_ms</code></td>
+<td>详情页平均加载毫秒数</td>
+<td>不出现不可接受的恶化</td>
+</tr>
+</tbody>
+</table></div>
+<p>数据体检确认：<code>user_id</code> 12,000 行完全唯一；每名转化用户均有点击记录（<code>converted &lt;= clicked</code>）；未转化用户 <code>order_amount</code> 均为 0。</p>
+<h2 id="第二步srm样本比例失衡校验p-31">第二步：SRM（样本比例失衡）校验（P-3.1）</h2>
+<p>实验设计为 50/50 分流。实际分到对照组 <strong>5,976 人</strong>、实验组 <strong>6,024 人</strong>。调用 <code>stats.chisquare([5976, 6024])</code> 得 <code>chi2 = 0.1920</code>，<code>p = 0.6613 &gt;&gt; 0.01</code>，通过 SRM 校验，说明分流比例无显著偏斜，可以继续分析。</p>
+<h2 id="第三步总体指标与护栏指标评估p-32-p-34">第三步：总体指标与护栏指标评估（P-3.2 ～ P-3.4）</h2>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th style="text-align: right;">人数</th>
+<th style="text-align: right;">点击率</th>
+<th style="text-align: right;">转化率</th>
+<th style="text-align: right;">人均 GMV (ARPU)</th>
+<th style="text-align: right;">平均加载耗时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>control</code>（旧版）</td>
+<td style="text-align: right;">5,976</td>
+<td style="text-align: right;">32.70%</td>
+<td style="text-align: right;">8.75%</td>
+<td style="text-align: right;">6.77 元</td>
+<td style="text-align: right;">455.76 ms</td>
+</tr>
+<tr>
+<td><code>treatment</code>（新版）</td>
+<td style="text-align: right;">6,024</td>
+<td style="text-align: right;">35.89%</td>
+<td style="text-align: right;"><strong>10.06%</strong></td>
+<td style="text-align: right;"><strong>7.61 元</strong></td>
+<td style="text-align: right;"><strong>499.28 ms</strong></td>
+</tr>
+<tr>
+<td>差异与检验</td>
+<td style="text-align: right;">SRM p=0.66</td>
+<td style="text-align: right;">+3.19pp</td>
+<td style="text-align: right;"><strong>+1.31pp (p=0.0141)</strong></td>
+<td style="text-align: right;">+0.84 元</td>
+<td style="text-align: right;"><strong>+43.52 ms (p&lt;0.001)</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<ul>
+<li><strong>主指标显著为正</strong>：转化率从 8.75% 提升至 10.06%（绝对提升 <strong>+1.31 个百分点</strong>，相对提升 +14.9%），卡方检验 <code>p = 0.0141 &lt; 0.05</code>。</li>
+<li><strong>已转化客单价持平（P-3.6）</strong>：对照组 77.38 元 vs 实验组 75.67 元（<code>p = 0.3986</code>），说明 ARPU 提升来自“更多人下单”，而非单笔买得更贵。</li>
+<li><strong>护栏指标显著变慢（P-3.4）</strong>：新版评价卡片引入更多图文元素，平均加载耗时增加 <strong>+43.52 ms</strong>（Welch t 检验 <code>p = 7.68e-147</code>）。</li>
+</ul>
+<h2 id="第四步新老客异质性拆解p-35">第四步：新老客异质性拆解（P-3.5）</h2>
+<p>如果只看总体数字就匆忙全量上线，会错过本项目最关键的业务洞察！按 <code>is_new_user</code> 拆开一看：</p>
+<div class="dataframe-wrap"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>用户类型</th>
+<th style="text-align: right;">对照组转化率</th>
+<th style="text-align: right;">实验组转化率</th>
+<th style="text-align: right;">绝对提升</th>
+<th style="text-align: right;">卡方 p 值</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>老客 (<code>0</code>)</td>
+<td style="text-align: right;">10.66%</td>
+<td style="text-align: right;">10.48%</td>
+<td style="text-align: right;">−0.19pp</td>
+<td style="text-align: right;"><strong>0.8235</strong></td>
+<td>无显著变化</td>
+</tr>
+<tr>
+<td>新客 (<code>1</code>)</td>
+<td style="text-align: right;">7.22%</td>
+<td style="text-align: right;"><strong>9.71%</strong></td>
+<td style="text-align: right;"><strong>+2.49pp</strong></td>
+<td style="text-align: right;"><strong>0.00027</strong></td>
+<td><strong>高度显著提升</strong></td>
+</tr>
+</tbody>
+</table></div></div>
+<p><strong>业务解读</strong>：老客已经熟悉店铺与口碑，新版评价卡片并未提升其下单意愿，反而白白多承受了 +43.5ms 的页面加载延迟；而新客对陌生商品缺乏信任，强化评价卡片直接把新客转化率拉升了 <strong>+2.49 个百分点</strong>！</p>
+<div class="compare"><div class="compare-col bad"><p class="compare-title">“总体 p=0.014 &lt; 0.05，建议立即 100% 全量推给所有用户”</p><p>忽视了护栏指标变慢和老客零收益的事实，让近一半老客平白承受更慢的页面加载。</p></div>
+<div class="compare-col good"><p class="compare-title">“优先对新客定向放量，同时请研发优化评价卡片懒加载后再评估老客全量”</p><p>兼顾了显著收益、性能护栏与人群异质性，是真实业务中最受欢迎的落地建议。</p></div></div>
+<div class="quiz"><p class="quiz-q">多重检验与上线纪律
+实验结束后，分析师把数据按 20 个不同城市切片逐一算 p 值，终于发现“某三线城市 p = 0.04”，于是宣称实验只在该城市有效。这犯了什么统计错误？</p><ul class="quiz-options"><li><button type="button" data-correct="0">样本量太大</button></li><li><button type="button" data-correct="1">多重检验（数据窥探）问题：在 $\alpha=0.05$ 下做 20 次独立检验，即使完全无效也期望碰巧撞出 1 次假阳性；分层拆解应基于事前业务假设（如新老客）并谨慎验证</button></li><li><button type="button" data-correct="0">没有做 SRM 校验</button></li></ul><div class="quiz-explain"><p>事前基于业务机理假设的新老客分层与事后漫无目的地刷几十个切片完全不同；前者可指导灰度，后者极易过拟合噪音。</p></div></div>
+<h2 id="第五步练习本六题清单与作品集交付">第五步：练习本六题清单与作品集交付</h2>
+<p>在 <code>notebooks/P-3_project_ab_test.ipynb</code> 中完成全部六道独立检查：
+- <strong>P-3.1</strong>：SRM 样本比例失衡检验
+- <strong>P-3.2</strong>：总体核心与护栏指标对比表
+- <strong>P-3.3</strong>：主指标转化率卡方检验
+- <strong>P-3.4</strong>：护栏指标 <code>page_load_ms</code> Welch t 检验
+- <strong>P-3.5</strong>：新老客分层转化率与 p 值汇总
+- <strong>P-3.6</strong>：已转化用户客单价对比与 Welch t 检验</p>
+<div class="callout try"><p class="callout-title">练习：补充项目三的长期观察限制</p><p>14 天短期实验通过后，还有哪些长期风险需要上线后继续追踪？</p>
+<details class="fold"><summary>参考答案</summary><ol>
+<li><strong>新奇效应（Novelty Effect）</strong>：新卡片刚上线时新鲜感可能短期拉高点击，需在放量后继续观察 2～4 周转化率是否回落。</li>
+<li><strong>售后退款率与长期复购</strong>：如果新版评价卡片过度筛选好评导致预期落差，可能推高后续退款率，需补充售后与复购护栏。</li>
+<li><strong>低端 Android 机型 P95 耗时</strong>：平均只慢 43.5ms，但需核查最慢 5% 用户的 P95 加载延迟是否导致跳失。</li>
+</ol></details></div>
+<div class="checklist"><p class="checklist-title">项目三验收</p><ul><li><label><input type="checkbox" data-id="P-3:10:0"><span class="cl-text">重启内核运行 <code>P-3_project_ab_test.ipynb</code> 全部通过，6 道检查全绿。</span></label></li><li><label><input type="checkbox" data-id="P-3:10:1"><span class="cl-text">我能完整讲清 SRM、主指标、护栏指标与新老客异质性四层结论。</span></label></li><li><label><input type="checkbox" data-id="P-3:10:2"><span class="cl-text">我在作品集报告中明确标注“虚构模拟实验数据”，不虚构真实上线 GMV 增量。</span></label></li></ul></div>
+<p>恭喜完成全部核心课程与三大实战项目！你可以回到<a href="../index.html">首页</a>核对全站进度，或前往<a href="../lessons/8-1-job-resume.html">求职冲刺 8-1</a>与<a href="../lessons/8-2-job-interview.html">8-2</a>打磨简历与面试。</p><div class="nb-cta"><div class="nb-icon">.ipynb</div><div class="nb-text"><b>读完了？打开练习本动手做一遍</b><br>在 JupyterLab 左侧文件栏打开 <code>notebooks/P-3_project_ab_test.ipynb</code>，从上到下逐格运行，完成里面的练习。卡住了再对照 <code>solutions/</code> 同名答案。<p><a href="../../notebooks/P-3_project_ab_test.ipynb" download>学生练习本</a> · <a href="../../solutions/P-3_project_ab_test.ipynb" download>参考答案本</a>（仍需保留教程完整目录）</p></div></div></article><footer class="lesson-footer"><div class="done-box"><span>学完这一课了吗？标记后首页会记录你的进度（只保存在本机浏览器）。</span><button type="button" class="done-btn">标记本课已学完</button></div><nav class="pager"><a class="prev" href="P-2-project-funnel-retention.html"><small>← 上一课</small>P-2 项目二：App 转化漏斗与用户留存</a><a class="next" href="5-1-stats-descriptive.html"><small>下一课 →</small>5-1 描述统计：平均数会骗人</a></nav></footer>
+  </main>
+  <aside class="toc" aria-label="本页目录">
+<div class="toc-title">本页目录</div><ul><li><a href="#第一步指标体系设计与数据体检">第一步：指标体系设计与数据体检</a></li><li><a href="#第二步srm样本比例失衡校验p-31">第二步：SRM（样本比例失衡）校验（P-3.1）</a></li><li><a href="#第三步总体指标与护栏指标评估p-32-p-34">第三步：总体指标与护栏指标评估（P-3.2 ～ P-3.4）</a></li><li><a href="#第四步新老客异质性拆解p-35">第四步：新老客异质性拆解（P-3.5）</a></li><li><a href="#第五步练习本六题清单与作品集交付">第五步：练习本六题清单与作品集交付</a></li></ul>
+  </aside>
+</div>
+<div class="sidebar-mask"></div>
+<script src="../assets/js/outline.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>
